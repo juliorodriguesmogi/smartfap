@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title></title>
+<style type="text/css">
+<!--
+#codigo_usuario {	text-align:right;	
+}
+#frm_usuarios {    border-bottom: none;
+}
+#principal {        border-bottom-style: none;
+}
+-->
+</style>
+</head>
+
+<body>
+<center>
+  <h1>Manutenção da Estrutura Organizacional</h1>
+</center>
+<form id="frm_barra_tarefas" action="" >
+  <button type="button" onclick="">
+  <table>
+    <tr>
+      <td height="42"><img src="../images/novo.png" height="40" width="40" /></td>
+    </tr>
+    <tr>
+      <td height="16">Novo</td>
+    </tr>
+  </table>
+  </button>
+  <button type="button" onclick="grava_registro();">
+  <table>
+    <tr>
+      <td height="42"><img src="../images/barra_ferramentas/floppy.png" height="40" width="40" /></td>
+    </tr>
+    <tr>
+      <td height="16">Gravar</td>
+    </tr>
+  </table>
+  </button>
+  <button  type="button" onclick="apaga_registro();">
+  <table>
+    <tr>
+      <td height="42"><img src="../images/barra_ferramentas/error_button_2.png" height="40" width="40" /></td>
+    </tr>
+    <tr>
+      <td height="16">Apagar</td>
+    </tr>
+  </table>
+  </button>
+  <button  type="button" onclick="descer();">
+  <table>
+    <tr>
+      <td height="42"><img src="../images/barra_ferramentas/update_quantity_cart[1].png" height="40" width="40" /></td>
+    </tr>
+    <tr>
+      <td height="16">Desfazer</td>
+    </tr>
+  </table>
+  </button>
+  <button  type="button" onclick="subir();">
+  <table>
+    <tr>
+      <td height="42"><img src="../images/barra_ferramentas/cima.gif" height="40" width="40" /></td>
+    </tr>
+    <tr>
+      <td height="16">Primeiro</td>
+    </tr>
+  </table>
+  </button>
+  <button  type="button" onclick="registro_anterior(document.forms[1].elements['CODIGO_USUARIO'],'usuarios')">
+  <table>
+    <tr>
+      <td height="42"><img src="../images/barra_ferramentas/left.png" height="40" width="40" /></td>
+    </tr>
+    <tr>
+      <td height="16">Anterior</td>
+    </tr>
+  </table>
+  </button>
+  <button  type="button" onclick="proximo_registro(document.forms[1].elements['CODIGO_USUARIO'],'usuarios')">
+  <table>
+    <tr>
+      <td height="42"><img src="../images/barra_ferramentas/right.png" height="40" width="40" /></td>
+    </tr>
+    <tr>
+      <td height="16">Pr&oacute;ximo</td>
+    </tr>
+  </table>
+  </button>
+  <button  type="button" onclick="descer();">
+  <table>
+    <tr>
+      <td height="42" width="48"><img src="../images/barra_ferramentas/baixo.gif" height="40" width="40" /></td>
+    </tr>
+    <tr>
+      <td height="16">Ultimo</td>
+    </tr>
+  </table>
+  </button>
+    <button  type="button" onclick="document.forms[1].reset();document.forms[2].reset();document.forms[1].elements['CODIGO_USUARIO'].focus();">
+  <table>
+    <tr>
+      <td height="42"><img src="../images/barra_ferramentas/folha.jpg" height="40" width="40" /></td>
+    </tr>
+    <tr>
+      <td height="16">Limpar</td>
+    </tr>
+  </table>
+  </button>
+
+  <button  type="button" onclick="descer();">
+  <table>
+    <tr>
+      <td height="40"><img src="../images/printer_2.png" height="40" width="40" /></td>
+    </tr>
+    <tr>
+      <td height="18">Imprimir</td>
+    </tr>
+  </table>
+  </button>
+  <link href="estiloSistema.css" rel="stylesheet" type="text/css" />
+  <div id="principal" > <br />
+      <br />
+      <table width="30%" border="0" cellpadding="0" cellspacing="1">
+        <tr>
+          <td width="10%" height="36" align="center" valign="middle" class="abaativa" id="celAbaCadastro" onclick="trataCliqueAba( this.id );" onmouseover="trataMouseAba( this );"> Cadastro de N&iacute;veis </td>
+          <td width="10%" height="36" align="center" valign="middle" class="abaativa" id="celAbaCadastro" onclick="trataCliqueAba( this.id );" onmouseover="trataMouseAba( this );"> Estrutura </td>		  
+        </tr>
+      </table>
+    <link href="../css/designer.css" rel="stylesheet" type="text/css" />
+      <div id="divCadastro" style="display: block">
+        <table width="100%" border="0" class="tabela">
+          <tr>
+            <th width="106">C&oacute;digo N&iacute;vel </th>
+            <td width="191"><select name="select" style="min-width:250px;width:250px">
+            </select>            </td>
+            <th width="712">&nbsp;</th>
+          </tr>
+          <tr>
+            <th>Subordinado &agrave;  </th>
+            <td><select name="select2" style="min-width:250px;width:250px">
+            </select></td>
+            <th>&nbsp;</th>
+          </tr>
+          <tr>
+            <th>Totaliza LTCAT? </th>
+            <td><select name="select3">
+              <option value="S">Sim</option>
+              <option value="N">N&atilde;o</option>
+              <option selected="selected"> </option>
+            </select>
+            </td>
+            <th>&nbsp;</th>
+          </tr>
+        </table>
+        <div id="divConsulta" style="display: none">
+          <table border="0" width="50%">
+            <tr>
+              <td> CONSULTAS </td>
+            </tr>
+          </table>
+        </div>
+        <div id="divModelo" style="display: none">
+          <table border="0" width="50%">
+            <tr>
+              <td> MODELOS DE IMPRESS&Atilde;O </td>
+            </tr>
+          </table>
+        </div>
+        <script>
+            defineAba( "celAbaCadastro"  , "divCadastro"   );
+            defineAba( "celAbaRelatorio" , "divRelatorio"  );
+            defineAba( "celAbaConsultas" , "divConsulta"   );
+            defineAba( "celAbaModelos"   , "divModelo"     );
+            defineAbaAtiva( "celAbaCadastro" );
+        </script>
+      </div>
+  </div>
+</form>
+</body>
+</html>

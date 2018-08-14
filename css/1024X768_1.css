@@ -1,0 +1,56 @@
+/* 
+    Document   : 1024X600.css
+    Created on : 13/01/2012, 22:26:19
+    Author     : julio
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+
+@media \0screen\,screen\9 {
+#DIV_PRINCIPAL{
+    zoom:95%;
+    min-width:155%;   
+    
+}
+#DIV_PRINCIPAL form{
+    zoom:70%;
+    min-width:115%;
+
+}
+}
+#DIV_FERRAMENTAS{
+    zoom:70%;
+    min-width:115%;
+    font-size: 90%;
+    -moz-transform: scale(0.95);
+    left: 0;
+}
+#TBL_ABAS{
+    -moz-transform: scale(0.75);
+}
+html{
+    font-size:90%;
+}
+form{
+    -moz-transform: scale(0.95);
+    font-size: 85%;
+}
+input{
+    font-size:80%;
+    width: 50%;
+}
+select{
+    font-size: 80%;
+    width: 70%;
+}
+select option {
+    font-size: 90%;
+
+}
+

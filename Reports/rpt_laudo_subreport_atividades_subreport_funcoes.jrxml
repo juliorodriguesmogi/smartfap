@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_laudo_subreport_atividades_subreport_funcoes" language="groovy" pageWidth="181" pageHeight="47" columnWidth="181" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c72cb3e5-dad8-49d2-9fbf-9fabcec0d7b9">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="CODIGO_EMPRESA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ANO_PERICIA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[2012]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NUMERO_LAUDO" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[8]]></defaultValueExpression>
+	</parameter>
+	<parameter name="REVISAO" class="java.lang.String">
+		<defaultValueExpression><![CDATA[0]]></defaultValueExpression>
+	</parameter>
+	<parameter name="CODIGO_ATIVIDADE" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     laudos_atividades_funcoes.`CODIGO_EMPRESA` AS laudos_atividades_funcoes_CODIGO_EMPRESA,
+     laudos_atividades_funcoes.`ANO_PERICIA` AS laudos_atividades_funcoes_ANO_PERICIA,
+     laudos_atividades_funcoes.`NUMERO_LAUDO` AS laudos_atividades_funcoes_NUMERO_LAUDO,
+     laudos_atividades_funcoes.`REVISAO` AS laudos_atividades_funcoes_REVISAO,
+     laudos_atividades_funcoes.`CODIGO_ATIVIDADE` AS laudos_atividades_funcoes_CODIGO_ATIVIDADE,
+     laudos_atividades_funcoes.`CODIGO_FUNCAO` AS laudos_atividades_funcoes_CODIGO_FUNCAO,
+     laudos_atividades_funcoes.`SEQUENCIAL` AS laudos_atividades_funcoes_SEQUENCIAL,
+     laudos_atividades_funcoes.`DESCRICAO_FUNCAO` AS laudos_atividades_funcoes_DESCRICAO_FUNCAO,
+case
+when funcoes.CODIGO_CBO_SINONIMO is not null then funcoes.CODIGO_CBO_SINONIMO
+when funcoes.CODIGO_CBO_OCUPACAO is not null then funcoes.CODIGO_CBO_OCUPACAO
+when funcoes.CODIGO_CBO_FAMILIA is not null then funcoes.CODIGO_CBO_FAMILIA
+
+else null end AS CODIGO_CBO
+FROM
+     `laudos_atividades_funcoes` laudos_atividades_funcoes LEFT JOIN `funcoes` funcoes  ON funcoes.`CODIGO_EMPRESA` = laudos_atividades_funcoes.`CODIGO_EMPRESA`
+     AND funcoes.`CODIGO_FUNCAO` = laudos_atividades_funcoes.`CODIGO_FUNCAO`
+WHERE
+     laudos_atividades_funcoes.CODIGO_EMPRESA = $P{CODIGO_EMPRESA}
+ AND ANO_PERICIA = $P{ANO_PERICIA}
+ AND NUMERO_LAUDO = $P{NUMERO_LAUDO}
+ AND REVISAO = $P{REVISAO}
+ AND CODIGO_ATIVIDADE = $P{CODIGO_ATIVIDADE}]]>
+	</queryString>
+	<field name="laudos_atividades_funcoes_CODIGO_EMPRESA" class="java.lang.Integer"/>
+	<field name="laudos_atividades_funcoes_ANO_PERICIA" class="java.lang.Integer"/>
+	<field name="laudos_atividades_funcoes_NUMERO_LAUDO" class="java.lang.Integer"/>
+	<field name="laudos_atividades_funcoes_REVISAO" class="java.lang.String"/>
+	<field name="laudos_atividades_funcoes_CODIGO_ATIVIDADE" class="java.lang.Integer"/>
+	<field name="laudos_atividades_funcoes_CODIGO_FUNCAO" class="java.lang.Integer"/>
+	<field name="laudos_atividades_funcoes_SEQUENCIAL" class="java.lang.Integer"/>
+	<field name="laudos_atividades_funcoes_DESCRICAO_FUNCAO" class="java.lang.String"/>
+	<field name="CODIGO_CBO" class="java.lang.String"/>
+	<group name="laudos_atividades_funcoes_CODIGO_ATIVIDADE">
+		<groupExpression><![CDATA[$F{laudos_atividades_funcoes_CODIGO_ATIVIDADE}]]></groupExpression>
+	</group>
+	<group name="laudos_atividades_funcoes_CODIGO_FUNCAO">
+		<groupExpression><![CDATA[$F{laudos_atividades_funcoes_CODIGO_FUNCAO}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement uuid="46e15c76-5e3e-431f-8f6a-0f1c40e6d2b3" x="59" y="0" width="122" height="36"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{laudos_atividades_funcoes_DESCRICAO_FUNCAO}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="cdda6dc9-c2a0-4c6e-b5e3-13b2366a797a" x="0" y="0" width="59" height="36"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{CODIGO_CBO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

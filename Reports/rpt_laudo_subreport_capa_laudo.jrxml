@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_laudo_subreport_capa_laudo" language="groovy" pageWidth="514" pageHeight="802" columnWidth="514" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d58e5dfe-8ba4-4422-a882-df390b892bf2">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="CODIGO_EMPRESA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ANO_PERICIA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[2012]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NUMERO_LAUDO" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[8]]></defaultValueExpression>
+	</parameter>
+	<parameter name="REVISAO" class="java.lang.String">
+		<defaultValueExpression><![CDATA[0]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+laudos.`CODIGO_EMPRESA` AS laudos_CODIGO_EMPRESA,
+laudos.`ANO_PERICIA` AS laudos_ANO_PERICIA,
+     laudos.`NUMERO_LAUDO` AS laudos_NUMERO_LAUDO,
+     laudos.`REVISAO` AS laudos_REVISAO,
+     laudos.`RAZAO_SOCIAL` AS laudos_RAZAO_SOCIAL,
+     laudos.`CNPJ_CEI` AS laudos_CNPJ_CEI,
+     laudos.`CNAE` AS laudos_CNAE,
+     laudos.`ENDERECO_ATUACAO` AS laudos_ENDERECO_ATUACAO,
+     laudos.`BAIRRO_ATUACAO` AS laudos_BAIRRO_ATUACAO,
+     laudos.`MUNICIPIO_ATUACAO` AS laudos_MUNICIPIO_ATUACAO,
+     laudos.`UF_ATUACAO` AS laudos_UF_ATUACAO,
+laudos.`DATA_LANCAMENTO` AS laudos_DATA_LANCAMENTO,
+     (case when (select e1.RAZAO_SOCIAL from empresas_contrato e1, empresas e2 where e2.EMPRESA_CONTRATO = e1.CODIGO_EMPRESA and e2.CODIGO_EMPRESA=laudos.CODIGO_EMPRESA) then (select e1.RAZAO_SOCIAL from empresas_contrato e1, empresas e2 where e2.EMPRESA_CONTRATO = e1.CODIGO_EMPRESA and e2.CODIGO_EMPRESA=laudos.CODIGO_EMPRESA) else laudos.RAZAO_SOCIAL END) AS laudos_EMPRESA,
+(select laudos.CEP_ATUACAO from empresas where empresas.CODIGO_EMPRESA=laudos.CODIGO_EMPRESA) as laudos_CEP_EMPRESA,
+laudos.NOME_MES_PERICIA AS laudos_NOME_MES_PERICIA,
+DATE_FORMAT(laudos.`DATA_HORA_PERICIA`,'%d/%m/%Y %T') AS laudos_DATA_HORA_PERICIA
+FROM
+     `laudos` laudos
+WHERE
+laudos.CODIGO_EMPRESA=$P{CODIGO_EMPRESA} AND
+laudos.ANO_PERICIA=$P{ANO_PERICIA} AND
+laudos.NUMERO_LAUDO=$P{NUMERO_LAUDO} AND
+laudos.REVISAO=$P{REVISAO}]]>
+	</queryString>
+	<field name="laudos_CODIGO_EMPRESA" class="java.lang.Integer"/>
+	<field name="laudos_ANO_PERICIA" class="java.lang.Integer"/>
+	<field name="laudos_NUMERO_LAUDO" class="java.lang.Integer"/>
+	<field name="laudos_REVISAO" class="java.lang.String"/>
+	<field name="laudos_RAZAO_SOCIAL" class="java.lang.String"/>
+	<field name="laudos_CNPJ_CEI" class="java.lang.String"/>
+	<field name="laudos_CNAE" class="java.lang.String"/>
+	<field name="laudos_ENDERECO_ATUACAO" class="java.lang.String"/>
+	<field name="laudos_BAIRRO_ATUACAO" class="java.lang.String"/>
+	<field name="laudos_MUNICIPIO_ATUACAO" class="java.lang.String"/>
+	<field name="laudos_UF_ATUACAO" class="java.lang.String"/>
+	<field name="laudos_DATA_LANCAMENTO" class="java.sql.Date"/>
+	<field name="laudos_EMPRESA" class="java.lang.String"/>
+	<field name="laudos_CEP_EMPRESA" class="java.lang.String"/>
+	<field name="laudos_NOME_MES_PERICIA" class="java.lang.String"/>
+	<field name="laudos_DATA_HORA_PERICIA" class="java.lang.String"/>
+	<title>
+		<band height="600" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="52896ca1-aaa2-47e0-b08b-376f71f7f535" x="5" y="6" width="507" height="565" backcolor="#000000"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="9a9f9ef0-606c-45f2-90a9-7b1be17e61bf" x="2" y="11" width="502" height="555"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="0c1179bd-c0b1-48f3-bfad-5fa746f76667" stretchType="RelativeToTallestObject" x="182" y="389" width="107" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{laudos_MUNICIPIO_ATUACAO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a4582ff8-a63a-47e8-8d40-51ed118ceb32" x="302" y="389" width="29" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{laudos_UF_ATUACAO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b2186008-097f-4733-84c2-57db92242cdd" x="52" y="369" width="392" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{laudos_BAIRRO_ATUACAO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="23d01bf8-4331-4001-8ce9-498af86445e8" x="182" y="329" width="38" height="20"/>
+				<textElement>
+					<font fontName="Verdana" isBold="true"/>
+				</textElement>
+				<text><![CDATA[C.N.P.J.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6011d007-de57-4b04-bda2-cd5b8bf0320b" x="155" y="152" width="188" height="56"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="32" isBold="true"/>
+				</textElement>
+				<text><![CDATA[L.T.C.A.T.]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="622396a4-0311-4832-b85c-3ea4640fea9f" mode="Transparent" x="7" y="14" width="177" height="75"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{laudos_EMPRESA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="96804f29-d995-430e-a51b-8c1530ac89f2" x="52" y="349" width="391" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{laudos_ENDERECO_ATUACAO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8de7643f-2c2f-43df-a8a6-933b87a88439" x="433" y="521" width="50" height="20"/>
+				<textElement>
+					<font fontName="Arial Black" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{laudos_ANO_PERICIA}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="319aa19b-0bb3-4a55-ab95-90df3eef1434" mode="Transparent" x="17" y="223" width="466" height="76"/>
+				<textElement textAlignment="Center">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAUDO TÉCNICO DE CONDIÇÕES AMBIENTAIS DO TRABALHO]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="201e81c0-b16c-43c2-8aed-d7738093ed5b" x="2" y="105" width="502" height="1"/>
+				<graphicElement>
+					<pen lineWidth="4.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="1a44d21e-683d-4dac-bef8-5e132e0ba061" x="391" y="520" width="20" height="21"/>
+				<textElement>
+					<font fontName="Arial Black" size="13"/>
+				</textElement>
+				<text><![CDATA[de]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="dc2da413-d615-4899-9ebb-0baa14dafc87" x="52" y="309" width="391" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{laudos_RAZAO_SOCIAL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="11459da3-49ee-4633-bed4-2a38b1a83b67" stretchType="RelativeToTallestObject" x="233" y="329" width="110" height="20"/>
+				<textElement>
+					<font fontName="Verdana" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{laudos_CNPJ_CEI}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement uuid="38be78fa-4878-48d0-9c7c-811c9a524891" x="233" y="520" width="135" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial Black" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{laudos_NOME_MES_PERICIA}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>

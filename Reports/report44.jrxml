@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report4" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9bb82c7d-a309-4f0c-8a7a-39268f17dda2">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Heading 1">
+		<conditionalStyle>
+			<style/>
+		</conditionalStyle>
+	</style>
+	<style name="Heading 2" fontSize="14" isBold="true" isItalic="true"/>
+	<subDataset name="dataset1" uuid="2d11351f-b0e3-4ab2-8af3-08dfe722748c"/>
+	<parameter name="CODIGO_EMPRESA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     funcoes.`CODIGO_EMPRESA` AS funcoes_CODIGO_EMPRESA,
+     funcoes.`CODIGO_FUNCAO` AS funcoes_CODIGO_FUNCAO,
+     funcoes.`DESCRICAO_FUNCAO_EMPRESA` AS funcoes_DESCRICAO_FUNCAO_EMPRESA,
+     funcoes.`CLASSIFICACAO_FUNCAO` AS funcoes_CLASSIFICACAO_FUNCAO,
+     funcoes.`DATA_CADASTRO` AS funcoes_DATA_CADASTRO
+FROM
+     `funcoes` funcoes where CODIGO_EMPRESA=$P{CODIGO_EMPRESA}]]>
+	</queryString>
+	<field name="funcoes_CODIGO_EMPRESA" class="java.lang.Integer"/>
+	<field name="funcoes_CODIGO_FUNCAO" class="java.lang.Integer"/>
+	<field name="funcoes_DESCRICAO_FUNCAO_EMPRESA" class="java.lang.String"/>
+	<field name="funcoes_CLASSIFICACAO_FUNCAO" class="java.lang.String"/>
+	<field name="funcoes_DATA_CADASTRO" class="java.sql.Timestamp"/>
+	<variable name="FirstRecordOfANewGroup" class="java.lang.Integer" resetType="Group" resetGroup="FUNCOES_CODIGO_FUNCAO" calculation="Count">
+		<variableExpression><![CDATA[$V{FirstRecordOfANewGroup}]]></variableExpression>
+	</variable>
+	<variable name="TOC" class="java.lang.String">
+		<variableExpression><![CDATA[($V{FirstRecordOfANewGroup}==0)
+? ($V{TOC}+$F{funcoes_DESCRICAO_FUNCAO_EMPRESA} +" ............................................ " + $V{PAGE_NUMBER}+"<br/>")
+:$V{TOC}]]></variableExpression>
+		<initialValueExpression><![CDATA[new java.lang.String()]]></initialValueExpression>
+	</variable>
+	<group name="FUNCOES_CODIGO_FUNCAO" isStartNewPage="true">
+		<groupExpression><![CDATA[$F{funcoes_CODIGO_FUNCAO}]]></groupExpression>
+		<groupHeader>
+			<band height="2"/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="200" splitType="Stretch">
+			<textField evaluationTime="Report" pattern="">
+				<reportElement uuid="abbb2957-9999-4361-b0b5-cc7bd55781cb" x="18" y="27" width="519" height="100"/>
+				<textElement textAlignment="Right" markup="html"/>
+				<textFieldExpression><![CDATA[$V{TOC}]]></textFieldExpression>
+			</textField>
+			<break>
+				<reportElement uuid="36f30321-5928-45e5-9548-d84745102fc7" x="0" y="150" width="100" height="1"/>
+			</break>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="20989e3a-93e0-4630-b72e-c712390cac59" x="18" y="2" width="49" height="34"/>
+				<textElement/>
+				<text><![CDATA[Código Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="46287bc2-2fcd-49fb-a895-b0b62edfd80f" x="78" y="2" width="41" height="34"/>
+				<textElement/>
+				<text><![CDATA[Código Função]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8bda552c-a2d6-46f7-8b43-158330a8d1af" x="150" y="2" width="210" height="34"/>
+				<textElement/>
+				<text><![CDATA[Descrição da Função]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bd51a4a0-f148-49d3-856a-a0df57328c67" x="377" y="2" width="75" height="34"/>
+				<textElement/>
+				<text><![CDATA[Data de Cadastro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3f748d6a-82c3-4184-91e1-fe7e4b2c6d7c" x="455" y="2" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="835359e8-9513-40f0-b791-71c163dcc153" x="18" y="0" width="49" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{funcoes_CODIGO_EMPRESA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8d7a0315-f98a-483a-a04b-02268b07e03d" x="88" y="0" width="41" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{funcoes_CODIGO_FUNCAO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="13743f38-eb5b-4af2-96e8-5d0323336bfd" x="150" y="0" width="210" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{funcoes_DESCRICAO_FUNCAO_EMPRESA}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="e7892373-3c20-4836-8c2c-c63752290b5f" x="377" y="0" width="75" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{funcoes_DATA_CADASTRO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="46" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement uuid="e27e8185-9caa-4fed-b5f6-8653aa7667ae" x="194" y="18" width="101" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de "]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="7d755d15-e092-4f78-a3a5-9a1b45159717" x="295" y="18" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<break>
+				<reportElement uuid="463c97e0-49c2-4612-b119-dea0c4904c07" x="0" y="0" width="100" height="1"/>
+			</break>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="115" splitType="Stretch">
+			<elementGroup/>
+		</band>
+	</summary>
+</jasperReport>

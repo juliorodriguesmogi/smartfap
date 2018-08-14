@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_laudo_subreport_setores_pericia_subreport_fotosp" language="groovy" columnCount="2" printOrder="Horizontal" pageWidth="515" pageHeight="174" columnWidth="257" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" whenResourceMissingType="Empty" uuid="e44c022d-f6d0-4950-a504-82819f67f6e2">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="CODIGO_SETOR" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="CODIGO_EMPRESA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="UNIDADE" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ANO_PERICIA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="REVISAO" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NUMERO_LAUDO" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     laudos_setores_fotos.`CAMINHO_FOTO` AS laudos_setores_fotos_CAMINHO_FOTO,
+laudos_setores_fotos.`IMAGEM_FOTO` AS laudos_setores_fotos_IMAGEM_FOTO
+FROM
+     `laudos_setores_fotos` laudos_setores_fotos
+WHERE
+     CODIGO_EMPRESA = $P{CODIGO_EMPRESA}
+ AND ANO_PERICIA = $P{ANO_PERICIA}
+ AND NUMERO_LAUDO = $P{NUMERO_LAUDO}
+ AND REVISAO = $P{REVISAO}
+ AND UNIDADE = $P{UNIDADE}
+ AND CODIGO_SETOR = $P{CODIGO_SETOR}]]>
+	</queryString>
+	<field name="laudos_setores_fotos_CAMINHO_FOTO" class="java.lang.String"/>
+	<field name="laudos_setores_fotos_IMAGEM_FOTO" class="java.io.InputStream"/>
+	<detail>
+		<band height="174">
+			<rectangle>
+				<reportElement uuid="de0cc961-130e-4f7e-9329-a2337fd769f4" mode="Transparent" x="0" y="0" width="257" height="148"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="aa906250-d3dc-4250-88b5-b942fcec4b54" x="0" y="148" width="257" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{laudos_setores_fotos_CAMINHO_FOTO}.toLowerCase()]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame">
+				<reportElement uuid="83820dcd-2cfe-423c-800f-7ad3cc38d26c" x="6" y="7" width="242" height="130"/>
+				<imageExpression><![CDATA[$F{laudos_setores_fotos_IMAGEM_FOTO}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

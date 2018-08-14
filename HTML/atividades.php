@@ -1,0 +1,799 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<link href="estilosistema.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+body{
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	font-size:90%;
+	width:90%;
+	background:white;
+}
+#principal{
+    background: whitesmoke;
+    width:1000px;
+    height:150px;
+}
+#aba_principal{
+	background:white;
+    position: relative;
+    width:500px;
+	height:100px;
+    list-style: none;
+    font-family:  sans-serif;
+    font-size: 95%; 
+}
+#aba_principal li{
+    display:inline;
+    position:relative;
+}
+li{display:inline}
+
+li:hover{display:block;}
+form #div_statusbar{
+	vertical-align: bottom;
+	position:absolute;
+	top:1%;
+	width: 110px;
+	max-width: 1280px;
+	border:solid;
+	background-color:silver;
+	left: 90%;
+	height: 397px;
+	text-align: center;
+}
+#div_statusbar textArea{
+    font-size:75%;
+}
+table#tbl th {
+    background-color: #FF0;
+    display:inline;
+    text-decoration: none;
+    width:100%;
+}
+#codigo_atividade{
+	text-align:right;	
+}
+table#tbl tr {
+    background-color: #FF0;
+    display:block;
+    text-decoration: none;
+    width:100%;
+}
+table#tbl tr:hover{
+    background-color: cadetblue;
+}
+table#tbl td a{
+    background-color: #ffc;
+    display:block;
+    text-decoration: none;
+    width:100%;
+}
+table#tbl tdx a:hover{
+    background-color: cadetblue;
+}
+#div_mensagem{
+        text-align:center;
+	position:relative;
+	z-index:7;
+}
+#mensagem{
+	text-align:center;
+	width:300px;
+	background:transpartent;
+	border:none;
+	color:red;
+         
+}
+.highlight{
+    background-color: cadetblue;
+}
+</style>
+<script type="text/javascript" src="../classes/js/Busca_Registro.js"></script>
+<script type="text/javascript" src="../classes/js/Busca_Registros.js"></script>
+<script type="text/javascript" src="../classes/js/Registro.js"></script>
+<script type="text/javascript" src="../classes/js/Registros.js"></script>
+<script type="text/javascript" src="../classes/js/Atividade.js"></script>
+<script type="text/javascript" src="../classes/js/Atividade_Funcao.js"></script>
+<script type="text/javascript" src="../js/funcoes.js"></script>
+<script type="text/javascript" src="../classes/js/Abas.js"></script>
+<script type="text/javascript" src="../classes/js/Funcoes.js"></script>
+<script type="text/javascript">
+//window.onload= new resize2();
+            newativ=new Atividade();
+            newfuncoes=new Funcoes();
+			newativfunc=new Atividade_Funcao();
+            var acao='';
+               empresa_ativa=<?php echo $_SESSION['empresa_ativa']?>+0;        
+         empresa_ativa=empresa_ativa.toString();  
+              function captura_linha(ttr){
+                valor_celula=captura_valores(ttr);
+                document.forms[1].elements['CODIGO_ATIVIDADE'].value=valor_celula[0];
+                document.forms[1].elements['DESCRICAO_ATIVIDADE'].value=valor_celula[1];
+                document.forms[1].elements['CLASSIFICACAO_ATIVIDADE'].value=valor_celula[2];
+                document.forms[1].elements['CODIGO_ATIVIDADE'].focus();
+      
+                document.getElementById('consultaexterna').style.display='none';
+            }
+
+            div_pai=document.getElementById('consultaexterna');
+
+            
+            function monta_consulta_atividade(campo_origem,campo_pesquisa){
+                estilo='';
+                if (campo_origem!=null){
+                    posicao=Array();
+                    posicao[0]=String(findPosY(campo_origem)+campo_origem.offsetHeight);
+                    posicao[1]=String(findPosX(campo_origem)+campo_origem.offsetLeft);
+                    posicao[2]="330";
+                    posicao[3]=String(campo_origem.offsetWidth+800);
+                    estilo='z-index:10;position:absolute;'+'top:'+posicao[0]+'px;'+'left:'+posicao[1]+'px;'+'height:'+posicao[2]+'px;'+'width:'+posicao[3]+'px;'+'border:solid 1px'+'background:white;';
+                }    
+                div_pai=document.getElementById('consultaexterna');
+                div_pai.setAttribute('style',estilo);
+                div_pai.style.border='solid 1px';
+                div_pai.style.top=posicao[0];
+                div_pai.style.left=posicao[1]+'px';
+                div_pai.style.height=posicao[2]+'px';
+                div_pai.style.width=posicao[3]+'px';
+                div_pai.style.background='white';
+                div=document.createElement('div');
+                div.setAttribute('className', 'tableContainer');
+                div.setAttribute('id', 'tableContainer');
+                div_pai.appendChild(div);                
+                tabela=document.createElement('table');
+                tabela.setAttribute('class', 'scrollTable');
+                if (document.getElementById('tableContainer').children.length>0){
+                        if (navigator.appName!='Microsoft Internet Explorer'){
+                            oChild=document.getElementById('tableContainer').childNodes;
+                            document.getElementById('tableContainer').removeChild( oChild[0] );
+                        }
+                        else {
+                            oChild=document.getElementById('tableContainer').children[0];
+                            document.getElementById('tableContainer').removeChild(oChild);
+                        }    
+                }
+                div_pai.style.display='block';
+                document.getElementById('tableContainer').appendChild(tabela);
+                thead=document.createElement('thead');
+                thead.setAttribute('class', 'fixedHeader');
+                tabela.appendChild(thead);
+                tr=document.createElement('tr');
+                thead.appendChild(tr);
+                colunas=Array('COD.ATIVIDADE.','DESCRIÇÃO','CLASSIFICAÇÃO');
+                largura=Array('112px','500px','70px');
+                for (xcab=0;xcab < 3;xcab++){
+                     th=document.createElement('th');
+                     th.setAttribute('width',largura[xcab]);
+                     th.innerHTML=colunas[xcab];
+                     tr.appendChild(th);  
+                }  
+                consultar_atividade(tabela,campo_pesquisa,' like ')
+            }    
+                
+                
+            function consultar_atividade(ntabela,campo_pesquisa,criterio){
+                tbody=document.createElement('tbody');
+                tbody.setAttribute('class','scrollContent');
+                ntabela.appendChild(tbody);
+                empresa_ativa=empresa_ativa.toString();
+                parm=Array(empresa_ativa,campo_pesquisa.value.toString());
+                buscar_registros(window,'atividades','Consulta_Atividades',Array("CODIGO_EMPRESA","DESCRICAO_ATIVIDADE"),parm,false,Array("="," like "),newregistros);
+                cont=0;
+                valores=newregistros.getValores();
+                valores=valores.toString().split("/|");
+                for(x=0;x<valores.length-1;x++){
+                    vreg=valores[x].split('|');
+                    tr=document.createElement('tr');
+                    
+                    if (x % 2==0){
+                        tr.setAttribute('class','alternateRow');
+                    }
+                    else {
+                        tr.setAttribute('class','normalRow');
+                    }
+                    tr.setAttribute('onclick', 'captura_linha(this)');
+                    largura=Array('112px','600px','40px');
+                    for (y=0;y<3;y++){
+                        td=document.createElement('td');
+                        td.setAttribute('style','width:'+largura[y]);
+                        a=document.createElement('a');
+                        a.setAttribute('href', "#");
+                        a.innerHTML=vreg[y];
+                        td.appendChild(a);
+                        tr.appendChild(td);
+                        tbody.appendChild(tr);
+                    }
+                    
+                    
+                }    
+                
+            }
+            function grava_registro(){
+                if (confirm("Gravar registro?")){                
+		document.forms[1].action="../PHP/Atividade_Class.php?acao="+"I"+"&newatvfunc="+newativfunc.retorna_todas_linhas();
+    	            document.forms[1].submit();
+				}	
+            }
+            function apaga_registro(){
+                if (confirm("Confirma a exclusão do registro?")){
+                    document.forms[1].action="../PHP/Atividade_Class.php?acao="+"D";
+                    document.forms[1].submit();
+                }
+            }
+            function proximo_registro(campo,visao){
+                codativ=campo.value==''?0:campo.value;
+                buscar_registro(window,campo.name,codusu,">",visao,"Busca_Atividade",true);                    
+                exibe_campos();
+            }
+            function registro_anterior(campo,visao){
+                codusu=campo.value==''?0:campo.value;
+                buscar_registro(window,campo.name, codusu,"<",visao,"Busca_Atividade",true);
+                exibe_campos();
+            }  
+            
+            function exibe_campos(){
+                codigo_atividade=document.forms[1].elements['CODIGO_ATIVIDADE'].value;
+                document.forms[1].reset();
+                document.forms[2].reset();
+                //newativ.setValores(newregistro.getValores());
+                    if (acao=='I'){
+                        document.forms[1].elements["CODIGO_ATIVIDADE"].value = 0;
+                    }
+
+                    if (acao=='A'){
+                        document.forms[1].elements["CODIGO_ATIVIDADE"].value = new String(newativ.get_Codigo_Atividade());
+                        document.forms[1].elements["DESCRICAO_ATIVIDADE"].value = new String(newativ.get_Descricao());
+                        document.forms[1].elements["DESCRICAO_RESUMIDA_ATIVIDADE"].value = new String(newativ.get_Descricao_Resumida());
+                        document.getElementById(new String(newativ.get_Classificacao())).checked=true;
+                        document.forms[2].elements["txt_log_data_cadastro"].value = new String(newativ.get_Data_Cadastro());                
+                        document.forms[2].elements["txt_log_ultima_atualizacao"].value = new String(newativ.get_Ultima_Atualizacao());                
+                        document.forms[2].elements["txt_log_ultimo_usuario"].value = new String(newativ.get_Ultimo_Usuario());                
+                        exibir_linhas_detalhe(document.forms[1].elements["CODIGO_ATIVIDADE"].value);
+                    }
+
+            }
+          function desabilitar_painel(){
+              componentes=document.getElementById('frm_usuarios');
+              for (element in componentes){
+                  try{
+                    x=componentes[element].tagName.toString();
+                    if (x=='INPUT' || x=='TABLE' || x=='SELECT'){
+                          componentes[element].disabled=true;
+                    }
+                    }
+                    catch(E){
+                  
+                     }
+              
+             }
+           
+          }
+        
+          function habilitar_painel(){
+             componentes=document.getElementById('frm_usuarios');
+             for (element in componentes){
+                  try{
+                    x=componentes[element].tagName.toString();
+                    if (x=='INPUT' || x=='TABLE'  || x=='SELECT'){
+                          componentes[element].disabled=false;
+                    }
+                  }
+                  catch(E){
+                  
+                  }
+             }
+          }
+
+
+            function carrega_campo(){
+                
+            }
+      function highlighted(tr_name){
+          return tr_name.setAttribute('class','highlight');
+      }     
+      function captura_atividade(linha){
+                if (navigator.appName.indexOf('Internet Explorer')>0){
+                    tabela=linha.parentNode.parentNode;
+                    valor_celula=tabela.rows[linha.rowIndex].cells[0].innerText;
+                }
+                else {
+                    tabela=linha.parentNode;
+                    valor_celula=tabela.rows[linha.rowIndex].cells[0].firstChild.textContent;
+                }
+                buscar_registro(window,'CODIGO_ATIVIDADE', valor_celula,"=","atividades","atividades","Busca_Atividade",true,newativ);
+
+                document.forms[1].elements['CODIGO_ATIVIDADE'].focus();
+                document.getElementById('pesq').style.visibility='hidden';
+
+      }
+      function popular_caixa_pesquisa(){
+           document.getElementById('pesq').style.border='solid';
+           document.getElementById('pesq').style.visibility='visible'; 
+
+           if (document.getElementById('tbl')) {
+                    tab=document.getElementById('tbl');
+                    div=tab.parentNode;
+                    div.removeChild(tab);
+           }
+
+           buscar_registros(window,'atividades','Carrega_Atividades');             
+           tabela = document.createElement('table');
+           tabela.setAttribute('id','tbl');
+           tabela.border='0px';
+           //tabela.cellpadding='0px';
+           document.getElementById('pesq').appendChild(tabela);  
+           //cabecalho=document.createElement('Thead');
+           //cabecalho.style="background-color:cyan";
+           linha_cab=document.createElement('tr');
+           //cabecalho.appendChild(linha_cab);
+           //tabela.appendChild(cabecalho);
+           corpo=document.createElement('tbody');
+           hlinha=document.createElement('tr');
+           cab=document.createElement('th');
+           cab.setAttribute('scope', 'col');
+           cab.innerHTML="Código da Atividade";
+           cab.width="50px";
+           hlinha.appendChild(cab);
+           cab=document.createElement('th');
+           cab.setAttribute('scope', 'col');
+           cab.innerHTML="Descrição da Atividade";
+           cab.width="100px";
+           hlinha.appendChild(cab);
+           cab=document.createElement('th');
+           cab.setAttribute('scope', 'col');
+           cab.innerHTML="Classificação";
+           cab.width="250px";
+           hlinha.appendChild(cab);
+           linha_cab.appendChild(hlinha);
+           tabela.appendChild(linha_cab);
+           divi=document.getElementById('pesq');
+           body=document.createElement('tbody');
+           body.style.border="1px";
+           tabela.appendChild(body);
+           xquebra=newregistros.getValores();
+           for (var y in xquebra){
+               var detail=document.createElement('tr');
+               detail.setAttribute('onmouseover', 'return highlighted(this)');
+               detail.setAttribute('onclick', 'captura_atividade(this)');
+               body.appendChild(detail);
+               campos=xquebra[y].split('|');
+               for (var x=0;x<3;x++){
+                   celula=detail.insertCell(-1);
+                   celula.width="33%";
+                   a=document.createElement('a');
+                   a.setAttribute('href', "#");
+                   a.innerHTML=campos[x];
+                   celula.appendChild(a);
+
+               }
+           }
+       }
+  function imprime_registro(){
+  
+          if (confirm("Imprimir registro corrente?")){
+                document.forms[1].action="../Reports/Relatorio_Atividade.php";
+                document.forms[1].submit();
+             }
+       }   
+            function apaga_linha(td){
+                ttr=td.parentNode;
+                valor_celula=captura_valores(ttr);
+                tbody=ttr.parentNode;
+                tbody.removeChild(ttr);
+                newativfunc.apaga_linha(ttr.rowIndex);
+                
+            }
+	   
+	   
+	   
+        function inserir_linha_detalhe(){
+                response=Array();
+                response[0]=document.forms[1].elements['CMB_CODIGO_FUNCAO'].value;
+                response[1]=document.forms[1].elements['CMB_CODIGO_FUNCAO'].options[document.forms[1].elements['CMB_CODIGO_FUNCAO'].selectedIndex].text;
+                tabela=document.getElementById('tbl_detalhes');
+                
+                tr=document.createElement('tr');
+                tbody=document.getElementById('t_body');
+                
+                celula=document.createElement('td');
+                celula.setAttribute('style','width:5%;max-width:10%');
+                img=document.createElement('img');
+                img.src='../images/imageres.dll_I0037_0409.png';
+                img.setAttribute('style','height:15px;width:15px');
+                img.setAttribute('src','../images/imageres.dll_I0037_0409.png');
+		img.alt='Remover a linha corrente';
+                celula.appendChild(img);
+                celula.setAttribute('onclick','apaga_linha(this)');
+                tr.appendChild(celula);
+
+
+                celula=document.createElement('td');
+                celula.setAttribute('style','width:10%;max-width:10%;text-align:right');
+                celula.innerHTML=response[0];
+                tr.appendChild(celula);
+                celula=document.createElement('td');
+                celula.setAttribute('style','width:65%;max-width:65%;text-align:left');
+                celula.innerHTML=response[1];
+                tr.appendChild(celula);
+
+                tbody.appendChild(tr);
+		resp=Array();
+                resp[0]=<?php echo $_SESSION['empresa_ativa'] ?>;
+                resp[1]=document.forms[1].elements['CODIGO_ATIVIDADE'].value;
+                resp[2]=response[0];
+		resp[3]=response[1];
+
+                Xresp=resp;
+                Xresp2=Xresp.join('|');
+                newativfunc.insereLinha(Xresp2);
+
+
+
+                
+                
+            }
+			
+        function exibir_linhas_detalhe(campo){
+		tabela=document.getElementById('tbl_detalhes');
+                while (tabela.rows.length > 0)  
+                { tabela.deleteRow(0); } 
+                empresa_ativa=<?php echo $_SESSION['empresa_ativa']?>+0;
+		parm=Array(empresa_ativa,campo);
+		newativfunc=new Atividade_Funcao();
+                buscar_registros(window,'atividade_funcoes','Consulta_Atividade_Funcoes',Array("CODIGO_EMPRESA","CODIGO_ATIVIDADE"),parm,false,Array("=","="),newativfunc);
+                resp=Array();
+		
+                while (tabela.rows.length > 0)  
+                { tabela.deleteRow(0); } 
+		for (var cn=0;cn<newativfunc.length();cn++){
+                    tr=document.createElement('tr');
+    	            tbody=document.getElementById('t_body');
+                    celula=document.createElement('td');
+            	    celula.setAttribute('style','width:5%;max-width:10%');
+                    img=document.createElement('img');
+	            img.src='../images/imageres.dll_I0037_0409.png';
+    	            img.setAttribute('style','height:15px;width:15px');
+        	    img.setAttribute('src','../images/imageres.dll_I0037_0409.png');
+                    img.alt='Remover a linha corrente';
+	            celula.appendChild(img);
+    	            celula.setAttribute('onclick','apaga_linha(this)');
+        	    tr.appendChild(celula);
+            	    celula=document.createElement('td');
+                    celula.setAttribute('style','width:10%;max-width:10%;text-align:right');
+	            celula.innerHTML=newativfunc.get_Codigo_Funcao(cn);
+    	            tr.appendChild(celula);
+        	    celula=document.createElement('td');
+            	    celula.setAttribute('style','width:65%;max-width:65%;text-align:left');
+                    celula.innerHTML=newativfunc.get_Descricao_Funcao(cn);
+	            tr.appendChild(celula);
+    	            tbody.appendChild(tr);
+            	    resp[0]=empresa_ativa;
+                    resp[1]=document.forms[1].elements['CODIGO_ATIVIDADE'].value;
+	            resp[2]=newativfunc.get_Codigo_Funcao(cn);
+                    resp[3]=newativfunc.get_Descricao_Funcao(cn);				
+                }	
+            }
+			
+						
+            function carrega_funcoes(campo){
+//                buscar_registros(window,'funcoes','Carrega_Funcao','','',false,'=',newfuncoes);
+                empresa_ativa=<?php echo $_SESSION['empresa_ativa']?>+0;
+		parm=Array(empresa_ativa.toString());
+                buscar_registros(window,'funcoes','Carrega_Funcao',Array("CODIGO_EMPRESA"),parm,false,Array("="),newfuncoes);
+                campo.length=0;
+				campo.add(new Option('Selecione uma opção',0));
+                for(x=0;x<newfuncoes.length();x++){
+                    descricao_funcao=newfuncoes.get_Descricao_funcao_empresa(x);
+                    codigo=newfuncoes.get_Codigo_funcao(x);
+                    opcao=new Option(descricao_funcao,codigo);
+					ocorrencia=0;					
+                    for (y=0;y<newativfunc.length();y++){
+						if (newativfunc.get_Codigo_Funcao(y)==codigo) ocorrencia++;
+					}
+					if (ocorrencia==0){
+						campo.add(opcao);
+					}
+					
+                }    
+            }
+	   function proximo_registro(campo,visao){
+                codativ=campo.value==''?0:campo.value;
+                buscar_registro(window,campo.name,codativ,Array('>','='),visao,visao,'Busca_Atividade',false,newativ);                    
+                exibe_campos();
+            }
+            function registro_anterior(campo,visao){
+                codativ=campo.value==''?0:campo.value;
+                buscar_registro(window,campo.name,codativ,Array('<','='),visao,visao,'Busca_Atividade',false,newativ);                    
+                exibe_campos();
+            } 
+</script>
+</head>
+
+<body>
+<center><h1>Cadastro de Atividades</h1></center>
+<div id="menu">
+  <form id="frm_barra_tarefas" action="" >
+       <button type="button"  onclick="window.location.reload(true);document.forms[1].elements['CODIGO_EMPRESA'].focus();">
+       <table>
+            <tr>
+            <td height="42"><img src="../images/novo.png" height="40" width="38" /></td>
+            </tr>
+            <tr>
+            <td height="16">Novo</td>
+            </tr>
+       </table>
+       </button>
+       <button type="button" onclick="grava_registro();">
+       <table>
+            <tr>
+            <td height="42"><img src="../images/barra_ferramentas/floppy.png" height="40" width="45" /></td>
+            </tr>
+            <tr>
+            <td height="16">Gravar</td>
+            </tr>
+       </table>
+       </button>
+       <button  type="button" onclick="apaga_registro();">
+       <table>
+            <tr>
+            <td height="42"><img src="../images/barra_ferramentas/error_button_2.png" height="40" width="45" /></td>
+            </tr>
+            <tr>
+            <td height="16">Apagar</td>
+            </tr>
+       </table>
+       </button>
+       <button  type="button" onclick="exibe_campos();">
+       <table>
+            <tr>
+            <td height="42"><img src="../images/barra_ferramentas/update_quantity_cart[1].png" height="33" width="47" /></td>
+            </tr>
+            <tr>
+            <td height="16">Desfazer</td>
+            </tr>
+       </table>
+       </button>
+     
+      <button  type="button" onclick="registro_anterior(document.forms[1].elements['CODIGO_ATIVIDADE'],'atividades_codigo_desc')">
+      <table>
+           <tr>
+           <td height="42"><img src="../images/barra_ferramentas/left.png" height="35" width="45" /></td>
+           </tr>
+           <tr>
+           <td height="16">Anterior</td>
+           </tr>
+      </table>
+      </button>
+      <button  type="button" onclick="proximo_registro(document.forms[1].elements['CODIGO_ATIVIDADE'],'atividades_codigo_asc')">
+      <table>
+           <tr>
+           <td height="42"><img src="../images/barra_ferramentas/right.png" height="35" width="45" /></td>
+           </tr>
+           <tr>
+           <td height="16">Pr&oacute;ximo</td>
+           </tr>
+      </table>
+      </button>
+     
+     <button  type="button" onclick="imprime_registro();">
+     <table>
+          <tr>
+          <td height="42"><img src="../images/printer_2.png" height="40" width="40" /></td>
+          </tr>
+          <tr>
+          <td height="18">Imprimir</td>
+          </tr>
+     </table>
+     </button>
+     <button  type="button" onclick="window.location.reload(true);document.forms[1].elements['CODIGO_EMPRESA'].focus();">
+     <table>
+         <tr>
+         <td height="42" width="50"><img src="../images/folha.gif" height="40" width="35" /></td>
+         </tr>
+         <tr>
+         <td height="16">Limpar</td>
+         </tr>
+     </table>
+  </button>  
+</form>
+</div>
+<script src="../js/script.js" type="text/javascript" ></script>
+<form id="frm_atividades" action="" method="POST">
+        <link href="estiloSistema.css" rel="stylesheet" type="text/css" />
+       <br>
+        <br> 
+        <table width="15%" border="0" cellpadding="0" cellspacing="1">
+            <tr>
+                <td width="10%" height="36" align="center" valign="middle" class="abaativa" id="celAbaCadastro" onClick="trataCliqueAba( this.id );" onMouseOver="trataMouseAba( this );">
+                    Dados Cadastrais                </td>
+
+        </tr>
+		</table>
+<div id="divCadastro" style="display: block">
+          <link href="../css/designer.css" type="text/css" rel="stylesheet" />
+          <table width="98%" height="145" border="0" class="tabela">
+            <tr>
+              <td width="77" rowspan="2">C&oacute;digo da Atividade </td>
+              <td width="68" rowspan="2"><p>
+                  <input type="text" name="CODIGO_ATIVIDADE" id="codigo_atividade" maxlength="10" size="10" class="input" onblur="buscar_registro(window,this.name,this.value,Array('=','='),'atividades','atividades','Busca_Atividade',true,newativ)" onkeypress="return entrada_numerica_inteira(this,event)"/>
+              </p>
+              <td width="13" rowspan="2"><label ><img src="../images/search.png" onclick="monta_consulta_atividade(document.forms[1].elements['CODIGO_ATIVIDADE'],document.forms[3].elements['txt_pesquisa'])" width="10px" height="10px"/></label></td>                          
+              <td width="73" rowspan="2">Descri&ccedil;&atilde;o Resumida da Atividade </td>                 
+
+              <td width="349" rowspan="2">
+                <input type="text" name="DESCRICAO_RESUMIDA_ATIVIDADE" size="60" maxlength="100"/>
+
+              </td>
+              <td width="67" rowspan="2">Descri&ccedil;&atilde;o Completa da Atividade</td>
+              <td colspan="2" rowspan="2"><textarea type="text" name="DESCRICAO_ATIVIDADE" cols="1" rows="20" style="text-align:justify;width:400px;height:120px;min-height:120px;max-height:120px;max-width:400px;min-width:400px;text-align:justify;font-family:Arial, Helvetica, sans-serif;font-size:11px"  class="input"></textarea></td>
+              <td colspan="3"><div>
+                <div align="center">Classifica&ccedil;&atilde;o da Atividade </div>
+              </div></td>
+            </tr>
+            <tr>
+
+              <td width="81" height="88"><input name="CLASSIFICACAO_ATIVIDADE" id="O" type="radio" value="O" class="input" />&Aacute;rea Operacional </td>
+              <td width="91"><input name="CLASSIFICACAO_ATIVIDADE" id="A" type="radio" value="A" class="input" />
+              Área Administrativa</td>
+            </tr>
+			
+			<tr>
+			  <td height="15" colspan="11"></button></td>
+   		    </tr>
+  </table>
+</div>
+		  <br/>
+		  <div style="width:35%">
+		  <form>
+		  <div>
+		  <div style="width:90%">
+		  <table width="96%">
+			<tr>
+			  <td colspan="5">Fun&ccedil;&otilde;es associadas &agrave; atividade </td>
+			  <td valign="top">Confirmar Linha</td>
+			  <td>&nbsp;</td>
+		    </tr>
+			<tr>
+			  <td colspan="5"><select id="CMB_CODIGO_FUNCAO" style="width:350px" onfocus="carrega_funcoes(this)">
+			    </select>			  </td>
+       		  <td width="147" valign="top"><button type="button" value="Inserir" onclick="inserir_linha_detalhe();">Inserir</button></td>
+			  <td width="502">&nbsp;</td>
+		    </tr>
+		  </table>
+		  <table id="tbl_detalhes" >
+		     <tbody id="t_body">
+			 </tbody>
+		  </table>
+		  </div>
+		  </div>
+		  
+		  </form>
+		  </div>
+		
+    </li>
+  </ul>
+        <div id="divRelatorio" style="display: none">
+            <table border="0" width="50%">
+                <tr>
+                    <td>
+                        RELATÓRIOS
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="divConsulta" style="display: none">
+            <table border="0" width="50%">
+                <tr>
+                    <td>
+                        CONSULTAS
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="divModelo" style="display: none">
+            <table border="0" width="50%">
+                <tr>
+                    <td>
+                        MODELOS DE IMPRESSÃO
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <script>
+            defineAba( "celAbaCadastro"  , "divCadastro"   );
+            defineAba( "celAbaRelatorio" , "divRelatorio"  );
+            defineAba( "celAbaConsultas" , "divConsulta"   );
+            defineAba( "celAbaModelos"   , "divModelo"     );
+            defineAbaAtiva( "celAbaCadastro" );
+        </script>
+        </form>
+            <form id='status' name="status">
+            <div id="div_statusbar">
+  <table width="109" height="393" border="0">
+    <tr>
+      <td colspan="2" style="border:solid 1px">Informa&ccedil;&otilde;es do Registro</td>
+    </tr>
+    <tr>
+      <td colspan="2">Data de Cadastro</td>
+    </tr>
+    <tr>
+      <td colspan="2"><textarea ID="TXT_LOG" name="txt_log_data_cadastro" DISABLED="DISABLED" style="text-align:center;width:100px;min-height:30px;max-height:30px;max-width:100px;min-width:100px;background:transparent" cols="1" rows="2"><?php echo $_SESSION['DATA_CADASTRO']?></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2">&Uacute;ltima Atualiza&ccedil;&atilde;o</td>
+    </tr>
+    <tr>
+      <td colspan="2"><textarea ID="TXT_LOG" name="txt_log_ultima_atualizacao" DISABLED="DISABLED" style="text-align:center;width:100px;min-height:30px;max-height:30px;max-width:100px;min-width:100px;background:transparent" cols="1" rows="2"> <?php echo $_SESSION['ULTIMA_ATUALIZACAO']?></textarea></td>
+    </tr>
+      
+    <tr>
+      <td colspan="2">&Uacute;ltima Alteração realizada por</td>
+    </tr>
+    <tr>
+      <td colspan="2"><INPUT ID="TXT_LOG" name="txt_log_ultimo_usuario" TYPE="TEXT" DISABLED="DISABLED" SIZE="8" STYLE="background:transparent" MAXLENGTH="8" VALUE="<?php echo $_SESSION['id_usuario']?>"/></td>
+    </tr>
+
+      <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2">&Uacute;ltimo c&oacute;digo gerado</td>
+    </tr>
+    <tr>
+      <td colspan="2"><INPUT ID="TXT_LOG" name="txt_log_ultimo_codigo_gerado" TYPE="TEXT" DISABLED="DISABLED" SIZE="8" STYLE="background:transparent" MAXLENGTH="8" VALUE="<?php echo $_SESSION['CODIGO_ATIVIDADE']?>"/></td>
+    </tr>
+    <tr>
+      <td width="50">&nbsp;</td>
+      <td width="49">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+            
+            </div>
+
+<div id="pesq" style="visibility:hidden;position:absolute;z-index:8;background:lightgoldenrodyellow">
+    <div align="right"><input type="button" value="X" onclick="document.getElementById('pesq').style.visibility='hidden'"/></div>
+    <label>Digite o texto a pesquisar:</label><input type="text" name="txt_pesq" id="txt_pesq" /><input type="button" value="Pesquisar" onclick="popular_caixa_pesquisa();"/>
+</div>            
+<div id="div_mensagem">
+    <input type="text" id="mensagem" name="mensagem" value="<?php echo ($_GET['mensagem']!=null?$_GET['mensagem']:$_GET['mensagem_erro'])?> "/>
+    <?php 
+        if ($_GET['mensagem']!=null){
+            echo "<meta HTTP-EQUIV='Refresh' CONTENT='1;URL=../HTML/atividades.php'>";     
+       }
+       else if ($_GET['mensagem_erro']!=null){
+           echo "<meta HTTP-EQUIV='Refresh' CONTENT='2;URL=../HTML/atividades.php'>";     
+       }
+       ?>  
+
+</div>
+        <div id="divRelatorio" style="display: none">
+</div>
+</form>
+<form>
+   <div id="consultaexterna" style="postion:absolute;display:none">
+         <input type="text" id="txt_pesquisa" name="txt_pesquisa" size="50"/>
+         <button name="btn" onclick="monta_consulta_atividade(document.forms[1].elements['CODIGO_ATIVIDADE'],document.forms[3].elements['txt_pesquisa'])"  type="button" value="Pesquisar" >Pesquisar</button><label onclick="document.getElementById('consultaexterna').style.display='none'"><strong>   X</strong></label>
+         
+   </div>     
+
+</form>
+</body>
+  
+
+
+
+</html>

@@ -1,0 +1,51 @@
+<?php
+$handle = fopen("CBO2002_Liv2.txt", "r");
+//$c=include_once("conexao_comun_class.php");
+$c=include_once("conexao.php");
+if ($handle) {
+    while (!feof($handle)) {
+        //$x=strlen(fgets($handle));
+        
+        $linha = fgetcsv($handle,150,"\n");
+        if (substr($linha[0],0,7)==' TÍTULO' || substr($linha[0],0,6)=='TÍTULO'){
+            $linha = fgetcsv($handle,150,"\n");
+            $codigo=substr($linha[0], 0, 4);
+
+                
+                while (substr($linha[0],0,17)<>'DESCRIÇÃO SUMÁRIA'){
+                    $linha=fgetcsv($handle,150,"\n");
+                }   
+                while (substr($linha[0],0,22)<>'FORMAÇÃO E EXPERIÊNCIA'){
+                    $linha=fgetcsv($handle, 150,"\n");
+                    $descricao_sumaria[]=$linha[0];
+                }
+                while (substr($linha[0],0,29)<>'CONDIÇÕES GERAIS DE EXERCÍCIO'){
+                    $linha=fgetcsv($handle, 150,"\n");
+                    $formacao_experiencia[]=$linha[0];
+                }                
+                while (substr($linha[0],0,28)<>'CÓDIGO INTERNACIONAL CIUO 88'){
+                    $linha=fgetcsv($handle, 150,"\n");
+                    $condicoes_gerais[]=$linha[0];
+                }                  
+                array_pop($descricao_sumaria);
+                array_pop($formacao_experiencia);
+                array_pop($condicoes_gerais);                
+                $d=implode("\n",$descricao_sumaria);
+                $c=implode("\n",$condicoes_gerais);
+                $f=implode("\n",$formacao_experiencia);
+                $sql="update `cbos` set DESCRICAO_SUMARIA='$d'";
+                $sql.=",FORMACAO_EXPERIENCIA='$f' where CODIGO_CBO='$codigo'";
+                mysql_query($sql);
+                $sql="update `cbos` set ";
+                $sql.="CONDICOES_GERAIS='$c' where CODIGO_CBO='$codigo'";
+                mysql_query($sql);
+
+        $linha = fgetcsv($handle,150,"\n");
+        $descricao_sumaria=null;
+        }
+        
+        
+    }
+    mysql_close($c);
+}    
+?>

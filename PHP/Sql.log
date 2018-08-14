@@ -1,0 +1,2 @@
+Data				 |Tipo Operação	|Operação
+[Sun, 19 Aug 2012 23:18:53 -0300]|	|Select * from `empresa_ativa`  where ID_USUARIO = 'PROSEG'

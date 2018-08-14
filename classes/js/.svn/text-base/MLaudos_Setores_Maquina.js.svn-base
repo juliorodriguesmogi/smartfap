@@ -1,0 +1,128 @@
+function laudo_setores_maquina(){
+                
+                this.inicializa=function(){
+                    Codigo_Empresa_Setores_Maquinas=Array();
+                    Ano_Maquinas_Setores_Maquinas=Array();
+                    Numero_Laudo_Setores_Maquinas=Array();
+                    Revisao_Setores_Maquinas=Array();
+                    Sequencial_Setores_Maquinas=Array();
+                    Unidade_Setores_Maquinas=Array();
+                    Codigo_Setor_Setores_Maquinas=Array();
+                    Codigo_Maquina=Array();
+                    Numero_Func_expostos=Array();
+                    Expostos_sexo_feminino=Array();
+                    Expostos_sexo_masculino=Array();
+                    Numero_func_setor=Array();
+                    Tipo_exposicao=Array();
+                    Data_Registro_Setores_Maquinas=Array();
+                    Session_id_Setores_Maquinas=Array();
+                    Ultimo_Usuario_Setores_Maquinas=Array();
+                    Ultima_Atualizacao_Setores_Maquinas=Array();
+                    Id_Usuario_Setores_Maquinas=Array();
+                    Nome_Setor_Setores_Maquinas=Array();
+                    Nome_Maquina_Setores_Maquinas=Array();
+                     
+                }
+                this.get_Codigo_Empresa= function(nlinha){
+                    return Codigo_Empresa_Setores_Maquinas[nlinha];
+                }                
+                this.get_Numero_Laudo= function(nlinha){
+                    return Numero_Laudo_Setores_Maquinas[nlinha];
+                }
+                this.get_Ano_Maquinas= function(nlinha){
+                    return Ano_Maquinas_Setores_Maquinas[nlinha];
+                }
+                this.get_Revisao=function(nlinha){
+                    return Revisao_Setores_Maquinas[nlinha];
+                }
+                this.get_Sequencial=function(nlinha){
+                    return Sequencial_Setores_Maquinas[nlinha];
+                }
+                this.get_Codigo_Maquina=function(nlinha){
+                    return Codigo_Maquina[nlinha];
+                }                       
+                this.get_Nome_Setor=function(nlinha){
+                    return Nome_Setor_Setores_Maquinas[nlinha];
+                }                       
+                this.get_Nome_Maquina=function(nlinha){
+                    return Nome_Maquina_Setores_Maquinas[nlinha];
+                }                       
+                
+                this.get_Numero_Func_expostos=function(nlinha){
+                    return Numero_Func_expostos[nlinha];
+                }                       
+                this.get_Tipo_exposicao=function(nlinha){
+                    return Tipo_exposicao[nlinha];
+                }                       
+                this.get_Expostos_sexo_feminino=function(nlinha){
+                    return Expostos_sexo_feminino[nlinha];
+                }                       
+                this.get_Expostos_sexo_masculino=function(nlinha){
+                    return Expostos_sexo_masculino[nlinha];
+                }                       
+                this.get_Numero_func_seto=function(nlinha){
+                    return Numero_func_seto[nlinha];
+                }                       
+                                                                
+                
+                this.get_Unidade=function(nlinha){
+                    return Unidade_Setores_Maquinas[nlinha];
+                }                       
+                this.get_Codigo_Setor=function(nlinha){
+                    return Codigo_Setor_Setores_Maquinas[nlinha];
+                }
+                this.get_Data_Registro=function(nlinha){
+                    return Data_Registro_Setores_Maquinas[nlinha];
+                }
+                this.get_Session_id=function(nlinha){
+                    return Session_id_Setores_Maquinas[nlinha];
+                }         
+                this.get_Ultimo_Usuario=function(nlinha){
+                    return Ultimo_Usuario_Setores_Maquinas[nlinha];
+                }         
+                this.get_Id_Usuario=function(nlinha){
+                    return Id_Usuario_Setores_Maquinas[nlinha];
+                }         
+                this.length=function(){
+                    return Codigo_Empresa_Setores_Maquinas.length;
+                }                
+                this.get_Ultima_Atualizacao=function(){
+                    return Ultima_Atualizacao_Setores_Maquinas[nlinha];
+                }  
+                this.setValores=function(response){
+                    this.inicializa();
+                    if (response!='NF'){
+                       for (x=0;x<response.length-1;x++){
+                            vreg=response[x].split('|');
+                            Codigo_Empresa_Setores_Maquinas[x]=vreg[0];
+                            Ano_Maquinas_Setores_Maquinas[x]=vreg[1];
+                            Numero_Laudo_Setores_Maquinas[x]=vreg[2];
+                            Revisao_Setores_Maquinas[x]=vreg[3];
+                            Sequencial_Setores_Maquinas[x]=vreg[4];
+                            Unidade_Setores_Maquinas[x]=vreg[5];
+                            Codigo_Setor_Setores_Maquinas[x]=vreg[6];
+                            Codigo_Maquina[x]=vreg[7];
+                            Tipo_exposicao[x]=vreg[8];
+                            Numero_func_setor[x]=vreg[9];
+                            Numero_Func_expostos[x]=vreg[10];
+                            Expostos_sexo_feminino[x]=vreg[11];
+                            Expostos_sexo_masculino[x]=vreg[12];
+                            Id_Usuario_Setores_Maquinas[x]=vreg[13];
+                            Session_id_Setores_Maquinas[x]=vreg[14];
+                            Ultima_Atualizacao_Setores_Maquinas[x]=vreg[16];                           
+                            Ultimo_Usuario_Setores_Maquinas[x]=vreg[17];
+                            Nome_Setor_Setores_Maquinas[x]=vreg[17];
+                            Nome_Maquina_Setores_Maquinas[x]=vreg[18];
+                            
+                       }     
+                    }
+                }
+            };
+             newlaudosetmaq=new laudo_setores_maquina();
+
+/* 
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+

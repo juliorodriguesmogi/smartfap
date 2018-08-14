@@ -1,0 +1,1368 @@
+Data				 |Tipo Operação	|Operação
+[Fri, 23 Mar 2012 22:56:52 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 22:56:52 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 22:56:52 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 22:56:52 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Fri, 23 Mar 2012 22:56:52 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Fri, 23 Mar 2012 22:57:01 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 22:57:01 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 22:57:01 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 22:57:01 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 22:57:21 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 22:57:21 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 22:57:21 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 22:57:21 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 22:58:54 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 22:58:54 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 22:58:54 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 22:58:54 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:04:26 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:04:26 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:04:26 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:04:26 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:06:11 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:06:11 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:06:11 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:06:11 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:06:11 -0300]|	|Select * from `cnae`  where CODIGO_CNAE = '9'
+[Fri, 23 Mar 2012 23:06:11 -0300]|	|Select * from `cnae`  where CODIGO_CNAE = '9'
+[Fri, 23 Mar 2012 23:06:34 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:06:34 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:06:34 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:06:34 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:07:33 -0300]|	|Select * from `cnae`  where CODIGO_CNAE = '9'
+[Fri, 23 Mar 2012 23:07:33 -0300]|	|Select * from `cnae`  where CODIGO_CNAE = '9'
+[Fri, 23 Mar 2012 23:09:12 -0300]|	|Select * from `empresas` 
+[Fri, 23 Mar 2012 23:09:12 -0300]|	|Select * from `empresas` 
+[Fri, 23 Mar 2012 23:09:12 -0300]|	|Select * from `empresas` 
+[Fri, 23 Mar 2012 23:09:12 -0300]|	|Select * from `empresas` 
+[Fri, 23 Mar 2012 23:09:25 -0300]|	|Select * from `empresas` 
+[Fri, 23 Mar 2012 23:09:25 -0300]|	|Select * from `empresas` 
+[Fri, 23 Mar 2012 23:09:25 -0300]|	|Select * from `empresas` 
+[Fri, 23 Mar 2012 23:09:25 -0300]|	|Select * from `empresas` 
+[Fri, 23 Mar 2012 23:09:49 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:09:49 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:09:49 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:09:49 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:09:55 -0300]|	|Select * from `cnae`  where CODIGO_CNAE = '9'
+[Fri, 23 Mar 2012 23:09:55 -0300]|	|Select * from `cnae`  where CODIGO_CNAE = '9'
+[Fri, 23 Mar 2012 23:13:17 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:13:17 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:13:17 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:13:17 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:17:23 -0300]|	|Select * from `cnae`  where CODIGO_CNAE = '9'
+[Fri, 23 Mar 2012 23:17:23 -0300]|	|Select * from `cnae`  where CODIGO_CNAE = '9'
+[Fri, 23 Mar 2012 23:17:47 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:17:47 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:17:47 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:17:47 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:20:16 -0300]|	|Select * from `cnae` 
+[Fri, 23 Mar 2012 23:20:16 -0300]|	|Select * from `cnae` 
+[Fri, 23 Mar 2012 23:20:40 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:20:40 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:20:40 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:20:40 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:21:53 -0300]|	|Select * from `cnae` 
+[Fri, 23 Mar 2012 23:21:53 -0300]|	|Select * from `cnae` 
+[Fri, 23 Mar 2012 23:22:04 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:22:04 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:22:04 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:22:04 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:23:26 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = ''
+[Fri, 23 Mar 2012 23:23:26 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = ''
+[Fri, 23 Mar 2012 23:25:10 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:25:10 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:25:11 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:25:11 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:30:51 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:30:51 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:30:51 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:30:51 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:32:53 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:32:53 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:32:53 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:32:53 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:33:36 -0300]|	|Select * from `cnae`  where CODIGO_CNAE = '93.13-1'
+[Fri, 23 Mar 2012 23:33:36 -0300]|	|Select * from `cnae`  where CODIGO_CNAE = '93.13-1'
+[Fri, 23 Mar 2012 23:34:04 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:34:04 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:34:04 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:34:04 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:34:04 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Fri, 23 Mar 2012 23:34:04 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Fri, 23 Mar 2012 23:34:55 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:34:55 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:34:55 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:34:55 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:35:06 -0300]|	|Select * from `cnae`  where CODIGO_CNAE = '93.13-1'
+[Fri, 23 Mar 2012 23:35:06 -0300]|	|Select * from `cnae`  where CODIGO_CNAE = '93.13-1'
+[Fri, 23 Mar 2012 23:36:03 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:36:03 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:36:03 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:36:03 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:36:05 -0300]|	|Select * from `cnae`  where CODIGO_CNAE = '93.13-1'
+[Fri, 23 Mar 2012 23:36:05 -0300]|	|Select * from `cnae`  where CODIGO_CNAE = '93.13-1'
+[Fri, 23 Mar 2012 23:40:34 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:40:34 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:40:34 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:40:34 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:42:39 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:42:39 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:42:39 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:42:39 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:42:39 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Fri, 23 Mar 2012 23:42:39 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Fri, 23 Mar 2012 23:43:04 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:43:04 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:43:05 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:43:05 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Fri, 23 Mar 2012 23:43:05 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Fri, 23 Mar 2012 23:43:05 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Fri, 23 Mar 2012 23:43:05 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Fri, 23 Mar 2012 23:43:05 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:02:18 -0300]|	|Select CODIGO_EMPRESA,NOME_FANTASIA,RAZAO_SOCIAL from `empresas`  where NOME_FANTASIA like  '%' order by NOME_FANTASIA limit 100
+[Sat, 24 Mar 2012 00:02:18 -0300]|	|Select CODIGO_EMPRESA,NOME_FANTASIA,RAZAO_SOCIAL from `empresas`  where NOME_FANTASIA like  '%' order by NOME_FANTASIA limit 100
+[Sat, 24 Mar 2012 00:02:18 -0300]|	|Select CODIGO_EMPRESA,NOME_FANTASIA,RAZAO_SOCIAL from `empresas`  where NOME_FANTASIA like  '%' order by NOME_FANTASIA limit 100
+[Sat, 24 Mar 2012 00:02:18 -0300]|	|Select CODIGO_EMPRESA,NOME_FANTASIA,RAZAO_SOCIAL from `empresas`  where NOME_FANTASIA like  '%' order by NOME_FANTASIA limit 100
+[Sat, 24 Mar 2012 00:02:21 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '3'
+[Sat, 24 Mar 2012 00:02:21 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '3'
+[Sat, 24 Mar 2012 00:02:21 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '3'
+[Sat, 24 Mar 2012 00:02:21 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '3'
+[Sat, 24 Mar 2012 00:02:22 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '01.42-3* PRO'
+[Sat, 24 Mar 2012 00:02:22 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '01.42-3* PRO'
+[Sat, 24 Mar 2012 00:02:24 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:02:24 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:02:24 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:02:24 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:02:27 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:02:27 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:02:28 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:02:28 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:02:29 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:02:29 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:02:30 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:02:30 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:02:30 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:02:30 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:02:31 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:02:31 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:02:31 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:02:31 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:02:32 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:02:32 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:02:36 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:02:36 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:02:38 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:02:38 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:02:48 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:02:48 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:02:48 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:02:48 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:02:51 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:02:51 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:02:51 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:02:51 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:02:58 -0300]|	|Select CODIGO_EMPRESA,NOME_FANTASIA,RAZAO_SOCIAL from `empresas`  where NOME_FANTASIA like  '%' order by NOME_FANTASIA limit 100
+[Sat, 24 Mar 2012 00:02:58 -0300]|	|Select CODIGO_EMPRESA,NOME_FANTASIA,RAZAO_SOCIAL from `empresas`  where NOME_FANTASIA like  '%' order by NOME_FANTASIA limit 100
+[Sat, 24 Mar 2012 00:02:58 -0300]|	|Select CODIGO_EMPRESA,NOME_FANTASIA,RAZAO_SOCIAL from `empresas`  where NOME_FANTASIA like  '%' order by NOME_FANTASIA limit 100
+[Sat, 24 Mar 2012 00:02:58 -0300]|	|Select CODIGO_EMPRESA,NOME_FANTASIA,RAZAO_SOCIAL from `empresas`  where NOME_FANTASIA like  '%' order by NOME_FANTASIA limit 100
+[Sat, 24 Mar 2012 00:03:02 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '5'
+[Sat, 24 Mar 2012 00:03:02 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '5'
+[Sat, 24 Mar 2012 00:03:02 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '5'
+[Sat, 24 Mar 2012 00:03:02 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '5'
+[Sat, 24 Mar 2012 00:03:02 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = ''
+[Sat, 24 Mar 2012 00:03:02 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = ''
+[Sat, 24 Mar 2012 00:03:05 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:03:05 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:03:05 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:03:05 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:03:07 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:03:07 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:03:08 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:03:08 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:03:09 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:03:09 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:03:09 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:03:09 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:03:20 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:03:20 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:03:20 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:03:20 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:04:09 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:04:09 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:04:09 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:04:09 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:04:09 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:04:09 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:04:09 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:04:09 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:04:11 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:04:11 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:04:12 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:04:12 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:04:14 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:04:14 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:04:15 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:04:15 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:04:16 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:04:16 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:04:16 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:04:16 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:04:19 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:04:19 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:04:19 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:04:19 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:05:37 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:05:37 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:05:37 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:05:37 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:05:41 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:05:41 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:05:41 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:05:41 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:05:41 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:05:41 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:05:41 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:05:41 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:05:43 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:05:43 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:05:43 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:05:43 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:05:45 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:05:45 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:05:47 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:05:47 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:05:47 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:05:47 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:05:49 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:05:49 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:05:50 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:05:50 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:05:50 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:05:50 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:05:53 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:05:53 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:06:31 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:06:31 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:06:31 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:06:31 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:06:33 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:06:33 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:06:33 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:06:33 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:06:34 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:06:34 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:06:34 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:06:34 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:06:35 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:06:35 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:06:35 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:06:35 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:06:37 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:06:37 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:06:39 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:06:39 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:06:39 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:06:39 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:06:40 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:06:40 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:06:42 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:06:42 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE =object HTMLSelectElement
+[Sat, 24 Mar 2012 00:07:13 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:07:13 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:07:13 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:07:13 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:07:14 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = 'undefined'
+[Sat, 24 Mar 2012 00:07:14 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = 'undefined'
+[Sat, 24 Mar 2012 00:07:39 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:07:39 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:07:39 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:07:39 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:07:41 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '01.41-5*'
+[Sat, 24 Mar 2012 00:07:41 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '01.41-5*'
+[Sat, 24 Mar 2012 00:07:41 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '01.41-5*'
+[Sat, 24 Mar 2012 00:07:41 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '01.41-5*'
+[Sat, 24 Mar 2012 00:07:44 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '01.32-6'
+[Sat, 24 Mar 2012 00:07:44 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '01.32-6'
+[Sat, 24 Mar 2012 00:07:44 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '01.32-6'
+[Sat, 24 Mar 2012 00:07:44 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '01.32-6'
+[Sat, 24 Mar 2012 00:13:14 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:13:14 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:13:14 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:13:14 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:13:14 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = 'undefined'
+[Sat, 24 Mar 2012 00:13:14 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = 'undefined'
+[Sat, 24 Mar 2012 00:15:22 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:15:22 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:15:22 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:15:22 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:15:22 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = 'undefined'
+[Sat, 24 Mar 2012 00:15:22 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = 'undefined'
+[Sat, 24 Mar 2012 00:15:37 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:15:37 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:15:37 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:15:37 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:15:37 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:15:37 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:15:37 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:15:37 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:15:39 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:15:39 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:15:40 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:15:40 -0300]|	|Select * from `cnaes` 
+[Sat, 24 Mar 2012 00:15:41 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '01.41-5*'
+[Sat, 24 Mar 2012 00:15:41 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '01.41-5*'
+[Sat, 24 Mar 2012 00:15:41 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '01.41-5*'
+[Sat, 24 Mar 2012 00:15:41 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '01.41-5*'
+[Sat, 24 Mar 2012 00:27:40 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:27:40 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:27:40 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:27:40 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:27:41 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:27:41 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:27:41 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:27:41 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:28:28 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:28:28 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:28:28 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:28:28 -0300]|	|Select * from `empresas`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:28:29 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:28:29 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:28:29 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:28:29 -0300]|	|Select * from `cnaes`  where CODIGO_CNAE = '93.13-1'
+[Sat, 24 Mar 2012 00:39:18 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:39:18 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:39:18 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:39:18 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 00:39:18 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 00:39:18 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 00:41:45 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 00:41:45 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 00:41:45 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 00:41:45 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 00:41:53 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:41:53 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:42:00 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:42:00 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:42:04 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 00:42:04 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 00:42:04 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 00:42:04 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 00:42:07 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:42:07 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:42:40 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '2' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:42:40 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '2' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:42:40 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '2' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:42:40 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '2' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:44:19 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 00:44:19 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 00:44:19 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 00:44:19 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 00:44:22 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '2' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:44:22 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '2' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:44:22 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '2' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:44:22 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '2' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:44:45 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 00:44:45 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 00:44:45 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 00:44:45 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 00:44:49 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '2' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:44:49 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '2' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:44:49 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '2' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:44:49 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '2' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:45:26 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '2' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:45:26 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '2' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:45:26 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '2' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:45:26 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '2' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:46:47 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 00:46:47 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 00:46:47 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 00:46:47 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 00:46:51 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '2' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:46:51 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '2' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:47:07 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:47:07 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:47:07 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:47:07 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:47:45 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:47:45 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:47:45 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:47:45 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:47:53 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:47:53 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:47:53 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:47:53 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:48:50 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:48:50 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:48:50 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:48:50 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:50:50 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:50:50 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:50:50 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 00:50:50 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 01:00:52 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 01:00:52 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 01:00:52 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 01:00:52 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 01:25:41 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 01:25:41 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 01:25:41 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 01:25:41 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 01:25:41 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 01:25:41 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 01:26:16 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 01:26:16 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 01:26:16 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 01:26:16 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 01:26:25 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 01:26:25 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 01:26:25 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 01:26:25 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 01:26:25 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 01:26:25 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 01:26:42 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 01:26:42 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 01:26:42 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 01:26:42 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 01:26:42 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 01:26:42 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 01:26:58 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 01:26:58 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 01:26:58 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 01:26:58 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 01:26:58 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 01:26:58 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 14:46:37 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 14:46:37 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 14:46:37 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 14:46:37 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 14:46:37 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 14:46:37 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 14:55:23 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 14:55:23 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 14:55:23 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 14:55:23 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 14:55:24 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 14:55:24 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 15:02:27 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 15:02:27 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 15:02:27 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 15:02:27 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 15:02:28 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 15:02:28 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 15:32:25 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 15:32:25 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 15:32:25 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 15:32:25 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 15:32:25 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 15:32:25 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 15:32:55 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 15:32:55 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 15:32:55 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 15:32:55 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 15:35:09 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:35:09 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:35:09 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:35:09 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:35:16 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:35:16 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:35:16 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:35:16 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:35:56 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:35:56 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:35:56 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:35:56 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:37:44 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:37:44 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:37:44 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:37:44 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:38:58 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:38:58 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:38:58 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:38:58 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:40:13 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:40:13 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:40:13 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:40:13 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:40:36 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:40:36 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:40:36 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:40:36 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:40:49 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:40:49 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:40:49 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:40:49 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:42:53 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:42:53 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:42:53 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:42:53 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:43:19 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:43:19 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:43:19 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:43:19 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:43:44 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:43:44 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:43:44 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:43:44 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:44:11 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:44:11 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:44:11 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:44:11 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:46:52 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:46:52 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:46:52 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:46:52 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:46:58 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:46:58 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:46:58 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:46:58 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:47:04 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:47:04 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:47:04 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:47:04 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:48:07 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:48:07 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:48:07 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:48:07 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:48:12 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:48:12 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:48:12 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:48:12 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:48:34 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:48:34 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:48:34 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:48:34 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:50:02 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:50:02 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:50:02 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:50:02 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:50:47 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:50:47 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:50:47 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:50:47 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:53:21 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:53:21 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:53:21 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:53:21 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:53:28 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:53:28 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:53:28 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:53:28 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:56:19 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 15:56:19 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 15:56:19 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 15:56:19 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 15:56:34 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 15:56:34 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 15:56:34 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 15:56:34 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 15:56:58 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:56:58 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:56:58 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:56:58 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:59:28 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 15:59:28 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 15:59:28 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 15:59:28 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 15:59:39 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:59:39 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:59:39 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:59:39 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 15:59:59 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 15:59:59 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:00:00 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:00:00 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:00:05 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:00:05 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:00:05 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:00:05 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:00:34 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:00:34 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:00:34 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:00:34 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:00:43 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:00:43 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:00:43 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:00:43 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:00:45 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:00:45 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:00:45 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:00:45 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:01:17 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:01:17 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:01:17 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:01:17 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:01:24 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:01:24 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:01:24 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:01:24 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:04:39 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:04:39 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:04:39 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:04:39 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:04:45 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:04:45 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:04:46 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:04:46 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:05:43 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:05:43 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:05:43 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:05:43 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:05:48 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:05:48 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:05:48 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:05:48 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:06:47 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:06:47 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:06:47 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:06:47 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:06:47 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 16:06:47 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 16:06:51 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:06:51 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:06:51 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:06:51 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:06:54 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:06:54 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:06:54 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:06:54 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:06:58 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:06:58 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:06:58 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:06:58 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:06:59 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:06:59 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:07:12 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '1' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:12 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '1' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:12 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '1' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:12 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '1' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:15 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '2' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:15 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '2' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:15 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '2' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:15 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '2' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:18 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '3' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:18 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '3' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:19 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '3' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:19 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '3' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:20 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '4' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:20 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '4' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:20 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '4' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:20 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '4' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:22 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '5' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:22 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '5' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:22 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '5' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:22 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '5' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:24 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '6' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:24 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '6' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:24 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '6' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:24 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '6' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:26 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '7' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:26 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '7' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:26 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '7' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:26 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '7' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:28 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '8' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:28 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '8' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:28 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '8' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:07:28 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '8' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:09:33 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:09:33 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:09:33 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:09:33 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:09:33 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 16:09:33 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 16:09:39 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '8' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:09:39 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '8' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:09:44 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '0' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:09:44 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '0' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:09:54 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '10' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:09:54 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '10' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:09:54 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '10' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:09:54 -0300]|	|Select * from `atividades`  where CODIGO_ATIVIDADE = '10' and  CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:17:11 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:17:11 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:17:11 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:17:11 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:17:11 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 16:17:11 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 16:17:15 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:17:15 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:17:15 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:17:15 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:20:17 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:20:17 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:20:17 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:20:17 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:20:35 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:20:35 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:20:35 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:20:35 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:42:26 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:42:26 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:42:26 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:42:26 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:42:29 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:42:29 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:42:32 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '0' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:42:32 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '0' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:42:37 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:42:37 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:42:37 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:42:37 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:42:39 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:42:39 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:43:31 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:43:31 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:43:31 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:43:31 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:43:31 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 16:43:31 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 16:43:35 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:43:35 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:43:35 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:43:35 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:43:37 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:43:37 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:43:42 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:43:42 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:43:42 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:43:42 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:44:07 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:44:07 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:44:11 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '0' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:44:11 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '0' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:44:15 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:44:15 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:44:15 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:44:15 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:44:22 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:44:22 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:44:22 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:44:22 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:44:39 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:44:39 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:44:39 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:44:39 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:44:46 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '0' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:44:46 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '0' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:44:49 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:44:49 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:44:49 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:44:49 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:44:55 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:44:55 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:44:55 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:44:55 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:44:56 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:44:56 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:44:56 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:44:56 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:45:01 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:45:01 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:45:01 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:45:01 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:45:02 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:45:02 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:45:02 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:45:02 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:45:15 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:45:15 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:45:15 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:45:15 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:46:31 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:46:31 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:46:31 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:46:31 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:46:32 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:46:32 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:46:32 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:46:32 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:46:36 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:46:36 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:46:37 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:46:37 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:48:58 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:48:58 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:48:58 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:48:58 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:49:02 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:49:02 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:49:02 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:49:02 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:51:39 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:51:39 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:51:39 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:51:39 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:53:39 -0300]|	|Select CODIGO_SETOR,NOME_SETOR,DESCRICAO,DESCRICAO from `setores`  where CODIGO_EMPRESA = '4' and  NOME_SETOR like  ' %' order by DESCRICAO limit 100
+[Sat, 24 Mar 2012 16:53:39 -0300]|	|Select CODIGO_SETOR,NOME_SETOR,DESCRICAO,DESCRICAO from `setores`  where CODIGO_EMPRESA = '4' and  NOME_SETOR like  ' %' order by DESCRICAO limit 100
+[Sat, 24 Mar 2012 16:53:53 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:53:53 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:53:53 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:53:53 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:53:59 -0300]|	|Select CODIGO_SETOR,NOME_SETOR,DESCRICAO,DESCRICAO from `setores`  where CODIGO_EMPRESA = '4' and  NOME_SETOR like  ' %' order by DESCRICAO limit 100
+[Sat, 24 Mar 2012 16:53:59 -0300]|	|Select CODIGO_SETOR,NOME_SETOR,DESCRICAO,DESCRICAO from `setores`  where CODIGO_EMPRESA = '4' and  NOME_SETOR like  ' %' order by DESCRICAO limit 100
+[Sat, 24 Mar 2012 16:54:07 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:54:07 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:54:07 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:54:07 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:54:16 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:54:16 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:54:16 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:54:16 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:54:17 -0300]|	|Select CODIGO_SETOR,NOME_SETOR,DESCRICAO,DESCRICAO from `setores`  where CODIGO_EMPRESA = '4' and  NOME_SETOR like  ' %' order by DESCRICAO limit 100
+[Sat, 24 Mar 2012 16:54:17 -0300]|	|Select CODIGO_SETOR,NOME_SETOR,DESCRICAO,DESCRICAO from `setores`  where CODIGO_EMPRESA = '4' and  NOME_SETOR like  ' %' order by DESCRICAO limit 100
+[Sat, 24 Mar 2012 16:55:37 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:55:37 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:55:52 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:55:52 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:55:52 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:55:52 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sat, 24 Mar 2012 16:55:52 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 16:55:52 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sat, 24 Mar 2012 16:55:55 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:55:55 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:55:55 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:55:55 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:55:57 -0300]|	|Select CODIGO_SETOR,NOME_SETOR,DESCRICAO,DESCRICAO from `setores`  where CODIGO_EMPRESA = '4' and  NOME_SETOR like  '%' order by DESCRICAO limit 100
+[Sat, 24 Mar 2012 16:55:57 -0300]|	|Select CODIGO_SETOR,NOME_SETOR,DESCRICAO,DESCRICAO from `setores`  where CODIGO_EMPRESA = '4' and  NOME_SETOR like  '%' order by DESCRICAO limit 100
+[Sat, 24 Mar 2012 16:55:57 -0300]|	|Select CODIGO_SETOR,NOME_SETOR,DESCRICAO,DESCRICAO from `setores`  where CODIGO_EMPRESA = '4' and  NOME_SETOR like  '%' order by DESCRICAO limit 100
+[Sat, 24 Mar 2012 16:55:57 -0300]|	|Select CODIGO_SETOR,NOME_SETOR,DESCRICAO,DESCRICAO from `setores`  where CODIGO_EMPRESA = '4' and  NOME_SETOR like  '%' order by DESCRICAO limit 100
+[Sat, 24 Mar 2012 16:56:02 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:56:02 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:56:02 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:56:02 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '1' order by CODIGO_SETOR
+[Sat, 24 Mar 2012 16:56:10 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:56:10 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:56:10 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:56:10 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:57:38 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:57:38 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:57:38 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 16:57:38 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 17:12:38 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 17:12:38 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 17:12:38 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 17:12:38 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 17:20:19 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 17:20:19 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 17:20:19 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sat, 24 Mar 2012 17:20:19 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 13:31:03 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 13:31:03 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 13:31:03 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 13:31:03 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 13:31:03 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 13:31:03 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 13:50:03 -0300]|	|Select * from `setores`  where null null 'null' and  CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 13:50:03 -0300]|	|Select * from `setores`  where null null 'null' and  CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 13:51:00 -0300]|	|Select * from `setores`  where null null 'null' and  CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 13:51:00 -0300]|	|Select * from `setores`  where null null 'null' and  CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 13:51:17 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 13:51:17 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 13:51:19 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 13:51:19 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 13:51:52 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 13:51:52 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 13:51:52 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 13:51:52 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 13:54:03 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 13:54:03 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 13:54:03 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 13:54:03 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:02:24 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 14:02:24 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 14:02:24 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 14:02:24 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 14:02:24 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 14:02:24 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 14:02:32 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:02:32 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:02:32 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:02:32 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:02:54 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:02:54 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:02:54 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:02:54 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:02:55 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:02:55 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:02:55 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:02:55 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:02:56 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:02:56 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:02:56 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:02:56 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:02:57 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:02:57 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:02:57 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:02:57 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:02:59 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 14:02:59 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 14:02:59 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 14:02:59 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 14:02:59 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 14:02:59 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 14:03:08 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:03:08 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:03:08 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:03:08 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:06:56 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 14:06:56 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 14:06:56 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 14:06:56 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 14:06:56 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 14:06:56 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 14:07:17 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:07:17 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:07:17 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:07:17 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:12:05 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 14:12:05 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 14:12:05 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 14:12:05 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 14:12:05 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 14:12:05 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 14:12:18 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:12:18 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:12:18 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:12:18 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:12:44 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:12:44 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:12:44 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:12:44 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:43:50 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:43:50 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:43:50 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:43:50 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:45:51 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:45:51 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:45:51 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:45:51 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:47:06 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:47:06 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:47:06 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:47:06 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:59:22 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:59:22 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:59:22 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 14:59:22 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:01:01 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:01:01 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:01:01 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:01:01 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:03:28 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:03:28 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:03:28 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:03:28 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:04:19 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:04:19 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:04:19 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:04:19 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:13:21 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:13:21 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:13:21 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:13:21 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:26:31 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:26:31 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:26:31 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:26:31 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:29:11 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:29:11 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:29:11 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:29:11 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:30:51 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:30:51 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:30:51 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:30:51 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:30:51 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 15:30:51 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 15:30:57 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:30:57 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:30:57 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:30:57 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:30:58 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:30:58 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:30:58 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:30:58 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:31:23 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:31:23 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:31:23 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:31:23 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:34:09 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:34:09 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:34:09 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:34:09 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:34:09 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 15:34:09 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 15:34:16 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:34:16 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:34:16 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:34:16 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:35:19 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:35:19 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:35:19 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:35:19 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:41:27 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:41:27 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:41:27 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:41:27 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:41:27 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 15:41:27 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 15:41:32 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:41:32 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:41:32 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:41:32 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:41:58 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:41:58 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:41:58 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:41:58 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:41:58 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 15:41:58 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 15:42:02 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:42:02 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:42:02 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:42:02 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:42:10 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:42:10 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:42:10 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:42:10 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:49:15 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:49:15 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:49:15 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:49:15 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:49:26 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:49:26 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:49:26 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:49:26 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:49:50 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:49:50 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:49:50 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:49:50 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:49:52 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:49:52 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:49:52 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:49:52 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:49:52 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 15:49:52 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 15:49:57 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:49:57 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:49:57 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:49:57 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:49:57 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:49:57 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:49:57 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:49:57 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:50:26 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:50:26 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:50:26 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:50:26 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 15:50:26 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 15:50:26 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 15:50:31 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:50:31 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:50:31 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:50:31 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:50:31 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:50:31 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:50:31 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:50:31 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:50:42 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:50:42 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:50:42 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:50:42 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:50:42 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:50:42 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:50:42 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:50:42 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:50:57 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:50:57 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:50:57 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:50:57 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:51:09 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:51:09 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:51:09 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:51:09 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:53:37 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:53:37 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:53:37 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:53:37 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:53:40 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:53:40 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:53:40 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:53:40 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:54:10 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:54:10 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:54:10 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:54:10 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 15:54:12 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:54:12 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:54:12 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 15:54:12 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:28:50 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:28:50 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:28:50 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:28:50 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:30:17 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:30:17 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:30:17 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:30:17 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:30:24 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:30:24 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:30:24 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:30:24 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:30:29 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:30:29 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:30:29 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:30:29 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:34:49 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:34:49 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:34:49 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:34:49 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:34:55 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:34:55 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:34:55 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:34:55 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:36:05 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:36:05 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:36:05 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:36:05 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:36:07 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:36:07 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:36:07 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:36:07 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:36:59 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:36:59 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:36:59 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:36:59 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:37:03 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '0' order by CODIGO_SETOR
+[Sun, 25 Mar 2012 16:37:03 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '0' order by CODIGO_SETOR
+[Sun, 25 Mar 2012 16:37:13 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:37:13 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:37:13 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:37:13 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:37:17 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '2' order by CODIGO_SETOR
+[Sun, 25 Mar 2012 16:37:17 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '2' order by CODIGO_SETOR
+[Sun, 25 Mar 2012 16:37:17 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '2' order by CODIGO_SETOR
+[Sun, 25 Mar 2012 16:37:17 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' and  UNIDADE = '0' and  CODIGO_SETOR = '2' order by CODIGO_SETOR
+[Sun, 25 Mar 2012 16:37:25 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:37:25 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:37:25 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:37:25 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:37:26 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:37:26 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:37:26 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:37:26 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:37:40 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:37:40 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:37:40 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:37:40 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:37:51 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:37:51 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:37:52 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:37:52 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:37:59 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:37:59 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:37:59 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:37:59 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:38:06 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:38:06 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:38:06 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:38:06 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:38:20 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:38:20 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:38:20 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:38:20 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:38:44 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:38:44 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:38:44 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:38:44 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:38:49 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:38:49 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:38:49 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:38:49 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:39:16 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:39:16 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:39:16 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:39:16 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:40:14 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:40:14 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:40:14 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:40:14 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:40:19 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:40:19 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:40:19 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:40:19 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:40:32 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:40:32 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:40:32 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:40:32 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:42:52 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:42:52 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:42:52 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:42:52 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:42:54 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:42:54 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:42:54 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:42:54 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:42:56 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:42:56 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:42:56 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:42:56 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:45:04 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 16:45:04 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 16:45:04 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 16:45:04 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 16:45:04 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 16:45:04 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 16:45:09 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:45:09 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:45:09 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:45:09 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:45:09 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:45:09 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:45:09 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:45:09 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:45:09 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:45:09 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:45:09 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:45:09 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:45:57 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:45:57 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:45:57 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:45:57 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 16:45:58 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:45:58 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:45:58 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:45:58 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:45:58 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:45:58 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:45:58 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 16:45:58 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:26:49 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 20:26:49 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 20:26:49 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 20:26:49 -0300]|	|Select CODIGO_MODULO from `modulos_acesso`  where CODIGO_EMPRESA = '4'
+[Sun, 25 Mar 2012 20:26:49 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 20:26:49 -0300]|	|Select DESCRICAO_MODULO from `modulos`  where CODIGO_MODULO = '5'
+[Sun, 25 Mar 2012 20:27:01 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:27:01 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:27:01 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:27:01 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:27:01 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:27:01 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:27:01 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:27:01 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:27:01 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:27:01 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:27:01 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:27:01 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:32:56 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:32:56 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:32:56 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:32:56 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:32:58 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:32:58 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:32:58 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:32:58 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:34:45 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:34:45 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:34:46 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:34:46 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:34:46 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:34:46 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:34:46 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:34:46 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:34:47 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:34:47 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:34:47 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:34:47 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:37:06 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:37:06 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:37:06 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:37:06 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:37:22 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:37:22 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:37:22 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:37:22 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:41:22 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:41:22 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:41:22 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:41:22 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:41:30 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:41:30 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:41:30 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:41:30 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:43:15 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:43:15 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:43:15 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:43:15 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:51:15 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:51:15 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:51:15 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:51:15 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 20:51:29 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:51:29 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:51:29 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:51:29 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:53:23 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:53:23 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:53:23 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 20:53:23 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:18:17 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 21:18:17 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 21:18:17 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 21:18:17 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 21:18:20 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:18:20 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:18:20 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:18:20 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:18:20 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:18:20 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:18:20 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:18:20 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:18:45 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 21:18:45 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 21:18:45 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 21:18:45 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 21:18:46 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:18:46 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:18:46 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:18:46 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:18:46 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:18:46 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:18:46 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:18:46 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:42:31 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 21:42:31 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 21:42:31 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 21:42:31 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 21:42:31 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:42:31 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:42:31 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:42:31 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:42:31 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:42:31 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:42:32 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 21:42:32 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 22:18:37 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 22:18:37 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 22:18:37 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 22:18:37 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 22:18:38 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 22:18:38 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 22:18:38 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 22:18:38 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 22:18:38 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 22:18:38 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 22:18:38 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 22:18:38 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 22:50:50 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 22:50:50 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 22:50:50 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 22:50:50 -0300]|	|Select * from `setores`  where CODIGO_EMPRESA = '4' order by CODIGO_EMPRESA , UNIDADE , CODIGO_SETOR
+[Sun, 25 Mar 2012 22:50:50 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 22:50:50 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 22:50:50 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 22:50:50 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 22:50:50 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 22:50:50 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 22:50:51 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO
+[Sun, 25 Mar 2012 22:50:51 -0300]|	|Select * from `estrutura_organizacional`  where CODIGO_EMPRESA = '4' order by UNIDADE_PAI,NIVEL_ORGANIZACAO

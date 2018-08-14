@@ -1,0 +1,50 @@
+Data				 |Tipo Operação	|Operação
+[Thu, 19 Jul 2012 08:27:19 -0300]|	|Select * from `laudos`  where CODIGO_EMPRESA = '1' and ANO_PERICIA = '2012' and NUMERO_LAUDO = '7' and REVISAO = '0'
+[Thu, 19 Jul 2012 08:27:20 -0300]|	|Select * from `laudos_acompanhantes`  where CODIGO_EMPRESA = '1' and ANO_PERICIA = '2012' and NUMERO_LAUDO = '7' and REVISAO = '0'
+[Thu, 19 Jul 2012 08:27:20 -0300]|	|Select * from `laudos_acompanhantes`  where CODIGO_EMPRESA = '1' and ANO_PERICIA = '2012' and NUMERO_LAUDO = '7' and REVISAO = '0'
+[Thu, 19 Jul 2012 08:27:21 -0300]|	|Select sum(RUIDO) AS RUIDO,SUM(RUIDO_DOSIMETRIA) AS RUIDO_DOSIMETRIA,SUM(FRIO) AS FRIO,SUM(CALOR) AS CALOR,SUM(UMIDADE) AS UMIDADE,SUM(RADIACAO_NAO_IONIZANTE) AS RADIACAO_NAO_IONIZANTE,SUM(RADIACAO_IONIZANTE),SUM(OUTROS_FISICOS) AS OUTROS_FISICOS,SUM(SANGUE_HUMANO) AS SANGUE_HUMANO,SUM(SANGUE_ANIMAL) AS SANGUE_ANIMAL,SUM(MANEJO_ANIMAIS) AS MANEJO_ANIMAIS,SUM(OUTROS_BIOLOGICOS) AS OUTROS_BIOLOGICOS,SUM(PRODUTOS_LIMPEZA) AS PRODUTOS_LIMPEZA,SUM(TINTAS_SOLVENTES) AS TINTAS_SOLVENTES,SUM(HIDROCARBONETOS_AROMATICOS) AS HIDROCARBONETOS_AROMATICOS,SUM(FUMOS_METALICOS) AS FUMOS_METALICOS,SUM(POEIRAS_INCOMODAS) AS POEIRAS_INCOMODAS, SUM(POEIRAS_MINERAIS) AS POEIRAS_MINERAIS,SUM(OUTROS_QUIMICOS) AS OUTROS_QUIMICOS,SUM(ILUMINAMENTO) AS ILUMINAMENTO  from `laudos_avaliacoes`  where CODIGO_EMPRESA = '1' and ANO_PERICIA = '2012' and NUMERO_LAUDO = '7' and REVISAO = '0'
+[Thu, 19 Jul 2012 08:27:21 -0300]|	|Select sum(RUIDO) AS RUIDO,SUM(RUIDO_DOSIMETRIA) AS RUIDO_DOSIMETRIA,SUM(FRIO) AS FRIO,SUM(CALOR) AS CALOR,SUM(UMIDADE) AS UMIDADE,SUM(RADIACAO_NAO_IONIZANTE) AS RADIACAO_NAO_IONIZANTE,SUM(RADIACAO_IONIZANTE),SUM(OUTROS_FISICOS) AS OUTROS_FISICOS,SUM(SANGUE_HUMANO) AS SANGUE_HUMANO,SUM(SANGUE_ANIMAL) AS SANGUE_ANIMAL,SUM(MANEJO_ANIMAIS) AS MANEJO_ANIMAIS,SUM(OUTROS_BIOLOGICOS) AS OUTROS_BIOLOGICOS,SUM(PRODUTOS_LIMPEZA) AS PRODUTOS_LIMPEZA,SUM(TINTAS_SOLVENTES) AS TINTAS_SOLVENTES,SUM(HIDROCARBONETOS_AROMATICOS) AS HIDROCARBONETOS_AROMATICOS,SUM(FUMOS_METALICOS) AS FUMOS_METALICOS,SUM(POEIRAS_INCOMODAS) AS POEIRAS_INCOMODAS, SUM(POEIRAS_MINERAIS) AS POEIRAS_MINERAIS,SUM(OUTROS_QUIMICOS) AS OUTROS_QUIMICOS,SUM(ILUMINAMENTO) AS ILUMINAMENTO  from `laudos_avaliacoes`  where CODIGO_EMPRESA = '1' and ANO_PERICIA = '2012' and NUMERO_LAUDO = '7' and REVISAO = '0'
+[Tue, 07 Aug 2012 19:39:26 -0300]|	|Select * from `maquinas`  where CODIGO_EMPRESA = '1' order by CODIGO_MAQUINA
+[Tue, 07 Aug 2012 19:39:26 -0300]|	|Select * from `maquinas`  where CODIGO_EMPRESA = '1' order by CODIGO_MAQUINA
+[Tue, 07 Aug 2012 19:39:27 -0300]|	|Select * from `maquinas`  where CODIGO_EMPRESA = '1' order by CODIGO_MAQUINA
+[Tue, 07 Aug 2012 19:39:27 -0300]|	|Select * from `maquinas`  where CODIGO_EMPRESA = '1' order by CODIGO_MAQUINA
+[Tue, 07 Aug 2012 19:39:28 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:28 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:30 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:30 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:31 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:31 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:33 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:33 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:35 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:35 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:36 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:36 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:38 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:38 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:40 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:40 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:41 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:41 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:43 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:43 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:44 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:44 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:46 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:46 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:47 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:47 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:49 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:49 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:51 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:51 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:54 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:54 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:56 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:56 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:57 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:57 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:58 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:39:58 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:40:00 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE
+[Tue, 07 Aug 2012 19:40:00 -0300]|	|Select * from `fabricantes`  where CODIGO_FABRICANTE = '0' order by CODIGO_FABRICANTE

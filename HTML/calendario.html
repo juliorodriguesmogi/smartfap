@@ -1,0 +1,437 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<style type="text/css">
+table{
+    cursor:pointer;
+        
+}    
+
+table th{
+	font-family:arial;
+	font-size:9px;
+	background:#99CC99;
+}
+table td{
+	font-family:arial;
+	font-size:10px;
+}
+.domingo{
+	background:#FF0000;
+	color:#FFFFFF;
+}
+.feriado_nacional{
+   background:#FF6666;
+   color:#FFFFFF;
+}
+.pascoa{
+   background: #FFCC66;
+   color:#FFFFFF;
+}
+.sexta_feira_santa{
+   background: #aef;
+}
+.carnaval{
+   background:#46a;
+   color: #FFFFFF;
+}
+.corpus_christi{
+   background:#99CCCC;
+}
+.dia_hoje{
+   background: #0000ff;
+   color: #FFFFFF;
+}
+</style>
+<script type="text/javascript">
+function carregar_calendario(){
+  datahoje=new Date();	
+  dia_mes='01';
+  mes_atual='0'+(datahoje.getMonth()+1);
+  mes_hoje=datahoje.getMonth()+1;
+  dia_hoje='0'+datahoje.getDate();
+  dia_hoje=dia_hoje.substr(dia_hoje.length-2,2);
+  formata_mes();
+  ano_atual=datahoje.getFullYear();
+  popula_calendario();	
+}
+ function formata_mes(){
+  mes_atual=mes_atual.substr(mes_atual.length-2,2);
+ }
+ function popula_calendario(){
+  meses=Array();
+  meses[0]='Janeiro';
+  meses[1]='Fevereiro';
+  meses[2]='Março';
+  meses[3]='Abril';
+  meses[4]='Maio';
+  meses[5]='Junho';
+  meses[6]='Julho';
+  meses[7]='Agosto';
+  meses[8]='Setembro';
+  meses[9]='Outubro';
+  meses[10]='Novembro';
+  meses[11]='Dezembro';
+ 
+  ultimos_dias_meses=Array();
+  ultimos_dias_meses[0]='29';
+  ultimos_dias_meses[1]='31';
+  ultimos_dias_meses[2]='28';
+  ultimos_dias_meses[3]='31';
+  ultimos_dias_meses[4]='30';
+  ultimos_dias_meses[5]='31';
+  ultimos_dias_meses[6]='30';
+  ultimos_dias_meses[7]='31';  
+  ultimos_dias_meses[8]='31';
+  ultimos_dias_meses[9]='30';
+  ultimos_dias_meses[10]='31';
+  ultimos_dias_meses[11]='30';
+  ultimos_dias_meses[12]='31';
+  
+
+  feriados_nacionais_fixos=["01|01","04|21","05|01","09|07","10|12","11|02","11|15","12|25"];
+  descricao_feriados=["Ano Novo","Tiradentes","Dia do Trabalho","Independência","Padroeira","Finados","Proclamação República","Natal"]
+  descricao_dias_santos=["Carnaval","Paixão de Cristo","Páscoa","Corpus-Christi"];
+  nferiados=Array();
+  ultimo_dia=((ano_atual % 4==0) && (mes_atual=='02'))?ultimos_dias_meses[0]:ultimos_dias_meses[parseInt(mes_atual,10)];
+  data_temp=new Date(mes_atual+"/"+dia_mes+"/"+ano_atual);
+  primeiro_dia_mes=data_temp.getDay();
+  data_temp=new Date(mes_atual+"/"+dia_mes+"/"+ano_atual);
+  carnaval=false;
+  pascoa=false;
+  corpus_christi=false;
+  feriados=false;
+  sexta_paixao=false;
+  tabela=document.getElementById('tbl_calendario');
+  intmes=parseInt(mes_atual,10);
+  intmes=intmes-1;
+  calcular_pascoa();
+  nome_mes=meses[intmes];
+  tabela.rows[0].cells[1].innerHTML=nome_mes;
+  tabela.rows[0].cells[3].innerHTML=ano_atual;
+  contlin=3;
+  for (contlin=3;contlin<tabela.rows.length;contlin++){
+  	for (contcol=0;contcol<7;contcol++) {
+            tabela.rows[contlin].cells[contcol].innerHTML="";
+            tabela.rows[contlin].cells[0].className='domingo';
+            tabela.rows[contlin].cells[contcol].className='';
+            
+
+        }
+  }
+  contlin=3;  
+  colatual=primeiro_dia_mes
+  contcol=colatual;
+  diames=0;
+  while(contlin<tabela.rows.length && diames<=parseInt(ultimo_dia,10) ){
+        while (contcol <7 && diames<parseInt(ultimo_dia,10)) {
+
+        	diames++;
+		tabela.rows[contlin].cells[contcol].innerHTML=diames;
+                if (diames== parseInt(dia_hoje,10) && mes_hoje==mes_atual) {
+                    tabela.rows[contlin].cells[contcol].className="dia_hoje";
+                }
+                switch (parseInt(mes_atual,10)){
+                        case mes_pascoa:
+                            switch (parseInt(diames)){
+                                case dia_pascoa:
+                                    tabela.rows[contlin].cells[contcol].className="pascoa";
+                                    pascoa=true;
+                                break;
+                                case sexta_feira_santa:
+                                        tabela.rows[contlin].cells[contcol].className="sexta_feira_santa";
+                                        sexta_paixao=true;
+                                break;
+                                
+                            }
+                            break;
+                        case mes_carnaval:
+                            switch (parseInt(diames)){
+                                case dia_carnaval:
+                                        tabela.rows[contlin].cells[contcol].className="carnaval";
+                                        carnaval=true;
+                                break;
+                            }
+                            break;
+                        case mes_corpus_christi:
+                            switch (parseInt(diames)){
+                                case dia_corpus_christi:
+                                    tabela.rows[contlin].cells[contcol].className="corpus_christi";
+                                    corpus_christi=true;
+                                break;
+                            }
+                            break;
+                            
+                }    
+                xdia_mes="0"+diames;
+                xdia_mes=xdia_mes.substr(xdia_mes.length-2,2);
+                xvar=mes_atual+"|"+xdia_mes ;
+                if (navigator.appName.indexOf('Internet Explorer')>0){
+                   for(x=0;x<feriados_nacionais_fixos.length;x++){
+                        if (feriados_nacionais_fixos[x]==xvar){
+                            tabela.rows[contlin].cells[contcol].className='feriado_nacional';
+                            nferiados[nferiados.length]=descricao_feriados[x];
+                            feriados=true;
+                        } 
+                       
+                   }
+                }
+                else {
+                if (feriados_nacionais_fixos.indexOf(xvar)>-1){
+                        v=feriados_nacionais_fixos.indexOf(xvar);
+                        tabela.rows[contlin].cells[contcol].className='feriado_nacional';
+                        nferiados[nferiados.length]=descricao_feriados[feriados_nacionais_fixos.indexOf(xvar)];
+                        feriados=true;
+                }
+                }
+
+		contcol++;
+	}
+	contcol=0;
+	contlin++;
+  }
+  exibe_legenda();
+}
+  function exibe_legenda(){
+      tbl_leg=document.getElementById('tbl_legenda');
+      linleg=1;
+      dias_feriados=[feriados,carnaval,corpus_christi,pascoa,sexta_paixao];
+      classes=["feriado_nacional","carnaval","corpus_christi","pascoa","sexta_feira_santa"]
+      while (tbl_leg.rows.length>1){
+          tbl_leg.deleteRow(1);
+      }
+      for (linleg=0;linleg<nferiados.length;linleg++){
+                          tbl_leg.insertRow(-1);
+                          linhaclasse=tbl_leg.rows[tbl_leg.rows.length-1];
+                          linhaclasse.insertCell(-1);
+                          linhaclasse.insertCell(-1);
+                          linhaclasse.setAttribute('style','display:block');
+                          linhaclasse.cells[0].className=classes[0];
+                          linhaclasse.cells[0].width="20px";
+                          linhaclasse.cells[1].innerHTML=nferiados[linleg];
+                          
+                  }
+
+                      
+      
+       if (carnaval || corpus_christi || sexta_paixao || pascoa){
+                          if (carnaval) {
+                              tbl_leg.insertRow(-1);
+                              linhaclasse=tbl_leg.rows[tbl_leg.rows.length-1];
+                              linhaclasse.insertCell(-1);
+                              linhaclasse.insertCell(-1);
+                              linhaclasse.setAttribute('style','display:block');
+                              linhaclasse.setAttribute('style','display:block');
+                              linhaclasse.cells[0].className="carnaval";
+                              linhaclasse.cells[0].width="20px";
+                              linhaclasse.cells[1].innerHTML=descricao_dias_santos[0];
+                          }
+                          if (corpus_christi) {
+                              tbl_leg.insertRow(-1);
+                              linhaclasse=tbl_leg.rows[tbl_leg.rows.length-1];
+                              linhaclasse.insertCell(-1);
+                              linhaclasse.insertCell(-1);
+                              linhaclasse.setAttribute('style','display:block');
+                              linhaclasse.setAttribute('style','display:block');
+                              linhaclasse.cells[0].className="corpus_christi";
+                              linhaclasse.cells[0].width="20px";
+                              linhaclasse.cells[1].innerHTML=descricao_dias_santos[3];
+                          }
+                          if (sexta_paixao && pascoa){
+                              tbl_leg.insertRow(-1);
+                              linhaclasse=tbl_leg.rows[tbl_leg.rows.length-1];
+                              linhaclasse.insertCell(-1);
+                              linhaclasse.insertCell(-1);
+                              linhaclasse.setAttribute('style','display:block');
+                              linhaclasse.setAttribute('style','display:block');
+                              linhaclasse.cells[0].width="20px";
+                              linhaclasse.cells[0].className="sexta_feira_santa";
+                              linhaclasse.cells[1].innerHTML=descricao_dias_santos[1];
+                              tbl_leg.insertRow(-1);                              
+                              linhaclasse=tbl_leg.rows[tbl_leg.rows.length-1];
+                              linhaclasse.insertCell(-1);
+                              linhaclasse.insertCell(-1);
+                              linhaclasse.setAttribute('style','display:block');
+                              linhaclasse.setAttribute('style','display:block');
+                              linhaclasse.cells[0].width="20px";
+                              linhaclasse.cells[0].className="pascoa";
+                              linhaclasse.cells[1].innerHTML=descricao_dias_santos[2];
+                              
+                          } 
+                          
+                          
+       }
+       
+                      
+  }
+function retrocede_mes(){
+	if (parseInt(mes_atual,10)>1){
+	   mes_atual=parseInt(mes_atual,10)-1;
+	   mes_atual='0'+mes_atual;
+	   formata_mes();
+	}
+	else {
+	   mes_atual='12';
+	   ano_atual=parseInt(ano_atual,10)-1;
+	}
+	
+	popula_calendario();
+}
+
+function avanca_mes(){
+	if (parseInt(mes_atual,10)<12){
+	   mes_atual=parseInt(mes_atual,10)+1;
+	   mes_atual='0'+mes_atual;	   
+	   formata_mes();
+	}
+	else {
+	   mes_atual='01';
+	   ano_atual=parseInt(ano_atual,10)+1;
+	}
+	
+	popula_calendario();
+}
+
+function retrocede_ano(){
+	ano_atual=parseInt(ano_atual)-1;
+		popula_calendario();
+}
+function avanca_ano(){
+	ano_atual=parseInt(ano_atual)+1;
+		popula_calendario();
+}
+
+function calcular_pascoa(){
+	xano_atual=(ano_atual);
+	c=parseInt((xano_atual / 100),10);
+	n = xano_atual- (19 * (parseInt(xano_atual/19,10)));
+	k=parseInt((c-17)/25,10);
+	i = c - parseInt(c/4,10) - (parseInt((c-k)/3,10)) +(19*n) + 15;
+	i = i - (30*(parseInt(i/30,10)));
+ 	i = i - (parseInt((i/28),10)*(1-(parseInt(i/28,10)))*(parseInt(29/(i+1),10)*(parseInt((21-n)/11)),10));
+	j = xano_atual + parseInt(xano_atual/4,10) + i + 2 -c + parseInt(c/4,10);
+	j = j - (7*(parseInt(j/7,10)));
+	l = i - j;
+	mes_pascoa= 3 + parseInt(((l+40)/44),10);
+	dia_pascoa = (l + 28 - (31*(parseInt(mes_pascoa/4,10))));
+        sexta_feira_santa=dia_pascoa-2;
+        calcular_carnaval();
+
+}
+function calcular_carnaval(){
+    ndia_pascoa="0"+dia_pascoa;
+    ndia_pascoa=ndia_pascoa.substr(ndia_pascoa.length-2,2);
+    nmes_pascoa="0"+mes_pascoa;
+    nmes_pascoa=nmes_pascoa.substr(nmes_pascoa.length-2,2);
+    
+    novadata=new Date(nmes_pascoa+"/"+ndia_pascoa+"/"+ano_atual);
+    data_carnaval=novadata;
+    data_carnaval.setDate(data_carnaval.getDate()-47);
+    dia_carnaval=data_carnaval.getDate();
+    mes_carnaval=data_carnaval.getMonth()+1;
+    novadata=new Date(nmes_pascoa+"/"+ndia_pascoa+"/"+ano_atual);
+    data_corpus_christi=novadata;
+    data_corpus_christi.setDate(data_corpus_christi.getDate()+60);
+    dia_corpus_christi=data_corpus_christi.getDate();
+    mes_corpus_christi=data_corpus_christi.getMonth()+1;
+    
+}
+</script>
+</head>
+
+<body onload="carregar_calendario()">
+<div style="width:14%" id="calendario">
+<table id="tbl_calendario" width="95%" height="145" border="0" cellpadding="1" cellspacing="1">
+  <tr>
+    <th cellpadding="0">M&ecirc;s</th>
+    <th colspan="3">&nbsp;</th>
+    <th colspan="2">Ano</th>
+    <th>&nbsp;</th>
+  </tr>
+  <tr>
+    <th cellpadding="0" onclick="retrocede_mes()">&lt;</th>
+    <th colspan="2"><label onclick="carregar_calendario()">Hoje</label></th>
+
+    <th onclick="avanca_mes()">&gt;</th>
+    <th onclick="retrocede_ano()">&lt;</th>
+    <th>&nbsp;</th>
+    <th onclick="avanca_ano()">&gt;</th>
+  </tr>
+  <tr>
+    <th width="22" cellpadding="0">Dom</th>
+    <th width="25">Seg</th>
+    <th width="25">Ter</th>
+    <th width="21">Qua</th>
+    <th width="25">Qui</th>
+    <th width="25">Sex</th>
+    <th width="24">Sab</th>
+  </tr>
+  
+  <tr>
+    <td class="domingo">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="domingo">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="domingo">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="domingo">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="domingo">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="domingo">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+    <table id="tbl_legenda" width="80%" height="40" border="0" cellpadding="1" cellspacing="1">
+        <tr>
+            <td colspan="2" height="5">
+                <div style="text-align: center" >Legenda</div>
+            </td>
+        </tr>
+        
+    </table>
+</div>
+</body>
+</html>

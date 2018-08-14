@@ -1,0 +1,118 @@
+function MLaudos(){
+                
+                this.inicializa=function(){
+                     Codigo_Empresa=0;
+                     Ano_Pericia=0;
+                     Nome_Empresa="";
+                     CNPJ_CEI='';
+                     CNAE='';
+                     Grau_Risco='';
+                     Numero_Funcionarios=0;
+                     Numero_Laudo=0;
+                     Revisao=0;
+                     Situacao='';
+                     Data_Laudo='';
+                     Data_Criacao='';
+                     Data_Pericia='';
+                     Session_id='';
+                     Id_Usuario='';
+                     Ultima_Atualizacao='';
+                     Ultimo_Usuario='';
+                     Endereco='';
+                     Bairro='';
+                     Municipio='';
+                     UF='';
+                     CEP='';
+                }
+                this.get_Codigo_Empresa= function(){
+                    return Codigo_Empresa;
+                }
+                this.get_Endereco= function(){
+                    return Endereco;
+                }
+                 this.get_Bairro= function(){
+                    return Bairro;
+                }
+                 this.get_Municipio= function(){
+                    return Municipio;
+                }
+                 this.get_UF= function(){
+                    return UF;
+                }
+                 this.get_CEP= function(){
+                    return CEP;
+                }
+                this.get_Numero_Laudo= function(){
+                    return Numero_Laudo;
+                }
+               this.get_Ano_Pericia= function(){
+                    return Ano_Pericia;
+                }
+                this.get_Revisao=function(){
+                    return Revisao;
+                }    
+                this.get_Data_Laudo=function(){
+                    return Data_Laudo;
+                }                   
+                this.get_Data_Criacao=function(){
+                    return Data_Criacao;
+                }                   
+                this.get_Data_Pericia=function(){
+                    return Data_Pericia;
+                }                   
+                
+                this.get_CNPJ_CEI=function(){
+                    return CNPJ_CEI;
+                }                                   
+                this.get_CNAE=function(){
+                    return CNAE;
+                }                                   
+
+                this.get_Session_id=function(){
+                    return Session_id;
+                }         
+                this.get_Ultimo_Usuario=function(){
+                    return Ultimo_Usuario;
+                }         
+                this.get_Situacao=function(){
+                    return Situacao;
+                }         
+                this.get_Numero_Funcionarios=function(){
+                    return Numero_Funcionarios;
+                }
+                this.get_Ultima_Atualizacao=function(){
+                    return Ultima_Atualizacao;
+                }  
+                this.setValores=function(response){
+                    this.inicializa();
+                    if (response!='NF'){
+                       Codigo_Empresa=response[0];
+                       Ano_Pericia=response[1];
+                       Numero_Laudo=response[2];
+                       Revisao=response[3];
+                       Situacao=response[4];
+                       Nome_Empresa=response[5];
+                       CNPJ_CEI=response[6];
+                       CNAE=response[7];
+                       Grau_Risco=response[8];
+                       Data_Laudo=response[10];
+                       Data_Criacao=response[11];
+                       Data_Pericia=response[12];
+                       ID_Usuario=response[13];
+                       Session_id=response[14];
+                       Ultima_Atualizacao=response[15];
+                       Ultimo_Usuario=response[16];                     
+                       Numero_Funcionarios=response[17];
+                       Endereco=response[18];
+                       Bairro=response[19];
+                       Municipio=response[20];
+                       CEP=response[21];
+                       UF=response[22];
+                       
+                       
+                       
+                          
+                    }
+                }
+            };
+             newlaudo=new MLaudos();

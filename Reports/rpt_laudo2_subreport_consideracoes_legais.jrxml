@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_laudo2_subreport_consideracoes_legais" language="groovy" pageWidth="514" pageHeight="167" whenNoDataType="AllSectionsNoDetail" columnWidth="514" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="bc1e53d1-336f-4b0e-93e0-0e64ea855ef8">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="47"/>
+	<property name="ireport.y" value="0"/>
+	<title>
+		<band height="167" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="b2083b6a-b5d1-4a93-a409-75b80ff8765c" x="3" y="11" width="510" height="144"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Justified" markup="styled">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Informamos que para efeitos de co-responsabilidade cível e criminal que, além dos funcionários da empresa ser obrigados a seguirem as normas de segurança, higiene e"+
+"medicina do trabalho, os funcionários de prestadores de serviços, autônomos, profissionais liberais entre outros que venham desempenhar qualquer atividade nas"+
+"dependências da empresa, devem seguir também as normas legais e internas da empresa, tais como:"+
+"<br/>"+
+"1 – Uso obrigatório de equipamentos de proteção individual adequados ao risco"+"<br/>"+
+"2 – Realização de exames médicos admissionais, periódicos, de retorno ao trabalho e demissionais."+"<br/>"+
+"3 – Realizações de exames complementares.O não cumprimento das normas de segurança, higiene e medicina do trabalho por"+
+"terceiros à empresa, podem acarretar em co-responsabilidade em processos civis e criminais caso este seja o entendimento da promotoria pública."]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>

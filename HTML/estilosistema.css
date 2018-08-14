@@ -1,0 +1,233 @@
+
+/* CSS Document */
+
+.abaativa {
+    font-family: verdana;
+    font-size: 10px;
+    font-style: normal;
+    line-height: normal;
+    font-weight: bold;
+    font-variant: normal;
+    
+    color: #FFFFFF;
+    background-image: url(../imagens/telas/abaAtiva.png);
+    background-color: #999999;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+
+
+.abainativa {
+    font-family: verdana;
+    font-size: 10px;
+    font-style: normal;
+    line-height: normal;
+    font-weight: bold;
+    font-variant: normal;
+
+    color: #FFFFFF;
+    background-image: url(../imagens/telas/abaInativa.png);
+    background-color: #666666;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.subabaativa {
+    font-family: verdana;
+    font-size: 10px;
+    font-style: normal;
+    line-height: normal;
+    font-weight: bold;
+    font-variant: normal;
+    
+    color: #FFFFFF;
+    background-image: url(../imagens/telas/abaAtiva.png);
+    background-color: #999999;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+
+
+.subabainativa {
+    font-family: verdana;
+    font-size: 10px;
+    font-style: normal;
+    line-height: normal;
+    font-weight: bold;
+    font-variant: normal;
+
+    color: #FFFFFF;
+    background-image: url(../imagens/telas/abaInativa.png);
+    background-color: #666666;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+input:focus, select:focus{
+    background-color:yellow;
+    
+    font-family: arial;
+}   
+input,select{
+    border:solid 1px;
+    border-style:  outset;
+    border-color: #99CCFF;
+    font-family: arial;
+    text-transform:uppercase;
+}
+textarea{
+   text-align:justify;
+}
+select:selected{
+border-style: solid 1px;
+font-weight:  bolder;
+}
+button{
+    border: none;
+    
+}
+button:hover{
+    background: url(image.gif);
+}
+.abc{
+    background-image: url(../images/gears.gif);
+    background-position:  right;
+    background-repeat: no-repeat;
+}
+#labelfam{
+    visibility: hidden;
+}
+#labelocup{
+    visibility: hidden;
+}
+#labelsin{
+    visibility: hidden;
+}
+#famimg{
+    visibility: hidden;
+}
+#ocupimg{
+    visibility: hidden;
+}
+#sinimg{
+    visibility: hidden;
+}
+
+div.tableContainer {
+	clear: both;
+	border: 1px solid #963;
+	height: 285px;
+	overflow:scroll;
+	width: 756px;
+
+
+}
+/* @media hacks */
+ 
+/* IE6/7 only (via Keith Clarke) */
+@media screen\9 { }
+ 
+/* IE6/7/8 (via Keith Clarke) */
+@media \0screen\,screen\9 {} 
+ 
+/* IE8 (via Keith Clarke) */
+@media \0screen  {
+
+}
+ 
+/* IE8/9 */
+@media screen\0 { 
+}
+
+/* define width of table. IE browsers only                 */
+div.tableContainer table {
+	
+	width: 740px;
+        height:280px;
+}
+
+
+
+
+thead.fixedHeader tr {
+	position: relative
+}
+
+
+html>body thead.fixedHeader tr {
+	display: block
+}
+
+thead.fixedHeader th {
+	background: #C96;
+	border-left: 1px solid #EB8;
+	border-right: 1px solid #B74;
+	border-top: 1px solid #EB8;
+	font-weight: normal;
+	padding: 4px 3px;
+	text-align: left
+}
+
+
+thead.fixedHeader a, thead.fixedHeader a:link, thead.fixedHeader a:visited {
+	color: #FFF;
+	display: block;
+	text-decoration: none;
+	width: 100%
+}
+
+
+thead.fixedHeader a:hover {
+	color: #FFF;
+	display: block;
+	text-decoration: underline;
+	width: 100%
+}
+
+tbody.scrollContent{
+    overflow:scroll;
+}
+html>body tbody.scrollContent {
+	display: block;
+	height: 262px;
+	width: 100%
+}
+
+tbody.scrollContent td, tbody.scrollContent tr.normalRow td {
+	background: #FFF;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #DDD;
+	padding: 2px 3px 3px 4px
+}
+
+tbody.scrollContent tr.alternateRow td {
+	background: #EEE;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #DDD;
+	padding: 2px 3px 3px 4px
+}
+
+
+
+html>body tbody.scrollContent td {
+	min-width: 50px;
+        max-width: 500px;
+}
+
+html>body tbody.scrollContent td + td {
+	width: 240px
+}
+
+html>body tbody.scrollContent td + td + td {
+	width: 300px
+}
+table{
+  font-family: arial;
+}
+.txt_foto{
+    text-transform: lowercase;
+}

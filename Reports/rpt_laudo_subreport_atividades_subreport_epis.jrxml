@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_laudo_subreport_atividades_subreport_epis" language="groovy" pageWidth="320" pageHeight="100" whenNoDataType="AllSectionsNoDetail" columnWidth="320" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="71abe9cf-36d7-4ee2-8860-a0b87f8723d8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="CODIGO_EMPRESA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ANO_PERICIA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NUMERO_LAUDO" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="REVISAO" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="CODIGO_ATIVIDADE" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     laudos_epis_fornecidos1.`CODIGO_EMPRESA` AS laudos_epis_fornecidos_CODIGO_EMPRESA,
+     laudos_epis_fornecidos1.`ANO_PERICIA` AS laudos_epis_fornecidos_ANO_PERICIA,
+     laudos_epis_fornecidos1.`NUMERO_LAUDO` AS laudos_epis_fornecidos_NUMERO_LAUDO,
+     laudos_epis_fornecidos1.`REVISAO` AS laudos_epis_fornecidos_REVISAO,
+     laudos_epis_fornecidos1.`CODIGO_ATIVIDADE` AS laudos_epis_fornecidos_CODIGO_ATIVIDADE,
+     laudos_epis_fornecidos1.`CODIGO_EPI` AS laudos_epis_fornecidos_CODIGO_EPI,
+     laudos_epis_fornecidos1.`DESCRICAO_EPI` AS laudos_epis_fornecidos_DESCRICAO_EPI,
+     laudos_epis_fornecidos1.`CA_EPI` AS laudos_epis_fornecidos_CA_EPI,
+     laudos_epis_fornecidos1.`CATEGORIA_PROTECAO` AS laudos_epis_fornecidos_CATEGORIA_PROTECAO,
+     laudos_epis_fornecidos1.`AGENTE_PREVENCAO` AS laudos_epis_fornecidos_AGENTE_PREVENCAO,
+case when (select count(*)
+FROM
+     `laudos_epis_fornecidos` laudos_epis_fornecidos2
+WHERE
+laudos_epis_fornecidos2.CODIGO_EMPRESA = laudos_epis_fornecidos1.CODIGO_EMPRESA
+AND laudos_epis_fornecidos2.ANO_PERICIA = laudos_epis_fornecidos1.ANO_PERICIA
+AND laudos_epis_fornecidos2.NUMERO_LAUDO = laudos_epis_fornecidos1.NUMERO_LAUDO
+AND laudos_epis_fornecidos2.REVISAO = laudos_epis_fornecidos1.REVISAO
+AND laudos_epis_fornecidos2.CODIGO_ATIVIDADE = laudos_epis_fornecidos1.CODIGO_ATIVIDADE
+) = 0 then
+'Não Aplicável' end as NAO_APLICAVEL
+FROM
+     `laudos_epis_fornecidos` laudos_epis_fornecidos1
+WHERE
+     CODIGO_EMPRESA = $P{CODIGO_EMPRESA}
+ AND ANO_PERICIA = $P{ANO_PERICIA}
+ AND NUMERO_LAUDO = $P{NUMERO_LAUDO}
+ AND REVISAO = $P{REVISAO}
+ AND CODIGO_ATIVIDADE = $P{CODIGO_ATIVIDADE}]]>
+	</queryString>
+	<field name="laudos_epis_fornecidos_CODIGO_EMPRESA" class="java.lang.Integer"/>
+	<field name="laudos_epis_fornecidos_ANO_PERICIA" class="java.lang.Integer"/>
+	<field name="laudos_epis_fornecidos_NUMERO_LAUDO" class="java.lang.Integer"/>
+	<field name="laudos_epis_fornecidos_REVISAO" class="java.lang.String"/>
+	<field name="laudos_epis_fornecidos_CODIGO_ATIVIDADE" class="java.lang.Integer"/>
+	<field name="laudos_epis_fornecidos_CODIGO_EPI" class="java.lang.Integer"/>
+	<field name="laudos_epis_fornecidos_DESCRICAO_EPI" class="java.lang.String"/>
+	<field name="laudos_epis_fornecidos_CA_EPI" class="java.lang.String"/>
+	<field name="laudos_epis_fornecidos_CATEGORIA_PROTECAO" class="java.lang.String"/>
+	<field name="laudos_epis_fornecidos_AGENTE_PREVENCAO" class="java.lang.String"/>
+	<field name="NAO_APLICAVEL" class="java.lang.String"/>
+	<group name="laudos_epis_fornecidos_CODIGO_EPI">
+		<groupExpression><![CDATA[$F{laudos_epis_fornecidos_CODIGO_EPI}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement uuid="8694cd09-f581-4b65-a304-db27c0436a08" x="5" y="0" width="201" height="30"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{laudos_epis_fornecidos_DESCRICAO_EPI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7ffd0dd1-1921-4455-9bf0-b109e6fa5091" x="237" y="0" width="83" height="30"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{laudos_epis_fornecidos_CA_EPI}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d1d0af52-6c39-4cf2-8ef6-19028f42cf96" x="211" y="0" width="26" height="30"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[C.A.]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="37">
+			<staticText>
+				<reportElement uuid="f05e73e0-2e0e-48f6-8056-c22da501e416" x="111" y="0" width="100" height="37"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[NÃO APLICÁVEL]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

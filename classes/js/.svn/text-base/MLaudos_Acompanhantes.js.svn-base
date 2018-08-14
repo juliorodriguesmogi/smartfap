@@ -1,0 +1,75 @@
+   function laudo_acompanhantes(){
+                
+                this.inicializa=function(){
+                     Codigo_Empresa=0;
+                     Ano_Pericia='';
+                     Numero_Laudo='';
+		     Revisao='';
+                     Codigo_Acompanhante='';
+                     Data_Criacao='';
+                     Session_id='';
+                     Ultimo_Usuario='';
+                     Ultima_Atualizacao=''; 
+                     Id_Usuario='';
+                     Responsavel_laudoxxx='';
+                     Funcao_Responsavel='';
+                     Data_Admissao_laudo='';
+                }
+                this.get_Numero_Laudo= function(){
+                    return Numero_Laudo;
+                }
+                 this.get_Funcao= function(){
+                    return Funcao_Responsavel;
+                }
+                this.get_Ano_Pericia= function(){
+                    return Ano_Pericia;
+                }
+                this.get_Revisao=function(){
+                    return Revisao;
+                }
+                this.get_Codigo_Acompanhante=function(){
+                    return Codigo_Acompanhante;
+                }
+                this.get_Data_Criacao=function(){
+                    return Data_Criacao;
+                }
+                this.get_Data_Admissao_laudo=function(){
+                    return Data_Admissao_laudo;
+                }
+                this.get_Responsavel_laudoxxx=function(){
+                    return Responsavel_laudoxxx;
+                }
+                this.get_Session_id=function(){
+                    return Session_id;
+                }         
+                this.get_Ultimo_Usuario=function(){
+                    return Ultimo_Usuario;
+                }         
+                this.get_Id_Usuario=function(){
+                    return Id_Usuario;
+                }         
+               
+                
+                this.get_Ultima_Atualizacao=function(){
+                    return Ultima_Atualizacao;
+                }  
+                this.setValores=function(response){
+                    this.inicializa();
+                    if (response!='NF'){
+                       Ano_Pericia=response[1];
+                       Numero_Laudo=response[2];
+                       Revisao=response[3];
+                       Codigo_Acompanhante=response[4];
+                       Responsavel_laudoxxx=response[5];
+                       Funcao_Responsavel=response[6];
+                       Data_Admissao_laudo=response[7];                           
+                       Data_Criacao=response[8];
+                       Id_Usuario=response[9];
+                       Session_id=response[10];
+                       Ultima_Atualizacao=response[11];
+                       Ultimo_Usuario=response[12];                     
+                       
+                }
+                }
+            };
+             newlaudoacompanhantes=new laudo_acompanhantes();

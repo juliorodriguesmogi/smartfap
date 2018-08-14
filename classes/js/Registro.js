@@ -1,0 +1,23 @@
+function Registro(){
+    this.inicializa=function(){
+        var vRegistro='';
+        var vTabela='';
+    }
+    
+    this.getValores=function(){
+        return vRegistro;
+        
+    }
+    this.setValores=function(registro){
+        this.inicializa();
+        if (registro!='') vRegistro=registro;
+    }
+    this.setTabela=function(tab){
+        VTabela=tab;
+    }
+    this.getTabela=function(){
+        return VTabela;
+    }    
+}            
+newregistro=new Registro("");
+            

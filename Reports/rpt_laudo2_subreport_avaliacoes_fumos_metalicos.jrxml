@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_laudo2_subreport_avaliacoes_fumos_metalicos" language="groovy" pageWidth="514" pageHeight="802" columnWidth="514" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="38914107-2d76-484b-bb4b-a4dd38222605">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="144"/>
+	<parameter name="CODIGO_EMPRESA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ANO_PERICIA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[2012]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NUMERO_LAUDO" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[34]]></defaultValueExpression>
+	</parameter>
+	<parameter name="REVISAO" class="java.lang.String">
+		<defaultValueExpression><![CDATA[0]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TABELA_FUNCOES" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["laudos_avaliacoes_fumos_metalicos_funcoes"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IsOnServer" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="UNIDADE" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+	</parameter>
+	<parameter name="CODIGO_SETOR" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT
+     laudos_avaliacoes_fumos_metalicos.`CODIGO_EMPRESA` AS laudos_avaliacoes_fumos_metalicos_CODIGO_EMPRESA,
+     laudos_avaliacoes_fumos_metalicos.`ANO_PERICIA` AS laudos_avaliacoes_fumos_metalicos_ANO_PERICIA,
+     laudos_avaliacoes_fumos_metalicos.`NUMERO_LAUDO` AS laudos_avaliacoes_fumos_metalicos_NUMERO_LAUDO,
+     laudos_avaliacoes_fumos_metalicos.`REVISAO` AS laudos_avaliacoes_fumos_metalicos_REVISAO,
+     laudos_avaliacoes_fumos_metalicos.`UNIDADE` AS laudos_avaliacoes_fumos_metalicos_UNIDADE,
+     laudos_avaliacoes_fumos_metalicos.`CODIGO_SETOR` AS laudos_avaliacoes_fumos_metalicos_CODIGO_SETOR,
+     laudos_avaliacoes_fumos_metalicos.`TIPO_AVALIACAO` AS laudos_avaliacoes_fumos_metalicos_TIPO_AVALIACAO,
+     laudos_avaliacoes_fumos_metalicos.`SEQUENCIAL` AS laudos_avaliacoes_fumos_metalicos_SEQUENCIAL,
+     laudos_avaliacoes_fumos_metalicos.`NUMERO_FUNCS_SETOR` AS laudos_avaliacoes_fumos_metalicos_NUMERO_FUNCS_SETOR,
+     laudos_avaliacoes_fumos_metalicos.`NUMERO_FUNCS_EXPOSTOS` AS laudos_avaliacoes_fumos_metalicos_NUMERO_FUNCS_EXPOSTOS,
+     laudos_avaliacoes_fumos_metalicos.`PERIODICIDADE_EXPOSICAO` AS laudos_avaliacoes_fumos_metalicos_PERIODICIDADE_EXPOSICAO,
+     laudos_avaliacoes_fumos_metalicos.`TEXTO_EXPLICATIVO` AS laudos_avaliacoes_fumos_metalicos_TEXTO_EXPLICATIVO,
+     laudos_avaliacoes_fumos_metalicos.`MEDIDAS_PROTECAO_COLETIVA` AS laudos_avaliacoes_fumos_metalicos_MEDIDAS_PROTECAO_COLETIVA,
+     laudos_avaliacoes_fumos_metalicos.`MEDIDAS_PROTECAO_INDIVIDUAL` AS laudos_avaliacoes_fumos_metalicos_MEDIDAS_PROTECAO_INDIVIDUAL,
+     laudos_avaliacoes_fumos_metalicos.`MEDIDAS_PROTECAO_COLETIVA_OUTROS` AS laudos_avaliacoes_fumos_metalicos_MEDIDAS_PROTECAO_COLETIVA_OUTROS,
+     laudos_avaliacoes_fumos_metalicos.`MEDIDAS_PROTECAO_INDIVIDUAL_OUTROS` AS laudos_avaliacoes_fumos_metalicos_MEDIDAS_PROTECAO_INDIVIDUAL_OUTROS,
+     laudos_avaliacoes_fumos_metalicos.`ENQUADRAMENTO` AS laudos_avaliacoes_fumos_metalicos_ENQUADRAMENTO,
+     laudos_avaliacoes_fumos_metalicos.`ACOES_PPRA` AS laudos_avaliacoes_fumos_metalicos_ACOES_PPRA,
+     laudos_avaliacoes_fumos_metalicos.`FONTE_GERADORA` AS laudos_avaliacoes_fumos_metalicos_FONTE_GERADORA,
+     laudos_avaliacoes_fumos_metalicos.`OBSERVACOES` AS laudos_avaliacoes_fumos_metalicos_OBSERVACOES,
+     laudos_avaliacoes_fumos_metalicos.`GRAU_RISCO` AS laudos_avaliacoes_fumos_metalicos_GRAU_RISCO,
+     laudos_avaliacoes_fumos_metalicos_funcoes.`CODIGO_EMPRESA` AS laudos_avaliacoes_fumos_metalicos_funcoes_CODIGO_EMPRESA,
+     laudos_avaliacoes_fumos_metalicos_funcoes.`ANO_PERICIA` AS laudos_avaliacoes_fumos_metalicos_funcoes_ANO_PERICIA,
+     laudos_avaliacoes_fumos_metalicos_funcoes.`NUMERO_LAUDO` AS laudos_avaliacoes_fumos_metalicos_funcoes_NUMERO_LAUDO,
+     laudos_avaliacoes_fumos_metalicos_funcoes.`REVISAO` AS laudos_avaliacoes_fumos_metalicos_funcoes_REVISAO,
+     laudos_avaliacoes_fumos_metalicos_funcoes.`UNIDADE` AS laudos_avaliacoes_fumos_metalicos_funcoes_UNIDADE,
+     laudos_avaliacoes_fumos_metalicos_funcoes.`CODIGO_SETOR` AS laudos_avaliacoes_fumos_metalicos_funcoes_CODIGO_SETOR,
+     laudos_avaliacoes_fumos_metalicos_funcoes.`CODIGO_FUNCAO` AS laudos_avaliacoes_fumos_metalicos_funcoes_CODIGO_FUNCAO,
+     laudos_avaliacoes_fumos_metalicos_funcoes.`PERIODICIDADE_EXPOSICAO` AS laudos_avaliacoes_fumos_metalicos_funcoes_PERIODICIDADE_EXPOSICAO,
+     laudos_avaliacoes_fumos_metalicos_funcoes.`SEQUENCIAL` AS laudos_avaliacoes_fumos_metalicos_funcoes_SEQUENCIAL,
+     laudos_avaliacoes_fumos_metalicos_funcoes.`GRAU_INSALUBRIDADE` AS laudos_avaliacoes_fumos_metalicos_funcoes_GRAU_INSALUBRIDADE,
+     laudos_avaliacoes_fumos_metalicos_funcoes.`INTENSIDADE_CONCENTRACAO` AS laudos_avaliacoes_fumos_metalicos_funcoes_INTENSIDADE_CONCENTRACAO,
+     laudos_avaliacoes_fumos_metalicos_funcoes.`INTENSIDADE_CONCENTRACAO_UNIDADE` AS laudos_avaliacoes_fumos_metalicos_funcoes_INTENSIDADE_CONCENTRACAO_UNIDADE,
+     laudos_avaliacoes_fumos_metalicos_funcoes.`TECNICA_UTILIZADA` AS laudos_avaliacoes_fumos_metalicos_funcoes_TECNICA_UTILIZADA,
+     laudos_avaliacoes_fumos_metalicos_funcoes.`EPC_EFICAZ` AS laudos_avaliacoes_fumos_metalicos_funcoes_EPC_EFICAZ,
+     laudos_avaliacoes_fumos_metalicos_funcoes.`EPI_EFICAZ` AS laudos_avaliacoes_fumos_metalicos_funcoes_EPI_EFICAZ,
+     laudos_avaliacoes_fumos_metalicos_funcoes.`CA_EPI` AS laudos_avaliacoes_fumos_metalicos_funcoes_CA_EPI,
+     laudos_avaliacoes_fumos_metalicos_maquinas.`CODIGO_EMPRESA` AS laudos_avaliacoes_fumos_metalicos_maquinas_CODIGO_EMPRESA,
+     laudos_avaliacoes_fumos_metalicos_maquinas.`ANO_PERICIA` AS laudos_avaliacoes_fumos_metalicos_maquinas_ANO_PERICIA,
+     laudos_avaliacoes_fumos_metalicos_maquinas.`NUMERO_LAUDO` AS laudos_avaliacoes_fumos_metalicos_maquinas_NUMERO_LAUDO,
+     laudos_avaliacoes_fumos_metalicos_maquinas.`REVISAO` AS laudos_avaliacoes_fumos_metalicos_maquinas_REVISAO,
+     laudos_avaliacoes_fumos_metalicos_maquinas.`UNIDADE` AS laudos_avaliacoes_fumos_metalicos_maquinas_UNIDADE,
+     laudos_avaliacoes_fumos_metalicos_maquinas.`CODIGO_SETOR` AS laudos_avaliacoes_fumos_metalicos_maquinas_CODIGO_SETOR,
+     laudos_avaliacoes_fumos_metalicos_maquinas.`CODIGO_MAQUINA` AS laudos_avaliacoes_fumos_metalicos_maquinas_CODIGO_MAQUINA,
+     laudos_avaliacoes_fumos_metalicos_maquinas.`SEQUENCIAL` AS laudos_avaliacoes_fumos_metalicos_maquinas_SEQUENCIAL,
+     laudos_avaliacoes_fumos_metalicos_maquinas.`NIVEL_MEDIDO` AS laudos_avaliacoes_fumos_metalicos_maquinas_NIVEL_MEDIDO,
+     laudos_avaliacoes_fumos_metalicos_maquinas.`NIVEL_PERMITIDO` AS laudos_avaliacoes_fumos_metalicos_maquinas_NIVEL_PERMITIDO,
+     setores.`CODIGO_EMPRESA` AS setores_CODIGO_EMPRESA,
+     setores.`UNIDADE` AS setores_UNIDADE,
+     setores.`CODIGO_SETOR` AS setores_CODIGO_SETOR,
+     setores.`CODIGO_SETOR_PAI` AS setores_CODIGO_SETOR_PAI,
+     setores.`NOME_SETOR` AS setores_NOME_SETOR,
+     setores.`DESCRICAO` AS setores_DESCRICAO,
+     setores.`SITUACAO` AS setores_SITUACAO,
+     setores.`GRAU_EXPOSICAO` AS setores_GRAU_EXPOSICAO,
+     estrutura_organizacional.`CODIGO_EMPRESA` AS estrutura_organizacional_CODIGO_EMPRESA,
+     estrutura_organizacional.`UNIDADE` AS estrutura_organizacional_UNIDADE,
+     estrutura_organizacional.`UNIDADE_PAI` AS estrutura_organizacional_UNIDADE_PAI,
+     estrutura_organizacional.`NIVEL_ORGANIZACAO` AS estrutura_organizacional_NIVEL_ORGANIZACAO,
+     estrutura_organizacional.`NIVEL_QUEBRA` AS estrutura_organizacional_NIVEL_QUEBRA,
+     estrutura_organizacional.`DESCRICAO_UNIDADE` AS estrutura_organizacional_DESCRICAO_UNIDADE, maquinas.`NOME` as maquinas_NOME
+
+
+FROM
+     `laudos_avaliacoes_fumos_metalicos` laudos_avaliacoes_fumos_metalicos LEFT JOIN `laudos_avaliacoes_fumos_metalicos_funcoes` laudos_avaliacoes_fumos_metalicos_funcoes ON laudos_avaliacoes_fumos_metalicos_funcoes.`CODIGO_EMPRESA` = laudos_avaliacoes_fumos_metalicos.`CODIGO_EMPRESA`
+     AND laudos_avaliacoes_fumos_metalicos_funcoes.`NUMERO_LAUDO` = laudos_avaliacoes_fumos_metalicos.`NUMERO_LAUDO`
+     AND laudos_avaliacoes_fumos_metalicos_funcoes.`UNIDADE` = laudos_avaliacoes_fumos_metalicos.`UNIDADE`
+     AND laudos_avaliacoes_fumos_metalicos_funcoes.`CODIGO_SETOR` = laudos_avaliacoes_fumos_metalicos.`CODIGO_SETOR`
+     AND laudos_avaliacoes_fumos_metalicos_funcoes.`REVISAO` = laudos_avaliacoes_fumos_metalicos.`REVISAO`
+     AND laudos_avaliacoes_fumos_metalicos_funcoes.`ANO_PERICIA` = laudos_avaliacoes_fumos_metalicos.`ANO_PERICIA`
+     LEFT JOIN `laudos_avaliacoes_fumos_metalicos_maquinas` laudos_avaliacoes_fumos_metalicos_maquinas ON laudos_avaliacoes_fumos_metalicos.`CODIGO_EMPRESA` = laudos_avaliacoes_fumos_metalicos_maquinas.`CODIGO_EMPRESA`
+     AND laudos_avaliacoes_fumos_metalicos_maquinas.`REVISAO` = laudos_avaliacoes_fumos_metalicos.`REVISAO`
+     AND laudos_avaliacoes_fumos_metalicos_maquinas.`ANO_PERICIA` = laudos_avaliacoes_fumos_metalicos.`ANO_PERICIA`
+     AND laudos_avaliacoes_fumos_metalicos_maquinas.`NUMERO_LAUDO` = laudos_avaliacoes_fumos_metalicos.`NUMERO_LAUDO`
+     INNER JOIN `setores` setores ON laudos_avaliacoes_fumos_metalicos.`CODIGO_EMPRESA` = setores.`CODIGO_EMPRESA`
+     AND setores.`UNIDADE` = laudos_avaliacoes_fumos_metalicos.`UNIDADE`
+     AND setores.`CODIGO_SETOR` = laudos_avaliacoes_fumos_metalicos.`CODIGO_SETOR`
+     AND setores.`CODIGO_EMPRESA` = laudos_avaliacoes_fumos_metalicos_maquinas.`CODIGO_EMPRESA`
+     AND setores.`UNIDADE` = laudos_avaliacoes_fumos_metalicos_maquinas.`UNIDADE`
+     AND setores.`CODIGO_SETOR` = laudos_avaliacoes_fumos_metalicos_maquinas.`CODIGO_SETOR`
+     INNER JOIN `estrutura_organizacional` estrutura_organizacional ON setores.`CODIGO_EMPRESA` = estrutura_organizacional.`CODIGO_EMPRESA`
+     AND estrutura_organizacional.`UNIDADE` = setores.`UNIDADE`
+     INNER JOIN `maquinas` maquinas ON maquinas.`CODIGO_EMPRESA`=
+laudos_avaliacoes_fumos_metalicos.`CODIGO_EMPRESA` AND maquinas.`CODIGO_MAQUINA` =
+laudos_avaliacoes_fumos_metalicos_maquinas.`CODIGO_MAQUINA`
+WHERE
+     laudos_avaliacoes_fumos_metalicos.CODIGO_EMPRESA = $P{CODIGO_EMPRESA}
+ AND laudos_avaliacoes_fumos_metalicos.ANO_PERICIA = $P{ANO_PERICIA}
+ AND laudos_avaliacoes_fumos_metalicos.NUMERO_LAUDO = $P{NUMERO_LAUDO}
+ AND laudos_avaliacoes_fumos_metalicos.REVISAO = $P{REVISAO}
+ORDER BY
+     laudos_avaliacoes_fumos_metalicos.UNIDADE ASC,
+     laudos_avaliacoes_fumos_metalicos.CODIGO_SETOR ASC]]>
+	</queryString>
+	<field name="laudos_avaliacoes_fumos_metalicos_CODIGO_EMPRESA" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_ANO_PERICIA" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_NUMERO_LAUDO" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_REVISAO" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_UNIDADE" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_CODIGO_SETOR" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_TIPO_AVALIACAO" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_SEQUENCIAL" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_NUMERO_FUNCS_SETOR" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_NUMERO_FUNCS_EXPOSTOS" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_PERIODICIDADE_EXPOSICAO" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_TEXTO_EXPLICATIVO" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_MEDIDAS_PROTECAO_COLETIVA" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_MEDIDAS_PROTECAO_INDIVIDUAL" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_MEDIDAS_PROTECAO_COLETIVA_OUTROS" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_MEDIDAS_PROTECAO_INDIVIDUAL_OUTROS" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_ENQUADRAMENTO" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_ACOES_PPRA" class="java.lang.Boolean"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_FONTE_GERADORA" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_OBSERVACOES" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_GRAU_RISCO" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_funcoes_CODIGO_EMPRESA" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_funcoes_ANO_PERICIA" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_funcoes_NUMERO_LAUDO" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_funcoes_REVISAO" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_funcoes_UNIDADE" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_funcoes_CODIGO_SETOR" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_funcoes_CODIGO_FUNCAO" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_funcoes_PERIODICIDADE_EXPOSICAO" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_funcoes_SEQUENCIAL" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_funcoes_GRAU_INSALUBRIDADE" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_funcoes_INTENSIDADE_CONCENTRACAO" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_funcoes_INTENSIDADE_CONCENTRACAO_UNIDADE" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_funcoes_TECNICA_UTILIZADA" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_funcoes_EPC_EFICAZ" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_funcoes_EPI_EFICAZ" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_funcoes_CA_EPI" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_maquinas_CODIGO_EMPRESA" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_maquinas_ANO_PERICIA" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_maquinas_NUMERO_LAUDO" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_maquinas_REVISAO" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_maquinas_UNIDADE" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_maquinas_CODIGO_SETOR" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_maquinas_CODIGO_MAQUINA" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_maquinas_SEQUENCIAL" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_maquinas_NIVEL_MEDIDO" class="java.math.BigDecimal"/>
+	<field name="laudos_avaliacoes_fumos_metalicos_maquinas_NIVEL_PERMITIDO" class="java.math.BigDecimal"/>
+	<field name="setores_CODIGO_EMPRESA" class="java.lang.Integer"/>
+	<field name="setores_UNIDADE" class="java.lang.Integer"/>
+	<field name="setores_CODIGO_SETOR" class="java.lang.Integer"/>
+	<field name="setores_CODIGO_SETOR_PAI" class="java.lang.Integer"/>
+	<field name="setores_NOME_SETOR" class="java.lang.String"/>
+	<field name="setores_DESCRICAO" class="java.lang.String"/>
+	<field name="setores_SITUACAO" class="java.lang.String"/>
+	<field name="setores_GRAU_EXPOSICAO" class="java.lang.String"/>
+	<field name="estrutura_organizacional_CODIGO_EMPRESA" class="java.lang.Integer"/>
+	<field name="estrutura_organizacional_UNIDADE" class="java.lang.Integer"/>
+	<field name="estrutura_organizacional_UNIDADE_PAI" class="java.lang.Integer"/>
+	<field name="estrutura_organizacional_NIVEL_ORGANIZACAO" class="java.lang.Integer"/>
+	<field name="estrutura_organizacional_NIVEL_QUEBRA" class="java.lang.Integer"/>
+	<field name="estrutura_organizacional_DESCRICAO_UNIDADE" class="java.lang.String"/>
+	<field name="maquinas_NOME" class="java.lang.String"/>
+	<variable name="UNIDADE" class="java.lang.String"/>
+	<variable name="CODIGO_SETOR" class="java.lang.String"/>
+	<group name="GRUPO_UNIDADE_SETOR" isStartNewPage="true">
+		<groupExpression><![CDATA[($F{laudos_avaliacoes_fumos_metalicos_UNIDADE}+" "+$F{laudos_avaliacoes_fumos_metalicos_CODIGO_SETOR})]]></groupExpression>
+		<groupHeader>
+			<band height="58">
+				<rectangle>
+					<reportElement uuid="f9e2ab1f-07a0-4aa6-9e43-744bc1364377" x="3" y="3" width="372" height="50"/>
+				</rectangle>
+				<textField>
+					<reportElement uuid="e21a8165-dddb-4b12-b71b-4260cc600a93" x="103" y="7" width="30" height="20"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{laudos_avaliacoes_fumos_metalicos_UNIDADE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="ea5a0108-b215-4d07-a48a-bb3af9ef2dc4" x="4" y="7" width="89" height="20"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Unidade]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="ea5a0108-b215-4d07-a48a-bb3af9ef2dc4" x="4" y="27" width="89" height="20"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Código do Setor]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="e21a8165-dddb-4b12-b71b-4260cc600a93" x="103" y="27" width="30" height="20"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{laudos_avaliacoes_fumos_metalicos_CODIGO_SETOR}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="6b845f37-283d-40d9-8034-b0102f6031e9" x="144" y="27" width="194" height="20"/>
+					<textElement>
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{setores_NOME_SETOR}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="ac6ec6c8-f882-42f4-9999-0210637389c1" x="144" y="7" width="194" height="20"/>
+					<textElement>
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{estrutura_organizacional_DESCRICAO_UNIDADE}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement uuid="bdb7cbe9-9eb0-4159-8f90-0c4129e3f6b5" x="375" y="3" width="137" height="50"/>
+				</rectangle>
+				<staticText>
+					<reportElement uuid="ea5a0108-b215-4d07-a48a-bb3af9ef2dc4" x="375" y="7" width="137" height="20"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Data]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="112">
+				<rectangle>
+					<reportElement uuid="f9e2ab1f-07a0-4aa6-9e43-744bc1364377" mode="Transparent" x="3" y="24" width="509" height="20"/>
+				</rectangle>
+				<rectangle>
+					<reportElement uuid="f9e2ab1f-07a0-4aa6-9e43-744bc1364377" mode="Opaque" x="3" y="4" width="509" height="20"/>
+				</rectangle>
+				<staticText>
+					<reportElement uuid="ea5a0108-b215-4d07-a48a-bb3af9ef2dc4" x="4" y="5" width="213" height="19"/>
+					<textElement>
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Medidas de Proteção Coletiva adotadas:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="ea5a0108-b215-4d07-a48a-bb3af9ef2dc4" x="4" y="25" width="226" height="19"/>
+					<textElement>
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Medidas de Proteção Individual adotadas:]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="cfd18f42-525c-4537-a20f-441b00d60124" x="230" y="5" width="100" height="20"/>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{laudos_avaliacoes_fumos_metalicos_MEDIDAS_PROTECAO_COLETIVA}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="cfd18f42-525c-4537-a20f-441b00d60124" x="230" y="24" width="100" height="20"/>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{laudos_avaliacoes_fumos_metalicos_MEDIDAS_PROTECAO_INDIVIDUAL}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="cfd18f42-525c-4537-a20f-441b00d60124" x="330" y="5" width="100" height="20"/>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{laudos_avaliacoes_fumos_metalicos_MEDIDAS_PROTECAO_COLETIVA_OUTROS}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="cfd18f42-525c-4537-a20f-441b00d60124" x="330" y="24" width="100" height="20"/>
+					<textElement>
+						<font fontName="Arial"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{laudos_avaliacoes_fumos_metalicos_MEDIDAS_PROTECAO_INDIVIDUAL_OUTROS}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement uuid="f9e2ab1f-07a0-4aa6-9e43-744bc1364377" mode="Transparent" x="3" y="44" width="509" height="65"/>
+				</rectangle>
+				<staticText>
+					<reportElement uuid="ea5a0108-b215-4d07-a48a-bb3af9ef2dc4" stretchType="RelativeToTallestObject" x="4" y="44" width="98" height="65"/>
+					<box>
+						<pen lineWidth="0.75"/>
+						<topPen lineWidth="0.75"/>
+						<leftPen lineWidth="0.75"/>
+						<bottomPen lineWidth="0.75"/>
+						<rightPen lineWidth="0.75"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Enquadramento]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="5f9625d8-f72c-483f-ad63-6ee9d9283582" x="102" y="44" width="410" height="65"/>
+					<textElement markup="styled">
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{laudos_avaliacoes_fumos_metalicos_ENQUADRAMENTO}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="GRUPO_FUNCOES_EMPRESA">
+		<groupHeader>
+			<band height="30">
+				<subreport>
+					<reportElement uuid="c5b11a19-6b91-4902-bf89-aeff20e0d2c4" positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="3" y="0" width="509" height="22"/>
+					<subreportParameter name="CODIGO_SETOR">
+						<subreportParameterExpression><![CDATA[$F{laudos_avaliacoes_fumos_metalicos_CODIGO_SETOR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CODIGO_EMPRESA">
+						<subreportParameterExpression><![CDATA[$P{CODIGO_EMPRESA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="UNIDADE">
+						<subreportParameterExpression><![CDATA[$F{laudos_avaliacoes_fumos_metalicos_UNIDADE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="IsOnServer">
+						<subreportParameterExpression><![CDATA[$P{IsOnServer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{IsOnServer}=='S'? "repo:rpt_laudo2_subreport_avaliacoes_funcoes.jasper":"rpt_laudo2_subreport_avaliacoes_funcoes.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPO_FUNCOES_EXPOSTAS">
+		<groupHeader>
+			<band height="35">
+				<subreport>
+					<reportElement uuid="46f399ca-96ce-4754-b053-94f5bbd33848" positionType="Float" x="3" y="0" width="509" height="25"/>
+					<subreportParameter name="CODIGO_SETOR">
+						<subreportParameterExpression><![CDATA[$F{laudos_avaliacoes_fumos_metalicos_CODIGO_SETOR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CODIGO_EMPRESA">
+						<subreportParameterExpression><![CDATA[$P{CODIGO_EMPRESA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ANO_PERICIA">
+						<subreportParameterExpression><![CDATA[$P{ANO_PERICIA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="UNIDADE">
+						<subreportParameterExpression><![CDATA[$F{laudos_avaliacoes_fumos_metalicos_UNIDADE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="REVISAO">
+						<subreportParameterExpression><![CDATA[$P{REVISAO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="IsOnServer">
+						<subreportParameterExpression><![CDATA[$P{IsOnServer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="TABELA_FUNCOES">
+						<subreportParameterExpression><![CDATA[$P{TABELA_FUNCOES}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NUMERO_LAUDO">
+						<subreportParameterExpression><![CDATA[$P{NUMERO_LAUDO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{IsOnServer}=='S'? "repo:rpt_laudo2_subreport_avaliacoes_funcoes_expostas.jasper":"rpt_laudo2_subreport_avaliacoes_funcoes_expostas.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPO_FUNCIONARIOS_FUNCOES">
+		<groupExpression><![CDATA[$F{laudos_avaliacoes_fumos_metalicos_CODIGO_EMPRESA}]]></groupExpression>
+		<groupHeader>
+			<band height="40">
+				<subreport>
+					<reportElement uuid="46f399ca-96ce-4754-b053-94f5bbd33848" positionType="Float" x="3" y="0" width="509" height="25"/>
+					<subreportParameter name="NUMERO_LAUDO">
+						<subreportParameterExpression><![CDATA[$P{NUMERO_LAUDO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{IsOnServer}=='S'? "repo:rpt_laudo2_subreport_avaliacoes_funcionarios_funcoes.jasper":"rpt_laudo2_subreport_avaliacoes_funcionarios_funcoes.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPO_MEDICOES">
+		<groupHeader>
+			<band height="42">
+				<rectangle>
+					<reportElement uuid="f9e2ab1f-07a0-4aa6-9e43-744bc1364377" positionType="Float" mode="Transparent" x="3" y="0" width="509" height="39"/>
+				</rectangle>
+				<staticText>
+					<reportElement uuid="ea5a0108-b215-4d07-a48a-bb3af9ef2dc4" positionType="Float" mode="Opaque" x="5" y="10" width="342" height="19" forecolor="#000000" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Local / Máquina ou Equipamento]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement uuid="ac099a07-e9ad-452c-adcf-c6be3f9d6183" positionType="Float" stretchType="RelativeToBandHeight" x="378" y="0" width="68" height="39"/>
+				</rectangle>
+				<staticText>
+					<reportElement uuid="ea5a0108-b215-4d07-a48a-bb3af9ef2dc4" positionType="Float" x="378" y="0" width="67" height="39"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nível  medido]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="ea5a0108-b215-4d07-a48a-bb3af9ef2dc4" positionType="Float" x="445" y="0" width="67" height="39"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nível permitido]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="113" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="7eebf796-86f6-4be2-bff4-347ba938a91c" x="3" y="11" width="509" height="20"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Agentes Químicos - Fumos Metálicos]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="13f10f0e-cb92-4495-adc3-789da66b5759" x="3" y="44" width="509" height="69"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Justified" markup="styled">
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{laudos_avaliacoes_fumos_metalicos_TEXTO_EXPLICATIVO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="f9e2ab1f-07a0-4aa6-9e43-744bc1364377" mode="Opaque" x="3" y="0" width="509" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="46d541f3-c7ee-43b2-bddf-42476286ece0" mode="Transparent" x="378" y="0" width="68" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="5e2923e3-0894-4253-980d-1fb2bce2515c" x="29" y="0" width="34" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{laudos_avaliacoes_fumos_metalicos_maquinas_CODIGO_MAQUINA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="dc599e70-bd6f-455e-a2b9-5c62f27b48ec" x="53" y="0" width="292" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{maquinas_NOME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5aa85b44-2cc1-484a-b78e-824dbfec2e59" x="443" y="0" width="69" height="20"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{laudos_avaliacoes_fumos_metalicos_maquinas_NIVEL_PERMITIDO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2d8ea13c-51a8-4eb1-bb41-d88cede2c9b2" x="378" y="0" width="67" height="20"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{laudos_avaliacoes_fumos_metalicos_maquinas_NIVEL_MEDIDO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_laudo2_subreport_avaliacoes" language="groovy" pageWidth="514" pageHeight="802" columnWidth="514" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a4394d85-ce2b-4db1-ae49-fa403ec4bb07">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1" uuid="594a5dd6-0fea-41c1-8a61-b66d55f693b8"/>
+	<subDataset name="dataset2" uuid="51ce4261-40a3-474c-824e-f0c6a9dbebce"/>
+	<parameter name="CODIGO_EMPRESA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ANO_PERICIA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[2012]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NUMERO_LAUDO" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[8]]></defaultValueExpression>
+	</parameter>
+	<parameter name="REVISAO" class="java.lang.String">
+		<defaultValueExpression><![CDATA[0]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IsOnServer" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="AVALIACOES_EXECUTADAS" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+DISTINCT OUTROS_FISICOS_DESCRICAO, OUTROS_BIOLOGICOS_DESCRICAO,  OUTROS_QUIMICOS_DESCRICAO, sum(RUIDO) AS RUIDO,SUM(RUIDO_DOSIMETRIA) AS RUIDO_DOSIMETRIA,SUM(FRIO) AS FRIO,SUM(CALOR) AS CALOR,SUM(UMIDADE) AS UMIDADE,SUM(RADIACAO_NAO_IONIZANTE) AS RADIACAO_NAO_IONIZANTE,SUM(RADIACAO_IONIZANTE) AS RADIACAO_IONIZANTE,SUM(OUTROS_FISICOS) AS OUTROS_FISICOS,SUM(SANGUE_HUMANO) AS SANGUE_HUMANO,SUM(SANGUE_ANIMAL) AS SANGUE_ANIMAL,SUM(MANEJO_ANIMAIS) AS MANEJO_ANIMAIS,SUM(OUTROS_BIOLOGICOS) AS OUTROS_BIOLOGICOS,SUM(PRODUTOS_LIMPEZA) AS PRODUTOS_LIMPEZA,SUM(TINTAS_SOLVENTES) AS TINTAS_SOLVENTES,SUM(HIDROCARBONETOS_AROMATICOS) AS HIDROCARBONETOS_AROMATICOS,SUM(FUMOS_METALICOS) AS FUMOS_METALICOS,SUM(POEIRAS_INCOMODAS) AS POEIRAS_INCOMODAS,
+SUM(DEFENSIVOS_AGRICOLAS) AS DEFENSIVOS_AGRICOLAS,
+ SUM(POEIRAS_MINERAIS) AS POEIRAS_MINERAIS,SUM(OUTROS_QUIMICOS) AS OUTROS_QUIMICOS,SUM(ILUMINAMENTO) AS ILUMINAMENTO
+FROM
+     `laudos_avaliacoes` laudos_avaliacoes
+
+WHERE
+laudos_avaliacoes.CODIGO_EMPRESA=$P{CODIGO_EMPRESA} AND
+laudos_avaliacoes.ANO_PERICIA=$P{ANO_PERICIA} AND
+laudos_avaliacoes.NUMERO_LAUDO=$P{NUMERO_LAUDO} AND
+laudos_avaliacoes.REVISAO=$P{REVISAO}]]>
+	</queryString>
+	<field name="OUTROS_FISICOS_DESCRICAO" class="java.lang.String"/>
+	<field name="OUTROS_BIOLOGICOS_DESCRICAO" class="java.lang.String"/>
+	<field name="OUTROS_QUIMICOS_DESCRICAO" class="java.lang.String"/>
+	<field name="RUIDO" class="java.math.BigDecimal"/>
+	<field name="RUIDO_DOSIMETRIA" class="java.math.BigDecimal"/>
+	<field name="FRIO" class="java.math.BigDecimal"/>
+	<field name="CALOR" class="java.math.BigDecimal"/>
+	<field name="UMIDADE" class="java.math.BigDecimal"/>
+	<field name="RADIACAO_NAO_IONIZANTE" class="java.math.BigDecimal"/>
+	<field name="RADIACAO_IONIZANTE" class="java.math.BigDecimal"/>
+	<field name="OUTROS_FISICOS" class="java.math.BigDecimal"/>
+	<field name="SANGUE_HUMANO" class="java.math.BigDecimal"/>
+	<field name="SANGUE_ANIMAL" class="java.math.BigDecimal"/>
+	<field name="MANEJO_ANIMAIS" class="java.math.BigDecimal"/>
+	<field name="OUTROS_BIOLOGICOS" class="java.math.BigDecimal"/>
+	<field name="PRODUTOS_LIMPEZA" class="java.math.BigDecimal"/>
+	<field name="TINTAS_SOLVENTES" class="java.math.BigDecimal"/>
+	<field name="HIDROCARBONETOS_AROMATICOS" class="java.math.BigDecimal"/>
+	<field name="FUMOS_METALICOS" class="java.math.BigDecimal"/>
+	<field name="POEIRAS_INCOMODAS" class="java.math.BigDecimal"/>
+	<field name="DEFENSIVOS_AGRICOLAS" class="java.math.BigDecimal"/>
+	<field name="POEIRAS_MINERAIS" class="java.math.BigDecimal"/>
+	<field name="OUTROS_QUIMICOS" class="java.math.BigDecimal"/>
+	<field name="ILUMINAMENTO" class="java.math.BigDecimal"/>
+	<group name="AVALIACOES_EXECUTADAS" isStartNewPage="true">
+		<groupHeader>
+			<band height="34">
+				<break>
+					<reportElement uuid="ac48e0a1-6f3b-43dd-b669-29b353bbbb40" x="0" y="8" width="100" height="1"/>
+				</break>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="04810d14-dad6-4615-a498-71d7e56361ee" mode="Opaque" x="0" y="8" width="514" height="20" backcolor="#CCCCCC"/>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{AVALIACOES_EXECUTADAS}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPO_RUIDO" isStartNewPage="true">
+		<groupExpression><![CDATA[$F{RUIDO}]]></groupExpression>
+		<groupHeader>
+			<band height="46">
+				<printWhenExpression><![CDATA[($F{RUIDO}>0)]]></printWhenExpression>
+				<subreport isUsingCache="true">
+					<reportElement uuid="87c9db34-0c5b-4d55-a853-471d0a950707" x="0" y="0" width="514" height="23"/>
+					<subreportParameter name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CODIGO_EMPRESA">
+						<subreportParameterExpression><![CDATA[$P{CODIGO_EMPRESA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="TABLEA_FUNCOES">
+						<subreportParameterExpression><![CDATA["laudos_avaliacoes_ruido_funcoes"]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ANO_PERICIA">
+						<subreportParameterExpression><![CDATA[$P{ANO_PERICIA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="REVISAO">
+						<subreportParameterExpression><![CDATA[$P{REVISAO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="IsOnServer">
+						<subreportParameterExpression><![CDATA[$P{IsOnServer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NUMERO_LAUDO">
+						<subreportParameterExpression><![CDATA[$P{NUMERO_LAUDO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{IsOnServer}=='S'?"repo:rpt_laudo2_subreport_avaliacoes_ruido.jasper":"rpt_laudo2_subreport_avaliacoes_ruido.jasper"]]></subreportExpression>
+				</subreport>
+				<break>
+					<reportElement uuid="fe39a4ed-4cb6-4ab8-9ab0-f65081e01ec8" x="0" y="33" width="100" height="1"/>
+				</break>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPO_RUIDO_DOSIMETRIA">
+		<groupExpression><![CDATA[$F{RUIDO_DOSIMETRIA}]]></groupExpression>
+		<groupHeader>
+			<band height="33">
+				<printWhenExpression><![CDATA[($F{RUIDO_DOSIMETRIA}>0)]]></printWhenExpression>
+				<break>
+					<reportElement uuid="9c9ea4ef-da62-4bba-b583-6719970c59c9" x="0" y="0" width="100" height="1"/>
+				</break>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPO_FRIO">
+		<groupExpression><![CDATA[$F{FRIO}]]></groupExpression>
+		<groupHeader>
+			<band height="34">
+				<printWhenExpression><![CDATA[($F{FRIO}>0)]]></printWhenExpression>
+				<subreport>
+					<reportElement uuid="87c9db34-0c5b-4d55-a853-471d0a950707" x="0" y="8" width="514" height="23"/>
+					<subreportParameter name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CODIGO_EMPRESA">
+						<subreportParameterExpression><![CDATA[$P{CODIGO_EMPRESA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ANO_PERICIA">
+						<subreportParameterExpression><![CDATA[$P{ANO_PERICIA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="REVISAO">
+						<subreportParameterExpression><![CDATA[$P{REVISAO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="IsOnServer">
+						<subreportParameterExpression><![CDATA[$P{IsOnServer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NUMERO_LAUDO">
+						<subreportParameterExpression><![CDATA[$P{NUMERO_LAUDO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{IsOnServer}=='S'?"repo:rpt_laudo2_subreport_avaliacoes_frio.jasper":"rpt_laudo2_subreport_avaliacoes_frio.jasper"]]></subreportExpression>
+				</subreport>
+				<break>
+					<reportElement uuid="0ef9bd63-f53f-4cee-b002-ea500859d4f0" x="0" y="5" width="100" height="1"/>
+				</break>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPO_CALOR">
+		<groupExpression><![CDATA[$F{CALOR}]]></groupExpression>
+		<groupHeader>
+			<band height="35">
+				<printWhenExpression><![CDATA[($F{CALOR}>0)]]></printWhenExpression>
+				<subreport>
+					<reportElement uuid="87c9db34-0c5b-4d55-a853-471d0a950707" x="0" y="7" width="514" height="23"/>
+					<subreportParameter name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CODIGO_EMPRESA">
+						<subreportParameterExpression><![CDATA[$P{CODIGO_EMPRESA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ANO_PERICIA">
+						<subreportParameterExpression><![CDATA[$P{ANO_PERICIA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="REVISAO">
+						<subreportParameterExpression><![CDATA[$P{REVISAO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="IsOnServer">
+						<subreportParameterExpression><![CDATA[$P{IsOnServer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NUMERO_LAUDO">
+						<subreportParameterExpression><![CDATA[$P{NUMERO_LAUDO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{IsOnServer}=='S'?"repo:rpt_laudo2_subreport_avaliacoes_calor.jasper":"rpt_laudo2_subreport_avaliacoes_calor.jasper"]]></subreportExpression>
+				</subreport>
+				<break>
+					<reportElement uuid="a645862c-d767-4f8c-8262-94fc0e93a88b" x="0" y="7" width="100" height="1"/>
+				</break>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPO_UMIDADE">
+		<groupExpression><![CDATA[$F{OUTROS_FISICOS_DESCRICAO}]]></groupExpression>
+		<groupHeader>
+			<band height="41">
+				<printWhenExpression><![CDATA[($F{UMIDADE}>0)]]></printWhenExpression>
+				<subreport>
+					<reportElement uuid="87c9db34-0c5b-4d55-a853-471d0a950707" x="0" y="10" width="514" height="23"/>
+					<subreportParameter name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CODIGO_EMPRESA">
+						<subreportParameterExpression><![CDATA[$P{CODIGO_EMPRESA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ANO_PERICIA">
+						<subreportParameterExpression><![CDATA[$P{ANO_PERICIA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="REVISAO">
+						<subreportParameterExpression><![CDATA[$P{REVISAO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="IsOnServer">
+						<subreportParameterExpression><![CDATA[$P{IsOnServer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="TABELA_FUNCOES">
+						<subreportParameterExpression><![CDATA["laudos_avaliacoes_umidade_funcoes"]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NUMERO_LAUDO">
+						<subreportParameterExpression><![CDATA[$P{NUMERO_LAUDO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{IsOnServer}=='S'?"repo:rpt_laudo2_subreport_avaliacoes_umidade.jasper":"rpt_laudo2_subreport_avaliacoes_umidade.jasper"]]></subreportExpression>
+				</subreport>
+				<break>
+					<reportElement uuid="cb1856d6-b0d2-4403-8dae-dc4f45a352a2" x="0" y="5" width="100" height="1"/>
+				</break>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPO_RADIACAO_NAO_IONIZANTE">
+		<groupExpression><![CDATA[$F{OUTROS_FISICOS_DESCRICAO}]]></groupExpression>
+		<groupHeader>
+			<band height="40">
+				<printWhenExpression><![CDATA[($F{RADIACAO_NAO_IONIZANTE}>0)]]></printWhenExpression>
+				<subreport>
+					<reportElement uuid="87c9db34-0c5b-4d55-a853-471d0a950707" x="0" y="10" width="514" height="23"/>
+					<subreportParameter name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CODIGO_EMPRESA">
+						<subreportParameterExpression><![CDATA[$P{CODIGO_EMPRESA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ANO_PERICIA">
+						<subreportParameterExpression><![CDATA[$P{ANO_PERICIA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="REVISAO">
+						<subreportParameterExpression><![CDATA[$P{REVISAO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="IsOnServer">
+						<subreportParameterExpression><![CDATA[$P{IsOnServer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NUMERO_LAUDO">
+						<subreportParameterExpression><![CDATA[$P{NUMERO_LAUDO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{IsOnServer}=='S'?"repo:rpt_laudo2_subreport_avaliacoes_radiacao_nao_ionizante.jasper":"rpt_laudo2_subreport_avaliacoes_radiacao_nao_ionizante.jasper"]]></subreportExpression>
+				</subreport>
+				<break>
+					<reportElement uuid="34c153de-c69e-451c-b237-45e9a8bffb2b" x="0" y="5" width="100" height="1"/>
+				</break>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPO_RADIACAO_IONIZANTE">
+		<groupExpression><![CDATA[$F{RADIACAO_IONIZANTE}]]></groupExpression>
+		<groupHeader>
+			<band height="42">
+				<printWhenExpression><![CDATA[($F{RADIACAO_IONIZANTE}>0)]]></printWhenExpression>
+				<subreport>
+					<reportElement uuid="87c9db34-0c5b-4d55-a853-471d0a950707" x="0" y="10" width="514" height="23"/>
+					<subreportParameter name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CODIGO_EMPRESA">
+						<subreportParameterExpression><![CDATA[$P{CODIGO_EMPRESA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ANO_PERICIA">
+						<subreportParameterExpression><![CDATA[$P{ANO_PERICIA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="REVISAO">
+						<subreportParameterExpression><![CDATA[$P{REVISAO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="IsOnServer">
+						<subreportParameterExpression><![CDATA[$P{IsOnServer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NUMERO_LAUDO">
+						<subreportParameterExpression><![CDATA[$P{NUMERO_LAUDO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{IsOnServer}=='S'?"repo:rpt_laudo2_subreport_avaliacoes_radiacao_ionizante.jasper":"rpt_laudo2_subreport_avaliacoes_radiacao_ionizante.jasper"]]></subreportExpression>
+				</subreport>
+				<break>
+					<reportElement uuid="a9b03ead-6a13-4d4d-b1d3-24772d5428ef" x="0" y="3" width="100" height="1"/>
+				</break>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPO_OUTROS_FISICOS">
+		<groupExpression><![CDATA[$F{OUTROS_FISICOS}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<printWhenExpression><![CDATA[($F{OUTROS_FISICOS}>0)]]></printWhenExpression>
+				<subreport>
+					<reportElement uuid="87c9db34-0c5b-4d55-a853-471d0a950707" x="0" y="11" width="514" height="23"/>
+					<subreportParameter name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CODIGO_EMPRESA">
+						<subreportParameterExpression><![CDATA[$P{CODIGO_EMPRESA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ANO_PERICIA">
+						<subreportParameterExpression><![CDATA[$P{ANO_PERICIA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="REVISAO">
+						<subreportParameterExpression><![CDATA[$P{REVISAO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="IsOnServer">
+						<subreportParameterExpression><![CDATA[$P{IsOnServer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NUMERO_LAUDO">
+						<subreportParameterExpression><![CDATA[$P{NUMERO_LAUDO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{IsOnServer}=='S'?"repo:rpt_laudo2_subreport_avaliacoes_outros_fisicos.jasper":"rpt_laudo2_subreport_avaliacoes_outros_fisicos.jasper"]]></subreportExpression>
+				</subreport>
+				<break>
+					<reportElement uuid="0b548dd7-aefc-462d-a827-4e4d4d622866" x="0" y="7" width="100" height="1"/>
+				</break>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPO_SANGUE_HUMANO">
+		<groupExpression><![CDATA[$F{SANGUE_HUMANO}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<printWhenExpression><![CDATA[($F{SANGUE_HUMANO}>0)]]></printWhenExpression>
+				<subreport>
+					<reportElement uuid="87c9db34-0c5b-4d55-a853-471d0a950707" x="0" y="11" width="514" height="23"/>
+					<subreportParameter name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CODIGO_EMPRESA">
+						<subreportParameterExpression><![CDATA[$P{CODIGO_EMPRESA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ANO_PERICIA">
+						<subreportParameterExpression><![CDATA[$P{ANO_PERICIA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="REVISAO">
+						<subreportParameterExpression><![CDATA[$P{REVISAO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="IsOnServer">
+						<subreportParameterExpression><![CDATA[$P{IsOnServer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NUMERO_LAUDO">
+						<subreportParameterExpression><![CDATA[$P{NUMERO_LAUDO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{IsOnServer}=='S'?"repo:rpt_laudo2_subreport_avaliacoes_sangue_humano.jasper":"rpt_laudo2_subreport_avaliacoes_sangue_humano.jasper"]]></subreportExpression>
+				</subreport>
+				<break>
+					<reportElement uuid="f7f85388-e60f-422d-a825-4335880a1d9f" x="0" y="5" width="100" height="1"/>
+				</break>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPO_SANGUE_ANIMAL">
+		<groupExpression><![CDATA[$F{SANGUE_ANIMAL}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<printWhenExpression><![CDATA[($F{SANGUE_ANIMAL}>0)]]></printWhenExpression>
+				<subreport>
+					<reportElement uuid="87c9db34-0c5b-4d55-a853-471d0a950707" x="0" y="11" width="514" height="23"/>
+					<subreportParameter name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CODIGO_EMPRESA">
+						<subreportParameterExpression><![CDATA[$P{CODIGO_EMPRESA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ANO_PERICIA">
+						<subreportParameterExpression><![CDATA[$P{ANO_PERICIA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="REVISAO">
+						<subreportParameterExpression><![CDATA[$P{REVISAO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="IsOnServer">
+						<subreportParameterExpression><![CDATA[$P{IsOnServer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NUMERO_LAUDO">
+						<subreportParameterExpression><![CDATA[$P{NUMERO_LAUDO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{IsOnServer}=='S'?"repo:rpt_laudo2_subreport_avaliacoes_sangue_animal.jasper":"rpt_laudo2_subreport_avaliacoes_sangue_animal.jasper"]]></subreportExpression>
+				</subreport>
+				<break>
+					<reportElement uuid="d5e036d7-9822-475f-a8a3-a6728be43f66" x="0" y="4" width="100" height="1"/>
+				</break>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPO_MANEJO_ANIMAIS">
+		<groupExpression><![CDATA[$F{OUTROS_FISICOS_DESCRICAO}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<printWhenExpression><![CDATA[($F{MANEJO_ANIMAIS}>0)]]></printWhenExpression>
+				<subreport>
+					<reportElement uuid="87c9db34-0c5b-4d55-a853-471d0a950707" x="0" y="10" width="514" height="23"/>
+					<subreportParameter name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CODIGO_EMPRESA">
+						<subreportParameterExpression><![CDATA[$P{CODIGO_EMPRESA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ANO_PERICIA">
+						<subreportParameterExpression><![CDATA[$P{ANO_PERICIA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="REVISAO">
+						<subreportParameterExpression><![CDATA[$P{REVISAO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="IsOnServer">
+						<subreportParameterExpression><![CDATA[$P{IsOnServer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NUMERO_LAUDO">
+						<subreportParameterExpression><![CDATA[$P{NUMERO_LAUDO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{IsOnServer}=='S'?"repo:rpt_laudo2_subreport_avaliacoes_manejo_animais.jasper":"rpt_laudo2_subreport_avaliacoes_manejo_animais.jasper"]]></subreportExpression>
+				</subreport>
+				<break>
+					<reportElement uuid="27e1db74-7c92-4d8d-b589-ce2278c26bc3" x="0" y="5" width="100" height="1"/>
+				</break>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPO_OUTROS_BIOLOGICOS">
+		<groupExpression><![CDATA[$F{OUTROS_FISICOS_DESCRICAO}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<printWhenExpression><![CDATA[($F{OUTROS_BIOLOGICOS}>0)]]></printWhenExpression>
+				<subreport>
+					<reportElement uuid="87c9db34-0c5b-4d55-a853-471d0a950707" x="0" y="10" width="514" height="23"/>
+					<subreportParameter name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CODIGO_EMPRESA">
+						<subreportParameterExpression><![CDATA[$P{CODIGO_EMPRESA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ANO_PERICIA">
+						<subreportParameterExpression><![CDATA[$P{ANO_PERICIA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="AVALIACOES_EXECUTADAS">
+						<subreportParameterExpression><![CDATA[$P{AVALIACOES_EXECUTADAS}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="REVISAO">
+						<subreportParameterExpression><![CDATA[$P{REVISAO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="IsOnServer">
+						<subreportParameterExpression><![CDATA[$P{IsOnServer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NUMERO_LAUDO">
+						<subreportParameterExpression><![CDATA[$P{NUMERO_LAUDO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{IsOnServer}=='S'?"repo:rpt_laudo2_subreport_avaliacoes_outros_biologicos.jasper":"rpt_laudo2_subreport_avaliacoes_outros_biologicos.jasper"]]></subreportExpression>
+				</subreport>
+				<break>
+					<reportElement uuid="27639973-d9d1-4224-8ac0-615220b79536" x="0" y="6" width="100" height="1"/>
+				</break>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPO_PRODUTOS_LIMPEZA">
+		<groupExpression><![CDATA[$F{PRODUTOS_LIMPEZA}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<printWhenExpression><![CDATA[($F{PRODUTOS_LIMPEZA}>0)]]></printWhenExpression>
+				<subreport>
+					<reportElement uuid="87c9db34-0c5b-4d55-a853-471d0a950707" x="0" y="10" width="514" height="23"/>
+					<subreportParameter name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CODIGO_EMPRESA">
+						<subreportParameterExpression><![CDATA[$P{CODIGO_EMPRESA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ANO_PERICIA">
+						<subreportParameterExpression><![CDATA[$P{ANO_PERICIA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="REVISAO">
+						<subreportParameterExpression><![CDATA[$P{REVISAO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="IsOnServer">
+						<subreportParameterExpression><![CDATA[$P{IsOnServer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NUMERO_LAUDO">
+						<subreportParameterExpression><![CDATA[$P{NUMERO_LAUDO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{IsOnServer}=='S'?"repo:rpt_laudo2_subreport_avaliacoes_produtos_limpeza.jasper":"rpt_laudo2_subreport_avaliacoes_produtos_limpeza.jasper"]]></subreportExpression>
+				</subreport>
+				<break>
+					<reportElement uuid="70c8fe81-7cad-4b14-8955-d03b65b2618e" x="0" y="8" width="100" height="1"/>
+				</break>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPO_TINTAS_SOLVENTES">
+		<groupExpression><![CDATA[$F{TINTAS_SOLVENTES}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<printWhenExpression><![CDATA[($F{TINTAS_SOLVENTES}>0)]]></printWhenExpression>
+				<subreport>
+					<reportElement uuid="87c9db34-0c5b-4d55-a853-471d0a950707" x="0" y="10" width="514" height="23"/>
+					<subreportParameter name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CODIGO_EMPRESA">
+						<subreportParameterExpression><![CDATA[$P{CODIGO_EMPRESA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ANO_PERICIA">
+						<subreportParameterExpression><![CDATA[$P{ANO_PERICIA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="REVISAO">
+						<subreportParameterExpression><![CDATA[$P{REVISAO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="IsOnServer">
+						<subreportParameterExpression><![CDATA[$P{IsOnServer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NUMERO_LAUDO">
+						<subreportParameterExpression><![CDATA[$P{NUMERO_LAUDO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{IsOnServer}=='S'?"repo:rpt_laudo2_subreport_avaliacoes_tintas_solventes.jasper":"rpt_laudo2_subreport_avaliacoes_tintas_solventes.jasper"]]></subreportExpression>
+				</subreport>
+				<break>
+					<reportElement uuid="8eb1097f-55b2-4bca-9ea1-355e64773d14" x="0" y="6" width="100" height="1"/>
+				</break>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPO_HIDROCARBONETOS">
+		<groupExpression><![CDATA[$F{HIDROCARBONETOS_AROMATICOS}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<printWhenExpression><![CDATA[($F{HIDROCARBONETOS_AROMATICOS}>0)]]></printWhenExpression>
+				<subreport>
+					<reportElement uuid="87c9db34-0c5b-4d55-a853-471d0a950707" x="0" y="11" width="514" height="23"/>
+					<subreportParameter name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CODIGO_EMPRESA">
+						<subreportParameterExpression><![CDATA[$P{CODIGO_EMPRESA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ANO_PERICIA">
+						<subreportParameterExpression><![CDATA[$P{ANO_PERICIA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="REVISAO">
+						<subreportParameterExpression><![CDATA[$P{REVISAO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="IsOnServer">
+						<subreportParameterExpression><![CDATA[$P{IsOnServer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NUMERO_LAUDO">
+						<subreportParameterExpression><![CDATA[$P{NUMERO_LAUDO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{IsOnServer}=='S'?"repo:rpt_laudo2_subreport_avaliacoes_hidrocarbonetos.jasper":"rpt_laudo2_subreport_avaliacoes_hidrocarbonetos.jasper"]]></subreportExpression>
+				</subreport>
+				<break>
+					<reportElement uuid="8985c711-2b33-4b81-b9ef-5f57a75919cb" x="0" y="7" width="100" height="1"/>
+				</break>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPO_FUMOS_METALICOS">
+		<groupExpression><![CDATA[$F{FUMOS_METALICOS}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<printWhenExpression><![CDATA[($F{FUMOS_METALICOS}>0)]]></printWhenExpression>
+				<subreport>
+					<reportElement uuid="87c9db34-0c5b-4d55-a853-471d0a950707" x="0" y="10" width="514" height="23"/>
+					<subreportParameter name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CODIGO_EMPRESA">
+						<subreportParameterExpression><![CDATA[$P{CODIGO_EMPRESA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ANO_PERICIA">
+						<subreportParameterExpression><![CDATA[$P{ANO_PERICIA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="REVISAO">
+						<subreportParameterExpression><![CDATA[$P{REVISAO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="IsOnServer">
+						<subreportParameterExpression><![CDATA[$P{IsOnServer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NUMERO_LAUDO">
+						<subreportParameterExpression><![CDATA[$P{NUMERO_LAUDO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{IsOnServer}=='S'?"repo:rpt_laudo2_subreport_avaliacoes_fumos_metalicos.jasper":"rpt_laudo2_subreport_avaliacoes_fumos_metalicos.jasper"]]></subreportExpression>
+				</subreport>
+				<break>
+					<reportElement uuid="46dae6bc-66d6-461f-a9a2-f4fbab753bf0" x="0" y="4" width="100" height="1"/>
+				</break>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPO_POEIRAS_INCOMODAS">
+		<groupExpression><![CDATA[$F{POEIRAS_INCOMODAS}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<printWhenExpression><![CDATA[($F{POEIRAS_INCOMODAS}>0)]]></printWhenExpression>
+				<subreport>
+					<reportElement uuid="87c9db34-0c5b-4d55-a853-471d0a950707" x="0" y="11" width="514" height="23"/>
+					<subreportParameter name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CODIGO_EMPRESA">
+						<subreportParameterExpression><![CDATA[$P{CODIGO_EMPRESA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ANO_PERICIA">
+						<subreportParameterExpression><![CDATA[$P{ANO_PERICIA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="REVISAO">
+						<subreportParameterExpression><![CDATA[$P{REVISAO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="IsOnServer">
+						<subreportParameterExpression><![CDATA[$P{IsOnServer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NUMERO_LAUDO">
+						<subreportParameterExpression><![CDATA[$P{NUMERO_LAUDO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{IsOnServer}=='S'?"repo:rpt_laudo2_subreport_avaliacoes_poeiras_incomodas.jasper":"rpt_laudo2_subreport_avaliacoes_poeiras_incomodas.jasper"]]></subreportExpression>
+				</subreport>
+				<break>
+					<reportElement uuid="814e7ebb-3fab-47ca-a13b-5a907066ad77" x="0" y="6" width="100" height="1"/>
+				</break>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPOS_POEIRAS_MINERAIS">
+		<groupExpression><![CDATA[$F{OUTROS_FISICOS_DESCRICAO}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<printWhenExpression><![CDATA[($F{POEIRAS_MINERAIS}>0)]]></printWhenExpression>
+				<subreport>
+					<reportElement uuid="87c9db34-0c5b-4d55-a853-471d0a950707" x="0" y="10" width="514" height="23"/>
+					<subreportParameter name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CODIGO_EMPRESA">
+						<subreportParameterExpression><![CDATA[$P{CODIGO_EMPRESA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ANO_PERICIA">
+						<subreportParameterExpression><![CDATA[$P{ANO_PERICIA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="REVISAO">
+						<subreportParameterExpression><![CDATA[$P{REVISAO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="IsOnServer">
+						<subreportParameterExpression><![CDATA[$P{IsOnServer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NUMERO_LAUDO">
+						<subreportParameterExpression><![CDATA[$P{NUMERO_LAUDO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{IsOnServer}=='S'?"repo:rpt_laudo2_subreport_avaliacoes_poeiras_minerais.jasper":"rpt_laudo2_subreport_avaliacoes_poeiras_minerais.jasper"]]></subreportExpression>
+				</subreport>
+				<break>
+					<reportElement uuid="b167cd75-bfbf-4122-bf24-86475bff3dbf" x="0" y="4" width="100" height="1"/>
+				</break>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPO_DEFENSIVOS_AGRICOLAS">
+		<groupExpression><![CDATA[$F{DEFENSIVOS_AGRICOLAS}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<printWhenExpression><![CDATA[($F{DEFENSIVOS_AGRICOLAS}>0)]]></printWhenExpression>
+				<subreport>
+					<reportElement uuid="87c9db34-0c5b-4d55-a853-471d0a950707" x="0" y="11" width="514" height="23"/>
+					<subreportParameter name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CODIGO_EMPRESA">
+						<subreportParameterExpression><![CDATA[$P{CODIGO_EMPRESA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ANO_PERICIA">
+						<subreportParameterExpression><![CDATA[$P{ANO_PERICIA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="REVISAO">
+						<subreportParameterExpression><![CDATA[$P{REVISAO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="IsOnServer">
+						<subreportParameterExpression><![CDATA[$P{IsOnServer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NUMERO_LAUDO">
+						<subreportParameterExpression><![CDATA[$P{NUMERO_LAUDO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{IsOnServer}=='S'?"repo:rpt_laudo2_subreport_avaliacoes_defensivos_agricolas.jasper":"rpt_laudo2_subreport_avaliacoes_defensivos_agricolas.jasper"]]></subreportExpression>
+				</subreport>
+				<break>
+					<reportElement uuid="1f421a4f-cfa3-445e-8827-98e99eca056e" x="0" y="4" width="100" height="1"/>
+				</break>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPO_OUTROS_QUIMICOS">
+		<groupExpression><![CDATA[$F{OUTROS_FISICOS_DESCRICAO}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<printWhenExpression><![CDATA[($F{OUTROS_QUIMICOS}>0)]]></printWhenExpression>
+				<subreport>
+					<reportElement uuid="87c9db34-0c5b-4d55-a853-471d0a950707" x="0" y="11" width="514" height="23"/>
+					<subreportParameter name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CODIGO_EMPRESA">
+						<subreportParameterExpression><![CDATA[$P{CODIGO_EMPRESA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ANO_PERICIA">
+						<subreportParameterExpression><![CDATA[$P{ANO_PERICIA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="REVISAO">
+						<subreportParameterExpression><![CDATA[$P{REVISAO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="IsOnServer">
+						<subreportParameterExpression><![CDATA[$P{IsOnServer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NUMERO_LAUDO">
+						<subreportParameterExpression><![CDATA[$P{NUMERO_LAUDO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{IsOnServer}=='S'?"repo:rpt_laudo2_subreport_avaliacoes_outros_quimicos.jasper":"rpt_laudo2_subreport_avaliacoes_outros_quimicos.jasper"]]></subreportExpression>
+				</subreport>
+				<break>
+					<reportElement uuid="c7728344-fb5b-40dd-8b19-b467a83b8556" x="0" y="5" width="100" height="1"/>
+				</break>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="ILUMINAMENTO">
+		<groupExpression><![CDATA[$F{ILUMINAMENTO}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<printWhenExpression><![CDATA[($F{ILUMINAMENTO}>0)]]></printWhenExpression>
+				<subreport>
+					<reportElement uuid="87c9db34-0c5b-4d55-a853-471d0a950707" x="0" y="11" width="514" height="23"/>
+					<subreportParameter name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CODIGO_EMPRESA">
+						<subreportParameterExpression><![CDATA[$P{CODIGO_EMPRESA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ANO_PERICIA">
+						<subreportParameterExpression><![CDATA[$P{ANO_PERICIA}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="REVISAO">
+						<subreportParameterExpression><![CDATA[$P{REVISAO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="IsOnServer">
+						<subreportParameterExpression><![CDATA[$P{IsOnServer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NUMERO_LAUDO">
+						<subreportParameterExpression><![CDATA[$P{NUMERO_LAUDO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{IsOnServer}=='S'?"repo:rpt_laudo2_subreport_avaliacoes_iluminamento.jasper":"rpt_laudo2_subreport_avaliacoes_iluminamento.jasper"]]></subreportExpression>
+				</subreport>
+				<break>
+					<reportElement uuid="3dcbe608-5fdf-45c2-8409-6f28cad0e73b" x="0" y="4" width="100" height="1"/>
+				</break>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+</jasperReport>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_laudo2_subreport_informacoes_complementares" language="groovy" pageWidth="514" pageHeight="79" whenNoDataType="AllSectionsNoDetail" columnWidth="514" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="01b1d583-28d1-4b10-a854-00d7a3417a32">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="71" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="7995a659-b160-4f74-b4ec-d1130d54b76f" x="2" y="3" width="509" height="62"/>
+			</rectangle>
+			<line>
+				<reportElement uuid="d48e76b7-e92e-481a-a4c6-6ab8c2085ce1" x="2" y="35" width="509" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="64294ee3-af56-4e34-848c-25799d25030f" x="259" y="4" width="1" height="61"/>
+			</line>
+			<staticText>
+				<reportElement uuid="05840566-fabc-4667-a1f9-7d2e291fe33f" x="2" y="4" width="259" height="31"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mudanças no local de
+trabalho:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9325adcb-ab4e-408b-b1e4-328a2b03d9a8" x="261" y="3" width="250" height="32"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Não ocorreram as que pudessem modificar as  avaliações ambientais]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="55b86cd7-c2ee-413c-8091-2eb5458483c1" x="2" y="36" width="259" height="29"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tempo de exposição:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6bc9f1f8-0676-40d5-8e9e-216413b1a91d" x="261" y="35" width="250" height="30"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[De acordo com o especificado nas avaliações ambientais]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>

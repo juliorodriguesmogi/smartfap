@@ -1,0 +1,130 @@
+﻿<html>
+    <head>
+        <title>    
+             Desenvolvido por Tenko            
+        </title>
+        <script>        
+        var aAbas       = new Array();  // Lista de abas do documento atual
+        var sAbaAtiva   = ""                 // Define qual é a aba ativa no momento
+        var ABA_ID      = 1
+        var ABA_BLOCO   = 2
+        var ABA_CAMPOS  = 3
+        
+        function defineAba( sId, sBloco ){
+           var aAba  = new Array( ABA_CAMPOS );
+           aAba[ ABA_ID    ]  = sId;
+           aAba[ ABA_BLOCO ]  = sBloco;
+           aAbas.push( aAba );
+        }
+
+        function defineAbaAtiva( sId ){
+           trataCliqueAba( sId );
+        }
+
+        function trataMouseAba( oAba ){
+           oAba.style.cursor  = "pointer";
+        }
+
+        function trataCliqueAba( sId ){
+           for ( var iAba  = 0; iAba < aAbas.length; iAba++ ){
+              var aAba  = aAbas[ iAba ];
+
+              if   ( aAba[ ABA_ID ] == sId ) ativaAba( aAba );
+
+              else                           inativaAba( aAba );
+           }
+        }
+
+        function ativaAba( aAba ){
+           var sAba       = aAba[ ABA_ID ];
+           var oAba       = document.getElementById( sAba );
+           mudaClasse( oAba, "abaativa" ); // Esse comando chama a classe css para fazer a troca
+
+           var sBlocoAba  = aAba[ ABA_BLOCO ];
+           var oBlocoAba  = document.getElementById( sBlocoAba );
+           oBlocoAba.style.display  = "block";
+        }
+
+        function inativaAba( aAba ){
+           var sAba       = aAba[ ABA_ID ];
+           var oAba       = document.getElementById( sAba );
+           mudaClasse( oAba, "abainativa" ); // Esse comando chama a classe css para fazer a troca
+
+           var sBlocoAba  = aAba[ ABA_BLOCO ];
+           var oBlocoAba  = document.getElementById( sBlocoAba );
+           oBlocoAba.style.display  = "none";
+        }
+        
+        function mudaClasse( oObjeto, sClasse ){
+           oObjeto.className  = sClasse;
+        }
+        </script>
+        <link href="estiloSistema.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <table width="50%" border="0" cellpadding="0" cellspacing="1">
+            <tr>
+                <td width="10%" height="36" align="center" valign="middle" class="abaativa" id="celAbaCadastro" onClick="trataCliqueAba( this.id );" onMouseOver="trataMouseAba( this );">
+                    Cadastro                </td>
+                
+                <td id="celAbaRelatorio" align="center" valign="middle" width="10%" class="abainativa" onMouseOver="trataMouseAba( this );" onClick="trataCliqueAba( this.id );">
+                    Relatório
+                </td>
+                
+                <td id="celAbaConsultas" align="center" valign="middle" width="10%" class="abainativa" onMouseOver="trataMouseAba( this );" onClick="trataCliqueAba( this.id );">
+                    Consultas
+                </td>
+                
+                <td id="celAbaModelos" align="center" valign="middle" width="10%" class="abainativa" onMouseOver="trataMouseAba( this );" onClick="trataCliqueAba( this.id );">
+                    Modelos Impressão
+                </td>
+            </tr>
+    </table>
+        <br>
+        <br>
+        <div id="divCadastro" style="display: block">
+            <table border="0" width="50%">
+                <tr>
+                    <td>
+                        CADASTRO
+                    </td>
+                </tr>
+          </table>
+        </div>
+        <div id="divRelatorio" style="display: none">
+            <table border="0" width="50%">
+                <tr>
+                    <td>
+                        RELATÓRIOS
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="divConsulta" style="display: none">
+            <table border="0" width="50%">
+                <tr>
+                    <td>
+                        CONSULTAS
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="divModelo" style="display: none">
+            <table border="0" width="50%">
+                <tr>
+                    <td>
+                        MODELOS DE IMPRESSÃO
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <script>
+            defineAba( "celAbaCadastro"  , "divCadastro"   );
+            defineAba( "celAbaRelatorio" , "divRelatorio"  );
+            defineAba( "celAbaConsultas" , "divConsulta"   );
+            defineAba( "celAbaModelos"   , "divModelo"     );
+            defineAbaAtiva( "celAbaCadastro" );
+        </script>
+    </body>
+</html>
+

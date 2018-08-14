@@ -1,0 +1,104 @@
+function laudo_atividades(){
+                
+                this.inicializa=function(){
+                    Codigo_Empresa_Atividades=Array();
+                    Ano_Pericia_Atividades=Array();
+                    Numero_Laudo_Atividades=Array();
+                    Revisao_Atividades=Array();
+                    Codigo_Atividadex=Array();
+                    Sequencial_Atividades=Array();
+                    Classificacao_Atividade=Array();
+                    Descricao_Resumida=Array();
+                    Descricao_Atividade=Array();
+                    Data_Registro_Atividades=Array();
+                    Id_Usuario_Atividades=Array();
+                    Session_id_Atividades=Array();
+                    Ultimo_Usuario_Atividades=Array();
+                    Ultima_Atualizacao_Atividades=Array();
+                    Acao_PPRA=Array();
+                    
+                     
+                }
+                this.get_Codigo_Empresa= function(nlinha){
+                    return Codigo_Empresa_Atividades[nlinha];
+                }                
+                this.get_Numero_Laudo= function(nlinha){
+                    return Numero_Laudo_Atividades[nlinha];
+                }
+                this.get_Ano_Pericia= function(nlinha){
+                    return Ano_Pericia_Atividades[nlinha];
+                }
+                this.get_Revisao=function(nlinha){
+                    return Revisao_Atividades[nlinha];
+                }
+                this.get_Sequencial=function(nlinha){
+                    return Sequencial_Atividades[nlinha];
+                }
+                this.get_Codigo_Atividade=function(nlinha){
+                    return Codigo_Atividadex[nlinha];
+                }
+                this.get_Classificacao_Atividade=function(nlinha){
+                    return Classificacao_Atividade[nlinha];
+                }
+                
+                this.get_Descricao_Resumida=function(nlinha){
+                    return Descricao_Resumida[nlinha];
+                }
+                this.get_Descricao_Atividade=function(nlinha){
+                    return Descricao_Atividade[nlinha];
+                }
+                
+                this.get_Data_Registro=function(nlinha){
+                    return Data_Registro_Atividades[nlinha];
+                }
+                this.get_Acao_PPRA=function(nlinha){
+                    return Acao_PPRA[nlinha];
+                }
+                this.get_Session_id=function(nlinha){
+                    return Session_id_Atividades[nlinha];
+                }         
+                this.get_Ultimo_Usuario=function(nlinha){
+                    return Ultimo_Usuario_Atividades[nlinha];
+                }         
+                this.get_Id_Usuario=function(nlinha){
+                    return Id_Usuario_Atividades[nlinha];
+                }         
+                this.length=function(){
+                    return Codigo_Empresa_Atividades.length;
+                }                
+                this.get_Ultima_Atualizacao=function(){
+                    return Ultima_Atualizacao_Atividades[nlinha];
+                }  
+                this.setValores=function(response){
+                    this.inicializa();
+                    if (response!='NF'){
+                       for (x=0;x<response.length-1;x++){
+                            vreg=response[x].split('|');
+                            Codigo_Empresa_Atividades[x]=vreg[0];
+                            Ano_Pericia_Atividades[x]=vreg[1];
+                            Numero_Laudo_Atividades[x]=vreg[2];
+                            Revisao_Atividades[x]=vreg[3];
+                            Codigo_Atividadex[x]=vreg[4];
+                            Sequencial_Atividades[x]=vreg[5];
+                            Classificacao_Atividade[x]=vreg[6];
+                            Descricao_Atividade[x]=vreg[7];
+                            Descricao_Resumida[x]=vreg[8];
+                            Acao_PPRA[x]=vreg[9]
+                            Id_Usuario_Atividades[x]=vreg[10];
+                            Session_id_Atividades[x]=vreg[11];
+                            Ultima_Atualizacao_Atividades[x]=response[12];
+                            Ultimo_Usuario_Atividades[x]=response[13];                     
+                            
+                            
+                       }     
+                    }
+                }
+            };
+             newativlaudo=new laudo_atividades();
+
+/* 
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+

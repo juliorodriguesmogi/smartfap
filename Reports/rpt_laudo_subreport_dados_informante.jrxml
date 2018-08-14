@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_laudo_subreport1" language="groovy" pageWidth="514" pageHeight="106" columnWidth="514" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="9d44aeff-445a-42b6-ab8d-c76da7e41e60">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="CODIGO_EMPRESA" class="java.lang.Integer"/>
+	<parameter name="ANO_PERICIA" class="java.lang.Integer"/>
+	<parameter name="NUMERO_LAUDO" class="java.lang.Integer"/>
+	<parameter name="REVISAO" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     DATE_FORMAT(laudos_acompanhantes.`DATA_ADMISSAO`, '%d/%m/%Y') AS laudos_acompanhantes_DATA_ADMISSAO ,
+     laudos_acompanhantes.`CODIGO_EMPRESA` AS laudos_acompanhantes_CODIGO_EMPRESA,
+     laudos_acompanhantes.`ANO_PERICIA` AS laudos_acompanhantes_ANO_PERICIA,
+     laudos_acompanhantes.`NUMERO_LAUDO` AS laudos_acompanhantes_NUMERO_LAUDO,
+     laudos_acompanhantes.`REVISAO` AS laudos_acompanhantes_REVISAO,
+     laudos_acompanhantes.`CODIGO_ACOMPANHANTE` AS laudos_acompanhantes_CODIGO_ACOMPANHANTE,
+     laudos_acompanhantes.`NOME_RESPONSAVEL` AS laudos_acompanhantes_NOME_RESPONSAVEL,
+     laudos_acompanhantes.`FUNCAO` AS laudos_acompanhantes_FUNCAO
+FROM
+     `laudos_acompanhantes` laudos_acompanhantes
+WHERE
+     CODIGO_EMPRESA=$P{CODIGO_EMPRESA}
+ AND ANO_PERICIA=$P{ANO_PERICIA}
+ AND NUMERO_LAUDO=$P{NUMERO_LAUDO}
+ AND REVISAO=$P{REVISAO}]]>
+	</queryString>
+	<field name="laudos_acompanhantes_DATA_ADMISSAO" class="java.lang.String"/>
+	<field name="laudos_acompanhantes_CODIGO_EMPRESA" class="java.lang.Integer"/>
+	<field name="laudos_acompanhantes_ANO_PERICIA" class="java.lang.Integer"/>
+	<field name="laudos_acompanhantes_NUMERO_LAUDO" class="java.lang.Integer"/>
+	<field name="laudos_acompanhantes_REVISAO" class="java.lang.String"/>
+	<field name="laudos_acompanhantes_CODIGO_ACOMPANHANTE" class="java.lang.Integer"/>
+	<field name="laudos_acompanhantes_NOME_RESPONSAVEL" class="java.lang.String"/>
+	<field name="laudos_acompanhantes_FUNCAO" class="java.lang.String"/>
+	<detail>
+		<band height="106">
+			<rectangle>
+				<reportElement uuid="111e1e28-adfa-48ff-82e8-61da53a30eab" mode="Transparent" x="0" y="10" width="514" height="41"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="0fbbc880-975d-4468-af65-c30472371f45" x="232" y="10" width="255" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{laudos_acompanhantes_NOME_RESPONSAVEL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="17bb6b8f-a9f0-4dda-8bdf-4b553b679c7c" x="232" y="30" width="255" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{laudos_acompanhantes_FUNCAO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="dba22def-a4e6-45cb-8907-1f8d67ab1d56" x="232" y="62" width="255" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{laudos_acompanhantes_DATA_ADMISSAO}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="6326146e-f2c8-4f9e-be42-6aa4df2ef081" x="222" y="10" width="1" height="79"/>
+			</line>
+			<staticText>
+				<reportElement uuid="435a8bd9-5fb7-4564-87e9-c98215325a38" x="5" y="19" width="202" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome do Acompanhante/Função]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2299d175-5a07-42c0-967e-ad1f555b93f5" mode="Transparent" x="0" y="10" width="514" height="79"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="435a8bd9-5fb7-4564-87e9-c98215325a38" x="5" y="51" width="202" height="41"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data de Admissão do Acompanhante na Empresa]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,20 @@
+/* 
+    Document   : 1024X600.css
+    Created on : 13/01/2012, 22:26:19
+    Author     : julio
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+html{
+    zoom:56%;
+    -moz-transform: scale(.55,.57);
+    -o-transform: scale(.55,.57);
+    -webkit-transform: scale(.55,.57);
+    transform: scale(.55,.57);
+}

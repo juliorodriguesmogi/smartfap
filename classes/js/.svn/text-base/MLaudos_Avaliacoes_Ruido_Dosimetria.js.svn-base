@@ -1,0 +1,133 @@
+ function MLaudos_Avaliacoes_Ruido_Dosimetria(){
+                
+                this.inicializa=function(){
+                     Codigo_Empresa=Array();
+                     Ano_Pericia=Array();
+                     Numero_Laudo=Array();
+                     Revisao=Array();
+                     Unidade=Array();
+                     Codigo_Setor=Array();
+                     Tipo_Avaliacao=Array();
+                     Sequencial=Array();
+                     Numero_Funcs_Setor=Array();
+                     Numero_Funcs_Expostos=Array();
+                     Periodicidade_Exposicao=Array();
+                     Texto_Explicativo=Array();
+                     Campo_Acustico_Medido=Array();
+                     Nivel_Atenuacao_Protetor=Array();
+                     Nivel_Ruido_Atenuado=Array();
+                     Medidas_Protecao_Coletiva=Array();
+                     Medidas_Protecao_Individual=Array();
+                     Medidas_Protecao_Coletiva_Outros=Array();
+                     Medidas_Protecao_Individual_Outros=Array();
+                     Enquadramento=Array();
+                     Acoes_PPRA=Array();
+                     Observacoes=Array();
+                     Situacao=Array();
+                     ID_Usuario=Array();
+                     Session_id=Array();
+                     Ultima_Atualizacao=Array();
+                     Ultimo_Usuario=Array();
+                     
+                }
+                this.get_Codigo_Empresa= function(nlinha){
+                    return Codigo_Empresa[nlinha];
+                }
+               this.get_Ano_Pericia= function(nlinha){
+                    return Ano_Pericia[nlinha];
+                }
+                this.get_Numero_Laudo= function(nlinha){
+                    return Numero_Laudo[nlinha];
+                }
+
+                this.get_Revisao=function(nlinha){
+                    return Revisao[nlinha];
+                }    
+                this.get_Unidade= function(nlinha){
+                    return Unidade[nlinha];
+                }
+                this.get_Codigo_Setor= function(nlinha){
+                    return Codigo_Setor[nlinha];
+                }
+                this.get_Tipo_Avaliacao= function(nlinha){
+                    return Tipo_Avaliacao[nlinha];
+                }
+                this.get_Sequencial= function(nlinha){
+                    return Sequencial[nlinha];
+                }
+                this.get_Numero_Funcs_Setor= function(nlinha){
+                    return Numero_Funcs_Setor[nlinha];
+                }
+                this.get_Numero_Funcs_Expostos= function(nlinha){
+                    return Numero_Funcs_Expostos[nlinha];
+                }
+                this.get_Periodicidade_Exposicao= function(nlinha){
+                    return Periodicidade_Exposicao[nlinha];
+                }
+                this.get_Texto_Explicativo= function(nlinha){
+                    return Texto_Explicativo[nlinha];
+                }
+                this.get_Campo_Acustico_Medido= function(nlinha){
+                    return Campo_Acustico_Medido[nlinha];
+                }
+                
+                this.get_Nivel_Atenuacao_Protetor= function(nlinha){
+                    return Nivel_Atenuacao_Protetor[nlinha];
+                }
+                this.get_Nivel_Ruido_Atenuado= function(nlinha){
+                    return Nivel_Ruido_Atenuado[nlinha];
+                }
+
+                this.get_Session_id=function(nlinha){
+                    return Session_id[nlinha];
+                }         
+                this.get_Ultimo_Usuario=function(nlinha){
+                    return Ultimo_Usuario[nlinha];
+                }         
+                this.get_Situacao=function(nlinha){
+                    return Situacao[nlinha];
+                }         
+                this.get_Numero_Funcionarios=function(nlinha){
+                    return Numero_Funcionarios[nlinha];
+                }
+                this.get_Ultima_Atualizacao=function(nlinha){
+                    return Ultima_Atualizacao[nlinha];
+                }  
+                this.setValores=function(response){
+                    this.inicializa();
+                    if (response!='NF'){
+                        for (x=0;x<response.length-1;x++){
+                            vreg=response.split('|');
+                            Codigo_Empresa[x]=vreg[0];
+                            Ano_Pericia[x]=vreg[1];
+                            Numero_Laudo[x]=vreg[2];
+                            Revisao[x]=vreg[3];
+                            Unidade[x]=vreg[4];
+                            Codigo_Setor[x]=vreg[5];
+                            Tipo_Avalicao[x]=vreg[6];
+                            Sequencial[x]=vreg[7];
+                            Numero_Funcs_Setor[x]=vreg[8];
+                            Numero_Funcs_Expostos[x]=vreg[9];
+                            Periodicidade_Exposicao[x]=vreg[10];
+                            Texto_Explicativo[x]=vreg[11];
+                            Campo_Acustico_Medido[x]=vreg[12];
+                            Nivel_Atenuacao_Protetor[x]=vreg[13];
+                            Nivel_Ruido_Atenuado[x]=vreg[14];
+                            Medidas_Protecao_Coletiva[x]=vreg[15];
+                            Medidas_Protecao_Individual[x]=vreg[16];
+                            Medidas_Protecao_Coletiva_Outros[x]=vreg[17];
+                            Medidas_Protecao_Individual_Outros[x]=vreg[18];
+                            Enquadramento[x]=vreg[19];
+                            Acoes_PPRA[x]=vreg[20];
+                            Fonte_Geradora[x]=vreg[21];
+                            Observacoes[x]=vreg[22];
+                            ID_Usuario[x]=vreg[23];
+                            Session_ID[x]=vreg[24];
+                            Ultima_Atualizacao[x]=vreg[25];
+                            Ultimo_Usuario[x]=vreg[26];
+                            
+                        } 
+                    }
+                }
+            };
+             newlaudoavalruidodosim=new MLaudos_Avaliacoes_Ruido_Dosimetria();

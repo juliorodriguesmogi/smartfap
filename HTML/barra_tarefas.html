@@ -1,0 +1,114 @@
+
+<style type="text/css">
+#frm_barra_tarefas{
+   zoom:80%;
+   -moz-transform: scale(.9);
+}
+</style>
+<div>
+    <form id="frm_barra_tarefas" action="" >
+       <button type="button" onclick="">
+           <table style="height:30px;">
+              <tr>
+                <td height="32" width="48"><div align="center"><img src="../images/novo.png" height="30" width="28" /></div></td>
+              </tr>
+              <tr>
+                <td height="16">Novo</td>
+              </tr>
+           </table>
+       </button>
+   
+      <button type="button" onclick="grava_registro();">
+          <table>
+            <tr>
+              <td height="33" width="48"><div align="center"><img src="../images/barra_ferramentas/floppy.png" height="31" width="30" /></div></td>
+            </tr>
+            <tr>
+              <td height="16">Gravar</td>
+            </tr>
+          </table>
+      </button>
+      <button  type="button" disabled="disabled" onclick="apaga_registro();">
+          <table>
+            <tr>
+              <td height="33" width="48"><div align="center"><img src="../images/barra_ferramentas/error_button_2.png" height="29" width="31" /></div></td>
+            </tr>
+            <tr>
+              <td height="16">Apagar</td>
+            </tr>
+          </table>
+      </button>
+      <button  type="button" onclick="descer();">
+          <table>
+            <tr>
+              <td height="34" width="48"><div align="center"><img src="../images/update_quantity_cart[1].png" height="28" width="38" /></div></td>
+            </tr>
+            <tr>
+              <td height="16">Desfazer</td>
+            </tr>
+          </table>
+      </button>
+       <button  type="button" onclick="subir();">
+          <table>
+            <tr>
+              <td height="34" width="48"><div align="center"><img src="../images/cima.gif" height="26" width="29" /></div></td>
+            </tr>
+            <tr>
+              <td height="16">Primeiro</td>
+            </tr>
+          </table>
+      </button>
+      <button  type="button" onclick="navega_registro('Anterior');">
+          <table>
+            <tr>
+              <td height="35" width="48"><div align="center"><img src="../images/left.png" height="28" width="35" /></div></td>
+            </tr>
+            <tr>
+              <td height="16">Anterior</td>
+            </tr>
+          </table>
+      </button>
+      <button  type="button" onclick="navega_registro('Proximo')">
+          <table>
+            <tr>
+              <td height="35" width="48"><div align="center"><img src="../images/right.png" height="28" width="36" /></div></td>
+            </tr>
+            <tr>
+              <td height="16">Pr&oacute;ximo</td>
+            </tr>
+          </table>
+      </button>
+      <button  type="button" onclick="descer();">
+          <table>
+            <tr>
+              <td height="35" width="48"><div align="center"><img src="../images/baixo.gif" height="32" width="32" /></div></td>
+            </tr>
+            <tr>
+              <td height="16">Ultimo</td>
+            </tr>
+          </table>
+      </button>
+      <button  type="button" onclick="descer();">
+          <table>
+            <tr>
+              <td height="34" width="48"><div align="center"><img src="../images/printer_2.png" height="32" width="36" /></div></td>
+            </tr>
+            <tr>
+              <td height="18">Imprimir</td>
+            </tr>
+          </table>
+      </button>
+      <button  type="button" onclick="document.forms[1].reset();document.forms[1].elements['CODIGO_CNAE'].focus();">
+          <table>
+            <tr>
+              <td height="35" width="48"><div align="center"><img src="../images/folha.gif" height="33" width="28" /></div></td>
+            </tr>
+            <tr>
+              <td height="16">Limpar</td>
+            </tr>
+          </table>
+      </button>  
+
+    </form>
+
+</div>

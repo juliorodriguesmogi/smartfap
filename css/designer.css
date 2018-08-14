@@ -1,0 +1,28 @@
+/* CSS Document */
+
+.tabela {
+	font-size:12px ;
+	background-color:whitesmoke ;
+	font-family: "arial" ;
+	
+	margin:0px;
+	border-color:#999999 ;
+	border-width: 1px;
+	border-style:double;
+}
+.input {
+	background-color:#FFFFFF;
+	text-transform:uppercase;
+	border-color:black;
+        font
+}
+.fundo {
+	background:url(empregos.jpg);
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position: 50% 50%;
+}
+input:focus, textarea:focus {
+	background:#FF0;
+	color:black;
+	}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_laudo_subreport_setores_pericia_subreport_fotos" language="groovy" columnCount="2" pageWidth="555" pageHeight="802" columnWidth="277" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="f7d6b721-8237-425e-880a-f80c1df5c07c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="CODIGO_EMPRESA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ANO_PERICIA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NUMERO_LAUDO" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="REVISAO" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     laudos_setores_fotos.`CODIGO_EMPRESA` AS laudos_setores_fotos_CODIGO_EMPRESA,
+     laudos_setores_fotos.`ANO_PERICIA` AS laudos_setores_fotos_ANO_PERICIA,
+     laudos_setores_fotos.`NUMERO_LAUDO` AS laudos_setores_fotos_NUMERO_LAUDO,
+     laudos_setores_fotos.`REVISAO` AS laudos_setores_fotos_REVISAO,
+     laudos_setores_fotos.`UNIDADE` AS laudos_setores_fotos_UNIDADE,
+     laudos_setores_fotos.`CODIGO_SETOR` AS laudos_setores_fotos_CODIGO_SETOR,
+     laudos_setores_fotos.`SEQUENCIA` AS laudos_setores_fotos_SEQUENCIA,
+     laudos_setores_fotos.`CAMINHO_FOTO` AS laudos_setores_fotos_CAMINHO_FOTO
+FROM
+     `laudos_setores_fotos` laudos_setores_fotos
+WHERE
+     CODIGO_EMPRESA = $P{CODIGO_EMPRESA}
+ AND ANO_PERICIA = $P{ANO_PERICIA}
+ AND NUMERO_LAUDO = $P{NUMERO_LAUDO}
+ AND REVISAO = $P{REVISAO}]]>
+	</queryString>
+	<field name="laudos_setores_fotos_CODIGO_EMPRESA" class="java.lang.Integer"/>
+	<field name="laudos_setores_fotos_ANO_PERICIA" class="java.lang.Integer"/>
+	<field name="laudos_setores_fotos_NUMERO_LAUDO" class="java.lang.Integer"/>
+	<field name="laudos_setores_fotos_REVISAO" class="java.lang.String"/>
+	<field name="laudos_setores_fotos_UNIDADE" class="java.lang.Integer"/>
+	<field name="laudos_setores_fotos_CODIGO_SETOR" class="java.lang.Integer"/>
+	<field name="laudos_setores_fotos_SEQUENCIA" class="java.lang.Integer"/>
+	<field name="laudos_setores_fotos_CAMINHO_FOTO" class="java.lang.String"/>
+	<group name="laudos_setores_fotos_CODIGO_SETOR">
+		<groupExpression><![CDATA[$F{laudos_setores_fotos_CODIGO_SETOR}]]></groupExpression>
+	</group>
+	<group name="GRUPO_IMAGEM">
+		<groupExpression><![CDATA[$F{laudos_setores_fotos_CAMINHO_FOTO}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="213" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="c18f1367-f707-439e-81fa-174573d66488" x="276" y="1" width="276" height="209"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="c18f1367-f707-439e-81fa-174573d66488" x="0" y="0" width="276" height="209"/>
+			</rectangle>
+			<image>
+				<reportElement uuid="0b6fa6ec-01a6-4399-968d-7fcb0cbd156f" x="276" y="0" width="263" height="208"/>
+				<imageExpression><![CDATA[$F{laudos_setores_fotos_CAMINHO_FOTO}]]></imageExpression>
+			</image>
+			<image onErrorType="Blank" evaluationGroup="GRUPO_IMAGEM">
+				<reportElement uuid="0b6fa6ec-01a6-4399-968d-7fcb0cbd156f" x="0" y="1" width="263" height="208"/>
+				<imageExpression><![CDATA[$F{laudos_setores_fotos_CAMINHO_FOTO}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

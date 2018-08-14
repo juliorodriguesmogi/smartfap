@@ -1,0 +1,145 @@
+function MLaudos_Avaliacoes_Sumarizadas(){
+                
+                this.inicializa=function(){
+                    Ruido=Array();
+                    Ruido_Dosimetria=Array();
+                    Frio=Array();
+                    Calor=Array();
+                    Umidade=Array();
+                    Radiacao_Nao_Ionizante=Array();
+                    Radiacao_Ionizante=Array();
+                    Outros_Fisicos=Array();
+                    Sangue_Humano=Array();
+                    Sangue_Animal=Array();
+                    Manejo_Animais=Array();
+                    Outros_Biologicos=Array();
+                    Produtos_Limpeza=Array();
+                    Tintas_Solventes=Array();
+                    Hidrocarbonetos_Aromaticos=Array();
+                    Fumos_Metalicos=Array();
+                    Poeiras_Incomodas=Array();
+                    Poeiras_Minerais=Array();
+                    Outros_Quimicos=Array();
+                    Iluminamento=Array();
+                    Outros_Fisicos_Descricao=Array();
+                    Outros_Biologicos_Descricao=Array();
+                    Outros_Quimicos_Descricao=Array();
+                    
+                     
+                }
+                this.get_Ruido=function(nlinha){
+                    return Ruido[nlinha];
+                }
+                this.get_Ruido_Dosimetria=function(nlinha){
+                    return Ruido_Dosimetria[nlinha];
+                }
+                this.get_Frio=function(nlinha){
+                    return Frio[nlinha];
+                }
+                this.get_Calor=function(nlinha){
+                    return Calor[nlinha];
+                }
+                this.get_Umidade=function(nlinha){
+                    return Umidade[nlinha];
+                }
+                this.get_Radiacao_Nao_Ionizante=function(nlinha){
+                    return Radiacao_Nao_Ionizante[nlinha];
+                }
+                this.get_Radiacao_Ionizante=function(nlinha){
+                    return Radiacao_Ionizante[nlinha];
+                }
+                this.get_Outros_Fisicos=function(nlinha){
+                    return Outros_Fisicos[nlinha];
+                }
+                this.get_Outros_Fisicos_Descricao=function(nlinha){
+                    return Outros_Fisicos_Descricao[nlinha];
+                }
+                
+                this.get_Sangue_Humano=function(nlinha){
+                    return Sangue_Humano[nlinha];
+                }
+                this.get_Sangue_Animal=function(nlinha){
+                    return Sangue_Animal[nlinha];
+                }
+                this.get_Manejo_Animais=function(nlinha){
+                    return Manejo_Animais[nlinha];
+                }
+                this.get_Outros_Biologicos=function(nlinha){
+                    return Outros_Biologicos[nlinha];
+                }
+                this.get_Outros_Biologicos_Descricao=function(nlinha){
+                    return Outros_Biologicos_Descricao[nlinha];
+                }
+                
+                this.get_Produtos_Limpeza=function(nlinha){
+                    return Produtos_Limpeza[nlinha];
+                }
+                this.get_Tintas_Solventes=function(nlinha){
+                    return Tintas_Solventes[nlinha];
+                }
+                this.get_Hidrocarbonetos_Aromaticos=function(nlinha){
+                    return Hidrocarbonetos_Aromaticos[nlinha];
+                }
+                this.get_Fumos_Metalicos=function(nlinha){
+                    return Fumos_Metalicos[nlinha];
+                }
+                this.get_Poeiras_Incomodas=function(nlinha){
+                    return Poeiras_Incomodas[nlinha];
+                }
+                this.get_Poeiras_Minerais=function(nlinha){
+                    return Poeiras_Minerais[nlinha];
+                }
+                this.get_Outros_Quimicos=function(nlinha){
+                    return Outros_Quimicos[nlinha];
+                }
+                this.get_Outros_Quimicos_Descricao=function(nlinha){
+                    return Outros_Quimicos_Descricao[nlinha];
+                }
+                
+                this.get_Iluminamento=function(nlinha){
+                    return Iluminamento[nlinha];
+                }
+                
+                
+                this.length=function(){
+                    return Codigo_Empresa_Avaliacoes_Sumarizadas.length;
+                }                
+
+                this.setValores=function(response){
+                    this.inicializa();
+                    if (response!='NF'){
+                       for (x=0;x<response.length-1;x++){
+                            vreg=response[x].split('|');
+                            Outros_Fisicos_Descricao=vreg[0];                            
+                            Outros_Biologicos_Descricao=vreg[1];
+                            Outros_Quimicos_Descricao=vreg[2];
+                            Ruido=vreg[3];
+                            Ruido_Dosimetria=vreg[4];
+                            Frio=vreg[5];
+                            Calor=vreg[6];
+                            Umidade=vreg[7];
+                            Radiacao_Nao_Ionizante=vreg[8];
+                            Radiacao_Ionizante=vreg[9];
+                            Outros_Fisicos=vreg[10];
+                            Sangue_Humano=vreg[11];
+                            Sangue_Animal=vreg[12];
+                            Manejo_Animais=vreg[13];
+                            Outros_Biologicos=vreg[14];
+                            Produtos_Limpeza=vreg[15];
+                            Tintas_Solventes=vreg[16];
+                            Hidrocarbonetos_Aromaticos=vreg[17];
+                            Fumos_Metalicos=vreg[18];
+                            Poeiras_Incomodas=vreg[19];
+                            Poeiras_Minerais=vreg[20];
+                            Outros_Quimicos=vreg[21];
+                            Iluminamento=vreg[22];
+                            
+                       }     
+                    }
+                }
+            };
+             newlaudosavalsum=new MLaudos_Avaliacoes_Sumarizadas();
+
+
+
+

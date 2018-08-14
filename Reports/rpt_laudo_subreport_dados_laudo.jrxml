@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_laudo_subreport_dados_laudo" language="groovy" pageWidth="514" pageHeight="189" columnWidth="514" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="22809a3f-d26d-4075-a2b3-0b0e02e49a65">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="CODIGO_EMPRESA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ANO_PERICIA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[2012]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NUMERO_LAUDO" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="REVISAO" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+laudos.`CODIGO_EMPRESA` AS laudos_CODIGO_EMPRESA,
+laudos.`ANO_PERICIA` AS laudos_ANO_PERICIA,
+     laudos.`NUMERO_LAUDO` AS laudos_NUMERO_LAUDO,
+     laudos.`REVISAO` AS laudos_REVISAO,
+laudos.`DATA_LANCAMENTO` AS laudos_DATA_LANCAMENTO,
+
+(select laudos.CEP_ATUACAO from empresas where empresas.CODIGO_EMPRESA=laudos.CODIGO_EMPRESA) as laudos_CEP_EMPRESA,
+laudos.NOME_MES_PERICIA AS laudos_NOME_MES_PERICIA,
+DATE_FORMAT(laudos.`DATA_HORA_PERICIA`,'%d/%m/%Y %T') AS laudos_DATA_HORA_PERICIA
+FROM
+     `laudos` laudos
+WHERE
+laudos.CODIGO_EMPRESA=$P{CODIGO_EMPRESA} AND
+laudos.ANO_PERICIA=$P{ANO_PERICIA} AND
+laudos.NUMERO_LAUDO=$P{NUMERO_LAUDO} AND
+laudos.REVISAO=$P{REVISAO}]]>
+	</queryString>
+	<field name="laudos_CODIGO_EMPRESA" class="java.lang.Integer"/>
+	<field name="laudos_ANO_PERICIA" class="java.lang.Integer"/>
+	<field name="laudos_NUMERO_LAUDO" class="java.lang.Integer"/>
+	<field name="laudos_REVISAO" class="java.lang.String"/>
+	<field name="laudos_DATA_LANCAMENTO" class="java.sql.Date"/>
+	<field name="laudos_CEP_EMPRESA" class="java.lang.String"/>
+	<field name="laudos_NOME_MES_PERICIA" class="java.lang.String"/>
+	<field name="laudos_DATA_HORA_PERICIA" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="179" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="90e11667-e7ff-4b2b-95a9-798bf7c97712" x="0" y="11" width="514" height="157"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="0653bec3-d9fc-4ea5-9750-f8b2e364e8df" x="304" y="23" width="192" height="140"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="e0a43cc8-02cf-4928-94bf-70a34a2ad204" x="416" y="82" width="72" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{laudos_REVISAO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5fa14c78-3e8a-4952-82d4-88e2a42dfe21" x="416" y="30" width="72" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{laudos_ANO_PERICIA}]]></textFieldExpression>
+			</textField>
+			<break>
+				<reportElement uuid="ed4fd2de-f00f-4152-bdbc-d44d1c424123" x="0" y="4" width="99" height="1"/>
+			</break>
+			<textField>
+				<reportElement uuid="a32ca285-60f9-4399-b398-8d9f1b7452e6" x="416" y="56" width="72" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{laudos_NUMERO_LAUDO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="f5aafb21-e049-459c-8790-28d11bd73dfc" x="314" y="107" width="91" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Data  Lançamento:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7c8984e3-642d-41fe-b28e-86f9555c9ddc" x="314" y="56" width="91" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Número do Laudo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f5aafb21-e049-459c-8790-28d11bd73dfc" x="314" y="133" width="91" height="22"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Mês Referência:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="960707a1-ccd2-48a6-aa1e-b1aa3616255b" x="314" y="30" width="91" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Ano da Perícia:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bda23862-760b-4015-84ee-c0e06a0ed5ea" x="0" y="14" width="283" height="152"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laudo Técnico de Condições Ambientais de Trabalho]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="9d3d6c4f-1203-4488-8f60-db421ac0d1cf" x="416" y="107" width="72" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{laudos_DATA_LANCAMENTO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="86abe4cb-0595-4e16-80df-30dc195fbddd" x="314" y="82" width="91" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Revisão:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement uuid="9d3d6c4f-1203-4488-8f60-db421ac0d1cf" x="416" y="133" width="72" height="20"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{laudos_NOME_MES_PERICIA}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="8ad9b1b5-c34d-4b0d-bcf5-0f8d8e5b8e29" x="294" y="11" width="1" height="157"/>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

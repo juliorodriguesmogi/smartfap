@@ -1,0 +1,17 @@
+function Registros(){
+    this.inicializa=function(){
+        var vRegistros='';
+    }
+    
+    this.getValores=function(){
+        return vRegistros;
+        
+    }
+    this.setValores=function(registros){
+        this.inicializa();
+        if (registros!='') vRegistros=registros;
+    }
+    
+}            
+newregistros=new Registros("");
+            

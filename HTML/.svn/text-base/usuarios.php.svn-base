@@ -1,0 +1,671 @@
+<?php
+session_start('usuario');
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Cadastro de Usuários</title>
+<style type="text/css">
+body{
+	background:white;
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	font-size:80%;
+	width:85%;
+        background:white;
+}
+#principal{
+        border-bottom-style: none;
+		width:100%;
+}
+#frm_usuarios{
+    border-bottom: none;
+}
+#conf_senha{
+	background: whitesmoke;
+	position:relative;
+	border-top: none;
+        height:40px;
+	z-index:7;
+}
+#aba_principal{
+	position: relative;
+	width:90%;
+	list-style: none;
+	font-family:  sans-serif;
+	font-size: 95%;
+	left: 0%;
+}
+#aba_principal li{
+    display:inline;
+    position:relative;
+}
+input[type=text]{
+    text-transform: uppercase;
+}
+#codigo_usuario{
+	text-align:right;	
+}
+#div_mensagem{
+        text-align:center;
+	position:relative;
+	z-index:7;
+}
+#mensagem{
+	text-align:center;
+	width:300px;
+	background:transpartent;
+	border:none;
+	color:red;
+}
+li{display:inline}
+
+li:hover{display:block;}
+
+#div_statusbar{
+	vertical-align: bottom;
+	position:absolute;
+	top:1%;
+	width: 110px;
+	max-width: 1280px;
+	border:solid;
+	background-color:silver;
+	left: 90%;
+	height: 397px;
+	text-align: center;
+}
+table#tbl th {
+    background-color: #FF0;
+    display:inline;
+    text-decoration: none;
+    width:100%;
+}
+table#tbl tr {
+    background-color: #FF0;
+    display:block;
+    text-decoration: none;
+    width:100%;
+}
+table#tbl tr:hover{
+    background-color: cadetblue;
+}
+table#tbl td a{
+    background-color: #ffc;
+    display:block;
+    text-decoration: none;
+    width:100%;
+}
+table#tbl tdx a:hover{
+    background-color: cadetblue;
+}
+.highlight{
+    background-color: cadetblue;
+}
+.subnivel{
+    padding-left:10px;
+    
+    background:#ffffc0;
+}
+</style>
+<script type="text/javascript" src="../classes/js/Busca_Registro.js"></script>
+<script type="text/javascript" src="../classes/js/Busca_Registro_1.js"></script>
+<script type="text/javascript" src="../classes/js/Busca_Registros.js"></script>
+<script type="text/javascript" src="../classes/js/Registro.js"></script>
+<script type="text/javascript" src="../classes/js/Registros.js"></script>
+<script type="text/javascript" src="../classes/js/Usuario.js"></script>
+<script type="text/javascript" src="../classes/js/Estruturas.js"></script>
+<script type="text/javascript" src="../classes/js/Empresas.js"></script>
+<script type="text/javascript" src="../js/funcoes.js"></script>
+<script type="text/javascript" src="../classes/js/abas.js"></script>
+<script type="text/javascript">
+
+            newusu=new Usuario();
+            var acao='';
+            function grava_registro(){
+                if (confirm("Atualizar Registro?")){
+                    document.forms[1].action="../PHP/Usuario_Class.php?acao="+acao;
+                    senha1=document.forms[1].elements['SENHA'].value;
+                    senha2=document.getElementById('CONFIRMA_SENHA').value;
+                    if (senha1!=senha2){
+                        alert('Senhas digitadas nao sao Identicas! Redigite-as.');
+                        document.forms[1].elements['SENHA'].focus();
+                    }
+                    else {
+                        document.forms[1].submit();
+                    }    
+                }
+                
+
+            }
+            function apaga_registro(){
+                if (confirm("Confirma a exclusão do registro?")){
+                    document.forms[1].action="../PHP/Usuario_Class.php?acao="+"D";
+                    document.forms[1].submit();
+                }
+            }
+            function primeiro_registro(campo,visao){
+                codusu=campo.value==''?'':campo.value;
+                buscar_registro(window,campo.name,codusu,"P",visao,visao,"Busca_Usuario",true,newusu);                                    
+                
+            }
+            
+            function proximo_registro(campo,visao){
+                codusu=campo.value==''?0:campo.value;
+                buscar_registro(window,campo.name,codusu,">",visao,visao,"Busca_Usuario",true,newusu);                    
+                
+            }
+            function registro_anterior(campo,visao){
+                codusu=campo.value==''?0:campo.value;
+                buscar_registro(window,campo.name, codusu,"<",visao,visao,"Busca_Usuario",true,newusu);
+                
+            }  
+            function ultimo_registro(campo,visao){
+                codusu=campo.value==''?99999:99999;
+                buscar_registro(window,campo.name,codusu,"U",visao,visao,"Busca_Usuario",true,newusu);                    
+                
+            }
+            
+            
+            function exibe_campos(){
+                codigo_usuario=document.forms[1].elements['CODIGO_USUARIO'].value;
+                document.forms[1].reset();
+                document.forms[2].reset();
+                newusu.setValores(newregistro.getValores());
+                    if (acao=='I'){
+                        document.forms[1].elements["CODIGO_USUARIO"].value = codigo_usuario;
+                    }
+
+                    if (acao=='A'){
+                        document.forms[1].elements["CODIGO_USUARIO"].value = new String(newusu.get_Codigo_Usuario());
+                        document.forms[1].elements["ID_USUARIO"].value = new String(newusu.get_Id());
+                        document.forms[1].elements["NOME_USUARIO"].value = new String(newusu.get_Nome_Usuario());
+                        document.forms[1].elements["GRUPO"].value = new String(newusu.get_Grupo());
+                        document.forms[1].elements["NIVEL_ACESSO"].value = new String(newusu.get_Nivel_Acesso());
+                        document.forms[1].elements["SENHA"].value = new String(newusu.get_Senha());                
+                        carrega_empresas();
+                        document.forms[1].elements["EMPRESA_ATIVA"].value = new String(newusu.get_Empresa_Ativa());
+                        carrega_unidades(document.forms[1].elements["EMPRESA_ATIVA"]);
+                        document.forms[1].elements["UNIDADE"].value = new String(newusu.get_Unidade());
+                        document.forms[3].elements["txt_log_data_cadastro"].value = new String(newusu.get_Data_Cadastro());
+                        document.forms[3].elements["txt_log_ultima_atualizacao"].value = new String(newusu.get_Ultima_Atualizacao());
+                        document.forms[3].elements["txt_log_ultimo_usuario"].value = new String(newusu.get_Ultimo_Usuario());
+                    }
+
+            }
+            
+            function carrega_campo(){
+                
+            }
+      function highlighted(tr_name){
+          return tr_name.setAttribute('class','highlight');
+      }   
+      
+      function pesquisar_usuario(campo){
+          desabilitar_painel();
+          buscar_registro(window,campo.name,campo.value,'=','usuarios','usuarios','Busca_Usuario',true,newusu);
+          habilitar_painel();
+          
+      }
+      window.onload=function(){
+          document.getElementById('CODIGO_USUARIO').disabled=false;
+          document.getElementById('CODIGO_USUARIO').focus();
+      }
+      
+      function desabilitar_painel(){
+          componentes=document.getElementById('frm_usuarios');
+          for (element in componentes){
+              try{
+              x=componentes[element].tagName.toString();
+              if (x=='INPUT' || x=='TABLE' || x=='SELECT'){
+                      componentes[element].disabled=true;
+              }
+              }
+              catch(E){
+                  
+              }
+              
+          }
+           
+      }
+      function habilitar_painel(){
+          componentes=document.getElementById('frm_usuarios');
+          for (element in componentes){
+              try{
+              x=componentes[element].tagName.toString();
+              if (x=='INPUT' || x=='TABLE'  || x=='SELECT'){
+                      componentes[element].disabled=false;
+              }
+              }
+              catch(E){
+                  
+              }
+              
+          }
+      }
+
+
+      function captura_usuario(linha){
+                if (navigator.appName.indexOf('Internet Explorer')>0){
+                    tabela=linha.parentNode.parentNode;
+                    valor_celula=tabela.rows[linha.rowIndex].cells[0].innerText;
+                }
+                else {
+                    tabela=linha.parentNode;
+                    valor_celula=tabela.rows[linha.rowIndex].cells[0].firstChild.textContent;
+                }
+                buscar_registro(window,'CODIGO_USUARIO', valor_celula,"=","usuarios","usuarios","Busca_Usuario",true);
+
+                document.forms[1].elements['CODIGO_USUARIO'].focus();
+                document.getElementById('pesq').style.visibility='hidden';
+      }
+      
+      function popular_caixa_pesquisa(){
+           document.getElementById('pesq').style.border='solid';
+           document.getElementById('pesq').style.visibility='visible'; 
+
+           if (document.getElementById('tbl')) {
+                    tab=document.getElementById('tbl');
+                    div=tab.parentNode;
+                    div.removeChild(tab);
+           }
+
+           buscar_registros(window,'usuarios','Carrega_Usuarios');             
+           tabela = document.createElement('table');
+           tabela.setAttribute('id','tbl');
+           tabela.border='0px';
+           tabela.cellpadding='0px';
+           document.getElementById('pesq').appendChild(tabela);  
+           //cabecalho=document.createElement('Thead');
+           //cabecalho.style="background-color:cyan";
+           linha_cab=document.createElement('tr');
+           //cabecalho.appendChild(linha_cab);
+           //tabela.appendChild(cabecalho);
+           corpo=document.createElement('tbody');
+           hlinha=document.createElement('tr');
+           cab=document.createElement('th');
+           cab.setAttribute('scope', 'col');
+           cab.innerHTML="Código do Usuário";
+           cab.width="50px";
+           hlinha.appendChild(cab);
+           cab=document.createElement('th');
+           cab.setAttribute('scope', 'col');
+           cab.innerHTML="ID do Usuário";
+           cab.width="100px";
+           hlinha.appendChild(cab);
+           cab=document.createElement('th');
+           cab.setAttribute('scope', 'col');
+           cab.innerHTML="Nome do Usuário";
+           cab.width="250px";
+           hlinha.appendChild(cab);
+           linha_cab.appendChild(hlinha);
+           tabela.appendChild(linha_cab);
+           divi=document.getElementById('pesq');
+           body=document.createElement('tbody');
+           body.style.border="1px";
+           tabela.appendChild(body);
+           xquebra=newregistros.getValores();
+           for (var y in xquebra){
+               var detail=document.createElement('tr');
+               detail.setAttribute('onmouseover', 'return highlighted(this)');
+               detail.setAttribute('onclick', 'captura_usuario(this)');
+               detail.setAttribute('id','teste')
+               body.appendChild(detail);
+               campos=xquebra[y].split('|');
+               for (var x=0;x<3;x++){
+                   celula=detail.insertCell(-1);
+                   celula.width="33%";
+                   a=document.createElement('a');
+                   a.setAttribute('href', "#");
+                   a.innerHTML=campos[x];
+                   celula.appendChild(a);
+
+               }
+           }
+       }
+	   function carrega_empresas(){
+                 buscar_registros(window,'empresas',"Carrega_Empresas",'','',false,'=',newEmpresas);
+                 codigo_empresa=document.forms[1].elements['CODIGO_EMPRESA_ATIVA'].value;
+                 // Inicializa select option 
+                 document.forms[1].elements['CODIGO_EMPRESA_ATIVA'].length=0;
+                 // Loop para carregar select option
+                 for (y=0;y< newEmpresas.length()+1;y++){
+                             opt=new Option('Selecione uma Empresa',0);
+                             if (y==0){
+                                opt.text="Selecione uma Empresa";
+                                opt.value="";
+                             }
+                             else {
+                                opt=new Option();
+				opt.text=newEmpresas.get_Nome_Empresa(y-1);
+                                opt.value=newEmpresas.get_Codigo_Empresa(y-1);
+                             }
+                             
+                             document.forms[1].elements['CODIGO_EMPRESA_ATIVA'].add(opt);
+                        }
+                        document.forms[1].elements['CODIGO_EMPRESA_ATIVA'].value=codigo_empresa;
+
+            }
+	   
+	   
+	   function carrega_unidades(campo){
+                 buscar_registros(window,'estrutura_organizacional',"Carrega_Estrutura",'CODIGO_EMPRESA',campo.value,false,'=',newEstruturas);
+                 codigo_estrutura=document.forms[1].elements['UNIDADE'].value;
+                 // Inicializa select option 
+                 document.forms[1].elements['UNIDADE'].length=0;
+                 // Loop para carregar select option
+                 nivel_organizacao=0;
+                 for (y=0;y< newEstruturas.length()+1;y++){
+                            
+                             opt=new Option('Selecione um item',0);
+                             if (y==0){
+                                opt.text="Selecione um ítem";
+                                opt.value="";
+                             }
+                             else {
+                                opt=new Option();
+                                if (newEstruturas.get_Nivel_Organizacao(y-1)>nivel_organizacao){
+                                    opt.setAttribute('class',"subnivel");
+                                    opt.text="  ";
+                                }
+                                else {
+                                    opt.text="";
+                                    opt.setAttribute('class',"");
+                                }
+                                nivel_organizacao=newEstruturas.get_Nivel_Organizacao(y-1);
+				opt.text+=newEstruturas.get_Descricao_Unidade(y-1);
+                                opt.value=newEstruturas.get_Codigo_Unidade(y-1);
+                             }
+                             
+                             document.forms[1].elements['UNIDADE'].add(opt);
+                        }
+                        if (document.forms[1].elements['UNIDADE'].length==1){
+                            document.forms[1].elements['UNIDADE'].length=0;
+                            opt=new Option('Nenhuma Unidade a Selecionar',0);
+                            document.forms[1].elements['UNIDADE'].add(opt);
+                            alert('Empresa não possui estrutura organizacional cadastrada!');
+                            return;
+                            
+                        }
+                        document.forms[1].elements['UNIDADE'].value=codigo_estrutura;
+                        
+
+            }
+	   
+
+
+
+</script>
+</head>
+
+<body>
+<center><h1>Cadastro de Usuários</h1></center>
+    <div>
+    <form id="frm_barra_tarefas" action="" >
+       <button type="button" onclick="">
+       <table>
+            <tr>
+            <td height="42"><img src="../images/novo.png" height="40" width="40" /></td>
+            </tr>
+            <tr>
+            <td height="16">Novo</td>
+            </tr>
+       </table>
+       </button>
+       <button type="button" onclick="grava_registro();">
+       <table>
+            <tr>
+            <td height="42"><img src="../images/barra_ferramentas/floppy.png" height="40" width="40" /></td>
+            </tr>
+            <tr>
+            <td height="16">Gravar</td>
+            </tr>
+       </table>
+       </button>
+       <button  type="button" onclick="apaga_registro();">
+       <table>
+            <tr>
+            <td height="42"><img src="../images/barra_ferramentas/error_button_2.png" height="40" width="40" /></td>
+            </tr>
+            <tr>
+            <td height="16">Apagar</td>
+            </tr>
+       </table>
+       </button>
+       <button  type="button" onclick="descer();">
+       <table>
+            <tr>
+            <td height="42"><img src="../images/barra_ferramentas/update_quantity_cart[1].png" height="40" width="40" /></td>
+            </tr>
+            <tr>
+            <td height="16">Desfazer</td>
+            </tr>
+       </table>
+       </button>
+       <button  type="button" onclick="subir();">
+       <table>
+            <tr>
+            <td height="42"><img src="../images/barra_ferramentas/cima.gif" height="40" width="40" /></td>
+            </tr>
+            <tr>
+            <td height="16">Primeiro</td>
+            </tr>
+      </table>
+      </button>
+      <button  type="button" onclick="registro_anterior(document.forms[1].elements['CODIGO_USUARIO'],'usuarios')">
+      <table>
+           <tr>
+           <td height="42"><img src="../images/barra_ferramentas/left.png" height="40" width="40" /></td>
+           </tr>
+           <tr>
+           <td height="16">Anterior</td>
+           </tr>
+      </table>
+      </button>
+      <button  type="button" onclick="proximo_registro(document.forms[1].elements['CODIGO_USUARIO'],'usuarios')">
+      <table>
+           <tr>
+           <td height="42"><img src="../images/barra_ferramentas/right.png" height="40" width="40" /></td>
+           </tr>
+           <tr>
+           <td height="16">Pr&oacute;ximo</td>
+           </tr>
+      </table>
+      </button>
+      <button  type="button" onclick="descer();">
+     <table>
+          <tr>
+          <td height="42" width="48"><img src="../images/barra_ferramentas/baixo.gif" height="40" width="40" /></td>
+          </tr>
+          <tr>
+          <td height="16">Ultimo</td>
+          </tr>
+     </table>
+     </button>
+     <button  type="button" onclick="descer();">
+     <table>
+          <tr>
+          <td height="40"><img src="../images/printer_2.png" height="40" width="40" /></td>
+          </tr>
+          <tr>
+          <td height="18">Imprimir</td>
+          </tr>
+     </table>
+     </button>
+     <button  type="button" onclick="document.forms[1].reset();document.forms[2].reset();document.forms[1].elements['CODIGO_USUARIO'].focus();">
+     <table>
+         <tr>
+         <td height="42"><img src="../images/barra_ferramentas/folha.jpg" height="40" width="40" /></td>
+         </tr>
+         <tr>
+         <td height="16">Limpar</td>
+         </tr>
+     </table>
+  </button>  
+
+</form>
+</div>
+<div id="principal" >
+<form id="frm_usuarios" action="" method="POST">
+        <link href="estiloSistema.css" rel="stylesheet" type="text/css" />
+
+
+     <br>
+        <br>
+        <table width="13%" border="0" cellpadding="0" cellspacing="1">
+            <tr>
+                <td width="10%" height="36" align="center" valign="middle" class="abaativa" id="celAbaCadastro" onClick="trataCliqueAba( this.id );" onMouseOver="trataMouseAba( this );">
+                    Dados Cadastrais                </td>
+                
+           
+    </table>
+       <link href="../css/designer.css" rel="stylesheet" type="text/css" />
+        <div id="divCadastro" style="display: block">
+<table width="67%" border="0" class="tabela">
+          <tr>
+            <td width="64">C&oacute;digo do Usu&aacute;rio </td>
+            <td width="85"><input name="CODIGO_USUARIO" type="text" id="codigo_usuario" size="7" maxlength="10" onblur="pesquisar_usuario(this)" onkeypress="return entrada_numerica_inteira(this,event)"/>
+            <img src="../images/search.png" width="10px" height="10px"/>            <label onclick="popular_caixa_pesquisa()"></label>            </td>
+            <td width="49">ID do Usu&aacute;rio </td>
+            <td colspan="2"><input name="ID_USUARIO" type="text" id="id_usuario" size="10" maxlength="10" /></td>
+            <td width="63">Nome do Usu&aacute;rio</td>
+            <td colspan="3"><input name="NOME_USUARIO" type="text" id="nome_usuario" size="40" maxlength="50" /></td>
+            <td width="103">Grupo</td>
+            <td width="104"><select name="GRUPO" id="grupo">
+              <option selected="selected"> </option>
+              <option value="0">Administrador</option>
+              <option value="1">Gerencial</option>
+              <option value="2">Supervis&atilde;o</option>
+              <option value="3">Digitador</option>
+            </select></td>
+          </tr>
+          <tr>
+            <td>N&iacute;vel de Acesso</td>
+            <td colspan="3"><select name="NIVEL_ACESSO" id="nivel_acesso">
+              <option selected="selected"> </option>
+              <option value="0">Total</option>
+              <option value="1">Movimenta&ccedil;&atilde;o</option>
+              <option value="2">Cadastros</option>
+              <option value="3">Relat&oacute;rios</option>
+              <option value="4">Consultas</option>
+            </select></td>
+            <td width="97">Empresa Ativa </td>
+            <td colspan="2"><select name="CODIGO_EMPRESA_ATIVA" id="EMPRESA_ATIVA" style="width:300px" onfocus="carrega_empresas()" onchange="carrega_unidades(this)">
+            </select></td>
+            <td width="58">Unidade para Acesso </td>
+            <td colspan="3"><select name="UNIDADE" id="UNIDADE" style="width:200px" >
+            </select></td>
+          </tr>
+          <tr>
+            <td>Senha</td>
+            <td colspan="3"><input name="SENHA" type="password" size="10" maxlength="10" /></td>
+            <td>Confirmar Senha            </td>
+            <td><input  type="password" id="CONFIRMA_SENHA" size="10" maxlength="10" /></td>
+            <td width="233">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td colspan="3">&nbsp;</td>
+          </tr>
+        </table>  
+     
+       
+<div id="divConsulta" style="display: none">
+            <table border="0" width="50%">
+                <tr>
+                    <td>
+                        CONSULTAS
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="divModelo" style="display: none">
+            <table border="0" width="50%">
+                <tr>
+                    <td>
+                        MODELOS DE IMPRESSÃO
+                    </td>
+                </tr>
+            </table>
+        </div>
+       
+        <script>
+            defineAba( "celAbaCadastro"  , "divCadastro"   );
+            defineAba( "celAbaRelatorio" , "divRelatorio"  );
+            defineAba( "celAbaConsultas" , "divConsulta"   );
+            defineAba( "celAbaModelos"   , "divModelo"     );
+            defineAbaAtiva( "celAbaCadastro" );
+        </script>
+        </div>
+</form>
+</div>
+            <form id='status' name="status">
+            <div id="div_statusbar">
+  <table width="109" height="393" border="0">
+    <tr>
+      <td colspan="2" style="border:solid 1px">Informa&ccedil;&otilde;es do Registro</td>
+    </tr>
+    <tr>
+      <td colspan="2">Data de Cadastro</td>
+    </tr>
+    <tr>
+      <td colspan="2"><textarea ID="TXT_LOG" name="txt_log_data_cadastro" DISABLED="DISABLED" style="text-align:center;width:100px;min-height:30px;max-height:30px;max-width:100px;min-width:100px;background:transparent" cols="1" rows="2"></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2">&Uacute;ltima Atualiza&ccedil;&atilde;o</td>
+    </tr>
+    <tr>
+      <td colspan="2"><textarea ID="TXT_LOG" name="txt_log_ultima_atualizacao" DISABLED="DISABLED" style="text-align:center;width:100px;min-height:30px;max-height:30px;max-width:100px;min-width:100px;background:transparent" cols="1" rows="2"></textarea></td>
+    </tr>
+      
+    <tr>
+      <td colspan="2">&Uacute;ltima Alteração realizada por</td>
+    </tr>
+    <tr>
+      <td colspan="2"><INPUT ID="TXT_LOG" name="txt_log_ultimo_usuario" TYPE="TEXT" DISABLED="DISABLED" SIZE="8" STYLE="background:transparent" MAXLENGTH="8" VALUE="<?php echo $_SESSION['ID_USUARIO']?>"/></td>
+    </tr>
+
+      <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2">&Uacute;ltimo c&oacute;digo gerado</td>
+    </tr>
+    <tr>
+      <td colspan="2"><INPUT ID="TXT_LOG" name="txt_log_ultimo_codigo_gerado" TYPE="TEXT" DISABLED="DISABLED" SIZE="8" STYLE="background:transparent" MAXLENGTH="8" VALUE="<?php echo $_SESSION['CODIGO_USUARIO']?>"/></td>
+    </tr>
+    <tr>
+      <td width="50">&nbsp;</td>
+      <td width="49">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+</div>
+
+<div id="pesq" style="visibility:hidden;position:absolute;z-index:8;background:lightgoldenrodyellow">
+    <div align="right"><input type="button" value="X" onclick="document.getElementById('pesq').style.visibility='hidden'"/></div>
+    <label>Digite o texto a pesquisar:</label><input type="text" name="txt_pesq" id="txt_pesq" /><input type="button" value="Pesquisar" onclick="popular_caixa_pesquisa();"/>
+</div>            
+<div id="div_mensagem">
+    <input type="text" id="mensagem" name="mensagem" value="<?php echo ($_GET['mensagem']!=null?$_GET['mensagem']:$_GET['mensagem_erro'])?> "/>
+    <?php 
+        if ($_GET['mensagem']!=null){
+            echo "<meta HTTP-EQUIV='Refresh' CONTENT='1;URL=../HTML/usuarios.php'>";     
+       }
+       else if ($_GET['mensagem_erro']!=null){
+           echo "<meta HTTP-EQUIV='Refresh' CONTENT='2;URL=../HTML/usuarios.php'>";     
+       }
+       ?>  
+
+</div>
+        </div>
+        <div id="divRelatorio" style="display: none">
+</div>
+
+        </form>    
+</body>
+</html>

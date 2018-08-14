@@ -1,0 +1,85 @@
+function MLaudos_setores_fotos(){
+this.inicializa=function(){
+                    Codigo_Empresa_Setores_Fotos=Array();
+                    Ano_Pericia_Setores_Fotos=Array();
+                    Numero_Laudo_Setores_Fotos=Array();
+                    Revisao_Setores_Fotos=Array();
+                    Unidade_Setores_Fotos=Array();
+                    Codigo_Setor_Setores_Fotos=Array();
+                    Sequencial_Setores_Fotos=Array();
+                    Caminho_Foto_Setores_Fotos=Array();
+                    Data_Registro_Setores_Fotos=Array();
+                    Session_id_Setores_Fotos=Array();
+                    Ultimo_Usuario_Setores_Fotos=Array();
+                    Ultima_Atualizacao_Setores_Fotos=Array();
+                    Id_Usuario_Setores_Fotos=Array();
+                     
+                }
+                this.get_Codigo_Empresa= function(nlinha){
+                    return Codigo_Empresa_Setores_Fotos[nlinha];
+                }                
+                this.get_Numero_Laudo= function(nlinha){
+                    return Numero_Laudo_Setores_Fotos[nlinha];
+                }
+                this.get_Ano_Pericia= function(nlinha){
+                    return Ano_Pericia_Setores_Fotos[nlinha];
+                }
+                this.get_Revisao=function(nlinha){
+                    return Revisao_Setores_Fotos[nlinha];
+                }
+                this.get_Unidade=function(nlinha){
+                    return Unidade_Setores_Fotos[nlinha];
+                }
+                this.get_Codigo_Setor=function(nlinha){
+                    return Codigo_Setor_Setores_Fotos[nlinha];
+                }
+                
+                this.get_Sequencial=function(nlinha){
+                    return Sequencial_Setores_Fotos[nlinha];
+                }
+                this.get_Caminho_Foto=function(nlinha){
+                    return Caminho_Foto_Setores_Fotos[nlinha];
+                }                
+                this.get_Data_Registro=function(nlinha){
+                    return Data_Registro_Setores_Fotos[nlinha];
+                }
+                this.get_Session_id=function(nlinha){
+                    return Session_id_Setores_Fotos[nlinha];
+                }         
+                this.get_Ultimo_Usuario=function(nlinha){
+                    return Ultimo_Usuario_Setores_Fotos[nlinha];
+                }         
+                this.get_Id_Usuario=function(nlinha){
+                    return Id_Usuario_Setores_Fotos[nlinha];
+                }         
+                this.length=function(){
+                    return Codigo_Empresa_Setores_Fotos.length;
+                }                
+                this.get_Ultima_Atualizacao=function(){
+                    return Ultima_Atualizacao_Setores_Fotos[nlinha];
+                }  
+                this.setValores=function(response){
+                    this.inicializa();
+                    if (response!='NF'){
+                       for (x=0;x<response.length-1;x++){
+                            vreg=response[x].split('|');
+                            Codigo_Empresa_Setores_Fotos[x]=vreg[0];
+                            Ano_Pericia_Setores_Fotos[x]=vreg[1];
+                            Numero_Laudo_Setores_Fotos[x]=vreg[2];
+                            Revisao_Setores_Fotos[x]=vreg[3];
+                            Unidade_Setores_Fotos[x]=vreg[4];
+                            Codigo_Setor_Setores_Fotos[x]=vreg[5];
+                            Sequencial_Setores_Fotos[x]=vreg[6];
+                            Caminho_Foto_Setores_Fotos[x]=vreg[7];
+                            Id_Usuario_Setores_Fotos[x]=vreg[8];
+                            Session_id_Setores_Fotos[x]=vreg[9];
+                            Ultima_Atualizacao_Setores_Fotos[x]=vreg[10];
+                            Ultimo_Usuario_Setores_Fotos[x]=vreg[11];                     
+                            
+                            
+                       }     
+                    }
+                }
+            };
+             newlaudosetfoto=new MLaudos_setores_fotos();
+

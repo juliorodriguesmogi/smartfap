@@ -1,0 +1,808 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title></title>
+<link href="responsaveiscss.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../classes/js/Busca_Registro.js"></script>
+<script type="text/javascript" src="../classes/js/Busca_Registros.js"></script>
+<script type="text/javascript" src="../classes/js/Registro.js"></script>
+<script type="text/javascript" src="../classes/js/Registros.js"></script>
+<script type="text/javascript" src="../classes/js/Empresa.js"></script>
+<script type="text/javascript" src="../classes/js/medico.js"></script>
+<script type="text/javascript" src="../classes/js/CEPS.js"></script>
+<script type="text/javascript" src="../js/funcoes.js"></script>
+<script type="text/javascript" src="../classes/js/Abas.js"></script>
+<script type="text/javascript" src="../classes/js/Tipos_Logradouros.js"></script>
+<link href="estilosistema.css" rel="stylesheet" type="text/css" />
+<link href="designer.css" rel="stylesheet" type="text/css" />
+
+
+<style type="text/css">
+body{
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	font-size:90%;
+	width:90%;
+        background: white;  
+}
+#div_statusbar {	vertical-align: bottom;
+	position:absolute;
+	top:1%;
+	width: 110px;
+	border:solid;
+	background-color:silver;
+	right: 0px;
+	max-width:110px;
+	max-height:397px;
+	height: 397px;
+	text-align: center;
+}
+#div_statusbar textArea{
+    font-size:75%;
+}
+#bulb_gif_endereco{
+	display:none;
+}
+        #div_consulta{
+        filter: alpha(opacity:0.70);  
+        KHTMLOpacity: 0.70;  
+        MozOpacity: 0.70;  
+        -khtml-opacity: .70;  
+        -ms-filter: "alpha(opacity=70)";  
+        -moz-opacity: .70;  
+        filter: alpha(opacity=70);  
+        opacity: .70;
+	top:70%;
+        }
+
+div{
+	width:100%;
+	
+}
+ul{
+    margin: 0; 
+    padding: 0;
+    list-style-type: none;}
+li{
+margin: -2px 0 0;
+}
+a{
+    left:0px;
+    margin: 0px;
+}
+
+</style>
+<script type="text/javascript">  
+	     newLogradouro=new CEPS();
+         newmedico=new medico();
+         empresa_ativa=<?php echo $_SESSION['empresa_ativa']?>+0;        
+         empresa_ativa=empresa_ativa.toString(); 
+   
+          function captura_linha(ttr){
+                valor_celula=captura_valores(ttr);
+                document.forms[1].elements['CODIGO_MEDICO'].value=valor_celula[0];
+                document.forms[1].elements['NOME_PROFISSIONAL'].value=valor_celula[1];
+                document.forms[1].elements['AREA_ATUACAO'].value=valor_celula[2];
+                document.forms[1].elements['CODIGO_MEDICO'].focus();
+                document.getElementById('consultaexterna').style.display='none';
+            }
+
+            div_pai=document.getElementById('consultaexterna');
+       
+       function carrega_tipo_logradouro(campo){
+            buscar_registros(window,"ceps","Carrega_Tipo_Logradouro",null,null,false,null,newtipologradouros);
+            campo.length=0;
+            campo.add(new Option('Selecione uma opção',''));
+            for (nocurs=0;nocurs<newtipologradouros.length();nocurs++){
+                opt=new Option(newtipologradouros.get_Tipo_Logradouro(nocurs),newtipologradouros.get_Tipo_Logradouro(nocurs));
+                campo.add(opt);
+            }
+            
+        }
+
+            
+            function monta_consulta_funcionario(campo_origem,campo_pesquisa){
+                estilo='';
+                if (campo_origem!=null){
+                    posicao=Array();
+                    posicao[0]=findPosY(campo_origem)+campo_origem.offsetHeight;
+                    posicao[1]=findPosX(campo_origem)+campo_origem.offsetLeft;
+                    posicao[2]="150";
+                    posicao[3]=campo_origem.offsetWidth;
+                    estilo='z-index:10;position:absolute;'+'top:'+posicao[0]+'px;'+'left:'+posicao[1]+'px;'+'height:'+posicao[2]+'px;'+'width:'+posicao[3]+'px;'+'border:solid 1px'+'background:white;';
+                }    
+                div_pai=document.getElementById('consultaexterna');
+                div_pai.setAttribute('style',estilo);
+                div_pai.style.border='solid 1px';
+                div_pai.style.top=posicao[0];
+                div_pai.style.left=posicao[1]+'px';
+                div_pai.style.height='340px';
+                div_pai.style.width='425px';
+                div_pai.style.background='white';
+                div=document.createElement('div');
+                div.setAttribute('className', 'tableContainer');
+                div.setAttribute('id', 'tableContainer');
+                div_pai.appendChild(div);                
+                tabela=document.createElement('table');
+                tabela.setAttribute('class', 'scrollTable');
+                if (document.getElementById('tableContainer').children.length>0){
+                        if (navigator.appName!='Microsoft Internet Explorer'){
+                            oChild=document.getElementById('tableContainer').childNodes;
+                            document.getElementById('tableContainer').removeChild( oChild[0] );
+                        }
+                        else {
+                            oChild=document.getElementById('tableContainer').children[0];
+                            document.getElementById('tableContainer').removeChild(oChild);
+                        }    
+                }
+                div_pai.style.display='block';
+                document.getElementById('tableContainer').appendChild(tabela);
+                thead=document.createElement('thead');
+                thead.setAttribute('class', 'fixedHeader');
+                tabela.appendChild(thead);
+                tr=document.createElement('tr');
+                thead.appendChild(tr);
+                colunas=Array('COD.MEDIC.','NOME MEDIC.','AREA DE ATUAï¿½ï¿½O');
+                for (xcab=0;xcab < 3;xcab++){
+                     th=document.createElement('th');
+                     th.innerHTML=colunas[xcab];
+                     tr.appendChild(th);  
+                }  
+                consultar_funcionario(tabela,campo_pesquisa,' like ')
+            }    
+                
+                
+            function consultar_funcionario(ntabela,campo_pesquisa,criterio){
+                tbody=document.createElement('tbody');
+                tbody.setAttribute('class','scrollContent');
+                ntabela.appendChild(tbody);
+                
+               parm=Array((campo_pesquisa.value+"%"));
+                
+                buscar_registros(window,'medicos','Consulta_Medicos',Array("NOME_PROFISSIONAL"),parm,false,Array("like "),newregistros);
+                
+                cont=0;
+                valores=newregistros.getValores();
+                valores=valores.toString().split(',');
+                for(x=0;x<valores.length-1;x++){
+                    vreg=valores[x].split('|');
+                    tr=document.createElement('tr');
+                    
+                    if (x % 2==0){
+                        tr.setAttribute('class','alternateRow');
+                    }
+                    else {
+                        tr.setAttribute('class','normalRow');
+                    }
+                    tr.setAttribute('onclick', 'captura_linha(this)');
+                    for (y=0;y<vreg.length-1;y++){
+                        td=document.createElement('td');
+                        a=document.createElement('a');
+                        a.setAttribute('href', "#");
+                        a.innerHTML=vreg[y];
+                        td.appendChild(a);
+                        tr.appendChild(td);
+                        tr.appendChild(td);
+                        tbody.appendChild(tr);
+                    }
+                    
+                    
+                }    
+                
+            }
+        function exibe_campos(){
+                codigo_medico=document.forms[1].elements['CODIGO_MEDICO'].value;
+                document.forms[1].reset();
+                //newmedico.setValores(newregistro.getValores());
+                                
+                if (acao=='I'){
+                    document.forms[1].elements["CODIGO_MEDICO"].value = codigo_medico;
+                }
+                if (acao=='A'){
+                        
+                        document.forms[1].elements["CODIGO_MEDICO"].value = new String(newmedico.get_Codigo_Medico());
+                        document.forms[1].elements["NOME_PROFISSIONAL"].value = new String(newmedico.get_Nome_Profissional());
+                        document.forms[1].elements["AREA_ATUACAO"].value =newmedico.get_Area_Atuacao();
+			document.forms[1].elements["CEP"].value = new String(newmedico.get_Cep());
+			carrega_tipo_logradouro(document.forms[1].elements['TIPO_LOGRADOURO']);
+                        document.forms[1].elements["TIPO_LOGRADOURO"].value=newmedico.get_Tipo_Logradouro();
+                        document.forms[1].elements["ENDERECO"].value = new String(newmedico.get_Endereco());
+                        document.forms[1].elements["NIT"].value = new String(newmedico.get_Nit());
+                        document.forms[1].elements["CPF"].value = new String(newmedico.get_Cpf());
+                        document.forms[1].elements["CRM"].value = new String(newmedico.get_Crm());
+                        document.forms[1].elements["BAIRRO"].value = new String(newmedico.get_Bairro());    
+                        document.forms[1].elements["OBSERVACAO"].value = new String(newmedico.get_Observacao());    
+                        document.forms[1].elements["MUNICIPIO"].value = new String(newmedico.get_Municipio());
+                        document.forms[1].elements["CODIGO_EMPRESA"].value = new String(newmedico.get_Empresa());
+                        document.forms[1].elements["RAZAO_SOCIAL"].value = new String(newmedico.get_Razao_Social());
+                        document.forms[1].elements["NUMERO"].value = new String(newmedico.get_Numero());
+                        document.forms[1].elements["CNPJ"].value = new String(newmedico.get_CNPJ());
+                        document.forms[1].elements["UF"].length=0;
+			document.forms[1].elements["UF"].add(new Option(newmedico.get_UF(),newmedico.get_UF()));
+                        document.forms[3].elements["data_cadastro"].value = new String(newmedico.get_Data_Cadastro());                
+                        document.forms[3].elements["txt_log_ultima_atualizacao"].value = new String(newmedico.get_Ultima_Atualizacao());                        document.forms[3].elements["txt_log_ultimo_usuario"].value = new String(newmedico.get_Ultimo_Usuario());                
+                       document.forms[3].elements["txt_log_ultimo_usuario"].value = new String(newfuncionario.get_Ultimo_Usuario()); 
+                       
+                }
+            }
+
+            
+            var acao='';
+            function grava_registro(){
+             if (confirm("confirma o registro")){
+                document.forms[1].action="../PHP/Medico_Class.php?acao=I";
+                document.forms[2].action="../PHP/Medico_Class.php?acao=I";
+                document.forms[1].submit();
+             }
+            }
+            function apaga_registro(){
+                if (confirm("Confirma a exclusÃ£o do registro?")){
+                    document.forms[1].action="../PHP/Medico_Class.php?acao="+"D";
+                    document.forms[1].submit();
+                }
+            }
+              function proximo_registro(campo,visao){
+                codmedico=campo.value==''?0:campo.value;
+                buscar_registro(window,campo.name,codmedico,">",visao,visao,'Busca_Medico',false,newmedico);                    
+                exibe_campos();
+            }
+            function registro_anterior(campo,visao){
+                codmedico=campo.value==''?0:campo.value;
+                buscar_registro(window,campo.name,codmedico,"<",visao,visao,'Busca_Medico',false,newmedico);                    
+                exibe_campos();
+            } 
+            var primeira_vez=false;			
+			
+            function Busca_CEP_Endereco(){
+                campo_atual=document.activeElement;
+                newdiv=document.getElementById('div_consulta');
+                divstop=findPosY(campo_atual)+campo_atual.offsetHeight;
+                divsleft=findPosX(campo_atual)+campo_atual.offsetLeft;
+                divestilo='display:none;'+'width:'+campo_atual.offsetWidth+"px;";
+                divestilo+='height:'+"50px;"+'overflow:auto;'+'top:'+divstop+"px;";
+                divestilo+='left:'+divsleft+"px;"+'position:absolute;'+'z-index:10;background-color:greenyellow';
+                if (document.getElementById('div_consulta').children.length>0){
+                    if (navigator.appName!='Microsoft Internet Explorer'){
+                        while (newdiv.hasChildNodes()){
+                            newdiv.removeChild(newdiv.lastChild);
+                        }
+
+                    }
+                    else {
+                        oChild=newdiv.children[0];
+                        newdiv.removeChild(oChild);
+                    }
+                }                
+                buscar_registros(window,"ceps","Carrega_CEPS",Array('LOGRADOURO'),Array(campo_atual.value+"%"),false,Array(" Like "),newLogradouro);
+                newul=document.createElement('ul');
+                for (y=0;y<=newLogradouro.length()-1;y++){
+                    newli=document.createElement('li');
+                    a=document.createElement('a');
+                    a.setAttribute('href', "#");
+                    a.setAttribute('style','font-size:11px;font-weight:bold');
+                    a.innerHTML=newLogradouro.get_Tipo_Logradouro(y).toString().substr(0,15)+"\t";
+                    a.innerHTML+="|"+newLogradouro.get_Logradouro(y).toString().substr(0,30)+"\t";
+                    a.innerHTML+="|"+newLogradouro.get_Bairro(y).toString().substr(0,30);
+                    a.innerHTML+="|"+newLogradouro.get_Municipio(y).toString().substr(0,30);
+                    a.innerHTML+="|"+newLogradouro.get_CEP(y).toString().substr(0,10);
+                    a.innerHTML+="|"+newLogradouro.get_UF(y).toString().substr(0,2)+"</BR>";
+                    newli.setAttribute('onclick',"captura_valor(this)");
+                    newli.setAttribute('width', 'auto');
+                    newli.appendChild(a);
+                    newul.appendChild(newli);
+                    document.getElementById('bulb_gif_endereco').style.display='block';
+                    
+                    
+                }     
+                newdiv.appendChild(newul);
+                newdiv.setAttribute('style',divestilo);
+                clearInterval(i);
+                primeira_vez=false;
+            }
+			
+			
+            function captura_valor(campo){
+                if (navigator.appName!='Microsoft Internet Explorer'){
+                    varx=campo.children[0].textContent.toString().split('|');
+                }
+                else {
+                    varx=campo.innerText.toString().split('|');
+                }
+                document.forms[1].elements["TIPO_LOGRADOURO"].length=0;
+				document.forms[1].elements["TIPO_LOGRADOURO"].add(new Option(varx[0],varx[0]));
+                document.forms[1].elements["ENDERECO"].value = varx[1];
+                document.forms[1].elements["BAIRRO"].value=varx[2];
+                document.forms[1].elements["MUNICIPIO"].value=varx[3];
+                document.forms[1].elements["CEP"].value=varx[4];                
+                document.forms[1].elements["UF"].length=0;
+                document.forms[1].elements["UF"].add(new Option(varx[5],varx[5]));                
+                document.getElementById('div_consulta').style.display='none';
+		document.getElementById('bulb_gif_endereco').style.display='none';
+
+            }
+            
+            function dispara(campo){
+              if (!primeira_vez) {
+                 primeira_vez=true;
+                 i=setTimeout("Busca_CEP_Endereco()",2000);
+              } 
+
+            }
+			
+			
+            function mostra_lista(opcao){
+		document.getElementById('div_consulta').style.display='block';
+                if (opcao.name='bulb_gif_endereco'){
+                    document.getElementById('bulb_gif_endereco').style.display='none';
+                }
+                if (opcao.name='bulb_gif_endereco_atuacao'){
+                    document.getElementById('bulb_gif_endereco_atuacao').style.display='none';
+                }
+		
+            }
+  function imprime_registro(){
+             if (confirm("Imprimir registro corrente?")){
+                document.forms[1].action="../Reports/Medico_Relatorio.php";
+                document.forms[1].submit();
+             }
+            }    
+              function Captura_linha(ttr){
+                valor_celula=captura_valores(ttr);
+                document.forms[1].elements['CODIGO_EMPRESA'].value=valor_celula[0];
+                document.forms[1].elements['RAZAO_SOCIAL'].value=valor_celula[1];
+                document.forms[1].elements['CNPJ'].value=valor_celula[2];
+                document.forms[1].elements['CODIGO_EMPRESA'].focus();
+                document.getElementById('consultaexterna').style.display='none';
+            }
+
+            div_pai=document.getElementById('consultaexterna');
+
+            
+            function monta_consulta_empresa(campo_origem,campo_pesquisa){
+                estilo='';
+                if (campo_origem!=null){
+                    posicao=Array();
+                    posicao[0]=String(findPosY(campo_origem)+campo_origem.offsetHeight);
+                    posicao[1]=String(findPosX(campo_origem)+campo_origem.offsetLeft);
+                    posicao[2]="330";
+                    posicao[3]=String(campo_origem.offsetWidth+800);
+                    estilo='z-index:10;position:absolute;'+'top:'+posicao[0]+'px;'+'left:'+posicao[1]+'px;'+'height:'+posicao[2]+'px;'+'width:'+posicao[3]+'px;'+'border:solid 1px'+'background:white;';
+                }    
+                div_pai=document.getElementById('consultaexterna');
+                div_pai.setAttribute('style',estilo);
+                div_pai.style.border='solid 1px';
+                div_pai.style.top=posicao[0];
+                div_pai.style.left=posicao[1]+'px';
+                div_pai.style.height=posicao[2]+'px';
+                div_pai.style.width=posicao[3]+'px';
+                div_pai.style.background='white';
+                div=document.createElement('div');
+                div.setAttribute('className', 'tableContainer');
+                div.setAttribute('id', 'tableContainer');
+                div_pai.appendChild(div);                
+                tabela=document.createElement('table');
+                tabela.setAttribute('class', 'scrollTable');
+                if (document.getElementById('tableContainer').children.length>0){
+                        if (navigator.appName!='Microsoft Internet Explorer'){
+                            oChild=document.getElementById('tableContainer').childNodes;
+                            document.getElementById('tableContainer').removeChild( oChild[0] );
+                        }
+                        else {
+                            oChild=document.getElementById('tableContainer').children[0];
+                            document.getElementById('tableContainer').removeChild(oChild);
+                        }    
+                }
+                div_pai.style.display='block';
+                document.getElementById('tableContainer').appendChild(tabela);
+                thead=document.createElement('thead');
+                thead.setAttribute('class', 'fixedHeader');
+                tabela.appendChild(thead);
+                tr=document.createElement('tr');
+                thead.appendChild(tr);
+                colunas=Array('COD.EMPRESA.','RAZAO_SOCIAL','CNPJ');
+                largura=Array('112px','116px','550px');
+                for (xcab=0;xcab < 3;xcab++){
+                     th=document.createElement('th');
+                     th.setAttribute('width',largura[xcab]);
+                     th.innerHTML=colunas[xcab];
+                     
+                     tr.appendChild(th);  
+                }  
+                consultar_empresa(tabela,campo_pesquisa,' like ')
+            }    
+                
+                
+            function consultar_empresa(ntabela,campo_pesquisa,criterio){
+                tbody=document.createElement('tbody');
+                tbody.setAttribute('class','scrollContent');
+                ntabela.appendChild(tbody);
+                parm=Array((campo_pesquisa.value+"%"));
+                buscar_registros(window,'empresas','Consulta_Empresa_Medico',Array("RAZAO_SOCIAL"),parm,false,Array("like "),newregistros);
+                cont=0;
+                valores=newregistros.getValores();
+                valores=valores.toString().split(',');
+                for(x=0;x<valores.length-1;x++){
+                    vreg=valores[x].split('|');
+                    tr=document.createElement('tr');
+                    
+                    if (x % 2==0){
+                        tr.setAttribute('class','alternateRow');
+                    }
+                    else {
+                        tr.setAttribute('class','normalRow');
+                    }
+                    tr.setAttribute('onclick', 'Captura_linha(this)');
+                    largura=Array('112px','116px','550px');
+                    for (y=0;y<vreg.length-1;y++){
+                        td=document.createElement('td');
+                        td.setAttribute('style','width:'+largura[y]);
+                        a=document.createElement('a');
+                        a.setAttribute('href', "#");
+                        a.innerHTML=vreg[y];
+                        td.appendChild(a);
+                        tr.appendChild(td);
+                        tbody.appendChild(tr);
+                    }
+                    
+                    
+                }    
+                
+            }
+             function insere(node){
+                //divpai=node.parentNode;
+              divpai=node.parentNode.parentNode;
+                divfilho=divpai.children[0].cloneNode(true);
+                divpai.appendChild(divfilho);
+            }	
+           function remove(node){
+divremover=node.parentNode;
+divpai=node.parentNode.parentNode;
+divpai.removeChild(divremover);
+} 
+        </script>
+</head>
+
+<body>
+
+<center>
+  <h2>Cadastro de Profissionais da Sa&uacute;de </h2>
+</center>
+
+  <form id="frm_barra_tarefas" action="" >
+       <button type="button"  onclick="window.location.reload(true);document.forms[1].elements['CODIGO_MEDICO'].focus();">
+       <table>
+            <tr>
+            <td height="42"><img src="../images/novo.png" height="40" width="38" /></td>
+            </tr>
+            <tr>
+            <td height="16">Novo</td>
+            </tr>
+       </table>
+       </button>
+       <button type="button" onclick="grava_registro();">
+       <table>
+            <tr>
+            <td height="42"><img src="../images/barra_ferramentas/floppy.png" height="40" width="45" /></td>
+            </tr>
+            <tr>
+            <td height="16">Gravar</td>
+            </tr>
+       </table>
+       </button>
+       <button  type="button" onclick="apaga_registro();">
+       <table>
+            <tr>
+            <td height="42"><img src="../images/barra_ferramentas/error_button_2.png" height="40" width="45" /></td>
+            </tr>
+            <tr>
+            <td height="16">Apagar</td>
+            </tr>
+       </table>
+       </button>
+       <button  type="button" onclick="exibe_campos();">
+       <table>
+            <tr>
+            <td height="42"><img src="../images/barra_ferramentas/update_quantity_cart[1].png" height="33" width="47" /></td>
+            </tr>
+            <tr>
+            <td height="16">Desfazer</td>
+            </tr>
+       </table>
+       </button>
+     
+      <button  type="button" onclick="registro_anterior(document.forms[1].elements['CODIGO_MEDICO'],'medicos_codigo_desc')">
+      <table>
+           <tr>
+           <td height="42"><img src="../images/barra_ferramentas/left.png" height="35" width="45" /></td>
+           </tr>
+           <tr>
+           <td height="16">Anterior</td>
+           </tr>
+      </table>
+      </button>
+      <button  type="button" onclick="proximo_registro(document.forms[1].elements['CODIGO_MEDICO'],'medicos_codigo_asc')">
+      <table>
+           <tr>
+           <td height="42"><img src="../images/barra_ferramentas/right.png" height="35" width="45" /></td>
+           </tr>
+           <tr>
+           <td height="16">Pr&oacute;ximo</td>
+           </tr>
+      </table>
+      </button>
+     
+     <button  type="button" onclick="imprime_registro();">
+     <table>
+          <tr>
+          <td height="42"><img src="../images/printer_2.png" height="40" width="40" /></td>
+          </tr>
+          <tr>
+          <td height="18">Imprimir</td>
+          </tr>
+     </table>
+     </button>
+     <button  type="button" onclick="window.location.reload(true);document.forms[1].elements['CODIGO_MEDICO'].focus();">
+     <table>
+         <tr>
+         <td height="42" width="50"><img src="../images/folha.gif" height="40" width="35" /></td>
+         </tr>
+         <tr>
+         <td height="16">Limpar</td>
+         </tr>
+     </table>
+  </button>  
+</form>
+
+<br />
+<br />
+ <table width="25%" border="0" cellpadding="0" cellspacing="1">
+            <tr width="10%">
+                <td width="10%" height="36" align="center" valign="middle" class="abaativa" id="celAbaCadastro" onClick="trataCliqueAba( this.id );" onMouseOver="trataMouseAba( this );">
+                    Dados Cadastrais                </td>
+                
+                
+               
+            </tr>
+    </table>
+ 
+        <div id="divCadastro" style="display: block">
+           <form id="frm_medico" method="POST">
+<div  >
+<table width="80%"  class="tabela2">
+<tr>
+    
+<td width="4%">Código</td>
+<td width="11%"><input name="CODIGO_MEDICO" type="text" size="10" onblur="buscar_registro(window,this.name,this.value,'=','medicos','medicos','Busca_Medico',true,newmedico)"/>
+  <img src="../images/search.png" onclick="monta_consulta_funcionario(document.forms[1].elements['CODIGO_MEDICO'],document.forms[1].elements['CODIGO_MEDICO'])" width="10px" height="10px"/></td>
+<td colspan="2">Nome do Profissional</td>
+<td colspan="3"><input name="NOME_PROFISSIONAL" type="text" size="60" />
+  </td>
+<td width="10%">Area de Atuação  </td>
+<td width="30%"><select name="AREA_ATUACAO" style="width:250px" id="select">
+  <option value="" selected="selected"> </option>
+  <option value="ACUPUNTURA" >Acupuntura</option>
+  <option value="ALERGIA E IMUNOLOGIA" >Alergia e Imunologia</option>
+  <option value="ANESTESIOLOGIA" >Anestesiologia</option>
+  <option value="ANESTESIOLOGIA" >Anestesiologia</option>
+  <option value="ANGIOLOGIA" >Angiologia</option>
+  <option value="CANCEROLOGIA" >Cancerologia</option>
+  <option value="CARDIOLOGIA" >Cardiologia</option>
+  <option value="CIRURGIA CARDIO-VASCULAR" >Cirurgia Cardio-vascular</option>
+  <option value="CIRURGIA DA MÃO" >Cirurgia da Mão</option>
+  <option value="CIRURGIA PEDIÁTRICA" >Cirurgia Pediátrica</option>
+  <option value="CIRURGIA PLÁSTICA" >Cirurgia Plástica</option>
+  <option value="CIRURGIA GERAL" >Cirurgia Geral</option>
+  <option value="CIRURGIA NEUROLÃ³GICA" >Cirurgia Neurológica</option>
+  <option value="CIRURGIA DO APARELHO DIGESTÓRIO" >Cirurgia do Aparelho Digestório</option>
+  <option value="CIRURGIA TORÁCICA" >Cirurgia Torácica</option>
+  <option value="CIRURGIA VASCULAR" >Cirurgia Vascular</option>
+  <option value="CLÍNICA GERAL" >Clínica Geral</option>
+  <option value="CLÍNICA MÉDICA" >Clínica Médica</option>
+  <option value="COLOPROCTOLOGIA" >Coloproctologia</option>
+  <option value="ENDOCRINOLOGIA E METABOLOGIA" >Endocrinologia e Metabologia</option>
+  <option value="GASTROENTEROLOGIA" >Gastroenterologia</option>
+  <option value="GENÉTICA MÉDICA" >Genética Médica</option>
+  <option value="GERIATRIA" >Geriatria</option>
+  <option value="GINECOLOCIA E OBSTETRÍCIA" >Ginecolocia e Obstetrícia</option>
+  <option value="HEMATOLOGIA E HEMOTERAPIA" >Hematologia e Hemoterapia</option>
+  <option value="HOMEOPATIA" >Homeopatia</option>
+  <option value="INFECTOLOGIA" >Infectologia</option>
+  <option value="MASTOLOGIA" >Mastologia</option>
+  <option value="NEFROLOGIA" >Nefrologia</option>
+  <option value="NEUROLOGIA" >Neurologia</option>
+  <option value="OFTALMOLOGIA" >Oftalmologia</option>
+  <option value="ORTOPEDIA" >Ortopedia</option>
+  <option value="OTORRINOLARINGOLOGIA" >Otorrinolaringologia</option>
+  <option value="PATOLOGIA" >Patologia</option>
+  <option value="PNEUMOLOGIA" >Pneumologia</option>
+  <option value="RADIOLOGIA" >Radiologia</option>
+  <option value="RADIOTERAPIA" >Radioterapia</option>
+  <option value="REUMATOLOGIA" >Reumatologia</option>
+  <option value="UROLOGIA" >Urologia</option>
+</select></td>
+</tr>
+  <tr>
+<td width="4%">NIT</td>
+<td width="11%"><input name="NIT" type="text" size="15" />
+ </td>
+<td width="4%">CPF</td>
+<td width="9%"><input name="CPF" type="text" SIZE="16" />
+  </td>
+<td width="7%">CRM</td>
+<td width="8%"><input name="CRM" type="text" size="15" />
+  </td>
+
+<td width="20%" >&nbsp;</td>
+<td width="20%">&nbsp;</td>
+<td width=""></td><td></td>
+</table>
+
+</tr>
+<table width="80%" class="tabela">
+<tr>
+  <td colspan="14"><center>Endereço</center></td>
+  </tr>
+<tr>
+  <td>Tipo Logradouro</td>
+  <td width="6%"><select name="TIPO_LOGRADOURO" id="TIPO_LOGRADOURO" style="width:70px;max-width:70px"  >
+  </select></td>
+  <td width="5%">Endereço</td>
+  <td width="21%"><input name="ENDERECO" type="text" size="50" onkeypress="dispara(this);" /><img src="../images/bulb_gif.gif" width="15px" height="15px" name="bulb_gif_endereco" id="bulb_gif_endereco" onclick="mostra_lista(this)"/></td>
+
+  <td width="1%">No. </td>
+  <td width="2%"><input name="NUMERO" type="text" size="10" /></td>
+  <td width="3%">Bairro</td>
+  <td width="13%"><input name="BAIRRO" type="text" size="30" />
+  
+  
+</tr>
+<tr>
+      <td width="3%">CEP</td>
+  <td width="18%"><input name="CEP" style="width:100px" id="CEP" size="10"/>
+    <td width="3%">Município  </td>  
+  <td width="13%"><input name="MUNICIPIO" type="text" size="30" /></td>
+    <td width="2%">UF</td>
+  <td width="5%"><select name="UF" style="width:50px" id="UF">
+    <option value="  " selected="selected"> </option>
+    <option value="AC">AC</option>
+    <option value="AM">AM</option>
+    <option value="AL">AL</option>
+    <option value="AP">AP</option>
+    <option value="BA">BA</option>
+    <option value="CE">CE</option>
+    <option value="DF">DF</option>
+    <option value="EF">EF</option>
+    <option value="GO">GO</option>
+    <option value="MA">MA</option>
+    <option value="MG">MG</option>
+    <option value="MS">MS</option>
+    <option value="MT">MT</option>
+    <option value="PA">PA</option>
+    <option value="PB">PB</option>
+    <option value="PE">PE</option>
+    <option value="PI">PI</option>
+    <option value="PR">PR</option>
+    <option value="RJ">RJ</option>
+    <option value="RN">RN</option>
+    <option value="RO">RO</option>
+    <option value="RR">RR</option>
+    <option value="RS">RS</option>
+    <option value="SC">SC</option>
+    <option value="SE">SE</option>
+    <option value="SP">SP</option>
+    <option value="TO">TO</option>
+  </select></td>
+<td width="6%">Observação</td>
+    <td colspan="3"><textarea name="OBSERVACAO" type="text"></textarea></td>
+    <td colspan="12"><p>
+    </td>
+    </tr>
+</table>
+       
+          
+           <div>
+               <div style="width:100%" id="div_1">    
+<table width="100%" class="tabela2" id="empresa" border="1px solid">
+<tr>
+<th colspan="4">
+<center>Credenciamento Medico/Empresas</center>
+</th>
+</tr>
+<tr>
+<th width="11%" >Codigo Empresa</th>
+<th width="59%" >Razão Social</th>
+<th width="20%" >C.N.P.J</th>
+<th width="10%">Confirmar Linha </th>
+</tr>
+<tr>
+<th width="11%" ><input name='CODIGO_EMPRESA'type="text" size="20px"/><img src="../images/search.png" onclick="monta_consulta_empresa(document.forms[1].elements['CODIGO_EMPRESA'],document.forms[2].elements['txt_pesquisa'])" width="10px" height="10px"/></th>
+<th width="59%" ><input name="RAZAO_SOCIAL"size="50px"/></th>
+<th width="20%" ><input name="CNPJ"size="20px"/></th>
+<th width="10%">  
+</th>
+</tr>
+</table><button type="button" onclick="insere(this)">+ Incluir Empresa </button>		
+		    <button type="button" onclick="remove(this)">- Remover Empresa </button> </div>
+</div>
+ </form> 
+
+ 
+        
+
+         </div>
+       
+        <script>
+            defineAba( "celAbaCadastro"  , "divCadastro"   );
+            defineAba( "celAbaRelatorio" , "divRelatorio"  );
+            defineAba( "celAbaConsultas" , "divConsulta"   );
+            defineAba( "celAbaModelos"   , "divModelo"     );
+            defineAbaAtiva( "celAbaCadastro" );
+        </script>
+</div>
+<form>
+                <div id="consultaexterna" style="postion:absolute;display:none">
+      <input type="text" id="txt_pesquisa" name="txt_pesquisa" size="50"/>
+            <button name="btn" onclick="monta_consulta_funcionario(document.forms[1].elements['CODIGO_MEDICO'],document.forms[3].elements['txt_pesquisa'])"  type="button" value="Pesquisar" >Pesquisar</button><label onclick="document.getElementById('consultaexterna').style.display='none'"><strong>   X</strong></label>
+      </div>     
+
+    </form>
+<br/>
+<form>
+      <div id="div_statusbar">
+        <table width="109" height="393" border="0">
+          <tr>
+            <td colspan="2" style="border:solid 1px">Informa&ccedil;&otilde;es do Registro</td>
+          </tr>
+          <tr>
+            <td colspan="2">Data de Movimenta&ccedil;&atilde;o </td>
+          </tr>
+          <tr>
+            <td colspan="2"><textarea id="TXT_LOG" name="data_cadastro" disabled="disabled" style="text-align:center;width:100px;min-height:30px;max-height:30px;max-width:100px;min-width:100px;background:transparent" cols="1" rows="2"></textarea></td>
+          </tr>
+          <tr>
+            <td colspan="2">&Uacute;ltima Atualiza&ccedil;&atilde;o</td>
+          </tr>
+          <tr>
+            <td colspan="2"><textarea id="TXT_LOG" name="txt_log_ultima_atualizacao" disabled="disabled" style="text-align:center;width:100px;min-height:30px;max-height:30px;max-width:100px;min-width:100px;background:transparent" cols="1" rows="2"></textarea></td>
+          </tr>
+          <tr>
+            <td colspan="2">&Uacute;ltima Altera&ccedil;&atilde;o realizada por</td>
+          </tr>
+          <tr>
+            <td colspan="2"><input id="TXT_LOG" name="txt_log_ultimo_usuario" type="text" disabled="disabled" size="8" style="background:transparent" maxlength="8" value="<?php echo $_SESSION['ID_USUARIO']?>"/></td>
+          </tr>
+          <tr>
+            <td colspan="2">&nbsp;</td>
+          </tr>
+          <tr>
+            <td colspan="2">&Uacute;ltimo sequencial gerado</td>
+          </tr>
+          <tr>
+            <td colspan="2"><input id="TXT_LOG" name="txt_log_ultimo_codigo_gerado" type="text" disabled="disabled" size="8" style="background:transparent" maxlength="8" value="<?php echo $_SESSION['CODIGO_USUARIO']?>"/></td>
+          </tr>
+          <tr>
+            <td width="50">&nbsp;</td>
+            <td width="49">&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+      </div>
+
+     </form>
+	             <div id='div_consulta'>
+           </div>
+	          
+
+    
+</body>
+</html>

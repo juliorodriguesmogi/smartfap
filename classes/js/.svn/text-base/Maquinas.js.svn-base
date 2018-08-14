@@ -1,0 +1,104 @@
+  function maquinas(){
+                
+                this.inicializa=function(){
+                     Codigo_Empresa=Array();
+                     Codigo_Maquina=Array();
+                     Nome_Maquina=Array();
+                     Tipo_De_Uso=Array();
+		     Taxa_De_Ruido=Array();
+                     Taxa_De_Luminosidade=Array();
+                     Fabricante=Array();
+                     Vida_Util=Array();
+                     Vida_Util2=Array();
+                     Data_Cadastro=Array();
+                     Id_Usuario=Array();
+                     Session_id=Array();
+                     Ultimo_Usuario=Array();
+                     Ultima_Atualizacao=Array();
+                     Situacao=Array();
+                     Unidade=Array();
+                     Setor=Array();
+                     Classificacao_Local=Array();
+                }
+                this.get_Codigo_Empresa= function(nlinha){
+                    return Codigo_Empresa[nlinha];
+                }
+                this.get_Codigo_Maquina= function(nlinha){
+                    return Codigo_Maquina[nlinha];
+                }
+                this.get_Nome_Maquina= function(nlinha){
+                    return Nome_Maquina[nlinha];
+                }
+                this.get_Tipo_De_Uso=function(nlinha){
+                    return Tipo_De_Uso[nlinha];
+                }
+                this.get_Taxa_De_Ruido=function(nlinha){
+                    return Taxa_De_Ruido[nlinha];
+                }
+                this.get_Taxa_De_Luminosidade=function(nlinha){
+                    return Taxa_De_Luminosidade[nlinha];
+                }
+              
+                  this.get_Fabricante=function(nlinha){
+                    return Fabricante[nlinha];
+                  }
+                this.get_Vida_Util=function(nlinha){
+                    return Vida_Util[nlinha];
+                }
+                this.get_Vida_Util2=function(nlinha){
+                    return Vida_Util2[nlinha];
+                }
+                this.get_Data_Cadastro=function(nlinha){
+                    return Data_Cadastro[nlinha];
+                }    
+                this.get_Session_id=function(nlinha){
+                    return Session_id[nlinha];
+                }         
+                this.get_Ultimo_Usuario=function(nlinha){
+                    return Ultimo_Usuario[nlinha];
+                }         
+                this.get_Situacao=function(nlinha){
+                    return Situacao[nlinha];
+                }         
+                this.get_Unidade=function(nlinha){
+                    return Unidade[nlinha];
+                }  
+
+                this.get_Setor=function(nlinha){
+                    return Setor[nlinha];
+                }  
+                this.get_Ultima_Atualizacao=function(nlinha){
+                    return Ultima_Atualizacao[nlinha];
+                }  
+                this.get_Classificacao_Local=function(nlinha){
+                    return Classificacao_Local[nlinha];
+                }
+                this.length=function(){
+                    return Codigo_Maquina.length;
+                }
+                this.setValores=function(response){
+                    this.inicializa();
+                    if (response!='NF'){
+                       for (x=0;x<response.length-1;x++){
+                           vreg=response[x].split('|');
+                           Codigo_Empresa[x]=vreg[0];
+                           Codigo_Maquina[x]=vreg[1];
+                           Nome_Maquina[x]=vreg[2];
+                           Classificacao_Local[x]=vreg[3];
+                           Tipo_De_Uso[x]=vreg[4];
+                           Taxa_De_Ruido[x]=vreg[5];
+                           Taxa_De_Luminosidade[x]=vreg[6];
+                           Fabricante[x]=vreg[7];
+                           Unidade[x]=vreg[8];  
+                           Setor[x]=vreg[9];  
+                           Vida_Util[x]=vreg[10];
+                           Vida_Util2[x]=vreg[11];
+                           Id_Usuario[x]=vreg[12];
+                           Data_Cadastro[x]=vreg[13];
+                           Ultima_Atualizacao[x]=vreg[14];
+                           Ultimo_Usuario[x]=vreg[15];                     
+                       }    
+                    }
+                }
+            };
+             newMaquinas=new maquinas();

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_laudo2_subreport_direitos_autorais" language="groovy" pageWidth="555" pageHeight="116" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6780006d-756f-4d22-8cbf-19017dbccbaf">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="116" splitType="Stretch">
+			<textField>
+				<reportElement uuid="994b7646-da40-460a-b65d-1c257140df39" x="11" y="9" width="532" height="94"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["A PROSEG – Proteção de Segurança no Trabalho Ltda., representado pelo sócio, João Gallani Jr , tem registrado esse formato de documento, ou seja, lay out gráfico, ordem lógica de trabalho e padrões de enquadramentos Legais, protocolados na Fundação Biblioteca Nacional. A cópia da formação deste documento sem autorização prévia estará infringindo a Lei N º 9.610, "+
+"de 19 de fevereiro de 1998."]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>

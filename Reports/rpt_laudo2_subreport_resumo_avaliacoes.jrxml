@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_laudo2_subreport_resumo_avaliacoes" language="groovy" pageWidth="514" pageHeight="451" columnWidth="514" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ac0ab2ea-f264-4b37-a364-1f441c01571c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="CODIGO_EMPRESA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ANO_PERICIA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[2012]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NUMERO_LAUDO" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[8]]></defaultValueExpression>
+	</parameter>
+	<parameter name="REVISAO" class="java.lang.String">
+		<defaultValueExpression><![CDATA[0]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IsOnServer" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="AVALIACOES_EXECUTADAS" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+DISTINCT OUTROS_FISICOS_DESCRICAO, OUTROS_BIOLOGICOS_DESCRICAO,  OUTROS_QUIMICOS_DESCRICAO, sum(RUIDO) AS RUIDO,SUM(RUIDO_DOSIMETRIA) AS RUIDO_DOSIMETRIA,SUM(FRIO) AS FRIO,SUM(CALOR) AS CALOR,SUM(UMIDADE) AS UMIDADE,SUM(RADIACAO_NAO_IONIZANTE) AS RADIACAO_NAO_IONIZANTE,SUM(RADIACAO_IONIZANTE) AS RADIACAO_IONIZANTE,SUM(OUTROS_FISICOS) AS OUTROS_FISICOS,SUM(SANGUE_HUMANO) AS SANGUE_HUMANO,SUM(SANGUE_ANIMAL) AS SANGUE_ANIMAL,SUM(MANEJO_ANIMAIS) AS MANEJO_ANIMAIS,SUM(OUTROS_BIOLOGICOS) AS OUTROS_BIOLOGICOS,SUM(PRODUTOS_LIMPEZA) AS PRODUTOS_LIMPEZA,SUM(TINTAS_SOLVENTES) AS TINTAS_SOLVENTES,SUM(HIDROCARBONETOS_AROMATICOS) AS HIDROCARBONETOS_AROMATICOS,SUM(FUMOS_METALICOS) AS FUMOS_METALICOS,SUM(POEIRAS_INCOMODAS) AS POEIRAS_INCOMODAS,
+SUM(DEFENSIVOS_AGRICOLAS) AS DEFENSIVOS_AGRICOLAS,
+ SUM(POEIRAS_MINERAIS) AS POEIRAS_MINERAIS,SUM(OUTROS_QUIMICOS) AS OUTROS_QUIMICOS,SUM(ILUMINAMENTO) AS ILUMINAMENTO
+FROM
+     `laudos_avaliacoes` laudos_avaliacoes
+
+WHERE
+laudos_avaliacoes.CODIGO_EMPRESA=$P{CODIGO_EMPRESA} AND
+laudos_avaliacoes.ANO_PERICIA=$P{ANO_PERICIA} AND
+laudos_avaliacoes.NUMERO_LAUDO=$P{NUMERO_LAUDO} AND
+laudos_avaliacoes.REVISAO=$P{REVISAO}]]>
+	</queryString>
+	<field name="OUTROS_FISICOS_DESCRICAO" class="java.lang.String"/>
+	<field name="OUTROS_BIOLOGICOS_DESCRICAO" class="java.lang.String"/>
+	<field name="OUTROS_QUIMICOS_DESCRICAO" class="java.lang.String"/>
+	<field name="RUIDO" class="java.math.BigDecimal"/>
+	<field name="RUIDO_DOSIMETRIA" class="java.math.BigDecimal"/>
+	<field name="FRIO" class="java.math.BigDecimal"/>
+	<field name="CALOR" class="java.math.BigDecimal"/>
+	<field name="UMIDADE" class="java.math.BigDecimal"/>
+	<field name="RADIACAO_NAO_IONIZANTE" class="java.math.BigDecimal"/>
+	<field name="RADIACAO_IONIZANTE" class="java.math.BigDecimal"/>
+	<field name="OUTROS_FISICOS" class="java.math.BigDecimal"/>
+	<field name="SANGUE_HUMANO" class="java.math.BigDecimal"/>
+	<field name="SANGUE_ANIMAL" class="java.math.BigDecimal"/>
+	<field name="MANEJO_ANIMAIS" class="java.math.BigDecimal"/>
+	<field name="OUTROS_BIOLOGICOS" class="java.math.BigDecimal"/>
+	<field name="PRODUTOS_LIMPEZA" class="java.math.BigDecimal"/>
+	<field name="TINTAS_SOLVENTES" class="java.math.BigDecimal"/>
+	<field name="HIDROCARBONETOS_AROMATICOS" class="java.math.BigDecimal"/>
+	<field name="FUMOS_METALICOS" class="java.math.BigDecimal"/>
+	<field name="POEIRAS_INCOMODAS" class="java.math.BigDecimal"/>
+	<field name="DEFENSIVOS_AGRICOLAS" class="java.math.BigDecimal"/>
+	<field name="POEIRAS_MINERAIS" class="java.math.BigDecimal"/>
+	<field name="OUTROS_QUIMICOS" class="java.math.BigDecimal"/>
+	<field name="ILUMINAMENTO" class="java.math.BigDecimal"/>
+	<title>
+		<band height="451" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="e6cf9efb-caa4-485b-9918-96e7b6374174" x="98" y="50" width="416" height="97"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="7b3f14ba-d712-4b28-92cf-d7c289a969bf" x="98" y="341" width="416" height="97"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="85c1d953-b16a-456c-adbc-f8479ac04160" x="0" y="341" width="98" height="97"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="85c1d953-b16a-456c-adbc-f8479ac04160" x="0" y="244" width="98" height="97"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="85c1d953-b16a-456c-adbc-f8479ac04160" x="0" y="147" width="98" height="97"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="96203067-daa5-46b3-8fc1-bd2ad00028bd" x="98" y="147" width="416" height="97"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="7b3f14ba-d712-4b28-92cf-d7c289a969bf" x="98" y="244" width="416" height="97"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="dee86b7c-f81d-4a40-9ae4-16994de6f116" x="138" y="292" width="172" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hidrocarbonetos Aromáticos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="df8fe350-9779-4f4a-a2e3-57c03361ac66" x="0" y="147" width="98" height="97"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Biológicos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="df8fe350-9779-4f4a-a2e3-57c03361ac66" x="0" y="244" width="98" height="97"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Químicos]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="035cf592-946d-42a7-b942-2c156f645ea8" x="114" y="312" width="12" height="11" forecolor="#FF3333" backcolor="#000000">
+					<printWhenExpression><![CDATA[($F{FUMOS_METALICOS}>0)]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<rectangle>
+				<reportElement uuid="2f0bb923-3cc4-4c0c-919f-20159ee1448c" mode="Transparent" x="98" y="7" width="416" height="43"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="85c1d953-b16a-456c-adbc-f8479ac04160" x="0" y="50" width="98" height="97"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="dee86b7c-f81d-4a40-9ae4-16994de6f116" x="138" y="153" width="162" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sangue Humano]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="035cf592-946d-42a7-b942-2c156f645ea8" x="332" y="292" width="12" height="11" forecolor="#FF3333" backcolor="#000000">
+					<printWhenExpression><![CDATA[($F{DEFENSIVOS_AGRICOLAS}>0)]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="df8fe350-9779-4f4a-a2e3-57c03361ac66" x="0" y="341" width="98" height="97"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ergonômicos]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="035cf592-946d-42a7-b942-2c156f645ea8" x="114" y="358" width="12" height="11" forecolor="#FF3333" backcolor="#000000">
+					<printWhenExpression><![CDATA[($F{ILUMINAMENTO}>0)]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement uuid="035cf592-946d-42a7-b942-2c156f645ea8" x="114" y="173" width="12" height="11" forecolor="#FF3333" backcolor="#000000">
+					<printWhenExpression><![CDATA[($F{SANGUE_ANIMAL}>0)]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement uuid="035cf592-946d-42a7-b942-2c156f645ea8" x="332" y="55" width="12" height="11" forecolor="#FF3333" backcolor="#000000">
+					<printWhenExpression><![CDATA[($F{UMIDADE}>0)]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="dee86b7c-f81d-4a40-9ae4-16994de6f116" x="138" y="193" width="162" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Manejo de Animais]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dee86b7c-f81d-4a40-9ae4-16994de6f116" x="138" y="173" width="162" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sangue Animal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dee86b7c-f81d-4a40-9ae4-16994de6f116" x="356" y="74" width="151" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Radiação Não Ionizante]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="035cf592-946d-42a7-b942-2c156f645ea8" x="114" y="94" width="12" height="11" forecolor="#FF3333" backcolor="#000000">
+					<printWhenExpression><![CDATA[($F{FRIO}>0)]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement uuid="035cf592-946d-42a7-b942-2c156f645ea8" x="114" y="272" width="12" height="11" forecolor="#FF3333" backcolor="#000000">
+					<printWhenExpression><![CDATA[($F{TINTAS_SOLVENTES}>0)]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="dee86b7c-f81d-4a40-9ae4-16994de6f116" x="138" y="94" width="162" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Frio]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="035cf592-946d-42a7-b942-2c156f645ea8" x="114" y="252" width="12" height="11" forecolor="#FF3333" backcolor="#000000">
+					<printWhenExpression><![CDATA[($F{PRODUTOS_LIMPEZA}>0)]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<rectangle>
+				<reportElement uuid="a9022538-2f6a-4d07-b3eb-24595df66ccd" mode="Transparent" x="0" y="7" width="514" height="43"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="aabf386f-684e-47db-a5b2-bce697786b04" x="114" y="18" width="403" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fatores de Risco Envolvidos na Análise]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="d632f109-338b-4f68-affa-2ffe0542dd6e" mode="Opaque" x="493" y="405" width="14" height="20" forecolor="#FFFFFF"/>
+				<textElement>
+					<font size="14" isBold="true" pdfEncoding="Cp1252" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{ILUMINAMENTO}>0) ? "\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<ellipse>
+				<reportElement uuid="035cf592-946d-42a7-b942-2c156f645ea8" x="332" y="312" width="12" height="11" forecolor="#FF3333" backcolor="#000000">
+					<printWhenExpression><![CDATA[($F{OUTROS_QUIMICOS}>0)]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement uuid="035cf592-946d-42a7-b942-2c156f645ea8" x="332" y="114" width="12" height="11" forecolor="#FF3333" backcolor="#000000">
+					<printWhenExpression><![CDATA[($F{OUTROS_FISICOS}>0)]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement uuid="035cf592-946d-42a7-b942-2c156f645ea8" x="332" y="74" width="12" height="11" forecolor="#FF3333" backcolor="#000000">
+					<printWhenExpression><![CDATA[($F{RADIACAO_NAO_IONIZANTE}>0)]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement uuid="035cf592-946d-42a7-b942-2c156f645ea8" x="114" y="74" width="12" height="11" forecolor="#FF3333" backcolor="#000000">
+					<printWhenExpression><![CDATA[($F{RUIDO_DOSIMETRIA}>0)]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement uuid="035cf592-946d-42a7-b942-2c156f645ea8" x="332" y="94" width="12" height="11" forecolor="#FF3333" backcolor="#000000">
+					<printWhenExpression><![CDATA[($F{RADIACAO_IONIZANTE}>0)]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement uuid="035cf592-946d-42a7-b942-2c156f645ea8" x="114" y="193" width="12" height="11" forecolor="#FF3333" backcolor="#000000">
+					<printWhenExpression><![CDATA[($F{MANEJO_ANIMAIS}>0)]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="dee86b7c-f81d-4a40-9ae4-16994de6f116" x="138" y="252" width="172" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Produtos de Limpeza]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="035cf592-946d-42a7-b942-2c156f645ea8" x="114" y="114" width="12" height="11" forecolor="#FF3333" backcolor="#000000">
+					<printWhenExpression><![CDATA[($F{CALOR}>0)]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="dee86b7c-f81d-4a40-9ae4-16994de6f116" x="356" y="292" width="151" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Defensivos Agrícolas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="df8fe350-9779-4f4a-a2e3-57c03361ac66" x="0" y="50" width="98" height="97"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Físicos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dee86b7c-f81d-4a40-9ae4-16994de6f116" x="138" y="312" width="172" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fumos Metálicos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dee86b7c-f81d-4a40-9ae4-16994de6f116" x="356" y="94" width="151" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Radiação Ionizante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dee86b7c-f81d-4a40-9ae4-16994de6f116" x="356" y="272" width="151" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Poeiras Minerais]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dee86b7c-f81d-4a40-9ae4-16994de6f116" x="138" y="355" width="172" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Iluminamento]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="d632f109-338b-4f68-affa-2ffe0542dd6e" x="138" y="213" width="162" height="20"/>
+				<textElement>
+					<font size="12" isBold="true" pdfEncoding="Cp1252"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OUTROS_BIOLOGICOS_DESCRICAO}!=""?$F{OUTROS_BIOLOGICOS_DESCRICAO}:"Outros Biológicos"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="dee86b7c-f81d-4a40-9ae4-16994de6f116" x="138" y="114" width="162" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Calor]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="035cf592-946d-42a7-b942-2c156f645ea8" x="114" y="56" width="12" height="11" forecolor="#FF3333" backcolor="#000000">
+					<printWhenExpression><![CDATA[($F{RUIDO}>0)]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement uuid="035cf592-946d-42a7-b942-2c156f645ea8" x="332" y="252" width="12" height="11" forecolor="#FF3333" backcolor="#000000">
+					<printWhenExpression><![CDATA[($F{POEIRAS_INCOMODAS}>0)]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement uuid="035cf592-946d-42a7-b942-2c156f645ea8" x="114" y="153" width="12" height="11" forecolor="#FF3333" backcolor="#000000">
+					<printWhenExpression><![CDATA[($F{SANGUE_HUMANO}>0)]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="dee86b7c-f81d-4a40-9ae4-16994de6f116" x="138" y="272" width="172" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tintas e Solventes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dee86b7c-f81d-4a40-9ae4-16994de6f116" x="138" y="74" width="162" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ruído Dosimetria]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="d632f109-338b-4f68-affa-2ffe0542dd6e" x="356" y="114" width="151" height="20"/>
+				<textElement>
+					<font size="12" isBold="true" pdfEncoding="Cp1252"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OUTROS_FISICOS_DESCRICAO}!=""?$F{OUTROS_FISICOS_DESCRICAO}:"Outros Físicos"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="dee86b7c-f81d-4a40-9ae4-16994de6f116" x="138" y="54" width="162" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ruído]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="90337137-0c2f-4b36-8fa2-150bec51e4c3" x="0" y="8" width="98" height="42"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Agentes Nocivos]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="d632f109-338b-4f68-affa-2ffe0542dd6e" x="356" y="312" width="151" height="20"/>
+				<textElement>
+					<font size="12" isBold="true" pdfEncoding="Cp1252"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OUTROS_QUIMICOS_DESCRICAO}!=""?$F{OUTROS_QUIMICOS_DESCRICAO}:"Outros Biológicos"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="dee86b7c-f81d-4a40-9ae4-16994de6f116" x="356" y="55" width="151" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Umidade]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="035cf592-946d-42a7-b942-2c156f645ea8" x="114" y="292" width="12" height="11" forecolor="#FF3333" backcolor="#000000">
+					<printWhenExpression><![CDATA[($F{HIDROCARBONETOS_AROMATICOS}>0)]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="dee86b7c-f81d-4a40-9ae4-16994de6f116" x="356" y="252" width="151" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Poeiras Incômodas]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="035cf592-946d-42a7-b942-2c156f645ea8" x="332" y="272" width="12" height="11" forecolor="#FF3333" backcolor="#000000">
+					<printWhenExpression><![CDATA[($F{POEIRAS_MINERAIS}>0)]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+			<ellipse>
+				<reportElement uuid="035cf592-946d-42a7-b942-2c156f645ea8" x="114" y="213" width="12" height="11" forecolor="#FF3333" backcolor="#000000">
+					<printWhenExpression><![CDATA[($F{OUTROS_BIOLOGICOS}>0)]]></printWhenExpression>
+				</reportElement>
+			</ellipse>
+		</band>
+	</title>
+</jasperReport>

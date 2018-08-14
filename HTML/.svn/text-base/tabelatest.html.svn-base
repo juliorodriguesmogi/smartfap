@@ -1,0 +1,49 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <script type="text/javascript">
+            function captura(linha){
+                if (navigator.appName.indexOf('Internet Explorer')>0){
+                    tabela=linha.parentNode.parentNode;
+                    celula1=tabela.rows[linha.rowIndex].cells[0].innerText;
+                    alert(celula1);
+                }
+                else {
+                    tabela=linha.parentNode;
+                    celula1=tabela.rows[linha.rowIndex].cells[0].firstChild.textContent;
+                    alert(celula1);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <table id="tbl" >
+
+                <tr onclick="captura(this)" >
+                    <td>teste 1 </td>
+                    <td>teste 1</td>
+                    <td>teste 1</td>    
+                </tr>
+                <tr onclick="captura(this)">
+                    <td>teste 2 </td>
+                    <td>teste 2</td>
+                    <td>teste 2</td>    
+                </tr>
+                <tr onclick="captura(this)">
+                    <td>teste 3 </td>
+                    <td>teste 3</td>
+                    <td>teste 3</td>    
+                </tr>
+
+            </table>
+            
+        </div>
+    </body>
+</html>

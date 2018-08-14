@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_laudo_subreport3" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="edd29d62-2686-45c3-b295-fb35e808f209">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     laudos.`CODIGO_EMPRESA` AS laudos_CODIGO_EMPRESA,
+     laudos.`ANO_PERICIA` AS laudos_ANO_PERICIA,
+     laudos.`NUMERO_LAUDO` AS laudos_NUMERO_LAUDO,
+     laudos.`REVISAO` AS laudos_REVISAO,
+     laudos.`SITUACAO_LAUDO` AS laudos_SITUACAO_LAUDO,
+     laudos.`RAZAO_SOCIAL` AS laudos_RAZAO_SOCIAL,
+     laudos.`CNPJ_CEI` AS laudos_CNPJ_CEI,
+     laudos.`CNAE` AS laudos_CNAE,
+     laudos.`GRAU_RISCO` AS laudos_GRAU_RISCO,
+     laudos.`NRO_FUNCS` AS laudos_NRO_FUNCS,
+     laudos.`DATA_LANCAMENTO` AS laudos_DATA_LANCAMENTO,
+     laudos.`DATA_CRIACAO` AS laudos_DATA_CRIACAO,
+     laudos.`DATA_HORA_PERICIA` AS laudos_DATA_HORA_PERICIA,
+     laudos.`ID_USUARIO` AS laudos_ID_USUARIO,
+     laudos.`SESSION_ID` AS laudos_SESSION_ID,
+     laudos.`ULTIMA_ATUALIZACAO` AS laudos_ULTIMA_ATUALIZACAO,
+     laudos.`ULTIMO_USUARIO` AS laudos_ULTIMO_USUARIO,
+     laudos.`NUMERO_FUNCIONARIOS` AS laudos_NUMERO_FUNCIONARIOS,
+     laudos.`ENDERECO_ATUACAO` AS laudos_ENDERECO_ATUACAO,
+     laudos.`BAIRRO_ATUACAO` AS laudos_BAIRRO_ATUACAO,
+     laudos.`MUNICIPIO_ATUACAO` AS laudos_MUNICIPIO_ATUACAO,
+     laudos.`CEP_ATUACAO` AS laudos_CEP_ATUACAO,
+     laudos.`UF_ATUACAO` AS laudos_UF_ATUACAO,
+     laudos.`MES_PERICIA` AS laudos_MES_PERICIA,
+     laudos.`NOME_MES_PERICIA` AS laudos_NOME_MES_PERICIA
+FROM
+     `laudos` laudos]]>
+	</queryString>
+	<field name="laudos_CODIGO_EMPRESA" class="java.lang.Integer"/>
+	<field name="laudos_ANO_PERICIA" class="java.lang.Integer"/>
+	<field name="laudos_NUMERO_LAUDO" class="java.lang.Integer"/>
+	<field name="laudos_REVISAO" class="java.lang.String"/>
+	<field name="laudos_SITUACAO_LAUDO" class="java.lang.String"/>
+	<field name="laudos_RAZAO_SOCIAL" class="java.lang.String"/>
+	<field name="laudos_CNPJ_CEI" class="java.lang.String"/>
+	<field name="laudos_CNAE" class="java.lang.String"/>
+	<field name="laudos_GRAU_RISCO" class="java.lang.Integer"/>
+	<field name="laudos_NRO_FUNCS" class="java.lang.Integer"/>
+	<field name="laudos_DATA_LANCAMENTO" class="java.sql.Date"/>
+	<field name="laudos_DATA_CRIACAO" class="java.sql.Timestamp"/>
+	<field name="laudos_DATA_HORA_PERICIA" class="java.sql.Timestamp"/>
+	<field name="laudos_ID_USUARIO" class="java.lang.String"/>
+	<field name="laudos_SESSION_ID" class="java.lang.String"/>
+	<field name="laudos_ULTIMA_ATUALIZACAO" class="java.sql.Timestamp"/>
+	<field name="laudos_ULTIMO_USUARIO" class="java.lang.String"/>
+	<field name="laudos_NUMERO_FUNCIONARIOS" class="java.lang.Integer"/>
+	<field name="laudos_ENDERECO_ATUACAO" class="java.lang.String"/>
+	<field name="laudos_BAIRRO_ATUACAO" class="java.lang.String"/>
+	<field name="laudos_MUNICIPIO_ATUACAO" class="java.lang.String"/>
+	<field name="laudos_CEP_ATUACAO" class="java.lang.String"/>
+	<field name="laudos_UF_ATUACAO" class="java.lang.String"/>
+	<field name="laudos_MES_PERICIA" class="java.lang.Integer"/>
+	<field name="laudos_NOME_MES_PERICIA" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

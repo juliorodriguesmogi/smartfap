@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+
+table{
+	
+	border-size:1;
+	border-color:black;
+}
+#titulo{
+	position:absolute;
+	top:0;
+	width:100%;
+	left:0;
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:30px;
+	font-weight:bold;	
+}
+
+#conteudo2{
+	position:absolute;
+	top:80px;
+		font-family:Arial, Helvetica, sans-serif;
+background-color:whitesmoke;
+}
+input:focus, select:focus{
+	background-color:#FF0;
+}
+#menu{
+	position:absolute;
+	top:10%;
+	width: 1094px;
+}
+.tabela{
+width: 80%;	
+    border-bottom:1px;
+	border-top:0px;
+	border-left:1px;
+	border-right:1px;
+	border-style:solid;
+	background:whitesmoke;
+     
+}
+.tabela2{
+     	width:80%;
+    border-top:1px;
+	border-left:1px;
+	border-bottom:0px;
+	border-right:1px;
+	border-style:solid;
+	background:whitesmoke;
+}
+#abas{
+	width:10%;
+}
+textarea{
+	width:300px;
+	height:50px;
+	}
+        input{
+            font-family:arialblack;
+            
+        }

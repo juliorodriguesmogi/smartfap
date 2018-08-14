@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+
+th
+{
+	border:#000000;
+}
+table
+{
+	border:#000;
+	border: 2px;
+	border:solid;
+	position:relative;
+	left: 10%;
+	top:50%;
+		
+}
+caption
+{
+	border-left-size:1px;
+	border-color:#000000;
+	}

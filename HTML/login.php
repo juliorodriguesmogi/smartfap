@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>ELC-Easy Labor Control</title>
+<style type="text/css">
+
+body {
+	width:90%;
+	font-size:12px;
+        height:90%;
+        max-height: 1050px;
+	
+}
+#fundo{
+	position:absolute;
+	z-index:0;
+	visibility: inherit;
+	top:25%;
+	left: 35%;
+	width: 120%;
+	height: 150%;
+}
+#tbl_login{
+
+	position:absolute;
+	left:29%;
+	top: 35%;
+	z-index: 7;
+	height: 1px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	width:40%;	
+}
+input{
+	border-color:#CCCCCC;
+	z-index:8;
+	
+	
+}
+#img_fundo{
+        filter: alpha(opacity:0.15);  
+        KHTMLOpacity: 0.15;  
+        MozOpacity: 0.15;  
+        -khtml-opacity: .15;  
+        -ms-filter: "alpha(opacity=15)";  
+        -moz-opacity: .15;  
+        filter: alpha(opacity=15);  
+        opacity: .15;
+	top:25%;
+	left: 10%;
+	width: 30%;
+	height: 40%;
+		z-index:0;
+
+}
+#titulo{
+	position:absolute;
+	top: 0px;
+	width: 45%;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	height:15%;
+	left: 28%;
+	z-index: 1;
+}
+#div_mensagem{
+    z-index: 7;
+    text-align: center;
+}
+#mensagem{
+    background: transparent;
+    color:red;
+    border:none;
+    font-weight:bold;
+    font-size:larger;
+    width: 300px;
+	text-align:center;
+}
+.style1 {
+	font-size: 18;
+	font-weight: bold;
+}
+-->
+</style></head>
+
+<body>
+<div id="titulo">
+<h1>&nbsp;</h1>
+<h1 align="center">
+  <p align="center">ELC - Easy Labor Control</p>
+  <p align="center">Gerenciamento de Rotinas Trabalhistas e Ocupacionais </p>
+</h1>
+ 
+</div>
+<form id="frm_login" name="frm_login" method="post" action="../PHP/Usuario_Class.php?acao=L">
+<p><span id="fundo"><img src="../images/empregos.jpg" name="img_fundo" align="center" id="img_fundo" /></span></p>
+    <table border="0" id="tbl_login">
+
+  <tr>
+    <td width="158" rowspan="4"><img src="../images/logo.gif" name="img_cyber" width="250" height="94" id="img_cyber" /></td>
+    <td width="64" height="73">&nbsp;</td>
+    <td width="71">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="51"><strong>Usu&aacute;rio</strong></td>
+    <td><p>&nbsp;
+      </p>
+      <p>
+        <input name="ID_USUARIO" type="text" id="ID_USUARIO" size="10" maxlength="10" />
+      </p>
+      <p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td height="53"><strong>Senha</strong> </td>
+    <td><input name="SENHA" type="password" id="SENHA" size="10" maxlength="10" /></td>
+  </tr>
+  <tr>
+    <td>
+      <div align="left">
+	  <button>
+ <table>
+    <tr>
+      <td height="14"><div align="center"><img src="../images/barra_ferramentas/apply.png" height="20" width="15" /></div></td>
+    </tr>
+    <tr>
+      <td height="16">Entrar</td>
+    </tr>
+  </table>	  
+	  </button>
+        </div>    </td>
+    <td><div align="right">
+	  <button>
+ <table>
+    <tr>
+      <td height="24"><div align="center"><img src="../images/barra_ferramentas/cancel.png" height="13" width="25" /></div></td>
+    </tr>
+    <tr>
+      <td height="14" width="40">Sair</td>
+    </tr>
+  </table>	  
+	  </button>
+
+    </div></td>
+  </tr>
+  
+  <tr>
+    <td colspan="3"><div id="div_mensagem" ><input type="text" name="mensagem" id="mensagem" value="<?php echo $_GET['mensagem'];sleep(2)?> " /></div></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+
+
+</form>
+    <?php if ($_GET['mensagem']!=null){
+        echo "<meta HTTP-EQUIV='Refresh' CONTENT='0;URL=../HTML/login.php'>";
+     } ?>
+</body>
+</html>

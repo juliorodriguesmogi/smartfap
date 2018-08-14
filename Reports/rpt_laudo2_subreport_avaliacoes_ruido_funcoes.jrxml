@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_laudo2_subreport_avaliacoes_ruido_funcoes" language="groovy" columnCount="2" printOrder="Horizontal" pageWidth="500" pageHeight="105" columnWidth="250" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="bc31cbe3-f9af-4bb0-913e-0e1fb0a76d49">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="CODIGO_EMPRESA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ANO_PERICIA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[2012]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NUMERO_LAUDO" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[34]]></defaultValueExpression>
+	</parameter>
+	<parameter name="REVISAO" class="java.lang.String">
+		<defaultValueExpression><![CDATA[0]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="UNIDADE" class="java.lang.Integer"/>
+	<parameter name="CODIGO_SETOR" class="java.lang.Integer"/>
+	<parameter name="TABELA_FUNCOES" class="java.lang.String">
+		<defaultValueExpression><![CDATA[laudos_avaliacoes_ruido_funcoes]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     laudos_avaliacoes_ruido_funcoes.`CODIGO_EMPRESA` AS laudos_avaliacoes_ruido_funcoes_CODIGO_EMPRESA,
+     laudos_avaliacoes_ruido_funcoes.`ANO_PERICIA` AS laudos_avaliacoes_ruido_funcoes_ANO_PERICIA,
+     laudos_avaliacoes_ruido_funcoes.`NUMERO_LAUDO` AS laudos_avaliacoes_ruido_funcoes_NUMERO_LAUDO,
+     laudos_avaliacoes_ruido_funcoes.`REVISAO` AS laudos_avaliacoes_ruido_funcoes_REVISAO,
+     laudos_avaliacoes_ruido_funcoes.`UNIDADE` AS laudos_avaliacoes_ruido_funcoes_UNIDADE,
+     laudos_avaliacoes_ruido_funcoes.`CODIGO_SETOR` AS laudos_avaliacoes_ruido_funcoes_CODIGO_SETOR,
+     laudos_avaliacoes_ruido_funcoes.`CODIGO_FUNCAO` AS laudos_avaliacoes_ruido_funcoes_CODIGO_FUNCAO,
+     laudos_avaliacoes_ruido_funcoes.`PERIODICIDADE_EXPOSICAO` AS laudos_avaliacoes_ruido_funcoes_PERIODICIDADE_EXPOSICAO,
+     laudos_avaliacoes_ruido_funcoes.`SEQUENCIAL` AS laudos_avaliacoes_ruido_funcoes_SEQUENCIAL,
+     laudos_avaliacoes_ruido_funcoes.`GRAU_INSALUBRIDADE` AS laudos_avaliacoes_ruido_funcoes_GRAU_INSALUBRIDADE,
+     laudos_avaliacoes_ruido_funcoes.`INTENSIDADE_CONCENTRACAO` AS laudos_avaliacoes_ruido_funcoes_INTENSIDADE_CONCENTRACAO,
+     laudos_avaliacoes_ruido_funcoes.`INTENSIDADE_CONCENTRACAO_UNIDADE` AS laudos_avaliacoes_ruido_funcoes_INTENSIDADE_CONCENTRACAO_UNIDADE,
+     laudos_avaliacoes_ruido_funcoes.`TECNICA_UTILIZADA` AS laudos_avaliacoes_ruido_funcoes_TECNICA_UTILIZADA,
+     laudos_avaliacoes_ruido_funcoes.`EPC_EFICAZ` AS laudos_avaliacoes_ruido_funcoes_EPC_EFICAZ,
+     laudos_avaliacoes_ruido_funcoes.`EPI_EFICAZ` AS laudos_avaliacoes_ruido_funcoes_EPI_EFICAZ,
+     laudos_avaliacoes_ruido_funcoes.`CA_EPI` AS laudos_avaliacoes_ruido_funcoes_CA_EPI,
+     setores.`CODIGO_EMPRESA` AS setores_CODIGO_EMPRESA,
+     setores.`UNIDADE` AS setores_UNIDADE,
+     setores.`CODIGO_SETOR` AS setores_CODIGO_SETOR,
+     setores.`CODIGO_SETOR_PAI` AS setores_CODIGO_SETOR_PAI,
+     setores.`NOME_SETOR` AS setores_NOME_SETOR,
+     setores.`DESCRICAO` AS setores_DESCRICAO,
+     setores.`SITUACAO` AS setores_SITUACAO,
+     setores.`GRAU_EXPOSICAO` AS setores_GRAU_EXPOSICAO,
+     estrutura_organizacional.`CODIGO_EMPRESA` AS estrutura_organizacional_CODIGO_EMPRESA,
+     estrutura_organizacional.`UNIDADE` AS estrutura_organizacional_UNIDADE,
+     estrutura_organizacional.`UNIDADE_PAI` AS estrutura_organizacional_UNIDADE_PAI,
+     estrutura_organizacional.`NIVEL_ORGANIZACAO` AS estrutura_organizacional_NIVEL_ORGANIZACAO,
+     estrutura_organizacional.`NIVEL_QUEBRA` AS estrutura_organizacional_NIVEL_QUEBRA,
+     estrutura_organizacional.`DESCRICAO_UNIDADE` AS estrutura_organizacional_DESCRICAO_UNIDADE,
+     funcoes.`DESCRICAO_FUNCAO_EMPRESA` AS funcoes_DESCRICAO_FUNCAO_EMPRESA,
+(select count(*) from `funcionarios` funcionarios where funcionarios.FUNCAO=funcoes.CODIGO_FUNCAO and funcionarios.UNIDADE=laudos_avaliacoes_ruido_funcoes.UNIDADE and
+funcionarios.CODIGO_SETOR=laudos_avaliacoes_ruido_funcoes.CODIGO_SETOR
+) AS NUMERO_FUNCIONARIOS
+FROM
+     $P!{TABELA_FUNCOES} laudos_avaliacoes_ruido_funcoes INNER JOIN `setores` setores ON laudos_avaliacoes_ruido_funcoes.`CODIGO_EMPRESA` = setores.`CODIGO_EMPRESA`
+     AND setores.`CODIGO_SETOR` = laudos_avaliacoes_ruido_funcoes.`CODIGO_SETOR`
+     AND setores.`UNIDADE` = laudos_avaliacoes_ruido_funcoes.`UNIDADE`
+     INNER JOIN `estrutura_organizacional` estrutura_organizacional ON setores.`CODIGO_EMPRESA` = estrutura_organizacional.`CODIGO_EMPRESA`
+     AND estrutura_organizacional.`UNIDADE` = setores.`UNIDADE`
+     INNER JOIN `funcoes` funcoes ON laudos_avaliacoes_ruido_funcoes.`CODIGO_EMPRESA` = funcoes.`CODIGO_EMPRESA`
+     AND funcoes.`CODIGO_FUNCAO` = laudos_avaliacoes_ruido_funcoes.`CODIGO_FUNCAO`
+WHERE
+     laudos_avaliacoes_ruido_funcoes.CODIGO_EMPRESA = $P{CODIGO_EMPRESA}
+ AND laudos_avaliacoes_ruido_funcoes.ANO_PERICIA = $P{ANO_PERICIA}
+ AND laudos_avaliacoes_ruido_funcoes.NUMERO_LAUDO = $P{NUMERO_LAUDO}
+ AND laudos_avaliacoes_ruido_funcoes.REVISAO = $P{REVISAO}
+AND laudos_avaliacoes_ruido_funcoes.UNIDADE = $P{UNIDADE}
+AND laudos_avaliacoes_ruido_funcoes.CODIGO_SETOR = $P{CODIGO_SETOR}
+HAVING NUMERO_FUNCIONARIOS>0
+ORDER BY
+     laudos_avaliacoes_ruido_funcoes.CODIGO_FUNCAO ASC]]>
+	</queryString>
+	<field name="laudos_avaliacoes_ruido_funcoes_CODIGO_EMPRESA" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_ruido_funcoes_ANO_PERICIA" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_ruido_funcoes_NUMERO_LAUDO" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_ruido_funcoes_REVISAO" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_ruido_funcoes_UNIDADE" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_ruido_funcoes_CODIGO_SETOR" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_ruido_funcoes_CODIGO_FUNCAO" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_ruido_funcoes_PERIODICIDADE_EXPOSICAO" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_ruido_funcoes_SEQUENCIAL" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_ruido_funcoes_GRAU_INSALUBRIDADE" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_ruido_funcoes_INTENSIDADE_CONCENTRACAO" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_ruido_funcoes_INTENSIDADE_CONCENTRACAO_UNIDADE" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_ruido_funcoes_TECNICA_UTILIZADA" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_ruido_funcoes_EPC_EFICAZ" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_ruido_funcoes_EPI_EFICAZ" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_ruido_funcoes_CA_EPI" class="java.lang.String"/>
+	<field name="setores_CODIGO_EMPRESA" class="java.lang.Integer"/>
+	<field name="setores_UNIDADE" class="java.lang.Integer"/>
+	<field name="setores_CODIGO_SETOR" class="java.lang.Integer"/>
+	<field name="setores_CODIGO_SETOR_PAI" class="java.lang.Integer"/>
+	<field name="setores_NOME_SETOR" class="java.lang.String"/>
+	<field name="setores_DESCRICAO" class="java.lang.String"/>
+	<field name="setores_SITUACAO" class="java.lang.String"/>
+	<field name="setores_GRAU_EXPOSICAO" class="java.lang.String"/>
+	<field name="estrutura_organizacional_CODIGO_EMPRESA" class="java.lang.Integer"/>
+	<field name="estrutura_organizacional_UNIDADE" class="java.lang.Integer"/>
+	<field name="estrutura_organizacional_UNIDADE_PAI" class="java.lang.Integer"/>
+	<field name="estrutura_organizacional_NIVEL_ORGANIZACAO" class="java.lang.Integer"/>
+	<field name="estrutura_organizacional_NIVEL_QUEBRA" class="java.lang.Integer"/>
+	<field name="estrutura_organizacional_DESCRICAO_UNIDADE" class="java.lang.String"/>
+	<field name="funcoes_DESCRICAO_FUNCAO_EMPRESA" class="java.lang.String"/>
+	<field name="NUMERO_FUNCIONARIOS" class="java.lang.Long"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="42">
+			<rectangle>
+				<reportElement uuid="f9e2ab1f-07a0-4aa6-9e43-744bc1364377" x="256" y="2" width="244" height="39"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="f9e2ab1f-07a0-4aa6-9e43-744bc1364377" x="7" y="2" width="244" height="39"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="ea5a0108-b215-4d07-a48a-bb3af9ef2dc4" x="7" y="5" width="186" height="34"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Função]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ea5a0108-b215-4d07-a48a-bb3af9ef2dc4" x="193" y="5" width="58" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Número de Funcionários]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ea5a0108-b215-4d07-a48a-bb3af9ef2dc4" x="442" y="5" width="58" height="34"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Número de Funcionários]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ea5a0108-b215-4d07-a48a-bb3af9ef2dc4" x="256" y="5" width="186" height="34"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Função]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="00b2465d-7642-4a37-beed-a6d6de347044" stretchType="RelativeToTallestObject" mode="Transparent" x="7" y="0" width="244" height="22"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="f2e02631-89df-4711-8d62-7f34da486db8" x="7" y="0" width="186" height="22"/>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{funcoes_DESCRICAO_FUNCAO_EMPRESA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b0947c0a-e57b-4aed-a234-14951a40f5e0" x="193" y="1" width="58" height="21"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{NUMERO_FUNCIONARIOS}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

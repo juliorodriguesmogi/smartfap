@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<style type="text/css">
+.mens{
+border:1px solid;
+color:#0000CC;
+width:100px;
+background: #99CCFF
+}
+</style>
+<script>
+x=1;
+function esm(){
+		if (x>=0){
+			valor='MozOpacity:'+x+';'+'opacity:'+x+';filter:alpha(opacity='+(x*100)+')';
+			document.getElementById('mens').setAttribute('background','url(../images/mensagens/'+codigo_erro+'.png)');
+			document.getElementById('mens').setAttribute('style',valor+";display:none");
+		
+		}	
+		else {
+		   clearInterval('esm()');
+		}
+		x-=0.1;
+		document.getElementById('mens').setAttribute('style',valor+";display:block");
+
+}
+
+function esmaecer(){
+	setInterval('esm()',80);
+
+}
+</script>
+</head>
+
+<body>
+<div class="mens" id="mens" >Registro atualizado com sucesso!!</div>
+<button type="button" onclick="esmaecer()">Esmaecer</button>
+</body>
+</html>

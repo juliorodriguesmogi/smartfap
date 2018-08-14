@@ -1,0 +1,351 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+#div_statusbar{
+	vertical-align: bottom;
+	position:absolute;
+	top:44px;
+	width: 110px;
+	max-width: 1280px;
+	border:solid;
+	background-color:silver;
+	left: 1292px;
+	height: 397px;
+	text-align: center;
+}
+
+</style>
+
+<title>responsaveis tecnicos</title>
+<link type="text/css" rel="stylesheet" href="responsaveiscss.css" />
+ <title>    
+             Desenvolvido por Tenko            
+</title>
+        <script>        
+        var aAbas       = new Array();  // Lista de abas do documento atual
+        var sAbaAtiva   = ""                 // Define qual é a aba ativa no momento
+        var ABA_ID      = 1
+        var ABA_BLOCO   = 2
+        var ABA_CAMPOS  = 3
+        
+        function defineAba( sId, sBloco ){
+           var aAba  = new Array( ABA_CAMPOS );
+           aAba[ ABA_ID    ]  = sId;
+           aAba[ ABA_BLOCO ]  = sBloco;
+           aAbas.push( aAba );
+        }
+
+        function defineAbaAtiva( sId ){
+           trataCliqueAba( sId );
+        }
+
+        function trataMouseAba( oAba ){
+           oAba.style.cursor  = "pointer";
+        }
+
+        function trataCliqueAba( sId ){
+           for ( var iAba  = 0; iAba < aAbas.length; iAba++ ){
+              var aAba  = aAbas[ iAba ];
+
+              if   ( aAba[ ABA_ID ] == sId ) ativaAba( aAba );
+
+              else                           inativaAba( aAba );
+           }
+        }
+
+        function ativaAba( aAba ){
+           var sAba       = aAba[ ABA_ID ];
+           var oAba       = document.getElementById( sAba );
+           mudaClasse( oAba, "abaativa" ); // Esse comando chama a classe css para fazer a troca
+
+           var sBlocoAba  = aAba[ ABA_BLOCO ];
+           var oBlocoAba  = document.getElementById( sBlocoAba );
+           oBlocoAba.style.display  = "block";
+        }
+
+        function inativaAba( aAba ){
+           var sAba       = aAba[ ABA_ID ];
+           var oAba       = document.getElementById( sAba );
+           mudaClasse( oAba, "abainativa" ); // Esse comando chama a classe css para fazer a troca
+
+           var sBlocoAba  = aAba[ ABA_BLOCO ];
+           var oBlocoAba  = document.getElementById( sBlocoAba );
+           oBlocoAba.style.display  = "none";
+        }
+        
+        function mudaClasse( oObjeto, sClasse ){
+           oObjeto.className  = sClasse;
+        }
+        </script>
+        <link href="estilosistema.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="titulo">
+Cadastro de Responsaveis Tecnicos
+</div>
+
+<div id="menu">
+  <form id="frm_barra_tarefas" action="" >
+       <button type="button" onclick="">
+       <table>
+            <tr>
+            <td height="42"><img src="../images/novo.png" height="40" width="38" /></td>
+            </tr>
+            <tr>
+            <td height="16">Novo</td>
+            </tr>
+       </table>
+       </button>
+       <button type="button" onclick="grava_registro();">
+       <table>
+            <tr>
+            <td height="42"><img src="../images/barra_ferramentas/floppy.png" height="40" width="45" /></td>
+            </tr>
+            <tr>
+            <td height="16">Gravar</td>
+            </tr>
+       </table>
+       </button>
+       <button  type="button" onclick="apaga_registro();">
+       <table>
+            <tr>
+            <td height="42"><img src="../images/barra_ferramentas/error_button_2.png" height="40" width="45" /></td>
+            </tr>
+            <tr>
+            <td height="16">Apagar</td>
+            </tr>
+       </table>
+       </button>
+       <button  type="button" onclick="descer();">
+       <table>
+            <tr>
+            <td height="42"><img src="../images/barra_ferramentas/update_quantity_cart[1].png" height="33" width="47" /></td>
+            </tr>
+            <tr>
+            <td height="16">Desfazer</td>
+            </tr>
+       </table>
+       </button>
+       <button  type="button" onclick="subir();">
+       <table>
+            <tr>
+            <td height="42"><img src="../images/barra_ferramentas/cima.gif" height="35" width="35" /></td>
+            </tr>
+            <tr>
+            <td height="16">Primeiro</td>
+            </tr>
+      </table>
+      </button>
+      <button  type="button" onclick="registro_anterior(document.forms[1].elements['CODIGO_ATIVIDADE'],'atividades')">
+      <table>
+           <tr>
+           <td height="42"><img src="../images/barra_ferramentas/left.png" height="35" width="45" /></td>
+           </tr>
+           <tr>
+           <td height="16">Anterior</td>
+           </tr>
+      </table>
+      </button>
+      <button  type="button" onclick="proximo_registro(document.forms[1].elements['CODIGO_ATIVIDADE'],'atividades')">
+      <table>
+           <tr>
+           <td height="42"><img src="../images/barra_ferramentas/right.png" height="35" width="45" /></td>
+           </tr>
+           <tr>
+           <td height="16">Pr&oacute;ximo</td>
+           </tr>
+      </table>
+      </button>
+      <button  type="button" onclick="descer();">
+     <table>
+          <tr>
+          <td height="42" width="48"><img src="../images/barra_ferramentas/baixo.gif" height="35" width="35" /></td>
+          </tr>
+          <tr>
+          <td height="16">Ultimo</td>
+          </tr>
+     </table>
+     </button>
+     <button  type="button" onclick="imprime();">
+     <table>
+          <tr>
+          <td height="42"><img src="../images/printer_2.png" height="40" width="40" /></td>
+          </tr>
+          <tr>
+          <td height="18">Imprimir</td>
+          </tr>
+     </table>
+     </button>
+     <button  type="button" onclick="document.forms[1].reset();document.forms[1].elements['CODIGO_ATIVIDADE'].focus();">
+     <table>
+         <tr>
+         <td height="42" width="50"><img src="../images/folha.gif" height="40" width="35" /></td>
+         </tr>
+         <tr>
+         <td height="16">Limpar</td>
+         </tr>
+     </table>
+  </button>  
+</form>
+</div>
+<br />
+<br />
+   <div id="conteudo"> 
+   <div id="abas">
+    <table border="0" cellpadding="0" cellspacing="1">
+            <tr>
+                <td width="10%" height="36" align="center" valign="middle" class="abaativa" id="celAbaCadastro" onClick="trataCliqueAba( this.id );" onMouseOver="trataMouseAba( this );">
+                    Cadastro                </td>
+                
+                <td id="celAbaRelatorio" align="center" valign="middle" width="10%" class="abainativa" onMouseOver="trataMouseAba( this );" onClick="trataCliqueAba( this.id );">
+                    Relatório
+                </td>
+                
+                <td id="celAbaConsultas" align="center" valign="middle" width="10%" class="abainativa" onMouseOver="trataMouseAba( this );" onClick="trataCliqueAba( this.id );">
+                    Consultas
+                </td>
+                
+                <td id="celAbaModelos" align="center" valign="middle" width="10%" class="abainativa" onMouseOver="trataMouseAba( this );" onClick="trataCliqueAba( this.id );">
+                    Modelos Impressão
+                </td>
+            </tr>
+    </table>
+      </div>
+
+        <div id="divCadastro" style="display: block">
+        
+<table class="tabela2">
+<tr>
+<td>Nome da Empresa
+<input type="text" name="nomedaempresa" size="10" />
+</td>
+<td>Nome do Funcionario
+<input type="text" name="nomedofuncionario" size="20%" />
+</td>
+<td>Numero do CPF
+<input type="text" name="cpf" size=""  />
+</td>
+</tr>
+<tr>
+<td>Numero do RG        
+  <input type="text" name="rg"  size=""/>
+</td>
+<td>Data de Nascimento
+<input type="text" name="datadenascimento" size="" />
+</td>
+<td>Data da Adimissão
+<input type="text" name="datadaadmissao" size="" />
+</td>
+</tr>
+</table>
+
+<div id="div_statusbar">
+  <table width="109" height="393" border="0">
+    <tr>
+      <td colspan="2" style="border:solid 1px">Informa&ccedil;&otilde;es do Registro</td>
+    </tr>
+    <tr>
+      <td colspan="2">Data de Cadastro</td>
+    </tr>
+    <tr>
+      <td colspan="2"><textarea id="TXT_LOG" name="txt_log_data_cadastro" disabled="disabled" style="text-align:center;width:100px;min-height:30px;max-height:30px;max-width:100px;min-width:100px;background:transparent" cols="1" rows="2"><?php echo $_SESSION['DATA_CADASTRO']?></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2">&Uacute;ltima Atualiza&ccedil;&atilde;o</td>
+    </tr>
+    <tr>
+      <td colspan="2"><textarea id="TXT_LOG" name="txt_log_ultima_atualizacao" disabled="disabled" style="text-align:center;width:100px;min-height:30px;max-height:30px;max-width:100px;min-width:100px;background:transparent" cols="1" rows="2"> <?php echo $_SESSION['ULTIMA_ATUALIZACAO']?></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2">&Uacute;ltima Alteração realizada por</td>
+    </tr>
+    <tr>
+      <td colspan="2"><input id="TXT_LOG" name="txt_log_ultimo_usuario" type="text" disabled="disabled" size="8" style="background:transparent" maxlength="8" value="<?php echo $_SESSION['id_usuario']?>"/></td>
+    </tr>
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2">&Uacute;ltimo c&oacute;digo gerado</td>
+    </tr>
+    <tr>
+      <td colspan="2"><input id="TXT_LOG" name="txt_log_ultimo_codigo_gerado" type="text" disabled="disabled" size="8" style="background:transparent" maxlength="8" value="<?php echo $_SESSION['CODIGO_ATIVIDADE']?>"/></td>
+    </tr>
+    <tr>
+      <td width="50">&nbsp;</td>
+      <td width="49">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+</div>
+<table class="tabela">
+<tr>
+<td>Profissão do Funcionario
+<select>
+	<option></option>
+    </select>
+</td>
+<td>Cargo Atual
+<select>
+</select>
+</td>
+<td>Setor De Trabalho
+<select>
+</select>
+</td>
+<td>Função
+<select>
+</select>
+</td>
+</tr>
+</table>
+
+        <div id="divRelatorio" style="display: none">
+            <table border="0" width="50%">
+                <tr>
+                    <td>
+                        RELATÓRIOS
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="divConsulta" style="display: none">
+            <table border="0" width="50%">
+                <tr>
+                    <td>
+                        CONSULTAS
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="divModelo" style="display: none">
+            <table border="0" width="50%">
+                <tr>
+                    <td>
+                        MODELOS DE IMPRESSÃO
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </div>
+        <script>
+            defineAba( "celAbaCadastro"  , "divCadastro"   );
+            defineAba( "celAbaRelatorio" , "divRelatorio"  );
+            defineAba( "celAbaConsultas" , "divConsulta"   );
+            defineAba( "celAbaModelos"   , "divModelo"     );
+            defineAbaAtiva( "celAbaCadastro" );
+        </script>
+
+
+</body>
+</html>

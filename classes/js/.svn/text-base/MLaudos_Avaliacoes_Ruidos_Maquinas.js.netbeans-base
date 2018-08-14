@@ -1,0 +1,82 @@
+ function MLaudos_Avaliacoes_Ruido_Maquinas(){
+                
+                this.inicializa=function(){
+                     Codigo_Empresa=Array();
+                     Numero_Laudo=Array();
+                     Ano_Exercicio=Array();
+                     Revisao=Array();
+                     Unidade=Array();
+                     Codigo_Setor=Array();
+                     Codigo_Maquina=Array();
+                     Sequencial=Array();
+                     Nivel_Ruido_Medido=Array();
+                     Tempo_Exposicao_Diaria=Array();
+                     Nivel_Ruido_Permitido=Array();
+                     Tempo_Maximo_Exposicao_Diaria=Array();
+                     Observacao=Array();
+                     Epi_Eficaz=Array();
+                     Epc_Eficaz=Array();
+                     Observacoes=Array();
+                     Situacao=Array();
+                     ID_Usuario=Array();
+                     Session_id=Array();
+                     Ultima_Atualizacao=Array();
+                     Ultimo_Usuario=Array();
+                     
+                }
+                this.get_Codigo_Empresa= function(nlinha){
+                    return Codigo_Empresa[nlinha];
+                }
+               this.get_Ano_Exercicio= function(nlinha){
+                    return Ano_Exercicio[nlinha];
+                }
+                this.get_Numero_Laudo= function(nlinha){
+                    return Numero_Laudo[nlinha];
+                }
+
+                this.get_Revisao=function(nlinha){
+                    return Revisao[nlinha];
+                }    
+                this.get_Unidade= function(nlinha){
+                    return Unidade[nlinha];
+                }
+                this.get_Codigo_Setor= function(nlinha){
+                    return Codigo_Setor[nlinha];
+                }
+                this.get_Codigo_Maquina= function(nlinha){
+                    return Codigo_Maquina[nlinha];
+                }
+                this.get_Sequencial= function(nlinha){
+                    return Sequencial[nlinha];
+                }
+                
+                this.get_Ultima_Atualizacao=function(nlinha){
+                    return Ultima_Atualizacao[nlinha];
+                }  
+                this.setValores=function(response){
+                    this.inicializa();
+                    if (response!='NF'){
+                        for (x=0;x<response.length-1;x++){
+                            vreg=response.split('|');
+                            Codigo_Empresa[x]=vreg[0];
+                            Ano_Exercicio[x]=vreg[1];
+                            Numero_Laudo[x]=vreg[2];
+                            Revisao[x]=vreg[3];
+                            Unidade[x]=vreg[4];
+                            Codigo_Setor[x]=vreg[5];
+                            Codigo_Funcao[x]=vreg[6];
+                            Sequencial[x]=vreg[7];
+                            Funcao_Exposta[x]=vreg[8];
+                            Periodicidade_Exposicao[x]=vreg[9];
+                            Epi_Eficaz[x]=vreg[10];
+                            Epc_Eficaz[x]=vreg[11];
+                            ID_Usuario[x]=vreg[23];
+                            Session_ID[x]=vreg[24];
+                            Ultima_Atualizacao[x]=vreg[25];
+                            Ultimo_Usuario[x]=vreg[26];
+                            
+                        } 
+                    }
+                }
+            };
+             newlaudoavalruidomaq=new MLaudos_Avaliacoes_Ruido_Maquinas();

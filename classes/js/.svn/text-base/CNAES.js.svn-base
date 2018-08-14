@@ -1,0 +1,33 @@
+                function CNAES(){
+                this.inicializa=function(){
+                     Codigo_CNAE=Array();
+                     Descricao=Array();
+                     Observacao=Array();
+                    
+                } 
+                this.get_Codigo_CNAE= function(nlinha){
+                    return Codigo_CNAE[nlinha];
+                }
+                this.get_Descricao= function(nlinha){
+                    return Descricao[nlinha];
+                }
+                this.get_Observacao= function(nlinha){
+                    return Observacao[nlinha];
+                }
+                this.length=function(){
+                    return Codigo_CNAE.length;
+                }
+                this.setValores=function(response){
+                    this.inicializa();
+                    if (response!='NF'){
+                        for (x=0;x<response.length-1;x++){
+                        vreg=response[x].split('|');
+                        Codigo_CNAE[x]=vreg[0];
+                        Descricao[x]=vreg[1];
+                        Observacao[x]=vreg[2];
+                        }
+                    }
+
+                }
+            };
+             newCNAES=new CNAES();

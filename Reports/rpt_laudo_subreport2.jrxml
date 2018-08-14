@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_laudo_subreport2" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="b115e719-6ed4-4694-bcc8-e44e1e634211">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     laudos_acompanhantes.`CODIGO_EMPRESA` AS laudos_acompanhantes_CODIGO_EMPRESA,
+     laudos_acompanhantes.`ANO_PERICIA` AS laudos_acompanhantes_ANO_PERICIA,
+     laudos_acompanhantes.`NUMERO_LAUDO` AS laudos_acompanhantes_NUMERO_LAUDO,
+     laudos_acompanhantes.`REVISAO` AS laudos_acompanhantes_REVISAO,
+     laudos_acompanhantes.`CODIGO_ACOMPANHANTE` AS laudos_acompanhantes_CODIGO_ACOMPANHANTE,
+     laudos_acompanhantes.`NOME_RESPONSAVEL` AS laudos_acompanhantes_NOME_RESPONSAVEL,
+     laudos_acompanhantes.`FUNCAO` AS laudos_acompanhantes_FUNCAO,
+    cast( laudos_acompanhantes.`DATA_ADMISSAO` as char) AS laudos_acompanhantes_DATA_ADMISSAO
+FROM
+     `laudos_acompanhantes` laudos_acompanhantes]]>
+	</queryString>
+	<field name="laudos_acompanhantes_CODIGO_EMPRESA" class="java.lang.Integer"/>
+	<field name="laudos_acompanhantes_ANO_PERICIA" class="java.lang.Integer"/>
+	<field name="laudos_acompanhantes_NUMERO_LAUDO" class="java.lang.Integer"/>
+	<field name="laudos_acompanhantes_REVISAO" class="java.lang.String"/>
+	<field name="laudos_acompanhantes_CODIGO_ACOMPANHANTE" class="java.lang.Integer"/>
+	<field name="laudos_acompanhantes_NOME_RESPONSAVEL" class="java.lang.String"/>
+	<field name="laudos_acompanhantes_FUNCAO" class="java.lang.String"/>
+	<field name="laudos_acompanhantes_DATA_ADMISSAO" class="java.sql.Date"/>
+	<group name="laudos_acompanhantes_CODIGO_EMPRESA">
+		<groupExpression><![CDATA[$F{laudos_acompanhantes_CODIGO_EMPRESA}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement uuid="3d2daf11-eaf0-4531-a9ac-42cfa8310802" x="220" y="41" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{laudos_acompanhantes_FUNCAO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8bec7b59-cfc5-40e0-a7ed-59e90b297745" x="48" y="41" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{laudos_acompanhantes_NOME_RESPONSAVEL}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="b0cfb9a6-7a2d-4daf-9a0c-cb6ebb90fa5a" x="381" y="41" width="174" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{laudos_acompanhantes_DATA_ADMISSAO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

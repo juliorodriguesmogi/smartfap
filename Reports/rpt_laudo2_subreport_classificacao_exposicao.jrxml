@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_laudo2_subreport_classificacao_exposicao" language="groovy" pageWidth="514" pageHeight="205" whenNoDataType="AllSectionsNoDetail" columnWidth="514" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c7243280-6fb4-4b76-946f-1d2bf954ad42">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<title>
+		<band height="205">
+			<rectangle>
+				<reportElement uuid="75cfdafa-3e57-4f5f-a020-ff59aeb50a89" mode="Transparent" x="0" y="165" width="514" height="33"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="b796c29d-4c7a-4dde-af19-7f2820434ea7" x="225" y="127" width="285" height="32"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[A atividade não faz parte da atribuição do cargo e a exposição é intercalada, não sendo freqüente.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b796c29d-4c7a-4dde-af19-7f2820434ea7" x="225" y="88" width="285" height="32"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[A atividade faz parte da atribuição do cargo e a exposição é intercalada, não sendo freqüente.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b796c29d-4c7a-4dde-af19-7f2820434ea7" x="3" y="13" width="214" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Periodicidade de Exposição]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b796c29d-4c7a-4dde-af19-7f2820434ea7" x="220" y="13" width="298" height="32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Definição]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b796c29d-4c7a-4dde-af19-7f2820434ea7" x="5" y="165" width="212" height="32"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Eventual]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b796c29d-4c7a-4dde-af19-7f2820434ea7" x="5" y="51" width="213" height="32"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Permanente]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="75cfdafa-3e57-4f5f-a020-ff59aeb50a89" mode="Transparent" x="0" y="126" width="514" height="33"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="b796c29d-4c7a-4dde-af19-7f2820434ea7" x="5" y="88" width="212" height="32"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Habitual]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="75cfdafa-3e57-4f5f-a020-ff59aeb50a89" mode="Transparent" x="0" y="88" width="514" height="33"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="b796c29d-4c7a-4dde-af19-7f2820434ea7" x="225" y="165" width="285" height="32"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[A atividade não faz parte da atribuição do cargo e a exposição é esporádica ou rara.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="75cfdafa-3e57-4f5f-a020-ff59aeb50a89" mode="Transparent" x="0" y="50" width="514" height="33"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="b796c29d-4c7a-4dde-af19-7f2820434ea7" x="5" y="127" width="212" height="32"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Intermitente]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="3600bf14-50ca-48ed-8596-6a39f2312f3d" x="219" y="13" width="1" height="184"/>
+			</line>
+			<rectangle>
+				<reportElement uuid="75cfdafa-3e57-4f5f-a020-ff59aeb50a89" mode="Transparent" x="0" y="13" width="514" height="32"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="b796c29d-4c7a-4dde-af19-7f2820434ea7" x="225" y="50" width="285" height="32"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[A atividade faz parte da atribuição do cargo e a exposição é diária.]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>

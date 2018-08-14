@@ -1,0 +1,2 @@
+Data				 |Tipo Operação	|Operação
+[Sun, 29 Jul 2012 14:14:17 -0300]|	|Select * from `laudos_acompanhantes`  where CODIGO_EMPRESA = '1' and ANO_PERICIA = '2012' and NUMERO_LAUDO = '34' and REVISAO = '0' order by NUMERO_LAUDO

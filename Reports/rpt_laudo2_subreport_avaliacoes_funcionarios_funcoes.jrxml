@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_laudo2_subreport_avaliacoes_funcionarios_funcoes" language="groovy" pageWidth="514" pageHeight="66" columnWidth="514" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="25f350dd-3dcf-4b6a-aac0-51e32baabc58">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="CODIGO_EMPRESA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+	</parameter>
+	<parameter name="CODIGO_SETOR" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[2]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ANO_PERICIA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="UNIDADE" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+	</parameter>
+	<parameter name="REVISAO" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IsOnServer" class="java.lang.String"/>
+	<parameter name="NUMERO_LAUDO" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TABELA_FUNCOES" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+
+     funcoes.`DESCRICAO_FUNCAO_EMPRESA` AS funcoes_DESCRICAO_FUNCAO_EMPRESA,
+(select count(*) from `funcionarios` funcionarios where funcionarios.FUNCAO=funcoes.CODIGO_FUNCAO and funcionarios.UNIDADE=setores.UNIDADE and
+funcionarios.CODIGO_SETOR=setores.CODIGO_SETOR and funcionarios.SEXO="M" and funcionarios.SITUACAO='AT'
+) AS NUMERO_FUNCIONARIOS_MASCULINO,
+(select count(*) from `funcionarios` funcionarios where funcionarios.FUNCAO=funcoes.CODIGO_FUNCAO and funcionarios.UNIDADE=setores.UNIDADE and
+funcionarios.CODIGO_SETOR=setores.CODIGO_SETOR and funcionarios.SEXO="F" and funcionarios.SITUACAO='AT'
+) AS NUMERO_FUNCIONARIOS_FEMININO,
+case when funcoes.CODIGO_CBO_SINONIMO>"" then funcoes.CODIGO_CBO_SINONIMO
+else ( case when funcoes.CODIGO_CBO_OCUPACAO>"" then funcoes.CODIGO_CBO_OCUPACAO
+else ( case when funcoes.CODIGO_CBO_FAMILIA>"" then funcoes.CODIGO_CBO_FAMILIA
+else "Não Informado" end)
+ end) end AS CBO_FUNCIONARIO
+FROM
+     `funcionarios` funcionarios LEFT JOIN `funcoes` funcoes ON funcionarios.CODIGO_EMPRESA=funcoes.CODIGO_EMPRESA and funcionarios.FUNCAO=funcoes.CODIGO_FUNCAO
+     INNER JOIN `setores` setores ON funcionarios.CODIGO_EMPRESA=setores.CODIGO_EMPRESA and funcionarios.UNIDADE=setores.UNIDADE and funcionarios.CODIGO_SETOR=setores.CODIGO_SETOR
+
+WHERE
+     funcionarios.CODIGO_EMPRESA = $P{CODIGO_EMPRESA}
+AND funcionarios.UNIDADE = $P{UNIDADE}
+AND funcionarios.CODIGO_SETOR = $P{CODIGO_SETOR}
+AND funcionarios.SITUACAO='AT'
+HAVING (NUMERO_FUNCIONARIOS_MASCULINO>0 OR NUMERO_FUNCIONARIOS_FEMININO>0)]]>
+	</queryString>
+	<field name="funcoes_DESCRICAO_FUNCAO_EMPRESA" class="java.lang.String"/>
+	<field name="NUMERO_FUNCIONARIOS_MASCULINO" class="java.lang.Long"/>
+	<field name="NUMERO_FUNCIONARIOS_FEMININO" class="java.lang.Long"/>
+	<field name="CBO_FUNCIONARIO" class="java.lang.String"/>
+	<variable name="QTDE_FUNCOES" class="java.lang.Integer" resetType="Column" calculation="Count">
+		<variableExpression><![CDATA[$V{QTDE_FUNCOES}]]></variableExpression>
+		<initialValueExpression><![CDATA[new Integer(0)]]></initialValueExpression>
+	</variable>
+	<group name="GRUPO_FUNCOES">
+		<groupHeader>
+			<band height="21">
+				<printWhenExpression><![CDATA[($F{NUMERO_FUNCIONARIOS_MASCULINO} >0) || ($F{NUMERO_FUNCIONARIOS_FEMININO}>0)]]></printWhenExpression>
+				<rectangle>
+					<reportElement uuid="00b2465d-7642-4a37-beed-a6d6de347044" x="3" y="1" width="511" height="20"/>
+				</rectangle>
+				<rectangle>
+					<reportElement uuid="f9e2ab1f-07a0-4aa6-9e43-744bc1364377" x="2" y="0" width="511" height="20"/>
+				</rectangle>
+				<staticText>
+					<reportElement uuid="ea5a0108-b215-4d07-a48a-bb3af9ef2dc4" x="259" y="1" width="79" height="20"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CBO da Função]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="ea5a0108-b215-4d07-a48a-bb3af9ef2dc4" x="2" y="0" width="257" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Função]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="ea5a0108-b215-4d07-a48a-bb3af9ef2dc4" x="338" y="0" width="87" height="20"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="6" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Número Funcionários Sexo Masculino]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="ea5a0108-b215-4d07-a48a-bb3af9ef2dc4" x="425" y="0" width="84" height="20"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="6" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Número Funcionários Sexo Feminino]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GRUPO_VAZIO">
+		<groupFooter>
+			<band height="22">
+				<printWhenExpression><![CDATA[($F{NUMERO_FUNCIONARIOS_MASCULINO}==0 && $F{NUMERO_FUNCIONARIOS_FEMININO}==0)]]></printWhenExpression>
+				<staticText>
+					<reportElement uuid="4dbefe32-cc98-4b71-8f55-56f597101255" x="4" y="0" width="511" height="20"/>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nenhuma ocorrência de funcionário/função foi encontrada]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="19" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="ea5a0108-b215-4d07-a48a-bb3af9ef2dc4" mode="Opaque" x="2" y="0" width="512" height="19" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Funcionários X Funções desempenhadas]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="f9e2ab1f-07a0-4aa6-9e43-744bc1364377" mode="Transparent" x="2" y="2" width="512" height="22"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="b0947c0a-e57b-4aed-a234-14951a40f5e0" x="425" y="2" width="84" height="22"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{NUMERO_FUNCIONARIOS_FEMININO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3716e970-a07a-4138-a5ec-2631f88d8bb0" x="259" y="3" width="79" height="21"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{CBO_FUNCIONARIO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="36d44934-00f4-420b-9dd3-f713aae45d7f" x="338" y="3" width="87" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{NUMERO_FUNCIONARIOS_MASCULINO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f2e02631-89df-4711-8d62-7f34da486db8" x="3" y="2" width="256" height="22"/>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{funcoes_DESCRICAO_FUNCAO_EMPRESA}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

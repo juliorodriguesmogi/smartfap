@@ -1,0 +1,32 @@
+/* 
+    Document   : 1024X600.css
+    Created on : 13/01/2012, 22:26:19
+    Author     : julio
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+html{
+    zoom:70%;
+    -moz-transform: scale(1,1);
+    -o-transform: scale(.75,.73);
+    -webkit-transform: scale(.75,.73);
+    transform: scale(.75,.73);
+    font-size: 75%;
+}
+#nav a{
+    font-size:120%;
+    width:120px;
+}
+#nav a:hover{
+    font-size:120%;
+}
+#nav ul ul {margin:-39px 120px ;}
+#div_statusbar{
+    font-size:70%;
+}

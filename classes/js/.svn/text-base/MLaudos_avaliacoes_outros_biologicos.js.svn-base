@@ -1,0 +1,138 @@
+function MLaudos_avaliacoes_outros_biologicos(){
+this.inicializa=function(){
+	Codigo_empresa=Array();
+	Ano_pericia=Array();
+	Numero_laudo=Array();
+	Revisao=Array();
+	Unidade=Array();
+	Codigo_setor=Array();
+	Tipo_avaliacao=Array();
+	Sequencial=Array();
+	Numero_funcs_setor=Array();
+	Numero_funcs_expostos=Array();
+	Periodicidade_exposicao=Array();
+	Taxa_ruido_nr17=Array();
+	Texto_explicativo=Array();
+	Campo_acustico_medido=Array();
+	Nivel_atenuacao_protetor=Array();
+	Nivel_ruido_atenuado=Array();
+	Medidas_protecao_coletivas=Array();
+	Medidas_protecao_individual=Array();
+	Enquadramento=Array();
+	Id_usuario=Array();
+	Session_id=Array();
+	Ultima_atualizacao=Array();
+	Ultimo_usuario=Array();
+	Observacoes=Array();
+	Acoes_ppra=Array();
+}
+this.get_Codigo_empresa=function(nlinha){
+	 return Codigo_empresa[nlinha];
+}
+this.get_Ano_pericia=function(nlinha){
+	 return Ano_pericia[nlinha];
+}
+this.get_Numero_laudo=function(nlinha){
+	 return Numero_laudo[nlinha];
+}
+this.get_Revisao=function(nlinha){
+	 return Revisao[nlinha];
+}
+this.get_Unidade=function(nlinha){
+	 return Unidade[nlinha];
+}
+this.get_Codigo_setor=function(nlinha){
+	 return Codigo_setor[nlinha];
+}
+this.get_Tipo_avaliacao=function(nlinha){
+	 return Tipo_avaliacao[nlinha];
+}
+this.get_Sequencial=function(nlinha){
+	 return Sequencial[nlinha];
+}
+this.get_Numero_funcs_setor=function(nlinha){
+	 return Numero_funcs_setor[nlinha];
+}
+this.get_Numero_funcs_expostos=function(nlinha){
+	 return Numero_funcs_expostos[nlinha];
+}
+this.get_Periodicidade_exposicao=function(nlinha){
+	 return Periodicidade_exposicao[nlinha];
+}
+this.get_Taxa_ruido_nr17=function(nlinha){
+	 return Taxa_ruido_nr17[nlinha];
+}
+this.get_Texto_explicativo=function(nlinha){
+	 return Texto_explicativo[nlinha];
+}
+this.get_Campo_acustico_medido=function(nlinha){
+	 return Campo_acustico_medido[nlinha];
+}
+this.get_Nivel_atenuacao_protetor=function(nlinha){
+	 return Nivel_atenuacao_protetor[nlinha];
+}
+this.get_Nivel_ruido_atenuado=function(nlinha){
+	 return Nivel_ruido_atenuado[nlinha];
+}
+this.get_Medidas_protecao_coletivas=function(nlinha){
+	 return Medidas_protecao_coletivas[nlinha];
+}
+this.get_Medidas_protecao_individual=function(nlinha){
+	 return Medidas_protecao_individual[nlinha];
+}
+this.get_Enquadramento=function(nlinha){
+	 return Enquadramento[nlinha];
+}
+this.get_Id_usuario=function(nlinha){
+	 return Id_usuario[nlinha];
+}
+this.get_Session_id=function(nlinha){
+	 return Session_id[nlinha];
+}
+this.get_Ultima_atualizacao=function(nlinha){
+	 return Ultima_atualizacao[nlinha];
+}
+this.get_Ultimo_usuario=function(nlinha){
+	 return Ultimo_usuario[nlinha];
+}
+this.get_Observacoes=function(nlinha){
+	 return Observacoes[nlinha];
+}
+this.get_Acoes_ppra=function(nlinha){
+	 return Acoes_ppra[nlinha];
+}
+this.setValores=function(response){
+	 this.inicializa();
+	 if (response[0]=='NF'){
+		 for (x=0;x<response.length-1;x++){
+		 vreg=response[x].split('|')
+		Codigo_empresa[x]=vreg[0];
+		Ano_pericia[x]=vreg[1];
+		Numero_laudo[x]=vreg[2];
+		Revisao[x]=vreg[3];
+		Unidade[x]=vreg[4];
+		Codigo_setor[x]=vreg[5];
+		Tipo_avaliacao[x]=vreg[6];
+		Sequencial[x]=vreg[7];
+		Numero_funcs_setor[x]=vreg[8];
+		Numero_funcs_expostos[x]=vreg[9];
+		Periodicidade_exposicao[x]=vreg[10];
+		Taxa_ruido_nr17[x]=vreg[11];
+		Texto_explicativo[x]=vreg[12];
+		Campo_acustico_medido[x]=vreg[13];
+		Nivel_atenuacao_protetor[x]=vreg[14];
+		Nivel_ruido_atenuado[x]=vreg[15];
+		Medidas_protecao_coletivas[x]=vreg[16];
+		Medidas_protecao_individual[x]=vreg[17];
+		Enquadramento[x]=vreg[18];
+		Id_usuario[x]=vreg[19];
+		Session_id[x]=vreg[20];
+		Ultima_atualizacao[x]=vreg[21];
+		Ultimo_usuario[x]=vreg[22];
+		Observacoes[x]=vreg[23];
+		Acoes_ppra[x]=vreg[24];
+		 }
+	}
+}
+};
+new=new MLaudos_avaliacoes_outros_biologicos();

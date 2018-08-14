@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_laudo2_subreport_responsabilidade_tecnica_avaliacao" language="groovy" pageWidth="514" pageHeight="169" columnWidth="514" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="90942187-b652-48ad-b089-2a6c1a46e5cb">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="CODIGO_EMPRESA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ANO_PERICIA" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NUMERO_LAUDO" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="REVISAO" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     empresas_contrato.`RAZAO_SOCIAL` AS empresas_contrato_RAZAO_SOCIAL,
+     trim(empresas_contrato.`ENDERECO_ATUACAO`) AS empresas_contrato_ENDERECO_ATUACAO,
+     empresas_contrato.`MUNICIPIO_ATUACAO` AS empresas_contrato_MUNICIPIO_ATUACAO,
+     empresas_contrato.`UF_ATUACAO` AS empresas_contrato_UF_ATUACAO,
+     laudos_profissionais.`NOME_RESPONSAVEL` AS laudos_profissionais_NOME_RESPONSAVEL,
+     laudos_profissionais.`NOME_FUNCAO` AS laudos_profissionais_NOME_FUNCAO,
+     laudos_profissionais.`NUMERO_REGISTRO1` AS laudos_profissionais_NUMERO_REGISTRO1,
+     laudos_profissionais.`NUMERO_REGISTRO2` AS laudos_profissionais_NUMERO_REGISTRO2,
+     laudos_profissionais.`NUMERO_REGISTRO3` AS laudos_profissionais_NUMERO_REGISTRO3,
+     laudos_profissionais.`NUMERO_REGISTRO4` AS laudos_profissionais_NUMERO_REGISTRO4,
+     laudos_profissionais.`NUMERO_REGISTRO5` AS laudos_profissionais_NUMERO_REGISTRO5,
+     empresas_contrato.`CNPJ` AS empresas_contrato_CNPJ,
+     empresas_contrato.`NRO_ATUACAO` AS empresas_contrato_NRO_ATUACAO
+FROM
+     `empresas_contrato` empresas_contrato INNER JOIN `empresas` empresas ON empresas_contrato.`CODIGO_EMPRESA` = empresas.`EMPRESA_CONTRATO`
+     INNER JOIN `laudos_profissionais` laudos_profissionais ON empresas.`CODIGO_EMPRESA` = laudos_profissionais.`CODIGO_EMPRESA`
+WHERE
+     laudos_profissionais.`CODIGO_EMPRESA` = $P{CODIGO_EMPRESA}
+ AND laudos_profissionais.`ANO_PERICIA` = $P{ANO_PERICIA}
+ AND laudos_profissionais.`NUMERO_LAUDO` = $P{NUMERO_LAUDO}
+ AND laudos_profissionais.`REVISAO` = $P{REVISAO}]]>
+	</queryString>
+	<field name="empresas_contrato_RAZAO_SOCIAL" class="java.lang.String"/>
+	<field name="empresas_contrato_ENDERECO_ATUACAO" class="java.lang.String"/>
+	<field name="empresas_contrato_MUNICIPIO_ATUACAO" class="java.lang.String"/>
+	<field name="empresas_contrato_UF_ATUACAO" class="java.lang.String"/>
+	<field name="laudos_profissionais_NOME_RESPONSAVEL" class="java.lang.String"/>
+	<field name="laudos_profissionais_NOME_FUNCAO" class="java.lang.String"/>
+	<field name="laudos_profissionais_NUMERO_REGISTRO1" class="java.lang.String"/>
+	<field name="laudos_profissionais_NUMERO_REGISTRO2" class="java.lang.String"/>
+	<field name="laudos_profissionais_NUMERO_REGISTRO3" class="java.lang.String"/>
+	<field name="laudos_profissionais_NUMERO_REGISTRO4" class="java.lang.String"/>
+	<field name="laudos_profissionais_NUMERO_REGISTRO5" class="java.lang.String"/>
+	<field name="empresas_contrato_CNPJ" class="java.lang.String"/>
+	<field name="empresas_contrato_NRO_ATUACAO" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="69" splitType="Stretch">
+			<textField>
+				<reportElement uuid="ef22cf37-c713-4da3-8c74-ea97dcbd0911" x="3" y="8" width="509" height="54"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["A "+$F{empresas_contrato_RAZAO_SOCIAL}+" CNPJ "+$F{empresas_contrato_CNPJ}+", localizada à "+$F{empresas_contrato_ENDERECO_ATUACAO}+" , "+$F{empresas_contrato_NRO_ATUACAO}+" – "+$F{empresas_contrato_MUNICIPIO_ATUACAO}+", estado de "+$F{empresas_contrato_UF_ATUACAO}+", foi contratada para elaboração do Laudo Técnico Pericial, tendo como responsáveis técnicos:"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<printWhenExpression><![CDATA[($F{laudos_profissionais_NOME_FUNCAO}=='MÉDICO DA SEGURANÇA DO TRABALHO')]]></printWhenExpression>
+			<textField>
+				<reportElement uuid="53622c1b-ea54-4c45-9dd3-3bf5b2c62bcd" x="3" y="-2" width="509" height="27"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA["Médico do Trabalho - Dr."+$F{laudos_profissionais_NOME_RESPONSAVEL}+" - "+$F{laudos_profissionais_NUMERO_REGISTRO1}+" - "+$F{laudos_profissionais_NUMERO_REGISTRO2}+" - "+$F{laudos_profissionais_NUMERO_REGISTRO3}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="35" splitType="Stretch">
+			<printWhenExpression><![CDATA[($F{laudos_profissionais_NOME_FUNCAO}=='TÉCNICO DE SEGURANÇA DO TRABALHO')]]></printWhenExpression>
+			<textField>
+				<reportElement uuid="6b4932af-1c2a-43ec-aa2d-3659b1b72928" x="3" y="1" width="509" height="29"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA["Técnico de Segurança do Trabalho "+$F{laudos_profissionais_NOME_RESPONSAVEL}+" - NÚMERO DE REGISTRO "+$F{laudos_profissionais_NUMERO_REGISTRO1}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="36" splitType="Stretch">
+			<printWhenExpression><![CDATA[$F{laudos_profissionais_NOME_FUNCAO}=='ENGENHEIRO DE SEGURANÇA DO TRABALHO']]></printWhenExpression>
+			<textField>
+				<reportElement uuid="149493cf-92d3-441b-87ce-168546913677" x="3" y="0" width="509" height="26"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[("Engenheiro de Segurança do Trabalho "+$F{laudos_profissionais_NOME_RESPONSAVEL}+" - NÚMERO DE REGISTRO "+$F{laudos_profissionais_NUMERO_REGISTRO1})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

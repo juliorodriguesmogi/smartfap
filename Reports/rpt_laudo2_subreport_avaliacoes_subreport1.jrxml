@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_laudo2_subreport_avaliacoes_subreport1" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="38914107-2d76-484b-bb4b-a4dd38222605">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     laudos_avaliacoes_ruido.`CODIGO_EMPRESA` AS laudos_avaliacoes_ruido_CODIGO_EMPRESA,
+     laudos_avaliacoes_ruido.`ANO_PERICIA` AS laudos_avaliacoes_ruido_ANO_PERICIA,
+     laudos_avaliacoes_ruido.`NUMERO_LAUDO` AS laudos_avaliacoes_ruido_NUMERO_LAUDO,
+     laudos_avaliacoes_ruido.`REVISAO` AS laudos_avaliacoes_ruido_REVISAO,
+     laudos_avaliacoes_ruido.`UNIDADE` AS laudos_avaliacoes_ruido_UNIDADE,
+     laudos_avaliacoes_ruido.`CODIGO_SETOR` AS laudos_avaliacoes_ruido_CODIGO_SETOR,
+     laudos_avaliacoes_ruido.`TIPO_AVALIACAO` AS laudos_avaliacoes_ruido_TIPO_AVALIACAO,
+     laudos_avaliacoes_ruido.`SEQUENCIAL` AS laudos_avaliacoes_ruido_SEQUENCIAL,
+     laudos_avaliacoes_ruido.`NUMERO_FUNCS_SETOR` AS laudos_avaliacoes_ruido_NUMERO_FUNCS_SETOR,
+     laudos_avaliacoes_ruido.`NUMERO_FUNCS_EXPOSTOS` AS laudos_avaliacoes_ruido_NUMERO_FUNCS_EXPOSTOS,
+     laudos_avaliacoes_ruido.`PERIODICIDADE_EXPOSICAO` AS laudos_avaliacoes_ruido_PERIODICIDADE_EXPOSICAO,
+     laudos_avaliacoes_ruido.`TEXTO_EXPLICATIVO` AS laudos_avaliacoes_ruido_TEXTO_EXPLICATIVO,
+     laudos_avaliacoes_ruido.`CAMPO_ACUSTICO_MEDIDO` AS laudos_avaliacoes_ruido_CAMPO_ACUSTICO_MEDIDO,
+     laudos_avaliacoes_ruido.`NIVEL_ATENUACAO_PROTETOR` AS laudos_avaliacoes_ruido_NIVEL_ATENUACAO_PROTETOR,
+     laudos_avaliacoes_ruido.`NIVEL_RUIDO_ATENUADO` AS laudos_avaliacoes_ruido_NIVEL_RUIDO_ATENUADO,
+     laudos_avaliacoes_ruido.`MEDIDAS_PROTECAO_COLETIVA` AS laudos_avaliacoes_ruido_MEDIDAS_PROTECAO_COLETIVA,
+     laudos_avaliacoes_ruido.`MEDIDAS_PROTECAO_INDIVIDUAL` AS laudos_avaliacoes_ruido_MEDIDAS_PROTECAO_INDIVIDUAL,
+     laudos_avaliacoes_ruido.`MEDIDAS_PROTECAO_COLETIVA_OUTROS` AS laudos_avaliacoes_ruido_MEDIDAS_PROTECAO_COLETIVA_OUTROS,
+     laudos_avaliacoes_ruido.`MEDIDAS_PROTECAO_INDIVIDUAL_OUTROS` AS laudos_avaliacoes_ruido_MEDIDAS_PROTECAO_INDIVIDUAL_OUTROS,
+     laudos_avaliacoes_ruido.`ENQUADRAMENTO` AS laudos_avaliacoes_ruido_ENQUADRAMENTO,
+     laudos_avaliacoes_ruido.`ACOES_PPRA` AS laudos_avaliacoes_ruido_ACOES_PPRA,
+     laudos_avaliacoes_ruido.`FONTE_GERADORA` AS laudos_avaliacoes_ruido_FONTE_GERADORA,
+     laudos_avaliacoes_ruido.`OBSERVACOES` AS laudos_avaliacoes_ruido_OBSERVACOES,
+     laudos_avaliacoes_ruido.`GRAU_RISCO` AS laudos_avaliacoes_ruido_GRAU_RISCO
+FROM
+     `laudos_avaliacoes_ruido` laudos_avaliacoes_ruido]]>
+	</queryString>
+	<field name="laudos_avaliacoes_ruido_CODIGO_EMPRESA" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_ruido_ANO_PERICIA" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_ruido_NUMERO_LAUDO" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_ruido_REVISAO" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_ruido_UNIDADE" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_ruido_CODIGO_SETOR" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_ruido_TIPO_AVALIACAO" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_ruido_SEQUENCIAL" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_ruido_NUMERO_FUNCS_SETOR" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_ruido_NUMERO_FUNCS_EXPOSTOS" class="java.lang.Integer"/>
+	<field name="laudos_avaliacoes_ruido_PERIODICIDADE_EXPOSICAO" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_ruido_TEXTO_EXPLICATIVO" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_ruido_CAMPO_ACUSTICO_MEDIDO" class="java.math.BigDecimal"/>
+	<field name="laudos_avaliacoes_ruido_NIVEL_ATENUACAO_PROTETOR" class="java.math.BigDecimal"/>
+	<field name="laudos_avaliacoes_ruido_NIVEL_RUIDO_ATENUADO" class="java.math.BigDecimal"/>
+	<field name="laudos_avaliacoes_ruido_MEDIDAS_PROTECAO_COLETIVA" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_ruido_MEDIDAS_PROTECAO_INDIVIDUAL" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_ruido_MEDIDAS_PROTECAO_COLETIVA_OUTROS" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_ruido_MEDIDAS_PROTECAO_INDIVIDUAL_OUTROS" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_ruido_ENQUADRAMENTO" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_ruido_ACOES_PPRA" class="java.lang.Boolean"/>
+	<field name="laudos_avaliacoes_ruido_FONTE_GERADORA" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_ruido_OBSERVACOES" class="java.lang.String"/>
+	<field name="laudos_avaliacoes_ruido_GRAU_RISCO" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
