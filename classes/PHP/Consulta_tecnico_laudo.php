@@ -22,7 +22,7 @@ $tabela=(String) $_GET['tabela'];
  
 
 $l=include_once('conexao_PDO.php');
-$conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+$conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 $conn->prepara_stmt('S', $tabela, array('NOME_RESPONSAVEL,FUNCAO,NUMERO_REGISTRO'),null,$campo,$condicao,$valor,null,array("NOME_RESPONSAVEL limit 100"));
 $r=$conn->executa_acao();     
 if ($r->fetchAll(PDO::FETCH_ASSOC)==0){

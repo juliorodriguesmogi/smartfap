@@ -58,7 +58,7 @@ class Epis{
             break;
         }
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         if (!$conn){
             exit;
         }
@@ -80,7 +80,7 @@ class Epis{
         }    
     }
     function apaga_epis(){
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         $conn->prepara_stmt('D', 'epis', null,null,array($this->nome_campos[0],$this->nome_campos[1]),array('=','='),array($this->valor_campos[0],$this->valor_campos[1]),null,null);
         try{
             $r=$conn->executa_acao();     

@@ -50,7 +50,7 @@ class Responsavel{
             break;
         }
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         $conn->prepara_stmt('I', 'responsaveis', $this->nome_campos, $this->valor_campos, array('CODIGO_EMPRESA', 'CODIGO_RESPONSAVEL'), array('=','='),array($this->valor_campos[0],$this->valor_campos[1]));
         $r=$conn->executa_acao();        
         $conn->prepara_stmt('S', "responsaveis", array('MAX(CODIGO_RESPONSAVEL) as CODIGO_RESPONSAVEL','MAX(DATA_CADASTRO) AS DATA_CADASTRO','MAX(ID_USUARIO) AS ID_USUARIO','MAX(ULTIMA_ATUALIZACAO) AS ULTIMA_ATUALIZACAO','MAX(ULTIMO_USUARIO) AS ULTIMO_USUARIO'), '');
@@ -69,7 +69,7 @@ class Responsavel{
     }
     function apaga_responsavel(){
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         $conn->prepara_stmt('D', 'maquinas', null, null, array('CODIGO_EMPRESA','CODIGO_MAQUINA'), array('=','='),array($this->valor_campos[0],$this->valor_campos[1]));
         try{
             $r=$conn->executa_acao();        

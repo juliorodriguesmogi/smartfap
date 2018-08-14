@@ -76,7 +76,7 @@ table #tr_detalhe td{
    <table width="100%" >
  <?php
 include_once('../classes/PHP/conexao_PDO.php');
-$conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+$conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 $conn->prepara_stmt('S', 'responsaveis',array('*'), null, array('CODIGO_RESPONSAVEL'), array('='),array($codigo_responsavel),null,array("CODIGO_RESPONSAVEL"));
 $r=$conn->executa_acao();        
 if ($r->fetchColumn(0)!=null){

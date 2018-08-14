@@ -20,7 +20,7 @@ $visao=(String) $_GET['visao'];
 $tabela=(String) $_GET['tabela'];
 $condicao[]="=";
 $l=include_once('conexao_PDO.php');
-$conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+$conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 $conn->prepara_stmt('S', $tabela, array('TIPO_AVALIACAO'),null,$campo,$condicao,$valor,null,array("NUMERO_LAUDO"));
 $r=$conn->executa_acao();     
 $contreg=0;

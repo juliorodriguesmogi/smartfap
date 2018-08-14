@@ -22,7 +22,7 @@ $tabela=(String) $_GET['tabela'];
  
 
 $l=include_once('conexao_PDO.php');
-$conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+$conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 $conn->prepara_stmt('S', $tabela, array('CODIGO_EMPRESA','ANO_PERICIA','NUMERO_LAUDO','REVISAO','CODIGO_INSTRUMENTO','TIPO_SELECAO_INSTRUMENTO','TIPO_INSTRUMENTO','MARCA_INSTRUMENTO','MODELO_INSTRUMENTO','SERIE_INSTRUMENTO','DATA_CALIBRACAO_INSTRUMENTO'),null,$campo,$condicao,$valor,null);
 $r=$conn->executa_acao();     
 if ($r->fetchAll(PDO::FETCH_ASSOC)==0){

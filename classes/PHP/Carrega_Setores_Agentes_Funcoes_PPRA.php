@@ -18,7 +18,7 @@ $condicao=explode(',', $condicao);
 $visao=$_GET['tabela'];
 $visaof=$visao."_funcoes";
 $l=include_once('conexao_PDO.php');
-$conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+$conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 $sql="
 select laf.CODIGO_ATIVIDADE,len.AGENTE_PREVENCAO as LEN_AGENTE_PREVENCAO,lef.AGENTE_PREVENCAO AS LEF_AGENTE_PREVENCAO,laf.CODIGO_FUNCAO,laf.DESCRICAO_FUNCAO,(case when laf.CODIGO_FUNCAO=0 THEN 'NÃO' ELSE 'SIM' END) AS EPI_EFICAZ,lef.CODIGO_EPI,lef.CA_EPI,(select EPC_EFICAZ from `laudos_setores_pericia` lsp where lsp.CODIGO_EMPRESA=lacc.CODIGO_EMPRESA and lsp.ANO_PERICIA=lacc.ANO_PERICIA and lsp.NUMERO_LAUDO=lacc.NUMERO_LAUDO and lsp.REVISAO=lacc.REVISAO and lsp.UNIDADE=lacc.UNIDADE and lsp.CODIGO_SETOR=lacc.CODIGO_SETOR) as EPC_EFICAZ,
 (select

@@ -5,7 +5,7 @@ $codigo_empresa=$_SESSION['empresa_ativa'];
 $codigo_funcionario=2; //;$_SESSION['codigo_funcionario'];
 $nome_empresa=$_SESSION['nome_empresa_ativa'];
 include_once '../classes/PHP/conexao_PDO.php';
-$conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+$conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 $conn->prepara_stmt('S', "empresas", array('*'),null,array('CODIGO_EMPRESA'),array("="),array($codigo_empresa)); 
 $registros=$conn->executa_acao();
 $empresa=$registros->fetch(PDO::FETCH_ASSOC);

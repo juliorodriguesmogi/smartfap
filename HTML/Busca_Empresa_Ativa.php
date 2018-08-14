@@ -8,7 +8,7 @@ class Busca_Empresa_Ativa {
    
     function __construct($id_usuario){
         $this->idusu=$id_usuario;
-        $this->conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $this->conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         $this->conn->prepara_stmt('S', 'empresa_ativa', array('*'), null, array('CODIGO_EMPRESA'), array('='),array($id_usuario));
     }
    

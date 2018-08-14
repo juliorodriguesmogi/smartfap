@@ -23,7 +23,7 @@ $l=include_once('conexao_PDO.php');
 $campo[]='CODIGO_EMPRESA';
 $valor[]=$_SESSION['empresa_ativa'];
 
-$conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+$conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 $conn->prepara_stmt('S', array('funcionarios fr ','funcoes fn '),array('fr.FUNCAO as CODIGO_FUNCAO','fn.DESCRICAO_FUNCAO_EMPRESA as DESCRICAO_FUNCAO_EMPRESA'), null, array('fr.CODIGO_EMPRESA','fr.FUNCAO','fr.UNIDADE','fr.CODIGO_SETOR', 'fn.CODIGO_EMPRESA','fn.CODIGO_FUNCAO','fn.CODIGO_EMPRESA'), array('=','=','=','=','=','=','=','='),array('[fn.CODIGO_EMPRESA]','[fn.CODIGO_FUNCAO]',$valor[0] ,$valor[1],'[fr.CODIGO_EMPRESA]','[fr.FUNCAO]',$valor[2]),null,array("fr.CODIGO_EMPRESA"));
 $r=$conn->executa_acao();     
 if ($r->fetchColumn(0)==0){

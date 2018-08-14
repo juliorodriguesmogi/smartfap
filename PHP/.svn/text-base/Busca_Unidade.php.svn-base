@@ -8,7 +8,7 @@ class Busca_Unidade {
    
     function __construct($unidade){
         $l=include_once('../classes/PHP/conexao_PDO.php');
-        $this->conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $this->conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         $this->conn->prepara_stmt('S', 'estrutura_organizacional', array('*'), null, array('UNIDADE'), array('='),array($unidade));
 
        

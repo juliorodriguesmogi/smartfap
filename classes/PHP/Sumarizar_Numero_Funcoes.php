@@ -19,7 +19,7 @@ $condicao=(String) $_GET['condicao'];
 $condicao=explode(',', $condicao);
 $tipo_busca=(String) $_GET['tipo_busca'];
 $tipo_busca=explode(',', $tipo_busca);
-$conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+$conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 $conn->prepara_stmt('S', $tabela, array('count(*) as contagem'),null,$campo,$tipo_busca,$valor,null);
 $r=$conn->executa_acao();     
     while($row=$r->fetch(PDO::FETCH_ASSOC)){

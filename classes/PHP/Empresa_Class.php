@@ -60,7 +60,7 @@ class Empresa{
                   $sql_empresa.="'".$c."'".',';
         }
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         $conn->prepara_stmt('I', 'empresas', $this->nome_campos, $this->valor_campos, array('CODIGO_EMPRESA'), array('='),array($this->valor_campos[0]));
         try{        
             $r=$conn->executa_acao();   

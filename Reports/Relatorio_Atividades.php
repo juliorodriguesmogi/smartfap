@@ -82,7 +82,7 @@ tr td {border-bottom: 1pt dotted black}
   </tr>
 <?php
 include_once('../classes/PHP/conexao_PDO.php');
-$conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+$conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 $conn->prepara_stmt('S', 'atividades',array('*'), null,array('CODIGO_EMPRESA'), array('='),array($_SESSION['empresa_ativa']),null,array("CODIGO_ATIVIDADE"));
 
 $r1=$conn->executa_acao();        
@@ -100,7 +100,7 @@ $classificacao=array('A'=>'Administrativa','O'=>'Operacional',''=>'Não-definida
     echo '<td width="10%">'. preg_replace("/(\d+)-(\d+)-(\d+) (\d+):(\d+):(\d+)/", "$3/$2/$1 $4:$5:$6", $row['ULTIMA_ATUALIZACAO']). '</td>';
     echo '</tr>'; 
     
-    $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+    $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
     $conn->prepara_stmt('S', 'atividade_funcoes',array('*'), null, array('CODIGO_EMPRESA','CODIGO_ATIVIDADE'), array('=','='),array($row['CODIGO_EMPRESA'],$row['CODIGO_ATIVIDADE']),null,array("CODIGO_ATIVIDADE"));
      $r2=$conn->executa_acao(); ?>     
 
@@ -111,7 +111,7 @@ $classificacao=array('A'=>'Administrativa','O'=>'Operacional',''=>'Não-definida
     <td>Descrição da Função</td>
   </tr>
  <?php include_once('../classes/PHP/conexao_PDO.php');
-$conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+$conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 $conn->prepara_stmt('S', 'atividade_funcoes',array('*'), null, array('CODIGO_EMPRESA','CODIGO_ATIVIDADE'), array('=','='),array($row['CODIGO_EMPRESA'],$row['CODIGO_ATIVIDADE']),null,array("CODIGO_ATIVIDADE"));
 $r2=$conn->executa_acao();      
 

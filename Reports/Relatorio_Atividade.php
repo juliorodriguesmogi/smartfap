@@ -77,7 +77,7 @@ table #tr_detalhe td{
  <?php
  $classificacao=array('A'=>'Administrativa','O'=>'Operacional',''=>'Não-definida');  
 include_once('../classes/PHP/conexao_PDO.php');
-$conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+$conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 $conn->prepara_stmt('S', 'atividades',array('*'), null, array('CODIGO_EMPRESA','CODIGO_ATIVIDADE'), array('=','='),array($codigo_empresa,$codigo_atividade),null,array("CODIGO_ATIVIDADE"));
 $r=$conn->executa_acao();        
 if ($r->fetchColumn(0)!=null){
@@ -121,7 +121,7 @@ $r2=$conn->executa_acao();
     <td>Descrição da Função</td>
   </tr>
  <?php include_once('../classes/PHP/conexao_PDO.php');
-$conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+$conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 $conn->prepara_stmt('S', 'atividade_funcoes',array('*'), null, array('CODIGO_EMPRESA','CODIGO_ATIVIDADE'), array('=','='),array($codigo_empresa,$codigo_atividade),null,array("CODIGO_ATIVIDADE"));
 $r=$conn->executa_acao();      
 

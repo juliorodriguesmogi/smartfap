@@ -74,7 +74,7 @@ $nome_empresa=$_SESSION['nome_empresa_ativa'];
    </tr>
  <?php
 include_once('../classes/PHP/conexao_PDO.php');
-$conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+$conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 $conn->prepara_stmt('S', 'estrutura_organizacional',array('*'), null, array('CODIGO_EMPRESA'), array('='),array($codigo_empresa,),null,array("CODIGO_EMPRESA","UNIDADE","UNIDADE_PAI","NIVEL_ORGANIZACAO"));
 $r=$conn->executa_acao();        
 if ($r->fetchColumn(0)!=null){

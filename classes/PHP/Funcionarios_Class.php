@@ -98,7 +98,7 @@ class Funcionario{
         $v[]=$_SESSION['id_usuario'];
         $_SESSION['codigo_funcionario']=$this->chave[1];
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         //$conn->prepara_stmt('I', 'funcionarios', $this->nome_campos, $this->valor_campos, array('CODIGO_EMPRESA','CODIGO_FUNCIONARIO'), array('=','='),array($this->valor_campos[0],$this->valor_campos[1]));
         $conn->prepara_stmt('I', 'funcionarios', $c, $v, array($this->chave[0],$this->chave[1]),$this->oper,array($this->criterio[0],$this->criterio[1]));
 
@@ -165,7 +165,7 @@ class Funcionario{
 }
     function apaga_funcionario(){
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         $conn->prepara_stmt('D', 'funcionarios', null,null,array($this->nome_campos[0],$this->nome_campos[1]),array('=','='),array($this->valor_campos[0],$this->valor_campos[1]),null,null);
         $conn->executa_acao();
         try{

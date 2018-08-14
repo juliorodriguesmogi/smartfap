@@ -26,7 +26,7 @@ class Busca_Empresa_Ativa {
         header('http-equiv="Content-Type" content="text/html; charset=ISO-8859-1');
         $this->idusu=$id_usuario;
         $l=include_once('../classes/PHP/conexao_PDO.php');
-        $this->conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $this->conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         $this->conn->prepara_stmt('S', 'empresa_ativa', array('*'), null, array('ID_USUARIO'), array('='),array($id_usuario));
         $this->r=$this->conn->executa_acao();     
         $this->row=$this->r->fetch(PDO::FETCH_ASSOC);

@@ -59,7 +59,7 @@ class Maquina{
             break;
         }
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         $conn->prepara_stmt('I', 'maquinas', $this->nome_campos, $this->valor_campos, array('CODIGO_EMPRESA', 'CODIGO_MAQUINA'), array('=','='),array($this->valor_campos[0],$this->valor_campos[1]));
         $r=$conn->executa_acao();        
         $conn->prepara_stmt('S', "maquinas", array('MAX(CODIGO_MAQUINA) as CODIGO_MAQUINA','MAX(DATA_CADASTRO) AS DATA_CADASTRO','MAX(ID_USUARIO) AS ID_USUARIO','MAX(ULTIMA_ATUALIZACAO) AS ULTIMA_ATUALIZACAO','MAX(ULTIMO_USUARIO) AS ULTIMO_USUARIO'), '');
@@ -97,7 +97,7 @@ class Maquina{
     }
     function apaga_maquina(){
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         $conn->prepara_stmt('D', 'maquinas', null, null, array('CODIGO_EMPRESA','CODIGO_MAQUINA'), array('=','='),array($this->valor_campos[0],$this->valor_campos[1]));
         try{
             $r=$conn->executa_acao();        

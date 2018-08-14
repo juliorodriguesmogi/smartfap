@@ -21,7 +21,7 @@ $visao=(String) $_GET['visao'];
 $tabela=(String) $_GET['tabela'];
 
 $l=include_once('conexao_PDO.php');
-$conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+$conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 $conn->prepara_stmt('S', $tabela, array('CODIGO_FUNCAO,DESCRICAO_FUNCAO_EMPRESA,CODIGO_CBO_FAMILIA'),null,$campo,$condicao,$valor,null,array("DESCRICAO_FUNCAO_EMPRESA limit 100"));
 $r=$conn->executa_acao();     
 if ($r->fetchColumn(0)==0){

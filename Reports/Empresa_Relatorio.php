@@ -76,7 +76,7 @@ table #tr_detalhe td{
  <?php
  
 include_once('../classes/PHP/conexao_PDO.php');
-$conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+$conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 $conn->prepara_stmt('S', 'empresas',array('*'), null, array('CODIGO_EMPRESA','SITUACAO'), array('=','='),array($codigo_empresa,$situacao),null,array("SITUACAO"));
 $r=$conn->executa_acao();        
 if ($r->fetchColumn(0)!=null){

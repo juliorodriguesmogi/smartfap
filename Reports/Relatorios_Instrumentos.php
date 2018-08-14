@@ -93,7 +93,7 @@ tr td {border-bottom: 1pt dotted black}
 include_once('../classes/PHP/conexao_PDO.php');
  
 
-$conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+$conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 $conn->prepara_stmt('S', 'instrumentos',array('*'), null,array('CODIGO_EMPRESA'),array('=') , array($codigo_empresa),array("CODIGO_INSTRUMENTO"));
 
 $r=$conn->executa_acao();        

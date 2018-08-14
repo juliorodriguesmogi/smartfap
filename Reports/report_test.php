@@ -37,7 +37,7 @@ $nome_empresa=$ea->retorna_nome_empresa();
 include_once('../classes/PHP/conexao_PDO.php');
  
 
-$conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+$conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 $conn->prepara_stmt('S', array('movimentacao_epis_m m','movimentacao_epis_d d','epis e','funcionarios f'),array('*'), null, array('m.CODIGO_EMPRESA','d.CODIGO_EMPRESA','e.CODIGO_EMPRESA','m.SEQUENCIAL','d.CODIGO_EPIS','f.CODIGO_FUNCIONARIO'), array('=','=','=','=','=','='),array($codigo_empresa,'[m.CODIGO_EMPRESA]','[d.CODIGO_EMPRESA]','[d.SEQUENCIAL]','[e.CODIGO_EPIS]','[m.CODIGO_FUNCIONARIO]'),null,array("m.SEQUENCIAL"));
 
 $r=$conn->executa_acao();        

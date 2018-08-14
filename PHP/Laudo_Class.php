@@ -92,7 +92,7 @@ class Laudo{
             header('location:../HTML/laudos.php?mensagem=Usuário não possui privilégios suficientes para essa operação');   
             break;
         }
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         // gravando laudos
         $c=array();;
         $v=array();;
@@ -221,7 +221,7 @@ class Laudo{
     function apaga_laudo(){
         $var_c=array_combine($this->nome_campos, $this->valor_campos);        
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         $conn->prepara_stmt('D', 'laudos', $this->nome_campos, $this->valor_campos, array('NUMERO_LAUDO'), array('='),array($this->valor_campos[0],$this->valor_campos[1]));
         
 

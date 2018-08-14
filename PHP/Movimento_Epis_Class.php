@@ -62,7 +62,7 @@ class Movimento_Epi{
             break;
         }
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 //        $conn->prepara_stmt('I', 'movimento_epi_d', $this->nome_campos, $this->valor_campos, array('CODIGO_EMPRESA','SEQUENCIAL'), array('='),array($this->valor_campos[0],$this->valor_campos[1]));        
         
 
@@ -115,7 +115,7 @@ class Movimento_Epi{
 
     function apaga_Movimento_Epi(){
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         $conn->prepara_stmt('D', 'maquinas', null, null, array('CODIGO_EMPRESA','CODIGO_MAQUINA'), array('=','='),array($this->valor_campos[0],$this->valor_campos[1]));
         try{
             $r=$conn->executa_acao();        

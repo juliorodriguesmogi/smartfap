@@ -57,7 +57,7 @@ class Atividade{
             break;
         }
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         $conn->prepara_stmt('I', 'atividades', $this->nome_campos, $this->valor_campos, array('CODIGO_EMPRESA','CODIGO_ATIVIDADE'), array('=','='),array($this->valor_campos[0],$this->valor_campos[1]));
         $r=$conn->executa_acao();
         $conn->prepara_stmt('D', 'atividade_funcoes', null, null, array('CODIGO_EMPRESA','CODIGO_ATIVIDADE'), array('=','='),array($this->valor_campos[0],$this->valor_campos[1]));
@@ -99,7 +99,7 @@ class Atividade{
 
     function apaga_Atividade(){
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         $conn->prepara_stmt('D', 'atividades', null, null, array('CODIGO_EMPRESA','CODIGO_ATIVIDADE'), array('=','='),array($this->valor_campos[0],$this->valor_campos[1]));
         try{
             $r=$conn->executa_acao();        

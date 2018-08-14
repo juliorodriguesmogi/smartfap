@@ -17,7 +17,7 @@ $condicao=(String) $_GET['condicao'];
 $condicao=explode(',', $condicao);
 
 $l=include_once('conexao_PDO.php');
-$conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+$conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 $sql="
 select CODIGO_EMPRESA,ANO_PERICIA,NUMERO_LAUDO,REVISAO,UNIDADE,CODIGO_SETOR,'FISICOS' as CLASSE,'RUIDO' as TIPO,FONTE_GERADORA,TIPO_AVALIACAO,GRAU_RISCO from
 laudos_avaliacoes_ruido WHERE CODIGO_EMPRESA=$valor[0] and ANO_PERICIA=$valor[1] and NUMERO_LAUDO=$valor[2] and REVISAO=$valor[3] and UNIDADE <>0  union

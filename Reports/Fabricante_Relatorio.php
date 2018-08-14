@@ -90,7 +90,7 @@ table #tr_detalhe td{
   <tr></tr>
 <?php
 include_once('../classes/PHP/conexao_PDO.php');
-$conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+$conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 $conn->prepara_stmt('S', 'fabricantes',array('*'), null, array('CODIGO_FABRICANTE'), array('='),array($codigo_fabricante),null,array("CODIGO_FABRICANTE"));
 
 $r=$conn->executa_acao();        

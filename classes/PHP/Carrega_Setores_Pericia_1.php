@@ -17,7 +17,7 @@ $condicao=(String) $_GET['condicao'];
 $condicao=explode(',', $condicao);
 
 $l=include_once('conexao_PDO.php');
-$conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+$conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 $conn->prepara_stmt('S', "laudos_setores_pericia", array('*'),null,$campo,$condicao,$valor,null,array("CODIGO_EMPRESA","UNIDADE","CODIGO_SETOR"));
 $r=$conn->executa_acao();     
 if ($r->fetchColumn(0)==0){

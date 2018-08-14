@@ -55,7 +55,7 @@ class Instrumento{
             break;
         }
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         $conn->prepara_stmt('I', 'instrumentos', $this->nome_campos, $this->valor_campos, array('CODIGO_EMPRESA','CODIGO_INSTRUMENTO'), array('=','='),array($this->valor_campos[0],$this->valor_campos[1]));
         $r=$conn->executa_acao();        
         $conn->prepara_stmt('S', "instrumentos", array('MAX(CODIGO_INSTRUMENTO) as CODIGO_INSTRUMENTO','MAX(DATA_CADASTRO) AS DATA_CADASTRO','MAX(ID_USUARIO) AS ID_USUARIO','MAX(ULTIMA_ATUALIZACAO) AS ULTIMA_ATUALIZACAO','MAX(ULTIMO_USUARIO) AS ULTIMO_USUARIO'), '');
@@ -75,7 +75,7 @@ class Instrumento{
    
     function apaga_instrumento(){
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         $conn->prepara_stmt('D', 'instrumentos', null,null,array($this->nome_campos[0],$this->nome_campos[1]),array('=','='),array($this->valor_campos[0],$this->valor_campos[1]),null,null);
         try{
             $r=$conn->executa_acao();  

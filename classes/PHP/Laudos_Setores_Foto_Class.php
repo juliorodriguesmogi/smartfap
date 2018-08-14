@@ -57,7 +57,7 @@ class Laudo{
             break;
         }
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         $conn->prepara_stmt('I', 'laudos_atividades', $this->nome_campos, $this->valor_campos, array('CODIGO_EMPRESA', 'NUMERO_LAUDO','REVISAO'), array('=','=','='),array($this->valor_campos[0],$this->valor_campos[1],$this->valor_campos[2]));
         $r=$conn->executa_acao();        
         $conn->prepara_stmt('S', "laudos_setores_fotos", array('MAX(NUMERO_LAUDO) as NUMERO_LAUDO','MAX(DATA_CADASTRO) AS DATA_CADASTRO','MAX(ID_USUARIO) AS ID_USUARIO','MAX(ULTIMA_ATUALIZACAO) AS ULTIMA_ATUALIZACAO','MAX(ULTIMO_USUARIO) AS ULTIMO_USUARIO'), '');
@@ -96,7 +96,7 @@ class Laudo{
     function apaga_laudo(){
         $var_c=array_combine($this->nome_campos, $this->valor_campos);        
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         $conn->prepara_stmt('D', 'laudos_setores_fotos', $this->nome_campos, $this->valor_campos, array('NUMERO_LAUDO'), array('='),array($this->valor_campos[0],$this->valor_campos[1]));
         
 

@@ -62,7 +62,7 @@ class Movimento{
             break;
         }
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 //        $conn->prepara_stmt('I', 'movimento_d', $this->nome_campos, $this->valor_campos, array('CODIGO_EMPRESA','SEQUENCIAL'), array('='),array($this->valor_campos[0],$this->valor_campos[1]));        
             $conn->prepara_stmt('I', 'movimentacao_exames_m', $this->nome_campos, $this->valor_campos, array('CODIGO_EMPRESA','CODIGO_MOVIMENTACAO'), array('=','='),array($this->valor_campos[0],$this->valor_campos[1]));
             $r=$conn->executa_acao();   
@@ -107,7 +107,7 @@ class Movimento{
 
     function apaga_Movimento(){
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         $conn->prepara_stmt('D', 'movimentacao_exames', null, null, array('CODIGO_EMPRESA','CODIGO_MAQUINA'), array('=','='),array($this->valor_campos[0],$this->valor_campos[1]));
         try{
             $r=$conn->executa_acao();        

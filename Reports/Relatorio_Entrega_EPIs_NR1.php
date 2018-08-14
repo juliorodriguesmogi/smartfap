@@ -11,7 +11,7 @@ $codigo_empresa=$ea->retorna_empresa();
 $nome_empresa=$ea->retorna_nome_empresa();
 $cidade_empresa=$ea->retorna_municipio_empresa();
 include_once '../classes/PHP/conexao_PDO.php';   
-$conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+$conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 $conn->prepara_stmt('S', "funcionarios", array('*'), '',array('CODIGO_EMPRESA','CODIGO_FUNCIONARIO') , array('=','='), array($_GET['CODIGO_EMPRESA'],$_GET['CODIGO_FUNCIONARIO']));
 $f=$conn->executa_acao();
 $row=$f->fetch(PDO::FETCH_ASSOC);

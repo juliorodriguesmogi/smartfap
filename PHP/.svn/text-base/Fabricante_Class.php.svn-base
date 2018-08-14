@@ -50,7 +50,7 @@ class fabrica{
             break;
         }
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         $conn->prepara_stmt('I', 'fabricantes', $this->nome_campos, $this->valor_campos, array('CODIGO_FABRICANTE'), array('='),array($this->valor_campos[0],$this->valor_campos[1]));
         $r=$conn->executa_acao();        
         $conn->prepara_stmt('S', "fabricantes", array('MAX(CODIGO_FABRICANTE) as CODIGO_FABRICANTE','MAX(DATA_CADASTRO) AS DATA_CADASTRO','MAX(ID_USUARIO) AS ID_USUARIO','MAX(ULTIMA_ATUALIZACAO) AS ULTIMA_ATUALIZACAO','MAX(ULTIMO_USUARIO) AS ULTIMO_USUARIO'), '');

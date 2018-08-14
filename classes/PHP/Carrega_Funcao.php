@@ -22,7 +22,7 @@ $tabela=(String) $_GET['tabela'];
 $campo[]='CODIGO_EMPRESA';
 $valor[]=$_SESSION['empresa_ativa'];
 $l=include_once('conexao_PDO.php');
-$conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+$conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
 $conn->prepara_stmt('S', "funcoes", array('*'),null,$campo,array("=","="),$valor,null,array("DESCRICAO_FUNCAO_EMPRESA"));
 $r=$conn->executa_acao();     
 if ($r->fetchColumn(0)==0){

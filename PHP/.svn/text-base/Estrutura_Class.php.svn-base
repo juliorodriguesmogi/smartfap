@@ -93,7 +93,7 @@ class estrutura{
         $campo[]='CODIGO_EMPRESA';
         $valor[]=$_SESSION['empresa_ativa'];
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         
         if ($conn->erro!=null){
             echo "NF";
@@ -139,7 +139,7 @@ class estrutura{
         $visao=(String) $_GET['visao'];
         $tabela=(String) $_GET['tabela'];
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         $conn->prepara_stmt('S', $tabela, array('*'),null,$campo,$condicao,$valor,null,array("UNIDADE_PAI,NIVEL_ORGANIZACAO"));
         $r=$conn->executa_acao();     
         if ($r->fetchColumn(0)==null){
@@ -174,7 +174,7 @@ class estrutura{
             break;
         }
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         $conn->prepara_stmt('I', 'estrutura_organizacional', $this->nome_campos, $this->valor_campos, array('CODIGO_EMPRESA','CODIGO_UNIDADE'), array('=',"="),array($this->valor_campos[0],$this->valor_campos[1]));
         $r=$conn->executa_acao();        
         $conn->prepara_stmt('S', "estrutura_organizacional", array('MAX(UNIDADE) as UNIDADE','MAX(DATA_CADASTRO) AS DATA_CADASTRO','MAX(ID_USUARIO) AS ID_USUARIO','MAX(ULTIMA_ATUALIZACAO) AS ULTIMA_ATUALIZACAO','MAX(ULTIMO_USUARIO) AS ULTIMO_USUARIO'), '');
@@ -197,7 +197,7 @@ class estrutura{
         $this->oper[]='=';
         $this->criterio[]=$_SESSION['empresa_ativa'];
         include_once '../classes/PHP/conexao_PDO.php';        
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         foreach ($this as $campo=>$valores){
             $campos=explode("|",$campo);
             
@@ -237,7 +237,7 @@ class estrutura{
     
     function apaga_estrutura(){
         include_once '../classes/PHP/conexao_PDO.php';
-        $conn=new conexao_PDO('209.97.130.137','cyberpc06','cyberpc06','phoenix10','mysql');
+        $conn=new conexao_PDO('209.97.130.137','smartfapdb','root','%phoenix17%','mysql');
         $conn->prepara_stmt('D', 'estrutura_organizacional', null,null,array($this->nome_campos[0],$this->nome_campos[1]),array('=','='),array($this->valor_campos[0],$this->valor_campos[1]),null,null);
         $conn->executa_acao();
         try{
